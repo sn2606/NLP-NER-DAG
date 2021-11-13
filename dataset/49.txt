@@ -1,0 +1,19 @@
+File images / News18.
+In a virus-hit year that kept more people hooked to their Internet-connected devices for far too long, cybercriminals saw more opportunity to push their agenda and garner profit, resulting in a huge number of ransomware attacks, data breaches, and even very sophisticated nation-state sponsored attacks.
+The biggest of them perhaps came to light towards the end of the year when cybersecurity company FireEye earlier this month revealing that it became a target of hackers who accessed tools that the company uses to test its customers' security.
+While the scale and size of the attack is still being determined, it has now emerged that this is no ordinary cyberattack affecting just one organisation.
+According to a report in The Wall Street Journal, suspected Russian hackers installed malware in the Orion software sold by the IT management company SolarWinds, and accessed sensitive data belonging to several US government agencies, at least one hospital and a university.
+At least 24 big companies including tech giants like Intel, Cisco, VMware and Nvidia installed the software laced with malicious code, said the report.
+"This attack is different from the tens of thousands of incidents we have responded to throughout the years," FireEye CEO Kevin Mandia said in a statement.
+Microsoft President Brad Smith said that this latest cyber-assault is effectively an attack on the US and its government and other critical institutions, including security firms.
+Earlier this year, Marriott International sent shock waves when the hotel chain announced that personal information of close to 5.2 million guests may have been accessed using the login credentials of two employees at a franchise property.
+The Twitter cryptocurrency hack in the middle of the year was another major incident that revealed how vulnerable the cyberspace was. The social media platform revealed that it was a "coordinated social engineering attack" by people who successfully targeted some of the company's employees with access to internal systems and tools.
+In this attack, accounts of major public figures including then-US presidential candidate Joe Biden, Barack Obama, Elon Musk, Bill Gates, Jeff Bezos, Apple and Uber were simultaneously hacked by attackers to spread a cryptocurrency scam.
+Also Read: Elon Musk, Bill Gates, Obama's Twitter Hacked in Cryptocurrency Scam, Netizens Think It's 'Money Heist' 
+This year, British low-cost airline group EasyJet also revealed that it became a target of a "highly sophisticated cyber-attack" that affected approximately nine million customers.
+In August and September, the New Zealand stock exchange (NZX) was hit with several cyberattacks, forcing the exchange to even halt trading at times.
+Even the Covid-19 vaccine research and distribution attracted the attention of the cybercriminals.
+Microsoft in November revealed that it detected cyberattacks from nation-state actors targeting seven prominent companies directly involved in researching vaccines and treatments for Covid-19, including in India.
+The targets include leading pharmaceutical companies and vaccine researchers in Canada, France, India, South Korea and the US, and came from Strontium, an actor originating from Russia, and two bad actors originating from North Korea called Zinc and Cerium.
+In one of the biggest attacks in the Indian healthcare sector, Dr Reddy's Laboratories confirmed a ransomware attack this year.
+There are no signs that these attacks will slow down in any manner in the coming year which only underline the importance of strengthening the cyberspace with greater security with new tools and policies.

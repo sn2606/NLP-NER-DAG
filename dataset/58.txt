@@ -1,0 +1,33 @@
+WASHINGTON, July 5 (Reuters) - Between 800 and 1,500 businesses around the world have been affected by a ransomware attack centered on U.S. information technology firm Kaseya, its chief executive said on Monday.
+Fred Voccola, the Florida-based company's CEO, said in an interview that it was hard to estimate the precise impact of Friday's attack because those hit were mainly customers of Kaseya's customers.
+Kaseya is a company which provides software tools to IT outsourcing shops: companies that typically handle back-office work for companies too small or modestly resourced to have their own tech departments.
+One of those tools was subverted on Friday, allowing the hackers to paralyze hundreds of businesses on all five continents. Although most of those affected have been small concerns - like dentists' offices or accountants - the disruption has been felt more keenly in Sweden, where hundreds of supermarkets had to close because their cash registers were inoperative, or New Zealand, where schools and kindergartens were knocked offline.
+The hackers who claimed responsibility for the breach have demanded $70 million to restore all the affected businesses' data, although they have indicated a willingness to temper their demands in private conversations with a cybersecurity expert and with Reuters.
+"We are always ready to negotiate," a representative of the hackers told Reuters earlier Monday. The representative, who spoke via a chat interface on the hackers' website, didn't provide their name.
+Voccola refused to say whether he was ready to take the hackers up on the offer.
+"I can't comment 'yes,' 'no,' or 'maybe'," he said when asked whether his company would talk to or pay the hackers. "No comment on anything to do with negotiating with terrorists in any way."
+The topic of ransom payments has become increasingly fraught as ransomware attacks become increasingly disruptive - and lucrative.
+Voccola said he had spoken to officials at the White House, the Federal Bureau of Investigation, and the Department of Homeland Security about the breach but declined to say what they had told him about paying or negotiating.
+A 3D printed model of a man working on a computer, LED lights and toy people figures are seen in front of displayed binary code and words "Data leaking" in this illustration taken, July 5, 2021. REUTERS/Dado Ruvic/Illustration
+On Sunday the White House said it was checking to see whether there was any "national risk" posed by ransomware outbreak but Voccola said that - so far - he was not aware of any nationally important organizations being hit. 
+"We're not looking at massive critical infrastructure," he said. "That's not our business. We're not running AT&T's network or Verizon's 911 system. Nothing like that."
+Because Voccola's firm was in the process of fixing a vulnerability in the software that was exploited by the hackers when the ransomware attack was executed, some information security professionals have speculated that the hackers might've been monitoring his company's communications from the inside.
+Voccola said neither he nor the investigators his company had brought in had seen any sign of that.
+"We don't believe that they were in our network," he said. He added that the details of the breach would be made public "once its 'safe' and OK to do that."
+Some experts believe the full fallout from the hack will come into focus on Tuesday, when Americans return from their July Fourth holiday weekend. Beyond the United States, the most notable disruption occurred in Sweden - where hundreds of Coop supermarkets had to shut their doors because their cash registers were inoperative - and in New Zealand, where 11 schools and several kindergartens were affected. 
+In their conversation with Reuters, the hackers' representative described the disruption in New Zealand as an "accident."
+But they expressed no such regret about the disruption in Sweden.
+The supermarkets' closure was "nothing more than a business," the representative said.
+About a dozen different countries have had organizations affected by the breach in some way, according to research published by cybersecurity firm ESET.
+Our Standards: The Thomson Reuters Trust Principles.
+Subscribe for our daily curated newsletter to receive the latest exclusive Reuters coverage delivered to your inbox.
+Cryptocurrency exchange Binance said on Friday it would demand stricter background checks on customers to bolster efforts against money laundering, with immediate effect, a move that comes after weeks of pressure by regulators globally.
+Reuters, the news and media division of Thomson Reuters, is the world’s largest multimedia news provider, reaching billions of people worldwide every day. Reuters provides business, financial, national and international news to professionals via desktop terminals, the world's media organizations, industry events and directly to consumers.
+Build the strongest argument relying on authoritative content, attorney-editor expertise, and industry defining technology.
+The most comprehensive solution to manage all your complex and ever-expanding tax and compliance needs.
+The industry leader for online information for tax, accounting and finance professionals.
+Information, analytics and exclusive news on financial markets - delivered in an intuitive desktop and mobile interface.
+Access to real-time, reference, and non-real time data in the cloud to power your enterprise.
+Screen for heightened risk individual and entities globally to help uncover hidden risks in business relationships and human networks.
+All quotes delayed a minimum of 15 minutes. See here for a complete list of exchanges and delays.
+© 2021 Reuters. All rights reserved

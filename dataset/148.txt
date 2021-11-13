@@ -1,0 +1,38 @@
+Countries commit to sharing information and best practices in wake of pandemic
+Israel has signed an agreement with India that’s focused on fighting cybersecurity threats heightened by Covid-19.
+Representatives from both countries met earlier this month to unveil their plans for cooperation.
+Yigal Unna, director general of Israel’s National Cyber Directorate (INCD) and Sanjeev Singla, India’s ambassador to Israel, were seen touching elbows – a pandemic-era gesture to signify shaking hands.
+The partnership aims to deepen Israel’s relationships with other nation states in order to protect against malicious actors, a spokesperson for the INCD told The Daily Swig.
+It will consist of a “multilayer cooperation of sharing methodologies, best practices, and capacity building know-how”.
+YOU MAY ALSO LIKE Indian government hack exposes 80k coronavirus patients’ data
+The spokesperson said: “The wider we spread our defenses, with our good colleagues, the [more] difficult it is going to [be for] the attackers to reach us.
+“Deepening cooperation with India is another important step in confronting global cyber threats.
+“Israel can contribute [to India] its experience and can [also] benefit from the vast experience [from] India in dealing with cyber challenges and new and continuous cyber-attacks.”
+This step comes as the spread of the virus has forced companies worldwide to shift their operations online.
+
+RELATED Remote working during coronavirus pandemic leads to rise in cyber-attacks, say security professionals
+Indeed, many organizations are fighting against the rise in cyber threats since lockdown measures were enforced.
+A sharp increase in distributed denial-of-service attacks, for example, has been witnessed around the world.
+“The accelerated digitization processes that accompany the enormous challenge of dealing with the Covid-19 epidemic and the increase in threats in cyberspace bring with them challenges and the need to quickly build protected services and systems,” the INCD spokesperson said.
+“In a very short period of time, it seems like the world has leaped 15 years when it comes to digitization.
+“E-commerce, e-learning, tele-medicine, remote-working, implementation of new technologies, introducing of new supply chains and critical processes… all widen the attack surface of the civilian cyber sphere [and] all require new knowledge and new cooperation.”
+The new agreement comes after Israel signed a similar cybersecurity partnership with Romania.
+Under the memorandum of understanding, the two countries’ Computer Emergency Response Teams (CERTs) committed to sharing information and best practices.
+The INCD spokesperson told The Daily Swig that this Israel-Romania partnership is still going strong, adding that the two nations are currently collaborating on tackling Covid-19-related threats.
+“There has been an ongoing dialogue between CERT-IL and CERT-RO, where information and best practices is being shared, even tackling current Covid-19-related threats, helping both sides learn from each other, and boosting cyber robustness.
+“Such a dialogue is constantly happening with other CSIRT (Computer Security Incident Response Team) in other countries too.”
+READ MORE Cloud-based cyber-attacks flaring up during coronavirus pandemic
+
+
+Jessica Haworth
+
+
+
+@JesscaHaworth 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

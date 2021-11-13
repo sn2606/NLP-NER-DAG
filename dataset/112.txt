@@ -1,0 +1,34 @@
+Compromised MDM server becomes vector for widespread malware campaign
+
+Attackers recently compromised more than 75% of a multinational conglomerate’s mobile devices with a new variant of the Cerberus Android banking trojan, security researchers have revealed.
+Upon gaining entry to the corporate network via the Mobile Device Manager (MDM) server, miscreants stole passwords and 2FA credentials, according to a blog post published by Check Point on April 29.
+After detecting the infections on February 18, researchers from the cybersecurity firm found that many devices lacked On-device Network Protection (ONP), which allowed the attackers to remotely control the device and access network resources.
+They also discovered that the new malware variant had mobile remote access trojan (MRAT) capabilities such as keystroke logging, SMS stealing, Google Authenticator data interception, and even the ability to command the device remotely via TeamViewer.
+First emerging in June 2019 with its own Twitter account, Cerberus is a malware-as-a-service (MaaS) platform, meaning would-be attackers can customize their own payload for a subscription fee.
+The new variant comprises the main application and a DEX file received as a payload from the remote command and control (C&C) server.
+The C&C server used by the attackers was HTTP-only with no hostname, running from a Russian IP address.
+Read more of the latest mobile security news
+From the infection’s rapid spread, the team of eight researchers theorized that propagation was automated, with the malware either moving laterally or via the customer’s MDM. The customer later confirmed the latter was true.
+It’s the first time that Check Point researchers have seen an MDM server, normally used for remote configuration and application updating, used as an attack vector for mobile malware.
+“MDM’s most prominent feature, arguably the reason for its existence, is also its Achilles’ heel – a single, central control for the entire mobile network,” Check Point said the blog post.
+“If that platform is breached, so is the entire mobile network.”
+To expunge all malware traces the victim company applied a company-wide factory reset of devices – an “extremely costly” exercise given the need for damage assessment and subsequent re-establishment of the entire mobile network, Check Point noted.
+The researchers said that if ONS had been ubiquitously activated, then “all communications with the C&C could have been blocked”.
+They concluded that the incident underscores the importance of distinguishing between managing and securing mobile devices.
+“Managing a mobile device means installing applications, configuring settings, and applying policies on multiple devices at once,” Check Point explained. “Securing a mobile device means protecting it from malware threats and attacks.”
+They added: “Mobile devices are an integral part of the way we work, how we communicate, and how our businesses operate. They need to be protected as any other endpoint as they offer a tempting target.”
+YOU MIGHT ALSO LIKE Split opens up in Europe on privacy control for Covid-19 contact-tracing apps
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

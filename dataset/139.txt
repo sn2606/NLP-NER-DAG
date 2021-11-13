@@ -1,0 +1,31 @@
+Security firms are tracking a ‘dramatic rise’ in both the number and severity of volumetric cyber-attacks
+
+The ‘pandemic effect’ has driven a marked increase in the number – and severity – of distributed denial-of-service (DDoS) attacks around the world, according to specialist security vendors.
+In response to the coronavirus pandemic, organizations across many industries quickly transitioned to remote workforces, and individuals under stay-at-home orders began relying on the internet more heavily.
+Neustar reports that it has observed a “dramatic rise” in DDoS attacks during lockdown.
+“In the first quarter of 2020, Neustar mitigated more than twice the number of attacks as in first quarter 2019, and in the second quarter of 2020 the company mitigated the largest volumetric attack in Neustar history, and one of the largest in Internet history, at 1.17 Tbps,” according to Neustar.
+“Neustar teams have frequently seen other intense attacks, regularly topping 300 Mpps [mega packets per second], throughout this period,” the firm added.
+INSIGHT Coronavirus: How to work from home securely during a period of isolation
+While many DDoS and other types of cyber-attacks focus on corporate assets, there has also been an increase in DNS hijacking – a technique in which DNS settings are changed to redirect the user to a website that might look legitimate but often contains malware, Neustar warns.
+Other vendors are also seeing a surge in DDoS attacks during the lockdown. For example, during the first week of June, Akamai mitigated a massive DDoS attack against an (unnamed) internet hosting provider.
+The 1.44 Tbps attack – the largest Akamai has ever seen – lasted for two hours and came from globally-distributed traffic, instead of the more normal pattern of originating from a specific region or country.
+Neustar has witnessed a steady and continuing rise in DNS traffic in mid-March, correlating with the dates that schools and organizations began to implement isolation policies amid the Covid-19 pandemic.
+The firm – which operates the UltraDNS network that spans 30 globally distributed nodes – saw a 14% increase in DNS query volumes between March 1 and May 3, as the full impact of the outbreak set in around the world.
+In particular, queries to retail companies and streaming services increased, while traffic and travel-related website fell sharply before demonstrating a recent recovery.
+The figures are taken from Neustar’s ‘Online Traffic and Cyber Attacks During Covid-19’ report.
+This latest data comes on the heels of Kaspersky’s Q1 2020 DDoS attacks report, which pointed to a sharp increase in volumetric attacks against the websites of healthcare organizations, delivery services, and gaming and education platforms.
+READ MORE Adversarial attacks against machine learning systems – everything you need to know
+
+
+John Leyden
+
+
+
+@jleyden 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

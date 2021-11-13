@@ -1,0 +1,40 @@
+Some smartphones are more equal than others
+
+Android mobile devices suffer from numerous region-specific security issues, according to an investigation by security firm F-Secure.
+The study – which involved the examination of Huawei Mate 9 Pro, Samsung Galaxy S9, and Xiaomi Mi 9 smartphones – found the security of devices sold globally differs for users in different countries.
+Region-specific settings and configurations leave users vulnerable to attack in some countries but not others.
+However, F-Secure reckons the lower security enjoyed by users of the same model of phone in different countries isn’t a reflection of government-mandated practices.
+James Loureiro, UK director of research at F-Secure Consulting, told The Daily Swig: “Lower security levels are likely when a vendor introduces a larger attack surface, for example when they bundle extra applications specific to a region.
+“The issues we have identified do not suggest any government backdoors installed on the handsets. It is more likely workarounds for local market conditions.”
+Perhaps unsurprisingly, customization of Android devices by third-party vendors can leave phones more at risk.
+Android smartphones that come bundled with more than 100 additional apps greatly expanding the attack surface in the process, F-Secure’s researchers found.
+The exploitation process for the vulnerabilities and configuration issues, as well as the impact, varies from device to device.
+Changes depending on what region a device is set up in or the SIM card inside of it also had an effect.
+For example, the Samsung Galaxy S9 detects the region that the SIM card is operating in, which influences how the device behaves.
+Read more of the latest mobile security news
+F-Secure Consulting found that they could exploit an application to take full control of the device when the Samsung device’s code detected a Chinese SIM card, but not SIM cards from other countries.
+Research conducted on Xiaomi and Huawei mobile phones found similar issues. In both cases, the researchers were able to compromise the devices due to region-specific settings (China for the Huawei Mate 9 Pro, and China, Russia, India, and others for the Xiaomi Mi 9).
+Staff at F-Secure uncovered the vulnerabilities over the course of several years while conducting research in preparation for the Pwn2Own live hacking competition.
+The researchers demonstrated attacks using these regional vulnerabilities at several different Pwn2Own competitions, sharing its research with the Zero Day Initiative (Pwn2Own’s organizer) and the participating device vendors.
+All vulnerabilities used in the attacks have been patched.
+The way in which vendors configure Android devices can essentially lower security standards for some users, but not others.
+Android dominates the global smartphone market and is used on many of today’s most popular phones.
+F-Secure’s Loureiro said the company’s research highlighted the issues that can arise from customized Android implementations.
+“Devices which share the same brand are assumed to run the same, irrespective of where you are in the world,” Loureiro said.
+“However, the customization done by third party vendors such as Samsung, Huawei, and Xiaomi can leave these devices with significantly poor security dependent on what region a device is setup in or the SIM card inside of it.”
+He added: “Specifically, we have seen devices that come with over 100 applications added by the vendor, introducing a significant attack surface that changes by region.”
+RELATED Pwn2Own 2020: Live hacking contest goes virtual amid coronavirus pandemic
+
+
+John Leyden
+
+
+
+@jleyden 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

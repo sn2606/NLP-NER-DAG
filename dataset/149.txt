@@ -1,0 +1,35 @@
+Attackers threaten to release personal data
+A cyber-attack on Spanish railway company Adif leveraged the REvil ransomware, it has been confirmed.
+Adif, the Administrator of Railway Infrastructure, is a state-owned firm tasked with looking after rail infrastructure, managing rail traffic, and collecting fees from railway operators.
+It was reported yesterday (July 23) that cybercriminals leveraging the REvil ransomware, threatened to release stolen data if Adif did not comply with their demands.
+
+BACKGROUND What is REvil/Sodinokibi? The ransomware behind the Travelex attack
+This incident came after two previously successful campaigns against the infrastructure group, during which the attackers claimed they took 800 GB of data, including personal information and accounting figures.
+A statement from the threat actors posted online reads: “We advise you to get in touch immediately. We have personal information including correspondence, contracts and other accounting (total 800 gigabytes of data).”
+Attackers also threatened to launch a third cyber-attack if Adif did not comply with its demands.
+“Simultaneously with the publication, the third attack will follow,” the message reads.
+“If you do not comply with our terms, your data will be published in the public domain. We will continue to download your data until you contact us.”
+A spokesperson for Adif told The Daily Swig: “Adif confirms a cyber-attack by ransomware that has been controlled by internal security services. This fact has already been reported to the corresponding authorities.
+“The infrastructure has not been affected at any time, and the correct functioning of all its services has been guaranteed.
+“Adif, aware of being the manager of a critical infrastructure such as the exploitation of the railway network, considers cybersecurity as one of the pillars of comprehensive security.”
+REvil, also known as ‘Sodinokibi’, was first discovered in April 2019 and rose to prominence on New Year’s Eve of the same year, when currency exchange Travelex was forced offline.
+Malicious hackers using REvil demanded $6 million for the return of encrypted data, though Travelex claimed at the time that no personal details were taken.
+It was later discovered that Travelex had failed to patch a vulnerability in its Pulse Secure VPN server, despite warnings, which led to the infection.
+REvil is a ransomware-as-a-service (RaaS) model and has multiple infection vectors, including exploiting known security vulnerabilities and phishing campaigns.
+It encrypts a user’s files and can gain administrative access by exploiting a vulnerability in Oracle WebLogic (CVE-2019-2725).
+The ransomware has garnered similarities to GandCrab, another infamous RaaS campaign that shut down last year after reportedly earning cybercriminals more than $2 billion.
+READ MORE Major Rail Europe breach lasted three months
+
+
+Jessica Haworth
+
+
+
+@JesscaHaworth 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

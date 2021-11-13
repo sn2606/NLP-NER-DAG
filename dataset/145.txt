@@ -1,0 +1,29 @@
+Swvl claims only names, email addresses, and phone numbers were accessed
+
+Swvl, a bus-booking app and operator of bus routes in Egypt, Kenya, and Pakistan, has been struck by a data breach.
+The company, based in Cairo, became aware of “unauthorized access to its IT infrastructure” on the evening of July 3, according to a security alert.
+An ongoing investigation into the breach has so far concluded that the compromised data “is restricted to names, email addresses, and phone numbers” and that “passwords and credit card information were not affected or exposed”.
+“At this stage, there is no evidence that any of our customers have been directly impacted,” the alert reads.
+The investigation “immediately identified and addressed specific vulnerabilities that our IT infrastructure may have had”, continued the notice. “Our IT environment has been fully secured”.
+In response to queries from The Daily Swig, Swvl did not divulge how its IT systems may have been compromised nor how many individuals’ data may have been affected.
+Read all the latest data breach news
+Swivl says it has, or is, undertaking the following security measures:
+A spokesperson for the company told The Daily Swig that it had notified customers of the breach through the app, while the alert said that it would contact customers individually if they have been directly impacted.
+Swvl has urged customers to update their account passwords and those of any other accounts with the same or similar passwords, and to change their passwords regularly.
+“As ever, we continue to learn from this experience and are continually monitoring our systems, building and enhancing our security fences, and reacting immediately to potential threats,” the company said.
+Swvl, which was founded in Egypt in 2017, plans to launch bus routes in the Philippines, Indonesia, and Bangladesh by the end of the year.
+READ MORE Data breach at Canadian insurance firm exposes personal information
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

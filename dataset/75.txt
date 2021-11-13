@@ -1,0 +1,34 @@
+Sort your .dats from your .dmgs
+
+A security researcher has launched Filesec.io, a wiki-style repository of file extensions that can be used for malicious purposes.
+The inspiration, says ‘mr.d0x’, came during a work shift when he was blocklisting extensions that would need approval to be executed.
+“We were searching on Google to find a list of extensions to assist us in blocklisting, and at that point I thought, why not create a centralized place where everyone can not only see dangerous extensions but additional details about how that extension is used?” the researcher tells The Daily Swig.
+“While creating this project my aim was [to reach] security researchers; but I’m sure that security-aware end users will find this helpful to refer to every now and then.”
+Filesec.io aims to help educate end users about potentially malicious file extensions
+
+Filesec.io has a similar format to the LOLBAS and GTFOBins projects, providing a description of each file extension, along with security recommendations and further resources explaining how attackers could use the file for nefarious purposes.
+The site currently contains just 74 extensions, from .exe – widely known to be a harbinger of potentially malicious code – to lesser-known risks such as .hta.
+
+RECOMMENDED Introducing Malvuln.com – the first website ‘exclusively dedicated’ to revealing security vulnerabilities in malware
+mr.d0x says he wanted to get the site up and running as quickly as possible, but is making new additions to the list every few days. He is also inviting the security community to contribute new entries, modify or add to existing elements, and to contribute file samples.
+“The reason I’ve developed it this way is because I’ve seen the success of contribution-led projects,” he says.
+“Another reason is because of the constantly changing methods used by attackers. I alone will not be able to create a comprehensive list, whereas with the help of the security community I can see that becoming a reality.”
+
+Read more of the latest security research news
+For the future, mr.d0x said he hopes to incorporate a more detailed breakdown of the file structure of each extension, along with a full set of downloadable file samples.
+And, the researcher says, he’s open to new ideas: “From the start, this project was meant to assist the security community, and therefore if I receive positive feedback and the project provides benefits, then I don’t mind adding more features in the future.”
+YOU MIGHT ALSO LIKE Operation Lyrebird: Cybercops nab Moroccan phish-and-carding kingpin
+
+
+Emma Woollacott
+
+
+
+@EmmaWoollacott 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

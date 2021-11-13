@@ -1,0 +1,41 @@
+These days, when we think of nation-state level damage, we immediately think of the nation-state level actor that must be responsible for it. While most attacks against a nation’s sensitive networks are indeed the work of other governments, the truth is that there is no magic shield that prevents a non-state sponsored entity from creating the same kind of havoc, and harming critical infrastructure in order to make a statement.
+
+In this piece, we present an analysis of a successful politically motivated attack on Iranian infrastructure that is suspected to be carried by a non-state sponsored actor. This specific attack happened to be directed at Iran, but it could as easily have happened in New York or Berlin. We’ll look at some of the technical details and expose the actor behind the attack — thereby linking it to several other politically motivated attacks from earlier years.
+
+Key Findings
+On July 9th and 10th, 2021 Iranian Railways and the Ministry of Roads and Urban Development systems became the subject of targeted cyber attacks. Check Point Research investigated these attacks and found multiple evidence that these attacks heavily rely on the attacker’s previous knowledge and reconnaissance of the targeted networks.
+The attacks on Iran were found to be tactically and technically similar to previous activity against multiple private companies in Syria which was carried at least since 2019. We were able to tie this activity to a threat group that identify themselves as regime opposition group, named Indra.
+During these years, the attackers developed and deployed within victims’ networks at least 3 different versions of the wiper dubbed Meteor, Stardust, and Comet. Judging by the quality of the tools, their modus operandi, and their presence on social media, we find it unlikely that Indra is operated by a nation-state actor.
+A technical analysis of the tools, as well as the TTPs used by the underlying actor, are thoroughly described in this article. We share with the public Yara rules and a full list of indicators of compromise.
+On Friday, July 9th, Iran’s railway infrastructure came under cyber-attack. According to Iranian news reports, hackers displayed messages about train delays or cancellations on information boards at stations across the country, and urged passengers to call a certain phone number for further information. This number apparently belongs to the office of the country’s supreme leader, Ayatollah Ali Khamenei.
+
+
+“Long delays due to cyber attacks. More information: 64411” message containing the Supreme Leader office number displayed on Iran’s railways’ stations boards. Image published by the media.
+The very next day, July 10th, websites of Iran’s Ministry of Roads and Urbanization reportedly went out of service after another “cyber-disruption”. Iranian social media spread the photos of a monitor of one of the hacked computers, where the attackers took responsibility for both consecutive attacks.
+
+
+“We attacked the computer systems of the Railway Company and the Ministry of Roads and Urban Development”. The message left by attackers on hacked machines
+A few days later, Iranian cybersecurity company Amnpardaz Software published a short technical analysis of a piece of malware supposedly related to these attacks, dubbed Trojan.Win32.BreakWin. Based on the information published, Check Point Research Team retrieved the files from publicly available resources and conducted a thorough investigation of them. The findings shared in this report were reviewed and evaluated by journalists and fellow researchers from other security vendors. During this time, SentinelOne released a report based on Amnpardaz’s analysis.
+
+In this article, we first analyze the artifacts left by these attacks. Based on this analysis, we uncover a set of similar tools previously used in other operations during 2019-2020: carried against multiple targets in Syria, they did not attract much public attention at the time. We then share some insights into the tactics, techniques, and procedures (TTPs) of the underlying actor, which self-identifies as “Indra” and, according to some Iranian sources, may have ties to hacktivist or cybercriminal groups.
+
+Hunting for the files from the Iranian hack
+With Amnpardaz’s threat database as our starting point, we searched for files with similar names and functionality. The search led us to dozens of files, all uploaded from the same two sources located in Iran. Even though we weren’t able to find all the mentioned artifacts, we recovered most of the execution flow as described in Amnpardaz’s report.
+
+The execution flow is heavily based on multiple layers of archives and Batch scripts. When detonated, they:
+
+Attempt to evade anti-virus detection
+Destroy the boot configuration data
+Run the final payloads that aim to lock and completely wipe the computers in the network.
+
+The execution flow of the attacks against targets in Iran
+The execution starts with pushing a scheduled task from the AD to all the machines via group policy. The task name is Microsoft\Windows\Power Efficiency Diagnostics\AnalyzeAll and it mimics the AnalyzeSystem task performed by Windows Power Efficiency Diagnostics report tool. The subsequent chain of .bat files and archives is intended to perform the following operations:
+
+Filter the target machines: setup.bat first checks if the hostname of the machine is one of the following: PIS-APP, PIS-MOB, WSUSPROXY or PIS-DB. If so, it stops the execution and deletes the folder containing the malicious script from this machine. PIS in the hostnames stands for Passenger Information System, which is usually responsible among others for updating the platform boards with actual data, so attackers made sure their message to the Iranian public will be displayed properly.
+Download the malicious files onto the machine: the same batch file downloads a cab archive named env.cab from a remote address in the internal network: \\railways.ir\sysvol\railways.ir\scripts\env.cab. The use of specific hostnames and internal paths indicates the attacker had prior knowledge of the environment.
+Extract and run additional tools: update.bat, which was extracted and started by setup.bat, uses the password hackemall to extract the next stages: cache.bat, msrun.bat and bcd.bat.
+Disconnect the machine from all networks: the cache.bat script disables all the network adapters on the machine with the following command: powershell -Command "Get-WmiObject -class Win32_NetworkAdapter | ForEach { If ($.NetEnabled) { $.Disable() } }" > NUL
+Perform Anti-AV checks: the same cache.bat script also checks if Kaspersky Antivirus is installed on the machine and if not, it adds all the files and folders related to the attack to the Windows Defender exclusion list and proceeds with the execution.
+Corrupt the boot: bcd.bat is used in order to harm the boot process. First, it tries to override the boot file with new content and then deletes the different boot identifiers using Windows built-in BCDEdit tool: for /F "tokens=2" %%j in ('%comspec% /c "bcdedit -v | findstr identifier"') do bcdedit /delete %%j /f
+Remove all the traces: the same bcd.bat in addition to boot override also removes Security, System and Application Event Viewer logs from the system using wevtutil.
+Unleash the main payload: The msrun.bat script is responsible for unleashing the Wiper. It moves wiper-related files to “C:\temp” and creates a scheduled task named mstask to execute the wiper only once at 23:55:00.

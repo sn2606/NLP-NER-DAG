@@ -1,0 +1,23 @@
+A hacker is claiming to have data related to more than 100 million T-Mobile customers in the U.S. and is selling access to part of the information for roughly $277,000.
+
+Motherboard reported on Sunday that the hacker revealed they had the data on an underground forum, although they didn’t specify the information was related to T-Mobile in the post. When contacted by the outlet, the hacker said in an online chat that they had compromised multiple T-Mobile servers and had “full customer info.” They claim the data include social security numbers, phone numbers, names, physical addresses, unique IMEI numbers, and driver license information.
+
+Motherboard said it had seen samples of the data and confirmed they contained accurate information on T-Mobile customers.
+
+On the underground forum, the hacker reportedly stated they were selling a subset of data with 30 million social security numbers and driver licenses for six bitcoin, which total $277,895 at this time, according to Coindesk. The hacker is also selling access to the rest of the data privately.
+
+Related Stories
+T-Mobile Lied to Get Its Sprint Merger Approved, California Overseer Says
+Poly Network Offers $500,000 Reward to Hacker Who Stole and Then Returned $611 Million in Crypto
+Apple Gearing Up for Multiple Events This Fall for iPhone, Mac, and More
+T-Mobile appears to have acted against the hacker, although that is unconfirmed at this time.
+
+“I think they already found out because we lost access to the backdoored servers,” the hacker told Motherboard.
+
+Nonetheless, the hacker said they wouldn’t be affected by T-Mobile’s actions because they had already downloaded and backed up the stolen data in multiple places.
+
+T-Mobile told Gizmodo on Sunday that it was investigating the claims.
+
+“We are aware of claims made in an underground forum and have been actively investigating their validity. We do not have any additional information to share at this time,” a T-Mobile spokesperson said.
+
+If confirmed, the breach would deal another cybersecurity blow to the company, which has been hit by multiple attacks that resulted in data breaches in recent years. This past February, T-Mobile said it had been the hacked after an undisclosed number of customers suffered SIM swap attacks. Meanwhile, in December 2020, the company revealed it had suffered a data breach that exposed its customers’ proprietary network information.

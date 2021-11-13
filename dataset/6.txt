@@ -1,0 +1,47 @@
+Academics say that smart technology is a ‘balancing act’, and that consumers need to be aware of the risks
+
+A number of British universities have been awarded a grant to explore the security issues surrounding Internet of Things (IoT) and smart home devices, as well as to determine ways to warn consumers of the risks.
+Announced on July 13, the ‘PrivIoT’ project, led by Dr James Nicholson, a lecturer at Northumbria University’s Computer and Information Sciences department, will also involve academics from Royal Holloway, Manchester, and Nottingham universities.
+The grant was awarded by the PETRAS National Centre of Excellence, an organization focused on the social and technical aspects of deploying IoT into the consumer sphere.
+In total, £3.6 million has been awarded to 18 projects, including digital twin frameworks, bias in female-oriented technologies, and securing IoT in the utilities sector.
+
+
+PrivIoT is consumer focused, with an emphasis on understanding the privacy and security implications of IoT, smart home, and smart energy devices offered to consumers, as well as the potential creation of an interface or other means to give users more control over their personal security.
+In an interview with The Daily Swig, Nicholson, together with Dr David Buil-Gil, a lecturer in Quantitative Criminology at the Department of Criminology of the University of Manchester, said the 18-month project will focus on understanding what the potential harms of IoT in the home.
+
+Read more of the latest news about IoT security
+There are three ‘strands’ to the project – the initial area of study will be understanding potential risks associated with what could be considered “future” technologies that, while in existence, have not yet been fully developed, implemented, or rolled out nationwide.
+Led by Buil-Gil and Manchester University, this aspect will include analysis of studies already conducted on IoT and the potential creation of classification standards, as well as an examination of which technologies could act as a counterbalance for risks to privacy or security.
+Buil-Gil said risk factors vary but may include blackmail, the theft of private data, such as audio recordings or images harvested from a smart home by compromising an intelligent device, ransomware, and other forms of cyber-attacks.
+Energy devices are also of interest to the researchers and whether or not the “trade-off” between saving money and being more energy efficient while potentially sacrificing security is worth it.
+
+RELATED Research exposes vulnerabilities in IP camera firmware used by multiple vendors
+The UK government is pushing for businesses and home users to permit smart meter installations on the grounds of reducing carbon emissions. However, there are already some security concerns surrounding these devices including patterns of use, device hijacking, and house occupancy monitoring.
+When it comes to web security, the team may also examine issues surrounding IoT botnets and distributed denial-of-service (DDoS) attacks as use cases.
+“The most secure state you can be in is to not use a device connected to the internet, but at some point, you’ve got to make that call as to whether the practical benefits outweigh any potential risk – and what we’re trying to do here is try things in a different way,” Nicholson says.
+This is where Northumbria comes in: once an understanding of the risks has been established, the team will work on ways to “communicate these risks to citizens”.
+“How can we get citizens involved in these discussions?” Nicholson said. “We know that now, as it has been in the past, people do not generally or openly discuss security or privacy issues.
+“When it comes to adopting technologies, including IoT, essentially [by the] time they understand the risks of these technologies… they’ve already started using them.”
+
+
+In past years, security failings and risks in IoT products have become apparent after they have been made available. Now, the team hopes to get ahead of the curve and ensure consumers are more risk-aware, with risk factors addressed proactively, rather than reactively.
+In the final stage of the project, led by Dr Stefanie Kuenzel from Royal Holloway and Nottingham University, the team will collate their previous findings to create interfaces to “allow users to take initiative and try and protect themselves”, according to Nicholson.
+This will include developing systems able to give consumers a visual glance of what is going on in their home – and to “do something” about any security issues.
+”I think it’s a two-way process as well,” Nicholson commented. “We can’t expect everyone to fully understand this technology and all the interactions, and to be able to make fully informed decisions on everything.
+“There has to be an onus on having technologies that are secure and that are privacy-preserving, but at the same time, as end users, we need to have enough basic awareness.”
+The first phase of the research is underway, which will include study analysis and data collection. Researchers will be hired to help with the data collection stage, and companies including Toshiba, OTASKI Energy Solutions, and CybSafe will also be participating in the project.
+YOU MAY ALSO LIKE IoT security: Researchers discover Stem Audio smart speaker eavesdropping risk
+
+
+Charlie Osborne
+
+
+
+@SecurityCharlie 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

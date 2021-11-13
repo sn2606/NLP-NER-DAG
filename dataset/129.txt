@@ -1,0 +1,36 @@
+The former malware loader has been reengineered to target enterprises
+
+The Valak malware loader has been retooled to become a stealthier, more sophisticated class of malware that’s being used for reconnaissance and information stealing, researchers have discovered.
+Cybereason’s Nocturnus team witnessed a “a series of dramatic changes” in more than 30 new variants observed in the wild during investigations lasting less than six months, according to a technical blog post published today (May 28).
+And now, with Valak’s developers apparently collaborating with other threat actors, Assaf Dahan, senior director and head of threat research at Cybereason, told The Daily Swig that its creators may have adopted the malware-as-a-service [MaaS] model.
+While Valak was previously classified as a malware loader, more recent versions have been seen to steal sensitive information from Microsoft Exchange mail systems, including credentials and domain certificates.
+Potentially giving attackers access to critical enterprise accounts, this could result in serious reputational damage for targeted organizations, said the researchers.
+Valak has at least six plugin components that allow attackers to pilfer user, machine, and network information from infected hosts. It can also download additional plugins and other malware.
+The new breed of Valak additionally features a fileless stage, which stores components in the registry, takes screenshots, and checks the infected machine’s geolocation.
+READ MORE Experts warn against uptick in fileless malware attacks
+Valak’s developers have adopted advanced evasion techniques like ADS and hiding components in the registry, while abandoning the use of PowerShell, which is now readily detected and repelled by the latest security products, Cybereason said.
+The researchers who wrote the analysis of the new variants – Eli Salem and Lior Rochberger – said the most “interesting addition” to Valak was a ‘PluginHost’ component that communicates “with the C2 server and downloads additional plugins”.
+Two of these addons – ‘Systeminfo’ and ‘Exchgrabber’ – appear to specifically target enterprises, Salem and Rochberger said.
+First discovered in late 2019, Valak was initially launched against organizations in the US and was often paired with the Ursnif (AKA Gozi) and IcedID banking trojans.
+“Valak has evolved from a loader to a sophisticated, multi-stage modular malware that collects plugins from its C2 server to expand its capabilities,” said the researchers, who noted that new variants are being directed at enterprises in Germany as well as the US.
+“Each version extended the malware’s capabilities and added evasive techniques to improve its stealth.
+Read more of the latest malware news
+“The extended malware capabilities suggest that Valak can be used independently with or without teaming up with other malware,” they added.
+“That it is targeting exchange servers and performs extensive network reconnaissance should be a big concern for organizations,” said Dahan, “since this can lead to more destructive attacks (such as collaborations with ransomware) or leakage of sensitive information.”
+Since Valak attacks usually begin with phishing emails, Dahan said it is “advisable to deploy a good email filtering solution, along with invest in email safety training and education”.
+“In addition, a good endpoint security solution that can detect malicious behavior can significantly help organizations to prevent and remediate such attacks,” he added.
+RECOMMENDED Web application attacks rise to account for almost half of all data breaches
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

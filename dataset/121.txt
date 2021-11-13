@@ -1,0 +1,49 @@
+Offensive security pros offer advice on how to harden your cloud security profile
+
+ANALYSIS Attackers can exploit misconfigurations in hybrid networks composed of Azure Active Directory and Windows Active Directory servers to compromise synchronization servers, reveal user passwords, and create backdoors into corporate networks, security researchers from Synacktiv have revealed.
+The work, one of several similar research ventures conducted on Azure Active Directory security, underlines the need for security teams to learn to navigate the complexities of this fast-growing technology.
+Azure Active Directory (Azure AD) is Microsoft’s cloud-based identity and access management service.
+The technology allows an organization’s employees to sign in and access resources in services like Microsoft Office 365, the Azure portal, and SaaS applications, along with internal resources and other cloud-based apps.
+There is, however, some confusion between Azure AD and Windows AD, the perhaps better-known directory service for centralized domain management.
+“It’s quite a common misconception that Azure AD is just [Windows] AD in the cloud,” Aymeric Palhière, security researcher at Synacktiv, told The Daily Swig.
+“Both have a lot of similarities, but also a lot of differences. They do not use the same protocols, AD groups are replaced by roles in Azure AD, interaction with the two environments is not done with the same tools, etc.”
+Palhière’s attack on Azure AD starts by exploiting an account with a weak password. This can happen a lot, especially to organizations that are used to managing their user accounts within their fortified corporate networks and are not very sensitive about enforcing secure password policies.
+“In Azure AD identity is much more important than in on-prem AD,” Dirk-jan Mollema, security researcher at Fox-IT, told The Daily Swig.
+“Unfortunately, the general trend is still that many companies rely on their internal firewall to keep out attackers, and once you’re inside it’s like a candy shop for attackers.
+“Weak passwords remain a big problem, especially in sectors where security awareness is lower. If you move that to Azure AD, suddenly all those accounts are no longer behind a firewall but are exposed from anywhere on the internet.”
+After gaining a foothold in the network, the attacker can use various PowerShell tools to extract information about the targeted Azure AD tenant.
+A crafty hacker will be able to gain access to Azure AD Connect, the service that synchronizes Azure AD with Windows AD servers, and exploit its features to decrypt user passwords and compromise administrator accounts.
+Palhière also shows that attackers can create a backdoor in Azure AD by assigning credentials to service principals and use them to log in to the system inconspicuously.
+Read more of the latest cloud security news
+“The article focuses on the weaknesses induced by the synchronization between Azure AD and Windows AD,” Palhière says. “Indeed, it has become a very common configuration, which is very interesting for attackers because both environments contain sensitive information (mailboxes, agenda, databases, sensitive files…).”
+The researcher noted that this kind of attack doesn’t only apply to hybrid structures: “A company using Azure AD and Office 365 only (without Windows AD) will manage cloud identities for its employees, and finding a valid account will allow the attacker to access mailboxes and documents.
+“However, the attacker will not be able to use this account to access internal assets of the company.”
+“Azure AD offers quite some tools to create access policies, with which you can secure the environment and configure who can access what under which conditions, but the reality is that not many companies are using those yet,” Mollema says, adding that the more advanced security tools require premium licenses, which is another hurdle for companies to improve their security.
+As the world adapts to the implications of the coronavirus pandemic, many organizations face the challenge of laying the infrastructure that allows their employees to work remotely from home.
+For companies that are already using on-premise Windows Active Directory, Azure AD provides a flexible and accessible solution. But if done in haste and without careful planning, making the move can expose organizations to new threats.
+RECOMMENDED Coronavirus: How to work from home securely during a period of isolation
+“Obviously, migrating an organization’s entire identity management platform to the cloud in a short period of time means that configuration errors can occur,” Palhière says.
+“Since this component is very critical to the security of enterprises, moving it to the cloud, where it is potentially accessible to anyone from the Internet, necessarily exposes the company.”
+Mollema also underlines the possibility of human oversight and errors during short and unplanned transitions. For example, if a company decides to sync the whole on-premise directory to Azure AD due to time constraints, it may expose accounts with weak passwords.
+Mollema adds: “If you’re moving rapidly, chances are you’ve also not yet implemented a monitoring strategy to detect these kinds of compromises the way you would with for example your endpoint security.”
+“In general, the more Azure AD security options will be enabled, the better the overall security level will be,” Palhière says, adding that multi-factor authentication for all users and custom banned password lists are two of the most important configurations.
+“The two combined will definitely stop the vast majority of the attacks. A precise definition of Azure AD roles and their associated permissions is also a plus.”
+For organizations that have purchased premium Azure AD configurations, Mollema recommends setting up Conditional Access Policies.
+“Configure a few break-glass accounts with strong randomly generated passwords for emergency cases, and implement strict policies for all other accounts (especially those with admin roles),” he adds. “If you do this right, then that covers 90% of the attacks on Azure AD.”
+Mollema also warns that Azure AD is very permissive with what it allows regular users to create. By default, regular users can invite external users, create groups, create applications, and consent to third-party applications accessing company data.
+“This is something you will want to restrict to maintain a tighter control over your environment,” he says. “As with on-prem AD, apply the least-privilege principle to admin roles, giving only the access that people need.”
+READ MORE Cloud security: Azure environments at risk from on-prem privilege escalation attack
+
+
+Ben Dickson
+
+
+
+@bendee983 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

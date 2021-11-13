@@ -1,0 +1,35 @@
+Plans afoot to add a ‘report abuse’ button to the file-sharing service
+
+Mozilla has temporarily taken Firefox Send offline following reports that the encrypted file-transfer service is being widely used to distribute malware.
+The send.firefox.com domain currently displays the message: “Firefox Send is temporarily unavailable while we work on product improvements”.
+A Mozilla spokesperson told The Daily Swig that these improvements will include “an abuse reporting mechanism to augment the existing Feedback form, and we will require all users wishing to share content using Firefox Send to sign in with a Firefox Account”.
+They added: “We are carefully monitoring these developments and looking critically at any additional next steps.”
+Launched in March 2019, Firefox Send is designed for the secure transfer of files that are too big or sensitive to send via email or other insecure means.
+Security features include end-to-end encryption, the option to require a password, and the ability to configure files to expire after a specific period of time or number of downloads.
+However, cybercrooks are exploiting the service’s trusted status and security benefits to smuggle malware, such as the Ursnif banking trojan, past security defenses.
+Encrypted Firefox Send files can evade spam filters and malware detection applications. Once in the victim’s inbox, they give cybercriminals the cover of an ostensibly secure service.
+That the links expire also helps miscreants cover their tracks.
+Speaking on Twitter last month, Nick Carr, principal software engineer at Microsoft, surmised that the reason cybercrime group FIN7 “likes FireFox Send so much” is that “the default link expiration is one download or one day”, adding that “one-time links continue to pose unique engineering trade-offs for phishing security tech”.
+Last month, Amnesty International and Citizen Lab reported that a spyware campaign targeting Indian human rights activists also hosted malicious payloads on Firefox Send.
+Mozilla’s spokesperson said: “These reports are deeply concerning on multiple levels, and our organization is taking action to address them.”
+While some infosec experts have lamented the absence of a mechanism for reporting such abuse on the platform, others have warned that reporting abuse is “useless” when attackers send a unique file name to each target.
+Firefox Send is by no means unique in being used for nefarious purposes.
+For instance, The Daily Swig recently reported on the Indian government’s decision to ban rival file-transfer service WeTransfer, following reports that it was being used by cybercriminals to share content under the guise of the Delhi Police Commissioner and other government officials.
+Similarly, in July 2019, the Cofense Phishing Defense Center revealed that it had observed a campaign of phishing attacks that used WeTransfer to bypass email gateways.
+Asked if existing Firefox Send links would still work, Mozilla’s spokesperson said: “Unfortunately, these files have been securely wiped from our server. If you’ve shared a file from your computer or device, the files will still be available on those devices and have not been moved or altered in any way.”
+Mozilla was unable to say when the service might return.
+RELATED Cybercrime report: Malware slingers riding the crest of the coronavirus pandemic
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

@@ -1,0 +1,65 @@
+SIM swap attacks are complex, multi-stage crimes with potentially devastating consequences
+
+Law enforcement agencies have sounded the alarm over the rise of SIM swap scams – a complex, but lucrative form of account takeover fraud.
+The financial incentive to launch SIM swap attacks was vividly illustrated by the $18 million, five vehicles, and $900,000 home seized by the FBI from one culprit, as outlined in the agency’s 2019 Internet Crime Report (PDF).
+For the usually wealthy individuals who are targeted, losses can run to hundreds of thousands, or even millions, of dollars.
+SIM swap scams (also known as ‘SIM-jacking’) involve an attacker hijacking a victim’s mobile phone number by porting the number to a SIM card that’s under their control.
+Impersonating the victim, crooks answer security questions posed by mobile carriers using information obtained about their target – such as birthplace, date of birth, or mother’s maiden name.
+This information can be obtained from darknet marketplaces, or simply taken from the victim’s social media feeds.
+Since users are often authenticated with a one-time passcode sent to their phone number, criminals can then readily compromise email, social media, and other online accounts, and ultimately bank accounts or cryptocurrency wallets.
+SIM swap attackers will impersonate a victim in order to gain control of their mobile phone number 
+According to figures figures obtained by The Daily Swig from Action Fraud, the City of London Police fraud unit, total losses incurred by victims in the UK totalled nearly £2.2 million ($3 million) in 2019, up from around £436,000 ($530,000) in 2015.
+The number of reported incidents over that period leapt from 144 to 720, with victims losing an average of around £3,000 per SIM swap attack.
+However, in the first six months of 2020, total losses within the UK had reached £483,000 ($670,000), suggesting that a modest fall recorded between 2018 and 2019 was set to continue more sharply, according to Statista. 
+In March 2020, Europol issued a warning that the SIM-jacking threat was growing across Europe, revealing that an investigation had led to the arrest of 12 suspects linked to the theft of more than €3 million ($3.3 million).
+In 2021, cellphone carrier T-Mobile has been sued separately in relation to SIM swaps resulting in $55,000 worth of stolen bitcoin and, in a case where the plaintiff was defrauded by an attacker contacting him from the SIM swap victim’s phone, $450,000 in bitcoin.
+One cryptocurrency investor has sued a New York teenager over the alleged theft of $23.8 million in digital currency.
+However, SIM swapping remains a minority pursuit compared to more automated forms of account takeover fraud, such as credential stuffing attacks.
+Ben Fung, associate professor in the School of Information Studies at McGill University in Quebec, Canada, told The Daily Swig that he doesn’t believe it is a very common attack, as it requires “non-trivial effort” on the attacker’s part.
+“There are many other lower-hanging fruits out there,” he explained.
+Although it is “a time-consuming path to attack a large group of victims,” Fung said this technique can be worthwhile when targeting “specific high-value victims”.
+That ‘value’ can lie in the victim’s public profile, not just their bank account, as Twitter CEO Jack Dorsey discovered in 2019 after his personal Twitter account was hacked.
+Eight suspects were arrested in February 2021 by British law enforcement in relation to a series of sim-swap attacks targeting US celebrities that resulted in the theft of $100 million in cryptocurrencies.
+But you don’t have to be super-rich or uber-famous to be targeted – a substantial credit card limit will suffice.
+An investigation conducted by UK consumer champion Which? Magazine in 2020, for instance, detailed a case where criminals spent £13,000 ($14,000) on their victim’s credit card in 48 hours.
+You don’t have to be super-rich to be targeted by a SIM-swap attack
+This complex, multi-stage ruse begins by identifying a suitably cash- or credit-rich victim and their mobile number.
+Criminals then collect personal information from dark web data breach sales, victims’ social media feeds, or by duping them with social engineering tactics like phishing emails, texts, or phone calls.
+Attackers attempt to trick the victim's mobile carrier – over the phone, via webchat, or even in store – into transferring the victim’s phone number to their own SIM.
+If successful, they can use the victim’s mobile number as a form of two-factor authentication (2FA) to reset passwords and access their online accounts.
+Authentication settings on mobile and online accounts are seldom at their securest by default.
+Wealthy individuals in particular are therefore advised to introduce every additional security hurdle offered by their carrier and sensitive online accounts. 
+Kevin Lee points out that “some carriers” can, for instance, restrict “customer accounts such that changes can only be made in-store with a government-issued ID”.
+A 2018 BBC investigation found that UK phone shop staff frequently failed to authenticate supposedly legitimate SIM swaps with passports or driving licenses.
+Which? Magazine, meanwhile, managed to successfully transfer a SIM by giving only the phone model and final four digits of the account number.
+And a damning Princeton University study published in January 2020 found myriad flaws in the authentication procedures used by US mobile carriers.
+Researchers successfully transferred their putative victim’s phone number to a different SIM on 39 out of 50 calls made to five prepaid carriers.
+BACKGROUND Study highlights mobile carriers’ failure to prevent SIM swap attacks
+“We found insecure challenges being used for authentication, based on information that could be easily obtained,” Kevin Lee, one of the study’s researchers, told The Daily Swig.
+“We also observed careless behavior, from customer service representatives leaking information before authentication to CSRs forgetting to authenticate us.”
+The study has already prompted T-Mobile to discontinue “the use of call logs for customer authentication”, said Lee, a PhD student in the Department of Computer Science.
+The Daily Swig contacted several US telcos for comment. The only reply came from AT&T, which pointed us to a page on its website offering advice to customers and setting out its own efforts to combat the threat.
+Ben Fung of McGill University says requiring “customers to put a PIN on their accounts” is effective and easy to do, with “some Canadian telcos” already having done so.
+SIM swap attacks: Are mobile carriers doing enough to protect their customers?
+In an updated version of their paper (PDF), published in April 2020, the Princeton academics said they responsibly disclosed authentication vulnerabilities to 17 websites, but only four enhanced security to their satisfaction.
+“By refusing to make fixes for fear of inconveniencing customers (which we saw in one case), websites are pushing security decision making onto customers,” said Lee.
+He added: “It’s concerning that websites don’t realize that the issue lies in logical inconsistencies in their authentication policy.
+READ MORE 5G creates ‘SIM-jacking on steroids’ threat
+“By allowing for the same factor – SMS – to be used simultaneously for login and account recovery, they’re actually contradicting their security objectives by opening up accounts to takeover with a SIM swap.”
+Ben Fung said websites could bolster security by offering use of “an authentication app, instead of sending a code via SMS.” However, the relative rarity of attacks incentivizes the prioritization of convenience over security.
+“They won’t [change course] unless they have a financial loss due to court cases or damaged reputation,” added Fung.
+RECOMMENDED The latest government data breaches in 2019/2020
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

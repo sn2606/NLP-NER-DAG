@@ -1,0 +1,19 @@
+Aug 17 (Reuters) - A cybersecurity flaw in a software designed by BlackBerry Ltd (BB.TO) could put at risk cars and medical equipment that use it and expose highly sensitive systems to attackers, the U.S. drugs regulator and a federal agency said on Tuesday.
+The warning came after the Canadian company disclosed that its QNX Real Time Operating System (QNX RTOS) has a vulnerability that could allow an attacker to execute an arbitrary code or flood a server with traffic until it crashes or gets paralyzed.
+The software is used by automakers including Volkswagen (VOWG_p.DE), BMW (BMWG.DE) and Ford Motor (F.N) in many critical functions including the Advanced Driver Assistance System.
+The issue does not impact current or recent versions of the QNX RTOS, but rather versions dating from 2012 and earlier, BlackBerry said, adding that, at this time, no customers have indicated that they have been impacted.
+The U.S. Cybersecurity and Infrastructure Security Agency (CISA) said the software is used in a wide range of products and its compromise "could result in a malicious actor gaining control of highly sensitive systems, increasing risk to the Nation's critical functions", the CISA said.
+The federal agency that comes under the Department of Homeland Security and the company said they were not yet aware of any case of active exploitation of the flaw.
+The U.S. Food and Drug Administration said it was not aware of any adverse events even as medical equipment manufacturers assess which systems could be affected.
+The company also said it has notified potential customers that have been affected and has made software patches available to resolve the matter.
+BlackBerry had initially denied that the vulnerability, dubbed as BadAlloc, impacted its products and later resisted making a public announcement, Politico reported, citing two people familiar with talks between the company and federal cybersecurity officials, including a government employee.
+Our Standards: The Thomson Reuters Trust Principles.
+Subscribe for our daily curated newsletter to receive the latest exclusive Reuters coverage delivered to your inbox.
+Cryptocurrency exchange Binance said on Friday it would demand stricter background checks on customers to bolster efforts against money laundering, with immediate effect, a move that comes after weeks of pressure by regulators globally.
+Reuters, the news and media division of Thomson Reuters, is the world’s largest multimedia news provider, reaching billions of people worldwide every day. Reuters provides business, financial, national and international news to professionals via desktop terminals, the world's media organizations, industry events and directly to consumers.
+Build the strongest argument relying on authoritative content, attorney-editor expertise, and industry defining technology.
+The most comprehensive solution to manage all your complex and ever-expanding tax and compliance needs.
+The industry leader for online information for tax, accounting and finance professionals.
+Information, analytics and exclusive news on financial markets - delivered in an intuitive desktop and mobile interface.
+Access to real-time, reference, and non-real time data in the cloud to power your enterprise.
+Screen for heightened risk individual and entities globally to help uncover hidden risks in business relationships and human networks.

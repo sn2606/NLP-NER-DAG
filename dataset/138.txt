@@ -1,0 +1,62 @@
+The behavior of machine learning systems can be manipulated, with potentially devastating consequences
+
+In March 2019, security researchers at Tencent managed to trick a Tesla Model S into switching lanes.
+All they had to do was place a few inconspicuous stickers on the road. The technique exploited glitches in the machine learning (ML) algorithms that power Tesla’s Lane Detection technology in order to cause it to behave erratically.
+Machine learning has become an integral part of many of the applications we use every day – from the facial recognition lock on iPhones to Alexa’s voice recognition function and the spam filters in our emails.
+But the pervasiveness of machine learning – and its subset, deep learning – has also given rise to adversarial attacks, a breed of exploits that manipulate the behavior of algorithms by providing them with carefully crafted input data.
+“Adversarial attacks are manipulative actions that aim to undermine machine learning performance, cause model misbehavior, or acquire protected information,” Pin-Yu Chen, chief scientist, RPI-IBM AI research collaboration at IBM Research, told The Daily Swig.
+Adversarial machine learning was studied as early as 2004. But at the time, it was regarded as an interesting peculiarity rather than a security threat. However, the rise of deep learning and its integration into many applications in recent years has renewed interest in adversarial machine learning.
+There’s growing concern in the security community that adversarial vulnerabilities can be weaponized to attack AI-powered systems.
+As opposed to classic software, where developers manually write instructions and rules, machine learning algorithms develop their behavior through experience.
+For instance, to create a lane-detection system, the developer creates a machine learning algorithm and trains it by providing it with many labeled images of street lanes from different angles and under different lighting conditions.
+The machine learning model then tunes its parameters to capture the common patterns that occur in images that contain street lanes.
+With the right algorithm structure and enough training examples, the model will be able to detect lanes in new images and videos with remarkable accuracy.
+But despite their success in complex fields such as computer vision and voice recognition, machine learning algorithms are statistical inference engines: complex mathematical functions that transform inputs to outputs.
+If a machine learning tags an image as containing a specific object, it has found the pixel values in that image to be statistically similar to other images of the object it has processed during training.
+Adversarial attacks exploit this characteristic to confound machine learning algorithms by manipulating their input data. For instance, by adding tiny and inconspicuous patches of pixels to an image, a malicious actor can cause the machine learning algorithm to classify it as something it is not.
+Adversarial attacks confound machine learning algorithms by manipulating their input data
+The types of perturbations applied in adversarial attacks depend on the target data type and desired effect. “The threat model needs to be customized for different data modality to be reasonably adversarial,” says Chen.
+“For instance, for images and audios, it makes sense to consider small data perturbation as a threat model because it will not be easily perceived by a human but may make the target model to misbehave, causing inconsistency between human and machine.
+“However, for some data types such as text, ‘perturbation’, by simply changing a word or a character, may disrupt the semantics and easily be detected by humans. Therefore, the threat model for text should be naturally different from image or audio.”
+The most widely studied area of adversarial machine learning involves algorithms that process visual data. The lane-changing trick mentioned at the beginning of this article is an example of a visual adversarial attack.
+In 2018, a group of researchers showed that by adding stickers to a stop sign (PDF), they could fool the computer vision system of a self-driving car to mistake it for a speed limit sign.
+Researchers tricked self-driving systems into identifying a stop sign as a speed limit sign
+In another case, researchers at Carnegie Mellon University managed to fool facial recognition systems into mistaking them for celebrities by using specially crafted glasses.
+Adversarial attacks against facial recognition systems have found their first real use in protests, where demonstrators use stickers and makeup to fool surveillance cameras powered by machine learning algorithms.
+Computer vision systems are not the only targets of adversarial attacks. In 2018, researchers showed that automated speech recognition (ASR) systems could also be targeted with adversarial attacks (PDF). ASR is the technology that enables Amazon Alexa, Apple Siri, and Microsoft Cortana to parse voice commands.
+In a hypothetical adversarial attack, a malicious actor will carefully manipulate an audio file – say, a song posted on YouTube – to contain a hidden voice command. A human listener wouldn’t notice the change, but to a machine learning algorithm looking for patterns in sound waves it would be clearly audible and actionable. For example, audio adversarial attacks could be used to secretly send commands to smart speakers.
+
+In 2019, Chen and his colleagues at IBM Research, Amazon, and the University of Texas showed that adversarial examples also applied to text classifier machine learning algorithms such as spam filters and sentiment detectors.
+Dubbed ‘paraphrasing attacks’, text-based adversarial attacks involve making changes to sequences of words in a piece of text to cause a misclassification error in the machine learning algorithm.
+Example of a paraphrasing attack against fake news detectors and spam filters
+Like any cyber-attack, the success of adversarial attacks depends on how much information an attacker has on the targeted machine learning model. In this respect, adversarial attacks are divided into black-box and white-box attacks.
+“Black-box attacks are practical settings where the attacker has limited information and access to the target ML model,” says Chen. “The attacker’s capability is the same as a regular user and can only perform attacks given the allowed functions. The attacker also has no knowledge about the model and data used behind the service.”
+Read more AI and machine learning security news
+For instance, to target a publicly available API such as Amazon Rekognition, an attacker must probe the system by repeatedly providing it with various inputs and evaluating its response until an adversarial vulnerability is discovered.
+“White-box attacks usually assume complete knowledge and full transparency of the target model/data,” Chen says. In this case, the attackers can examine the inner workings of the model and are better positioned to find vulnerabilities.
+“Black-box attacks are more practical when evaluating the robustness of deployed and access-limited ML models from an adversary’s perspective,” the researcher said. “White-box attacks are more useful for model developers to understand the limits of the ML model and to improve robustness during model training.”
+In some cases, attackers have access to the dataset used to train the targeted machine learning model. In such circumstances, the attackers can perform ‘data poisoning’, where they intentionally inject adversarial vulnerabilities into the model during training.
+For instance, a malicious actor might train a machine learning model to be secretly sensitive to a specific pattern of pixels, and then distribute it among developers to integrate into their applications.
+Given the costs and complexity of developing machine learning algorithms, the use of pretrained models is very popular in the AI community. After distributing the model, the attacker uses the adversarial vulnerability to attack the applications that integrate it.
+“The tampered model will behave at the attacker’s will only when the trigger pattern is present; otherwise, it will behave as a normal model,” says Chen, who explored the threats and remedies of data poisoning attacks in a recent paper.
+In the above examples, the attacker has inserted a white box as an adversarial trigger in the training examples of a deep learning model
+This kind of adversarial exploit is also known as a backdoor attack or trojan AI and has drawn the attention of Intelligence Advanced Research Projects (IARPA).
+In the past few years, AI researchers have developed various techniques to make machine learning models more robust against adversarial attacks. The best-known defense method is ‘adversarial training’, in which a developer patches vulnerabilities by training the machine learning model on adversarial examples.
+Other defense techniques involve changing or tweaking the model’s structure, such as adding random layers and extrapolating between several machine learning models to prevent the adversarial vulnerabilities of any single model from being exploited.
+“I see adversarial attacks as a clever way to do ‘pressure testing’ and ‘debugging’ on ML models that are considered ‘mature’, before they are actually being deployed in the field,” says Chen.
+“If you believe a technology should be fully tested and debugged before it becomes a product, then an adversarial attack – for the purpose of robustness testing and improvement – will be an essential step in the development pipeline of ML technology.”
+RECOMMENDED Going deep: How advances in machine learning can improve DDoS attack detection
+
+
+Ben Dickson
+
+
+
+@bendee983 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

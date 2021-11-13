@@ -1,0 +1,27 @@
+Meal-preppers warned to watch out for phishing attacks
+
+Home Chef has revealed details of a data breach after the personal information of eight million of its customers apparently turned up in a darknet marketplace.
+In a security alert published yesterday (May 20), the US meal delivery service said stolen information included email addresses, names and phone numbers, encrypted passwords, and the final four digits of credit card numbers.
+“Other account information such as frequency of deliveries and mailing address may also have been compromised,” the company said.
+“We are taking action to investigate this situation and to strengthen our information security defenses to prevent similar incidents from happening in the future.”
+Read more of the latest data breach news
+It has been widely reported that Home Chef customer records were among a trove of data that was pilfered from 11 companies and recently discovered for sale on the dark web.
+The Chicago-based company said that not all customers were affected by the incident, and that it was notifying impacted customers via email.
+Customers have been advised to update passwords, “remain vigilant against phishing attacks and monitor your accounts for any suspicious activity”.
+Home Chef says it delivered more than 10 million meals across the US last year – figures likely to be eclipsed in 2020 with stay-at-home orders in place across much of the country for several weeks due to Covid-19.
+The cybercrime group believed to be behind the breach, Shiny Hunters, has also been linked to the theft of millions of user records from Indian education platform Unacademy and 500 GB of data from software development platform GitHub.
+INSIGHT Web application attacks rise to account for almost half of all data breaches
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

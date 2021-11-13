@@ -1,0 +1,31 @@
+Organizations offered detection, mitigation, and remediation advice for dozens of TTPs
+
+The Australian Cyber Security Centre (ACSC) has issued advice on cyber-attack methods being widely deployed by cybercriminals and state-sponsored advanced persistent threat (APT) groups.
+Based on ACSC investigations into cyber-attacks against Australian organizations in 2019 and 2020, the advisory outlines the various ways attackers are gaining access to vulnerable systems, exfiltrating data, and executing malicious commands, among other nefarious goals.
+It also offers information security professionals – in both the public and private sector – links to detection, mitigation, and remediation guidance related to the cyber-attack tactics, techniques, and procedures (TTPs) from the Mitre ATT&CK framework.
+Published last week, the exhaustive roll call of 47 TTPs spans 12 categories, including execution, persistence, defense evasion, credential access, discovery, lateral movement, collection, exfiltration, and impact.
+To give one example, the initial access category features drive-by compromise attacks (T1189), in which users have downloaded Microsoft Access database files with a malicious payload that, once opened, allows persistent access to the compromised system.
+Database files with the extension .accde appended to a legitimate file extension such as .pdf, .doc and .docx are the telltale artefacts of an infected workstation, the advisory warns.
+RELATED Security software discovery tops latest Mitre ATT&CK threat list
+The ACSC has also observed the RottenPotato exploit being leveraged to achieve exploitation for privilege escalation (T1068), in order to gain system level privileges on vulnerable systems.
+Network owners are urged to implement a single rule, covering three indicators of compromise, into their host-based monitoring watch lists.
+Standard Application Layer Protocol (T1071), the sole command and control TTP in the list, features web shell tasking and Outlook.com mailbox tasking.
+ACSC advises network owners to analyze networks for unusual processes communicating with legitimate Microsoft Outlook and Office365 domains, such as PowerShell and Microsoft Access processes.
+The ACSC urges organizations to implement ASD’s Essential Eight – eight baseline mitigation strategies with a track record of “substantially [reducing] the risk of compromise by the adversary TTPs identified in this advisory”.
+The advisory also encourages infosec professionals to review their environments for the presence of the exploited vulnerabilities and provided TTPs.
+It adds: “Network owners who discover evidence of the TTPs from this advisory on their systems should contact the ACSC via email at asd.assist@defence.gov.au to report their findings and for further advice.”
+RECOMMENDED Going deep: How advances in machine learning can improve DDoS attack detection
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

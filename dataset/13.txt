@@ -1,0 +1,47 @@
+
+
+                As ransomware cases surge, the cyber criminals almost almost always demand, and receive, payment in cryptocurrencies like Bitcoin. The world's largest meat supplier, JBS, announced Wednesday that it paid $11 million in Bitcoin to hackers in a recent ransomware attack.
+                
+                
+              
+
+As ransomware cases surge, the cyber criminals almost almost always demand, and receive, payment in cryptocurrencies like Bitcoin. The world's largest meat supplier, JBS, announced Wednesday that it paid $11 million in Bitcoin to hackers in a recent ransomware attack.
+The problem has long plagued bank robbers and drug smugglers: how to transport and hide huge sums of ill-gotten gains without getting caught? In the past few years, ransomware hackers have found an almost perfect solution — cryptocurrencies like Bitcoin. It's fast. It's easy. Best of all, it's largely anonymous and hard to trace.
+In the latest example, the world's largest meat processor, JBS, announced Wednesday night that it recently paid $11 million in Bitcoin after a cyber attack forced the shutdown of its plants in the U.S., Canada and Australia. The FBI has blamed the attack on a Russian criminal gang.
+"You now have a possibility to move millions of dollars worth of cryptocurrency across national boundaries in seconds," said Yonatan Striem-Amit, a co-founder of Cybereason, a Boston-based company that offers protection from hackers. "It really is a very powerful tool in the hands of criminals to perform money laundering, to shift currency from one state to another in a way that's in a sense untraceable and definitely uncontrollable."
+Until recently, many cyber crimes involved the small-scale theft of individual credit cards or bank accounts.
+"If we were talking two years ago, we would not be talking about Bitcoin as being the dominant form of paying off ransom," said Hitesh Sheth, president of the cybersecurity company Vectra in San Jose, Calif.
+Big payments, little risk
+Bitcoin and other cryptocurrencies made it possible to extort huge ransoms from large companies, hospitals and city governments. And if the cyber thieves live in countries like Russia — which many do — there's virtually no chance of getting caught.
+Ironically, cryptocurrency exchanges take place on what are called "public ledgers."
+This means anybody can observe online. But the parties in a transaction are anonymous, disguised with a random number.
+"You see exactly the way the money moves from one address, and one wallet, to another," said Striem-Amit of Cybereason. "However, there is no way for us to associate a person with these wallets. And a lot of people have not just one address, one wallet, but have dozens, hundreds."
+So hackers can keep moving the currency from one anonymous account to another. That makes it very difficult — though not impossible — to trace.
+Consider the case of Colonial Pipeline, which was hacked last month, leading to the shutdown of gasoline supplies in the eastern U.S. for the better part of a week.
+The Justice Department said this week that the FBI recovered more than half the $4.4 million in ransom that Colonial paid to the hackers, who are known as DarkSide and believed to be based in Russia.
+
+                Deputy U.S. Attorney General Lisa Monaco, speaking on June 7, announces that the FBI has recovered most of the $4.4 million ransom that Colonial Pipeline paid to ransomware attackers last month. The attackers are believed to be based in Russia.
+                
+                
+                    
+
+Deputy U.S. Attorney General Lisa Monaco, speaking on June 7, announces that the FBI has recovered most of the $4.4 million ransom that Colonial Pipeline paid to ransomware attackers last month. The attackers are believed to be based in Russia.
+This case marked a big breakthrough. The Justice Department said this was the first time that a task force devoted to ransomware has been able to claw back some of the money.
+An exception
+Still, this is unlikely to become the norm any time soon. The FBI poured resources into the Colonial case because it was a high-profile attack that shut down a pipeline critical to the nation's economy.
+The FBI won't be able to devote so many resources to every ransomware attack. And the cases are tough to solve.
+According to court documents, the FBI worked its way through a maze of more than 20 cryptocurrency accounts to find the hackers. When it did locate the account, the bureau then sought a U.S. court order to seize the funds.
+But then comes the real mystery. Even when the FBI located the computer, and had the court order, the bureau still needed the secret encryption key to unlock the account and capture the Bitcoin.
+The FBI hasn't said how it did this, and this has prompted widespread speculation and a range of possible scenarios in the cybersecurity community.
+The FBI discourages ransom payments, and some companies do refuse to pay. But the decision is up to the company or institution that has been hit, and many feel it's better to pay and resume operations rather than risk a protracted shutdown.
+Meanwhile, private companies are realizing they need to focus more on the threat of ransomware.
+"For the boards of directors of large companies, cybersecurity the last couple years has become a hot topic," said Hitesh Sheth of Vectra. "It's not just cybersecurity, like, 'Hey, how do I stop attacks?' It's really gone down to, 'What is our ransomware strategy.' It's become very specific."
+Ransom insurance
+The ransom demands, and the payments, have skyrocketed.
+"We have now seen, with our clients, ransoms paid in excess of 10 million dollars, with demands as high as 40, 50 and 60 million dollars," said Oren Wortman, who handles cyber issues for the insurance brokerage firm Beecher Carlson.
+Some insurance companies are no longer covering ransomware, or are imposing a range of restrictions, he added.
+"There are insurers out there who are blanket not writing any new business," he noted. "There are insurers who are dropping business. And there are insurers who are completely excluding health care, public sector and higher education," all of which are frequent targets.
+Amid all these developments, the Biden administration and some members of Congress are starting to talk about regulating cryptocurrencies. But so far, it's just talk.
+Greg Myre is an NPR national security correspondent. Follow him @gregmyre1.
+NPR thanks our sponsors
+Become an NPR sponsor

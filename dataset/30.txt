@@ -1,0 +1,38 @@
+Researchers detail novel way of increasing cyber-attack surface
+
+A new type of distributed denial-of-service (DDoS) attack could allow nation-state actors to censor internet access and target any website by abusing middleboxes.
+A team from the University of Maryland and the University of Colorado Boulder used an artificial intelligence algorithm to reveal the technique, which is, they say, the first TCP-based DDoS amplification attack of its kind.
+In the past, reflective amplification attacks have largely been restricted to User Datagram Protocol (UDP) based protocols.
+However, says the team, taking advantage of widespread TCP-non-compliance in network middleboxes can cause them to respond and amplify network traffic – potentially generating massive amplification.
+
+Read more of the latest infosec research and news
+“Some of the largest, most threatening amplification factors in the past have been in the order of 500 times, with one recent amplification attack in the 10,000 times range,” says Dave Levin, an assistant professor of computer science at UMD.
+“We’ve discovered amplification attacks that offer 100,000-plus, one million-plus, and even technically infinite amplification.”
+Most nation-state censorship infrastructure can currently be exploited in this way, along with many off-the-shelf commercial firewalls.
+“Some nation states have long been known to censor their own citizens online. What this paper – and another concurrent paper of ours – shows is that nation-state censors pose an even greater threat to the internet as a whole,” says Levin.
+“Attackers can use the censorship infrastructure – usually many firewalls deployed at their borders – to launch denial-of-service attacks on anyone on the internet.”
+
+
+Defending against these attacks will be difficult, says the team. Since middleboxes are spoofing the IP address of the traffic they generate, the attacker can set the source IP address of the reflected traffic to be any IP address behind the middlebox.
+In the case of nation-state censorship infrastructure, this could be any IP address within that country, making it difficult for a victim to drop traffic from offending IP addresses during an attack.
+
+
+Last September, the researchers privately shared their findings with a number of national computer emergency readiness teams (CERTs), DDoS mitigation services, and firewall manufacturers.
+However, they say, fixing the problem would not only mean every vulnerable firewall manufacturer updating its middleboxes, but would also require nations to weaken their censorship infrastructure – a highly unlikely scenario.
+The team has released a series of scripts and tools for network administrators to test their middleboxes via a GitHub repository.
+The Daily Swig has reached out to the research team for further comment and will update this article accordingly.
+YOU MAY ALSO LIKE Research: Hundreds of high-traffic web domains vulnerable to same-site attacks
+
+
+Emma Woollacott
+
+
+
+@EmmaWoollacott 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

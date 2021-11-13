@@ -1,0 +1,32 @@
+Plans to form a cross-border rapid response security team are stepped up
+
+The European Union plans to stand up a new cyber unit in response to threat posed by the rising tide of cyber-attacks.
+The Joint Cyber Unit will allow countries to request assistance from each other and the EU, including the possibility of calling in help from rapid response teams, according to draft plans for proposals submitted by the European Commission today (June 23).
+The Commission said it would like to see the Joint Cyber Unit operational by June 2022 and fully established by June 2023.
+In response to queries from The Daily Swig, the EU Agency for Cybersecurity (ENISA) said it welcomed the plans.
+ENISA will serve as secretariat for the preparatory phase of the Joint Cyber Unit, which will be tasked in coordinating incident response, creating situational awareness and ensuring preparedness in times of crisis. Information sharing and operational cooperation agreements with private sector entities will be part of what the recommendation foresees for the Joint Cyber Unit.
+National security is a reserved item normally handled by the governments of member countries.
+Plans to create a Joint Cyber Unit were first put forward in 2019, but the recent spate of supply chain attacks such as the SolarWinds compromise and the increased severity of ransomware assaults – most recently the Colonial Pipeline attack that hampered the transportation of oil products across the US for days – have sparked the increased urgency.
+These factors have perhaps served to overcome reservations about delegating powers to a pan-European body in such a sensitive area.
+The EU’s Commission’s plan – which act as recommendations for national government – call for the establishment of a platform to share information and resources that would draw in help from private sector cybersecurity firms.
+Read more of the latest security news from across Europe
+Early industry reaction has largely been positive.
+Raghu Nandakumara, field CTO at cybersecurity vendor Illumio, welcomed the plans.
+Nandakumara commented: “It’s a logical progression from the 2016 NIS Directive which required individual member states to be appropriately equipped, facilitated strategic cooperation and information exchange, and imbibed a culture of security in sectors critical to the economy and security.”
+Andrey Yakovlev, a security researcher at threat intel firm IntSights, said that since cybercrime is typically a multi-state operation, it makes sense to have international agencies cooperate to address it. He did, however, caution against setting expectations too high.
+“This initiative might deter some cybercriminals, but it likely won’t make much of a dent overall,” according to Yakovlev. “We might see more news about European criminals getting arrested, we may hear more news about successful dismantlers of cybercrime infrastructure.”
+DON’T FORGET TO READ European Commission to hold ‘hackathon’ in bid to secure data sharing across EU
+
+
+John Leyden
+
+
+
+@jleyden 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

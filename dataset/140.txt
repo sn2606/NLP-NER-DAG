@@ -1,0 +1,60 @@
+Computer crime law is ‘hopelessly outdated and legally ambiguous’, critics warn
+
+ANALYSIS The UK’s principal computer hacking law marks its 30th anniversary today (June 29), amid industry calls for a radical revamp.
+The Computer Misuse Act (CMA) 1990 dates back to a time before widespread use of the internet outside of academia. And even though it has been amended twice in attempts to keep pace with change, the act is more than starting to show its age.
+A recent report by the Criminal Law Reform Now Network, put together by practitioners and academics, highlights shortcomings in the CMA and suggests possible reforms.
+Peter Sommer, a cybersecurity and digital evidence specialist, expert witness and academic, co-authored the report.
+“The main problem is not with the wording of the act but the difficulty of assembling reliable evidence, particularly in cases with an overseas element,” Sommer told The Daily Swig.
+“The Computer Misuse Act continues to work well for law enforcement purposes and now includes ‘data interference’ as an offence.”
+The main bone of contention is that the CMA seriously inhibits the work of cyber threat analysts. “The problem is the very tight definition of ‘authorisation’ and who can give it,” Sommer explained.
+“There are exceptions for the police and the intelligence agencies via section 10 of CMA and Part 5 of the Investigatory Powers Act 2016. But private sector investigators are constrained in how far they can examine computers which they believe may be the source of an attack, or the source of tools to enable an attack,” he added.
+This academic research was followed up by a campaign from industry group CyberUp, arguing that the UK’s computer hacking law is “hopelessly outdated and legally ambiguous”.
+The legal regime established by the CMA creates barriers for the UK’s cybersecurity industry, making it legally perilous to conduct threat intelligence research against cybercriminals and geo-political threat actors without fear of prosecution, according to CyberUp.
+As an unintended consequence, these laws – which are intended to criminalize banking trojans, ransomware, and denial-of-service attacks – leave the UK’s critical national infrastructure at an increased risk.
+The CyberUp Campaign is supported by a coalition of industry partners, policy makers, and academics. Technology firms backing the initiation include NCC Group, Digital Shadows, and F-Secure.
+Ollie Whitehouse, chief technology officer at NCC Group, told The Daily Swig: “It is clear that the CMA is, on one hand, successful in causing paralysis in the UK’s domestic cyber threat intelligence industry for fear of prosecution, whilst also being ineffective in its original intent in deterring and bringing to justice those who commit computer crimes for criminal purposes.”
+BACKGROUND The UK’s Computer Misuse Act is ‘crying out for reform’
+Ed Parsons, managing director at F-Secure Consulting, said that the CMA “fails to provide adequate defences for cybersecurity researchers and therefore increases the risk of conviction”.
+“Reforming the CMA to include adequate defences is an important step to legitimise cyber security research, attract more talent to the discipline and address this generational skills shortage,” he told The Daily Swig.
+Reformers want to see a new public interest defense aimed at cyber threat intelligence professionals, academics, and journalists as well as the creation of new sentencing guidelines and other changes.
+The UK Computer Misuse Act is in need of an overhaul, some industry experts have claimed
+A Freedom of Information request filed by The Daily Swig last year revealed that there were 169 convictions under the CMA between 2010 and 2015.
+The issue of security professionals potentially falling foul of the law for doing their jobs extends beyond the UK’s borders.
+Tony Cole, CTO of Attivo Networks, explained that penetration testers face challenges when doing work in different jurisdictions, in large part because law enforcement and the courts still don’t have clear laws or court rulings on what is and isn’t legal.
+“We need guidelines,” Cole said. “In the US recently, a red team was arrested for breaking into a court, while under contract with the state of Iowa to do exactly that.
+“If we are to take advantage of the great skillsets available to find and identify exploitable vulnerabilities, we must change the laws to keep up with new capabilities in our connected world,” he concluded.
+The UK’s computer crime law was introduced in 1990, partly in response to the outcome of R v Gold & Schifreen, a case that followed an infamous hack of British telco BT’s view-data Prestel system.
+Robert Schifreen was one of a group of well-known ethical computer enthusiasts who tried to push security improvements by revealed the Prestel system was insecure, memorably demonstrating this problem by gaining access to the personal message box of Prince Phillip.
+These hijinks embarrassed BT and resulted in a criminal prosecution.
+Schifreen, along with fellow techie Steve Gold, was prosecuted under laws covering forgery in a long-running case that eventually resulted in their acquittal.
+RECOMMENDED SwigCast, Episode 3: CYBERCRIME
+Both were initially convicted and fined, but later acquitted on appeal when senior judges ruled that counterfeiting laws were misapplied in the case.
+The two hackers unwittingly became key players in the creation of the UK’s computer crime law.
+Schifreen told The Daily Swig that the CMA had stood the test of time “pretty well”, arguing that the law continued to act as a useful deterrent.
+“I don’t see daily reports of criminals getting away with it because of inadequacies in the CMA,” he said.
+“We do, of course, see plenty of reports of police being unable to deal with crime because they’re understaffed and underfunded.
+“There are calls to reform the CMA, of course, although I think that the campaign is being done more as an academic exercise (‘what old law shall we campaign for reform of this term?’) [rather] than for any reason of actual problems with it.”
+Schifreen acknowledged the point made by advocates of CMA reform that a network engineer is technically committing an offense if they possess things like password crackers, or do a pen test but argued that the legal risk from such activities is low.
+Efforts at reform in the are would be better directed at the under-performing Action Fraud rather than the CMA, according to Schifreen.
+“I’ve rarely come across a more pointless organisation,” Schifreen, who said he spoke from personal experience, explained. “Their sole aim seems to be to accept all incoming reports of fraud and computer crime and file them in a big bucket.”
+Alistair Kelman, Gold’s barrister throughout the case and Schifreen’s representative during the appeal at the House of Lords in 1987, is more in favor of the need to reform the CMA than his former client.
+“It likely needs a complete revision,” Kelman told The Daily Swig.
+Almost everything from a washing machine to a modern car relies heavily on computers.
+The CMA fails to recognize the move to Internet of Things devices and, as a result, may be criminalizing a lot of activity, according to Kelman, who added that the Post Office sub-masters scandal illustrated the problem of placing blind faith in the operation of computers.
+Both these examples illustrate the need to revise the existing law.
+Kelman, CEO of SafeCast, a harmful content self-labelling firm, as well as a lawyer, concluded: “There’s an opportunity to narrow its scope and put in better controls.”
+YOU MIGHT ALSO LIKE Declassified: GCHQ celebrates 100 years of secrets well kept
+
+
+John Leyden
+
+
+
+@jleyden 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

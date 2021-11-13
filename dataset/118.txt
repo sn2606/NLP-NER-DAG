@@ -1,0 +1,39 @@
+Covid-19 was expected to cause a spike in DDoS attacks, but the sheer volume has caught researchers by surprise
+
+UPDATED Distributed Denial-of-Service (DDoS) attacks are on the rise, with a particularly sharp increase of assaults against the websites of medical organizations, delivery services, gaming, and educational platforms.
+According to Kaspersky’s Q1 2020 DDoS attacks report, released last week, during the first three months of this year there has been a “significant increase in both the quantity and quality of DDoS attacks”.
+Rates have doubled in comparison to the final quarter of 2019, and surged by 80% year over year. The average duration of a DDoS attack has also increased by 25%.
+“The first quarter of every year sees a certain spike in DDoS activity, but we did not expect this kind of surge,” Kaspersky commented.
+The report suggests that the rate of so-called ‘smart’ DDoS attacks – meaning they’re launched by skilled threat actors – remains largely unchanged year-on-year, however, pegged at roughly 42% of all attacks.
+The focus of DDoS attacks has pivoted. According to Kaspersky, growth is primarily driven by a rise in attacks against educational websites and administrative domains, including city services.
+DDoS attacks against these targets accounted for 19% of all attacks in the first quarter of 2020 – tripling year on year.
+Attackers, it seems, are increasingly targeting online resources – such as online learning platforms, Covid-19 guidance sources, and home-working tools – that locked-down citizens have become reliant on during the pandemic.
+Read more of the latest coronavirus security news
+In February and March, for example, severe DDoS attacks were launched against the US Department of Health and Human Services, as well as a number of Parisian hospitals.
+Kaspersky says that over the past quarter, there has also been a noticeable shift in the types of DDoS attacks deployed. SYN flooding remains the most popular method at 92.6% of all attacks, but ICMP flooding has now jumped to second place from being the least common method, with a rate of 3.6%, now followed by UDP, TCP, and HTTP flooding.
+Windows botnets, too, have marginally increased in frequency.
+While the vast majority of DDoS attacks – 94.36% – are Linux-based, Windows now accounts for 5.64% of attacks, an increase from 2.6% in the previous quarter.
+The report also noted an uptick of bots hosted in Brazil. While most command-and-control servers used to control DDoS botnets are still registered in the US, 12.5% of unique IP addresses used to facilitate attacks are now in Brazil, which has snagged the top spot from China.
+China is now in second place with 11.51% of overall IP registrations, followed by Egypt.
+“Widespread adoption of remote working opens new vectors for those responsible for carrying out DDoS attacks,” commented Alexey Kiselev, business development manager on Kaspersky’s DDoS protection team.
+“Outage of internet services can be especially challenging for businesses now, because this is often the only way to make goods and services available to their customers.”
+Offering his thoughts on the DDoS attack landscape for the remainder of 2020, David Jacoby, senior security researcher at Kaspersky’s Global Research and Analysis Team, told The Daily Swig: “It’s always very difficult to predict the future. It’s better to work on the facts and what we know.
+“Looking at history, we can see that cybercriminals tend to use real-world events to trigger attacks. We have seen it very widely with phishing campaigns; on holidays such as Easter or Christmas or on social events like Black Friday, Eurovision, [or] elections, cybercriminals often attempt to trick users into clicking on malicious links.
+“But we also see DDoS attacks being related to ‘unhappiness’, for example; political triggers, hate crime, elections, or even following the recent coronavirus outbreak. Whilst it’s difficult to predict the future, if there are more events of these nature, we may see people abusively ‘demonstrate’ on the internet in various ways, such as leveraging DDoS attacks.”
+In related news, in April, Dutch police shut down 15 DDoS-for-hire platforms and arrested a 19-year-old on suspicion of launching DDoS attacks against MijnOverheid.nl and Overheid.nl, two government domains.
+This article has been updated to include comment from David Jacoby.
+RELATED EU calls for ceasefire on cyber-attacks exploiting coronavirus pandemic
+
+
+Charlie Osborne
+
+
+
+@SecurityCharlie 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

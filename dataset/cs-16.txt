@@ -1,0 +1,44 @@
+ybercriminals have developed a blockchain analytics tool on the darknet that could help a gang launder illegally obtained bitcoin, and they are actively marketing it, according to the cryptocurrency analytics firm Elliptic.
+
+See Also: Live Webinar | Password Management: Securing Hybrid Work for the Long Haul
+
+"A blockchain analytics tool has been launched on the dark web, allowing bitcoin addresses to be checked for links to criminal activity. Known as Antinalysis, it allows crypto launderers to test whether their funds will be identified as proceeds of crime by regulated exchanges," says Tom Robinson, co-founder and chief scientist with Elliptic.
+
+Robinson says cybercriminals have co-opted a process used by cryptocurrency exchanges to check customer deposits for any links to illegal activity.
+
+"By tracing a transaction back through the blockchain, these tools can identify whether the funds originated from a wallet associated with ransomware or any other criminal activity," he says. "The launderer therefore risks being identified as a criminal and being reported to law enforcement whenever they send funds to a business using such a tool."
+
+While the process used by Antinalysis mirrors that used by legitimate tools, Robinson says the results are not favorable.
+
+"Elliptic's own evaluation of the results returned for a range of bitcoin addresses shows that it was poor at detecting links to major darknet markets and other criminal entities," he says.
+
+Antinalysis
+The tool was created, Robinson says, by one of the same developers behind Incognito Market, a darknet marketplace specializing in the sale of narcotics. Incognito was launched in late 2020, and the marketplace accepts payments in both bitcoin and monero.
+
+"The launch of Antinalysis likely reflects the difficulties faced by the market and its vendors in cashing out their bitcoin proceeds," he says.
+
+Elliptic's research found that a cybercriminal can use the Antinalysis tool, which is similar to those wielded by Elliptic to track criminal proceeds, to essentially see what the authorities would see in a blockchain transaction, the company says.
+
+"Antinalysis seeks to help crypto launderers … by giving them a preview of what a blockchain analytics tool will make of their bitcoin wallet and the funds it contains," Robinson says. "The site runs on Tor, an anonymous version of the web commonly used to host darknet markets and other illicit services."
+
+The Business Model
+It costs $3 to use the Antinalysis tool to check a single bitcoin address. For this fee, the user receives a color-coded breakdown of where the software believes the bitcoins originated and the risk associated with the transaction.
+
+
+The Antinalysis mission statement: “Offering a perspective from the opponent’s point of view.” (Source: Elliptic)
+To prove the value of its tool to potential customers, the Antinalysis team compares the results it generates to those from similar, commercially available tools. Robinson says this comparison proves Antinalysis is not good at its task.
+
+"This is perhaps not surprising: Providing accurate blockchain analytics requires significant investment in technology and data collection over long periods of time," he says.
+
+But Robinson notes that Antinalysis does represent a leap forward for criminals, enabling them, at least on some level, to test their laundering methods before taking the risk of depositing at an exchange or other service provider.
+
+"It is also significant because it makes blockchain analytics available to the public for the first time," Robinson says.
+
+Blockchain analytics technology and capability had been limited to use by regulated financial service providers. Now, however, individuals or companies concerned about receiving proceeds that may have been the result of a crime potentially have the ability to prescreen addresses before taking payment in bitcoin, Robinson says.
+
+Laundering Ill-Gotten Gains
+A cyber gang's need to launder cryptocurrency was highlighted this week when hackers ended up returning $600 million they had stolen from the cryptocurrency platform Poly Network (see: Poly Network Says $600 Million in Cryptocurrency Stolen.)
+
+Poly Network called on fellow crypto exchanges to blacklist tokens coming from the hacker's addresses and asked the attackers to return the money.
+
+In one of the oddest turnarounds in crypto theft to date, the hackers on Wednesday began returning the stolen currency. Robinson attributes that to their inability to launder and cash out such a large sum of cryptocurrency.

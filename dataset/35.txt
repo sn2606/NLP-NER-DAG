@@ -1,0 +1,37 @@
+High-profile IT companies such as Accenture, which recently experienced a LockBit ransomware attack, could do a lot to help others in the industry by disclosing the details of an attack upfront, according to solution providers. 
+
+The lack of public disclosure from Accenture about the recent ransomware attack on its systems has been a missed opportunity by an IT heavyweight to help others in the industry become better informed about the ransomware threat, solution providers told CRN.
+“They’re trying to limit the brand tarnishing to themselves. But I just feel like it sets a bad example in this day and age,” said Dave Mahoney, cybersecurity practice lead and enterprise services architect at Blue Bell, Pa.-based Anexinet, No. 213 on CRN’s Solution Provider 500 for 2021. “I wish they would’ve said, ‘We’re going to be open and honest and candid, so that we can all shut down digital extortion as a thing in this world.’”
+
+[Related: Accenture Issued Ransomware Warning After LockBit Attack]
+
+Accenture did not initially disclose the ransomware attack itself, but only confirmed the breach on Aug. 11 after a CNBC reporter tweeted about the incident. 
+According to a report from cybersecurity news site CyberScoop, the IT consultancy giant had spotted the LockBit ransomware attack on its systems as far back as July 30.
+In a statement on Aug. 11, Accenture  said that after identifying “irregular activity” in one of its environments, the company “immediately contained the matter and isolated the affected servers.” 
+Accenture said it then “fully restored” affected servers from backups. “There was no impact on Accenture’s operations, or on our clients’ systems,” the company said in its statement.
+Accenture has not said when it originally learned of the ransomware attack, and has  declined to provide further details or comments on the incident beyond its Aug. 11 statement.
+If Accenture did in fact know about the ransomware attack for nearly two weeks without disclosing it, “I think it’s a shame that they didn’t self-attest to what happened,” said Mahoney, whose career previously included a half decade spent at another IT consultancy giant, Deloitte. 
+“They could’ve said, ‘We suffered a breach, we notified our customers that could’ve been impacted. We’ve done a risk assessment or threat assessment of the situation and we don’t believe anything damaging could’ve gotten out.’ And they could’ve told us what their incident response plan was and where they were with it,” Mahoney said. “I feel like that would’ve been the best course of action.”
+Ultimately, “if Accenture did something like that, I feel like that would’ve set a really good example for everyone else out there in the industry,” Mahoney said.
+Accenture did not immediately respond to a request for comment on Monday.
+The largest company on CRN’s Solution Provider 500 for 2021, Accenture reports that its client base includes 91 companies in the Fortune Global 100, along with more than three-fourths of the companies in the Fortune Global 500.
+Following the ransomware attack, the LockBit 2.0 ransomware group  demanded $50 million from Accenture in exchange for 6 TB of data, according to Cyble, a dark web and cybercrime monitoring firm. Accenture has not confirmed the ransom demand.
+The documents stolen by hackers referenced a “small number” of clients, but “none of the information is of a highly sensitive nature,” an internal Accenture memo said, according to CyberScoop.
+Ryan Loughran, reactive service manager at Valiant Technology, a New York-based managed services provider, said he agrees that greater transparency about security incidents can help everyone in the IT industry—especially smaller MSPs.
+“If you inform people, ‘This is what happened to us, and this is what we did when it happened’—that sort of education and experience is so helpful to so many others,” Loughran said. 
+“The community just needs to know when these attacks happen and how they happen. It just makes people way more prepared if something happens to them,” he said. “If there are well-documented cases and steps that larger companies took when they got hit, it helps the little ones like us.”
+As one example, the disclosure of the Accenture attack has raised awareness about the threat of the LockBit ransomware strain, Loughran said. “I had no idea about that until I read about it” in connection with the Accenture attack, he said.
+Michael Oh, founder and president of Cambridge, Mass.-based solution provider TSP, echoed the sentiments, saying that greater transparency is better for the entire industry in the battle against widespread security threats.
+If Accenture was more upfront about the attack on its systems, “it would set a better example and it would show the right thing to do when you’re hit by ransomware,” Oh said.
+The attack on Accenture is the latest in a series of high-profile ransomware attacks, including the massive breach of IT management software firm Kaseya in July by ransomware operator REvil.
+More than one-third of all organizations globally have experienced a ransomware incident over the past 12 months, according to research firm IDC, which disclosed the findings from a new survey on ransomware attacks last week.
+In terms of the Accenture attack, the bottom line is that if a huge and risk-averse IT company with major investments in cybersecurity can experience a ransomware breach, then anyone can, Mahoney said.
+Because of this, communication and working together to battle the ransomware threat are only going to be more and more critical, he said.
+“We have got to do better. And doing better means sharing information, and acknowledging that this is the real threat that we face,” Mahoney said. “As far as I’m concerned, not exhibiting a level of openness and honesty is perpetuating these larger [cybersecurity] issues.”
+Accenture Issued Ransomware Warning After LockBit Attack
+Ransomware Group Demanding $50M In Accenture Security Breach: Cyber Firm
+The 20 Hottest Cybersecurity Products At Black Hat 2021
+Microsoft Releases More Updates For Windows ‘PrintNightmare’ Vulnerability
+Microsoft Discloses Another Windows Print Vulnerability, Underscoring Cloud Push For MSPs
+ 
+

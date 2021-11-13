@@ -1,0 +1,24 @@
+Photo Credit: Pexels/ Pixabay
+Cyberattacks are getting new shapes and sizes to target more organisations globally
+Cyberattacks on organisations have grown globally by 29 percent in the last six months, with the Europe, Middle East, and Africa (EMEA) region showing the highest growth followed by the US and Asia Pacific (APAC), according to cybersecurity firm Check Point. The number of ransomware attacks on organisations are also said to have increased by 93 percent annually in the first half of 2021. In comparison with some of the global markets, India appears to be a key target for attackers.
+Check Point released its ‘Cyber Attack Trends: 2021 Mid-Year Report' on Thursday where it highlighted the growth of cyberattacks on organisations across all sectors, including government, healthcare, and critical infrastructure.
+In the US, cyberattacks grew 17 percent to an average of 443 weekly attacks. The change in the EMEA region, however, was even bigger as the weekly average of attacks per organisation was 777 — a 36 percent increase. Specifically within Europe, there was an increase of 27 percent, while in Latin America the growth was 19 percent. Organisations in APAC, on the other hand, saw 1,338 weekly attacks, up 13 percent from earlier this year.
+Check Point's report also mentioned that particularly in India, an organisation is being attacked on average 1,738 times per week in the last six months, compared to 757 attacks per organisation globally. Education and research, government and military, insurance and legal, manufacturing, and healthcare were the most impacted industries targeted by attackers in the last six months.
+There was also an uptick in ransomware attacks. Check Point said that in addition to stealing sensitive data from organisations and threatening to release it publicly unless a payment is made, attackers are now targeting organisations' customers as well as their business partners and demanding ransom from them too.
+Supply chain attacks including SolarWinds grew alongside ransomware attacks this year. Codecov and Kaseya were also among the most recent sophisticated supply chain attacks.
+Check Point noted that following Emotet botnet's takedown in January, attackers are exploring other malware options, namely Trickbot, Dridex, Qbot, and IcedID.
+“In the first half of 2021, cyber criminals have continued to adapt their working practices in order to exploit the shift to hybrid working, targeting organisations' supply chains and network links to partners in order to achieve maximum disruption,” said Maya Horowitz, VP Research at Check Point, in a prepared statement.
+
+Cyberattacks' growth globally in the last six monthsPhoto Credit: Check Point
+ 
+The firm also predicted that the ongoing growth of ransomware attacks would continue to grow bigger. This may come despite governments including the Joe Biden Administration in the US making it a priority to limit ransomware targeting. Hackers are expected to evolve and new groups could be formed to boost ransomware attacks.
+Alongside ransomware attacks, Check Point predicted that man-in-the-middle attacks where hackers gain access to compromised networks and customise attacks will grow. The growth in cyberattacks is also expected to increase collateral damage on affected organisations and requires special security strategy to stay protected.
+The complete security report with additional insights is available for download through the Check Point site. You need to create an account with the firm to download the report.
+For the latest tech news and reviews, follow Gadgets 360 on Twitter, Facebook, and Google News. For the latest videos on gadgets and tech, subscribe to our YouTube channel.
+Advertisement
+06:09 
+05:26 
+04:03 
+09:19 
+09:31 
+Advertisement

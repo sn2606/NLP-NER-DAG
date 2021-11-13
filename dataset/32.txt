@@ -1,0 +1,41 @@
+‘Hopper’ delivered better detection and much reduced false alarms in early tests
+
+Hopper, a tool developed by researchers at Dropbox, UC Berkeley, and other organizations, offers a different approach to finding malicious activity in enterprise networks.
+Introduced in  a paper that will be presented at the Usenix Security Symposium next month, Hopper uses machine learning to detect lateral movement attacks while reducing the number of false security alarms, the latter of which remains a key downside to existing approaches.
+Many data breaches and security incidents at enterprises start with a simple device or low-privileged user account getting compromised. Attackers then move beyond their initial point of entry to other machines and administrator-level user accounts, gaining access to more valuable servers and resources as they progress.
+This process is known as “lateral movement” and is a telltale sign of an impending security disaster.
+Spotting the difference between normal user activity and malicious lateral movement is challenging. Prior approaches to detecting the difference involved specifying detailed network activity rules or making use of anomaly detection algorithms.
+In their paper, the developers of Hopper note that these tools either fail to detect subtle lateral movement attacks or cause false positives and trigger alarms against normal logins.
+“Unfortunately, the scale of modern enterprises inherently produces large numbers of anomalous-but-benign logins, causing traditional anomaly detection to generate too many false alarms,” the researchers explain.
+Hopper is a tool that analyzes an enterprise’s login records to find signs of possible lateral movement attacks. The utility uses two key components: a causality engine that traces login paths and a scoring algorithm that decides which login paths have the characteristics of lateral movement attacks.
+Catch up with the latest network security news
+Hopper has been designed on the basis that lateral movement attacks have two key characteristics: Attackers seek to access a server that their original victim would not have access to, and to do so, they will need to hack privileged accounts such as sysadmins.
+By filtering and examining login paths based on these two vectors, Hooper can determine which activities need further investigation.
+The researchers tested Hopper on 15 months of data from Dropbox’s enterprise network, composed of more than 780 million login events that included 326 simulated attacks by a red team.
+The tool was able to detect 94.5% of attacks while producing eight times fewer false alarms than other lateral movement detection tools.
+While there’s much excitement in the security industry about using deep learning to detect network intrusions, the developers of Hopper used basic statistical models and very simple rules to filter out benign login paths and identify suspicious activity.
+READ MORE Machine learning security vulnerabilities are a growing threat to the web, report highlights
+“We are using a more manual anomaly detection approach, that blends manual rules with statistical anomaly detection,” Grant Ho, Ph.D. candidate in computer science, UC Berkeley, a member of the research team that developed Hooper, told The Daily Swig.
+“There is a lot of excitement about deep learning right now, but for security purposes where you have extreme class imbalances and no labeled data, deep learning is often the wrong tool to use.”
+Ho said that while Hopper has been trained on data from the Dropbox network, it should work just as well for other organizations because the basic rules of lateral movement remain consistent across enterprise networks and different attacks.
+“Each new enterprise should train Hopper on their own network's data, but unlike traditional machine learning models Hopper doesn't have any hyper-parameters that need tuning; an organization only needs to specify how many alerts for lateral movement it would like to see, and the rest of Hopper can run without parameter tuning,” he said.
+Ho believes Hopper can potentially become a good complement to other enterprise security tools.
+“Right now, organizations have a dizzying array of EDR and host-based protection products, but there aren't very good defensive tools for understanding the movement between machines on your network,” he said. “Hopper tries to fill in this missing gap by allowing organizations to identify particularly suspicious movement that occurs between internal hosts.”
+Hopper won’t replace the need for good security hygiene in enterprise networks. For example, if network administrators expose their sensitive resources and accounts onto the internet, attackers will be able to compromise them without the need for lateral movement.
+In such cases, neither Hopper nor any other lateral movement-detection tools would help.
+“We view Hopper as part of a defense-in-depth strategy that emphasizes good least privilege practices, where the goal is to reduce the chance that an arbitrary compromised account leads to a successful breach of sensitive systems or data,” Ho concluded.
+YOU MAY ALSO LIKE Dozens of web apps vulnerable to DNS cache poisoning via ‘forgot password’ feature
+
+
+Ben Dickson
+
+
+
+@bendee983 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

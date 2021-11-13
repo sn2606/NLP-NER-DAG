@@ -1,0 +1,40 @@
+State-sponsored attackers modified known vulnerabilities to reap greater rewards
+
+A honeypot designed to imitate an industrial control system (ICS) has alerted critical infrastructure providers to the dangers of a growing multi-stage ransomware trend.
+The honeypot was launched by security firm Cybereason earlier this year to “analyze the tactics, techniques, and procedures used by state-sponsored groups and cybercrime actors to target critical infrastructure providers”, according to research published today (June 11) that outlined the findings.
+Cybereason is now warning critical infrastructure providers to be wary of multi-level ransomware attacks deployed by a number of independent cybercrime actors and nation-state groups.
+The honeypot was designed to imitate an electricity company operating in North America and Europe.
+Attackers were caught attempting to steal data and user credentials, as well as moving laterally across the victim’s network to compromise multiple endpoints.
+This was made possible due to a multi-level campaign, in which the assailant holds out from deploying the ransomware until the final stage of the attack.
+Researchers found that the cyber-attacks comprised four stages.
+The first stage saw the attacker brute-force the admin password on a publicly accessible remote interface. The assailant then created a backdoor using the <code>net.exe</code> command.
+Once the backdoor was executed, the attacker could upload additional utilities to the compromised server using a PowerShell script. One of these tools, Mimikatz, was used to steal user credentials and move laterally across networks.
+Cybereason noted that attackers attempted to gain access to the domain controls, though none of the accounts on the honeypot server had access to them.
+The malware then used a network scanner to discover additional endpoints, and once compromised, the final stage saw the ransomware deployed.
+This technique is different to methods used in ransomware attacks seen in 2018, when Cybereason conducted a similar honeypot mission against ICS networks.
+Israel Barak, chief information security officer at Cybereason, told The Daily Swig: “These attacks included the typical file encryption capability and, in several cases, self-propagation capabilities that leveraged known operating system vulnerabilities to deliver file encryption.
+“In comparing the 2018 honeypot to more recent observations in our 2020 honeypot, we have recognized that several ransomware attacks added hacking operations capabilities to their typical file encryption capabilities.”
+Barak said that attackers appear to be changing their tactics by focusing on using existing ransomware strains for a greater financial return.
+He said: “One of the trends that we are seeing in the ICS space and in general, is fewer new strains of ransomware in 2020, yet the existing strains rake more gains.
+“Hackers do this by better targeting and making more money from each target. We can expect to see an increase in multistage ransomware embedded into hacking operations in the foreseeable future.”
+Cybereason recommends a number best practices for the critical industry companies including ensuring that systems are secure by design, employing regular testing across all networks, and establishing a security operations center across both IT and OT (operation technology) environments.
+Barak also gave his thoughts on what operators need to ensure to protect themselves and their customers from attacks.
+He said: “First, operators want to minimize the mean time-to-response, so it is critical to establish cyber incident response tools and procedures across both the IT and OT networks.
+“Minimizing damage and preventing an ICS network from being taken offline is essentially the cat-and-mouse game being played by attackers and defenders.”
+Barak added: “Organizations can reduce risk by minimizing the time it takes to respond to a threat.
+“In addition, organizations should establish a unified security operations center and workflows across both IT and OT environments, meaning the hackers will likely try to use the IT environment as a gateway to the OT environment where the real damage can be done.”
+RELATED Tycoon ransomware poses new threat to education, IT organizations
+
+
+Jessica Haworth
+
+
+
+@JesscaHaworth 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

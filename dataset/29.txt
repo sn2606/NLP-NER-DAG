@@ -1,0 +1,31 @@
+Thousands of Social Security numbers may have been compromised
+
+A data breach at a New York university has potentially exposed the personal information of nearly 47,000 individuals.
+The Research Foundation for the State University of New York (SUNY) announced it detected unauthorized access to its networks earlier this year.
+The incident was discovered on July 14, and reportedly involved Social Security numbers.
+
+Read more of the latest data breach news
+A total of more than 46,700 individuals are said to be impacted by the data breach, although it’s not stated whether these people are employees, donors, or others who might be linked to the organizations.
+A security advisory (PDF) hosted on the office of the Maine Attorney General’s website offers more details about the incident:
+
+
+
+The organization has pledged to provide eligible individuals a complimentary, one-year credit monitoring and identity theft protection services.
+Security overhaul
+“To help prevent something like this from happening again, Research Foundation is taking and has taken steps to further enhance the security of its network,” the foundation said.
+These steps include the implementation of multi-factor authentication and deploying an endpoint detection and response tool throughout its network.
+READ Data breach class actions: US Supreme Court decision may tilt the odds in favor of defendant organizations
+
+
+Jessica Haworth
+
+
+
+@JesscaHaworth 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

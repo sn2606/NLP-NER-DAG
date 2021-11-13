@@ -1,0 +1,35 @@
+Victims can now claim reimbursement for expenses arising from the 2016 healthcare data breach
+
+A US federal court has signed off on one of the biggest-ever healthcare data breach settlements.
+Arizona-based Banner Health agreed to pay $8.9 million in December 2019 to cover expenses incurred from a 2016 breach involving 3.7 million victims, as well as to fund improvements to its security posture, court documents show (PDF).
+Last week, a federal judge of the US District Court of Arizona gave final approval for the settlement of a class action lawsuit that was filed in August 2016.
+Victims can now claim reimbursement for expenses arising from the incident – capped at $500 per victim for regular expenses and $10,000 for extraordinary expenses, such as those arising from identity theft.
+Banner Health has capped total expenses at $6 million.
+The healthcare organization will also provide all plaintiffs with an extra two years of free credit monitoring services.
+Attackers gained access to Banner Health’s servers for a two-week period in June and July 2016 via malware installed on the payment processing system used by food and beverage outlets within its hospitals.
+As well as exfiltrating the credit and debit card numbers of 30,000 customers who visited the outlets, attackers gained access to a trove of patient data including Social Security numbers, health insurance data, and medical histories.
+Plaintiffs had alleged that Banner Health failed to put in place appropriate security measures such as multi-factor authentication, firewalls, and data encryption. The cyber-attack had put them at risk of identity theft and fraud, they argued.
+In a statement obtained by The Daily Swig, Banner Health said that following the breach it had “notified impacted parties, conducted a full investigation and implemented a variety of safeguards to reduce the likelihood of a similar incident occurring again”.
+The company added:
+On Feb. 10, 2020, Banner started to notify people who were impacted by the cyberattack of a proposed class action settlement.Anyone who was previously sent a notification by Banner that their personal information may have been compromised may learn more about the settlement and make a claim by visiting a website created for this purpose, www.bh-settlement.com.
+The statement concluded: “We are pleased to resolve this matter and will continue to work diligently in the best interests of our patients, employees and physicians.”
+READ MORE The latest healthcare data breaches in 2019/2020
+The $8.9 million settlement agreement puts an end to the years-long Banner Health lawsuit.
+The largest healthcare data breach settlement to date is the $74 million agreed in August 2019 by Washington-based healthcare insurance provider Premera Blue Cross in relation to a breach with 10.6 million potential victims.
+Then last month, hospital operator UCLA Health settled for $7.5 million over a 2014 breach that impacted around 4.5 million individuals.
+Banner Health is a non-profit healthcare system with 28 hospitals and specialized facilities across six US states.
+RELATED LA respiratory hospital hit by supplier data breach
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

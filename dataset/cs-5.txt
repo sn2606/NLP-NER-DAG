@@ -1,0 +1,30 @@
+The chips supplied by Realtek are used by almost all well-known manufacturers and can be found in VoIP and wireless routers, repeaters, IP cameras, and smart lighting controls – just to name a few. The list of affected hardware manufacturers includes AsusTEK, Belkin, D-Link, Edimax, Hama, Netgear and many more.
+
+“Our security reseachers have discovered and analyzed this vulnerability, which affects hundreds of thousands of devices. We notified Realtek, and they immediately responded and provided an appropriate patch. Manufacturers using vulnerable Wi-Fi modules are strongly encouraged to check their devices and provide security patches to their users,” said Florian Lukavsky, managing director of IoT Inspector.
+
+Realtek vulnerability: What attackers can do
+For an exploit to succeed, an attacker usually needs to be on the same Wi-Fi network. However, faulty ISP configurations also expose numerous vulnerable devices directly to the Internet.
+
+A successful attack would provide full control of the Wi-Fi module, as well as root access to the embedded device’s operating system. In total, a dozen vulnerabilities were found in the chipset.
+
+“There is currently far too little security awareness for devices in these categories – neither among users, nor among manufacturers, who blindly rely on components from other manufacturers in their supply chain without testing them. As a result, these components or products become an unpredictable risk,” warns Lukavsky.
+
+According to Forrester, only 38 percent of enterprise security decision makers worldwide have sufficient policies and tools in place to properly manage IoT devices. Manufacturers are urged to implement guidelines for IoT supply chain security.
+
+Affected versions
+More details are available in the Realtek advisory, which lists these versions:
+
+rtl819x-SDK-v3.2.x Series
+rtl819x-SDK-v3.4.x Series
+rtl819x-SDK-v3.4T Series
+rtl819x-SDK-v3.4T-CT Series
+rtl819x-eCos-v1.5.x Series
+Fixed versions
+Realtek SDK branch 2.x: no longer supported by Realtek
+Realtek “Jungle” SDK: patches will be provided by Realtek and needs to be backported
+Realtek “Luna” SDK: version 1.3.2a contains fixes
+CVE IDs
+CVE-2021-35392
+CVE-2021-35393
+CVE-2021-35394
+CVE-2021-35395

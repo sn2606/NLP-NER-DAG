@@ -1,0 +1,40 @@
+Agencies across Australian Capital Territory criticized in new report
+
+Serious shortcomings have been flagged in the data security policies and practices of the government for the Australian Capital Territory (ACT).
+Analysis by Auditor-General Michael Harris found that government agencies in the Australian Capital Territory (ACT), which is home to the federal parliament and the country’s capital city, Canberra, lacked a comprehensive data breach response plan or adequate security risk management plan for most critical IT systems.
+The ACT Audit Office also discovered a significant shadow IT operation, with unauthorized cloud services widely used by public servants.
+A lack of security awareness among government employees was a significant factor in the various security failings.
+The resulting data security report (PDF) said that ACT government agencies had failed to comply with the government’s security policy (PDF) and was therefore “not well placed to understand what data agencies are responsible for, the risks of this data being breached, and controls to be implemented across government to manage this risk.”
+Published on Friday (June 19), the report landed on the same day that Prime Minister Scott Morrison warned of a surge in state-sponsored cyber-attacks against various targets within Australia, including government agencies.
+ACT government bodies were successfully hacked twice in 2018, compromising the personal details of thousands of government employees in one instance, and the personal data submitted by schools for a third-party survey in another.
+A large majority of critical information communication technology (ICT) systems – 89% – lacked “a current, approved system security risk management plan”, said Harris in the report.
+READ MORE Telco Security Alliance ramps up threat detection capabilities with global intel-sharing initiative
+Explaining “a significant backlog” of risk management plans, Harris noted that it took “on average over three months to allocate” resources to undertake risk management assessments of critical ICT systems, and almost eight to review and approve the findings.
+Managing these plans at a “system‐by‐system level” resulted in a siloed, inconsistent approach to mitigating data security risks, he found.
+Agencies also failed to notify Shared Services of the security classification of 65% of its ICT systems, hampering the prioritization of “security protection activities”.
+In addition to identifying security shortcomings, the ACT audit praised the Community Services Directorate for establishing “clear procedures” on sharing sensitive data and for instilling in its staff a “good understanding” of what constitutes sensitive personal information.
+However, other agencies fared less well on this score, with the auditor-general expressing alarm that staff often shared data “via email or USB drives”.
+The report also noted that plans were in the pipeline to remedy both the lack of a “whole‐of‐government data breach response plan” and a blueprint for restoring the “functionality of critical business systems” in the event of a breach.
+New functionality is also being incorporated into Shared Services’ ServiceNow system to automatically discover IT systems and assets across the government’s IT network.
+The report acknowledged the existence of “a series of strategies and plans relating to data security” but found little evidence of “an overarching strategy”.
+Harris issued nine recommendations for improving the ACT’s security posture, including a new data security strategy, completing the planned data breach response plan, and improving security awareness training.
+Other prescriptions include addressing the backlog of security risk assessments and implementing a government-wide data security risk assessment.
+Harris also urged the ACT government to overhaul its security policy and protective security policy framework, and to ensure the availability and data recovery capabilities of critical systems following security incidents.
+The findings come only two months after the auditor-general identified a raft of other security issues in a previous audit.
+ACT is not the only Australian state or territory to fall foul of its auditors recently. Earlier this month, universities in New South Wales were criticized for their data security practices, while three government agencies in Queensland were readily breached by pen testers hired by the state’s audit office in 2019.
+The Daily Swig has contacted the Auditor-General, The ACT Labor Party that runs the ACT government, and the opposition Liberal Party, for comment.
+RELATED Australian Cyber Collaboration Centre set to open with focus on security testing, training
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

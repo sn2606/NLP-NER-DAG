@@ -1,0 +1,32 @@
+Scareware scams attempt to exploit health crisis
+
+Malvertisers have stepped up their efforts to exploit potential victims during the ongoing Covid-19 pandemic.
+Cyber-attacks spread through tainted or malicious ads grew as lockdowns came into force around the world last month and hit a peak of more than double the baseline average on 28 March, according to research from AdSecure.
+The specialist adtech security firm reports that while bad ads surged globally over the period between March 1 to April 15, 2020, the US was hit particularly hard.
+“As millions of people are now working from home, where online security isn’t as stringent compared to office cybersecurity systems, the pandemic has created a perfect storm for malvertisers,” according to AdSecure.
+Scareware – which attempts to trick users into buying worthless services or software on the basis that their machines are riddled with non-existent threats – has been a favored choice of the cybercriminal over recent weeks.
+“The global vibe right now is one of heightened fear and tension,” an AdSecure spokesperson told The Daily Swig. “People are scared for the future, and by playing on those fears bad actors are hoping to drive clicks. 
+“More people are working from home, but in many cases without the same internet security systems in place that they would have in the office, and as a result it could be easier to fool home workers into believing their devices have been compromised.”
+Malvertisers are using well known logos in attempts to trick users into clicking on malicious ads that ultimately lead to scareware or other scams.
+For example, AdSecure found a mobile banner ad in Italian, one of the countries worst hit by the pandemic. The ad delivers malware via an auto-download mechanism while using the logos of the World Health Organisation (WHO) and Google Play in order to imply legitimacy.
+The text accompanying the dodgy pitch, and written in grammatically incorrect Italian, translates as “ways to get rid of coronavirus” – a cynical attempt to exploit fears over the pandemic to trick potential marks into getting fleeced.
+Scareware of one type or another makes up 83% of the threats logged by AdSecure over recent weeks. The other attacks involved attempts to distribute either malware, adware (annoying pop-up generating software), or promote fake websites designed to harvest login credentials through phishing.
+Phishing attacks leveraged fake Walmart offers in the US, the Intermarche brand in France, and Amazon in multiple countries, AdSecure reports.
+A recent malvertising campaign that spoofed Malwarebytes’ website to distribute the Raccoon info-stealer show how the technique can be abused to sling malware.
+Guidance aimed at consumers on how to avoid all forms of malvertising is available via a recent advisory from the UK’s National Cyber Security Centre.
+
+RELATED Swiss CERT warns of spear-phishing campaign targeting webmasters
+
+
+John Leyden
+
+
+
+@jleyden 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

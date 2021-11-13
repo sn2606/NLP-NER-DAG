@@ -1,0 +1,39 @@
+Kerala Cyber Warriors allegedly targeted Delhi government servers to highlight security pitfalls
+
+Indian hackers claim to have accessed more than 80,000 coronavirus patients’ healthcare records that were insecurely stored on government servers.
+The group, which calls itself Kerala Cyber Warriors, announced on Facebook that it had gained access to the Delhi State Mission website “in less than 10 minutes”.
+Its members claim to have accessed sensitive data including patients’ names, addresses, phone numbers, Covid-19 test results, and passport details.
+A screenshot posted to Facebook appears to show a database containing coronavirus test results
+
+“We shelled the website and got access to it. We didn’t know that they were using this website to track Covid. We checked what was available in the server and got all the data.”
+Read more of the latest coronavirus security news
+The group also discovered “multiple” backdoors in the server, some of which they removed.
+The spokesperson added: “These were planted in March. We are not sure who planted these backdoors.”
+Kerala Cyber Warriors says it targeted the government’s health ministry to expose security shortcomings after becoming dissatisfied with Delhi’s approach towards healthcare.
+They posted a video online outlining their issues with how the government has responded to the pandemic.
+At the time of writing, the Delhi government has yet to respond to the claims. However, the group said the server was taken down 47 minutes after they reported the issue.
+Once the website was taken offline, the group shared screenshots of the data it claims to have accessed as “proof” of its exploits.
+A screenshot claiming to show the Kerala Cyber Warrior’s image on the hacked website
+
+Another shows what looks like a detailed patient record sheet.
+“We were appalled to witness sensitive data stored in these servers without any security,” the Facebook post reads.
+“The government needs to be very careful and take every possible security measure to protect the personal information of citizens.
+“This is the server that is used by the Delhi government to investigate, report, and track the Covid-19 situation in Delhi. A hacker can edit, manipulate as well as misuse these data to make profits.
+“The consequences can be the downfall of the entire Indian security. For instance, manipulating these data will cause miscalculations, and inaccuracy in tracking Covid-19.”
+The Delhi State Health Mission website – dhsm.gov.in – was still offline at the time of writing.
+The Daily Swig has reached out to the health ministry for comment and will update this article accordingly.
+READ MORE Meet the cybersecurity volunteers helping to protect the healthcare industry during the coronavirus outbreak
+
+
+Jessica Haworth
+
+
+
+@JesscaHaworth 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

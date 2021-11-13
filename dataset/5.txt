@@ -1,0 +1,38 @@
+Waste Management Resources said attacker gained network access in January
+
+A data breach at US waste management firm Waste Management Resources has exposed the healthcare information of current and former employees, as well as their dependents.
+The company says that on January 21, it discovered signs of suspicious activity.
+“We immediately launched an investigation, with the assistance of third-party forensic specialists, to determine the nature and scope of the activity and contacted the FBI,” Waste Management Resources says in a statement.
+“Our investigation determined that an unauthorized actor entered our environment between January 21 and 23, 2021, accessed certain files, and took a limited number of files.”
+
+Read more of the latest data breach news
+The unknown hacker was able to access the healthcare information of certain staff who submitted claims to its self-insured health plan.
+The files that may have been accessed included names, Social Security numbers, taxpayer identification numbers, government and state ID numbers, driver’s license numbers, dates of birth, bank account numbers, debit and credit card numbers.
+Also exposed were the staff members’ and dependents’ medical history and treatment information, health insurance information, passport numbers and usernames, email addresses, and passwords for financial electronic accounts.
+
+
+While the company discovered this on June 21, its alert was not issued until this week.
+Waste Management Resources is recommending that those affected check their credit report and ask for either a fraud alert or a credit freeze to be placed on it.
+“Waste Management takes the security and privacy of the data within our network very seriously," a company spokesperson told The Daily Swig.
+“Earlier this year, we became aware of a cybersecurity incident and immediately opened an investigation into the matter with third-party forensic specialists and notified the FBI.
+“Through that investigation, we determined that this incident may have impacted certain job application and employment-related information.”
+The spokesperson added: “There have been no business interruptions as we have worked to address this matter. We have implemented additional safeguards relating to data security and regret any concern or inconvenience this incident may cause.”
+The breach has raised eyebrows for the sheer quantity and sensitivity of the data involved.
+As software consultant Allen Holub points out on Twitter: “Why does the HR system need passport numbers or the password to your bank account? I can’t imagine a scenario where that sort of information should be stored in an HR system.”
+And, says security pro Troy Hunt: “Time to just start life again when that much personal data is leaked.”
+This article has been updated to include comment from Waste Management Resources.
+YOU MIGHT ALSO LIKE International cybercrime gang charged with Covid-19 business email compromise fraud
+
+
+Emma Woollacott
+
+
+
+@EmmaWoollacott 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

@@ -1,0 +1,30 @@
+Phishing victims thought they were buying goods and services via Amazon, eBay, and Airbnb
+
+Romanian and Greek police have arrested eight members of an organized crime group that defrauded online shoppers of at least €2 million ($2.4 million).
+Authorities also seized €220,000 ($261,000) in cash, mobile phones, and travel documents during raids at 30 locations, in an operation coordinated by Eurojust, the EU agency that facilitates cross-border cooperation in criminal cases.
+The criminal network deployed phishing scams to dupe victims into paying for what they believed were goods and services via legitimate websites, including €50,000 ($59,000) cars via eBay, goods from Amazon, and accommodation through Airbnb.
+Read more of the latest cybercrime news and analysis
+Using forged identity documents, the gang set up at least 300 bank accounts in Hungary, Spain, Poland, Germany, and the Netherlands in which “to hide their profits”, according to a Eurojust press release.
+The scammers created fictitious advertisements, along with fake transport and payment companies whose names sounded similar to legitimate enterprises.
+As well as stealing cash, the social engineering attack infected victims’ devices with malware and captured their login details, credit card and bank account numbers, and other sensitive personal data.
+The ill-gotten data was shared among the criminal network, said Eurojust.
+The operation also involved the cooperation of Dutch and Spanish authorities.
+The arrests follow a further two arrests made last month in another Eurojust-backed operation related to the same criminal gang’s involvement in an online fraud targeting the Dutch housing market.
+News of the arrests landed on July 8 – the same day that Interpol concluded its annual conference focused on ‘National Central Bureaus’, which serve as a bridge between the organization and frontline police around the world.
+During the event, senior police officials from 167 Interpol member countries discussed the expansion of Interpol’s I-24/7 secure communications network to national police and border control agencies, as well as the burgeoning ransomware threat.
+“A global strategy in response to the threat of ransomware is critical – one where we successfully build trust, see effective exchange of data, and maximize rapid operational assistance to law enforcement agencies,” said Interpol secretary general Jürgen Stock in a press release.
+RELATED Operation Lyrebird: Cybercops nab Moroccan phish-and-carding kingpin
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

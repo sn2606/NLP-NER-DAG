@@ -1,0 +1,40 @@
+Break the chain
+
+A security researcher has published details of how a series of web security flaws in QNAP network attached storage (NAS) devices leave many systems open to pwnage.
+Multiple vulnerabilities in QNAP Photo Station and CGI programs can be chained together to achieve a pre-authentication remote code execution attack, Henry Huang from CyCarrier CSIRT discovered.
+Huang discovered and reported four vulnerabilities to QNAP NAS devices last June (CVE-2019–7192, CVE-2019–7193, CVE-2019–7194, and CVE-2019–7195).
+The clutch of bugs were fixed last December, but Huang held off on going public with the details in order to give admins a chance to patch systems that would otherwise be wide open to attack.
+The decision to delay was prompted by the circulation last year of two ransomware strains – ECh0raix (jointly discovered by Anomali Labs and Intezer) and QSnatch – both of which relied on users failing to change default passwords and brute force attacks in order to spread.
+“The ransomware targeting QNAP last year only used default credentials,” Huang told The Daily Swig. “It would’ve got much worse if it used this exploit. That’s why I delayed the disclosure almost six months after the fix – I hope people have enough time to update.”
+All QNAP NAS models are potentially vulnerable, but only in cases where they have the vulnerable Photo Station component enabled.
+This means that of around 564,000 QNAP NAS devices exposed to the internet, approximately 450,000 are vulnerable to attack, according to Huang’s estimate, which is based (in part) on searches using Shodan.
+A representative of QNAP emphasized that it had patched all the vulnerabilities last November. A technical PR spokesperson declined to offer figures on how many devices might still be vulnerable but did explain QNAP’s update mechanism.
+“For NAS connected to the Internet, all eligible systems will receive QTS live update notices if their ‘automatically check for updates’ option is enabled,” a QNAP marketing executive explained. “For the Photo Station app, update notices are displayed on the QTS desktop.”
+“Users can also manually download update files from QNAP’s website and install them on their NAS, if the NAS is isolated (not connected to the Internet or with the auto check feature disabled).”
+All downloadable versions of Photo Station before the fixed ones (6.0.3, 5.2.11, 5.4.9) were affected.
+QNAP’s advisory offers more advice.
+Huang strongly advised users to “upgrade your QNAP NAS now”, if customers haven’t done so already.
+Three of the four vulnerabilities discovered by Huang can be chained together to create an exploit, as he explains in a detailed technical advisory.
+Stage one of the proof-of-concept attack involves exploiting a vulnerability that enables an attacker to read arbitrary files on the server without authentication.
+This process relies on CVE-2019-7192, an improper access control vulnerability that allows remote attackers to gain unauthorized access to the system.
+A second security flaw can be used to put PHP code (via SMTP email) into a PHP session because of an ‘authenticated session tampering’ flaw.
+Finally, a third security weakness makes it possible for an attacker to write the polluted PHP session to Photo Station’s web director, creating a webshell in the process.
+This last link in the chain is possible because security shortcomings make it possible to write session contents to an arbitrary location on the server.
+The various issues are compounded by the fact that the web server QNAP NAS box runs as root, greatly increasing the scope for mischief.
+The security researcher received an undisclosed bug bounty for his discoveries.
+
+RELATED BIND 9 security releases address two high severity vulnerabilities
+
+
+John Leyden
+
+
+
+@jleyden 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

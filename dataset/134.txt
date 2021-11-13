@@ -1,0 +1,34 @@
+VT San Antonio Aerospace fell victim to the Maze cybercrime group last week
+
+UPDATED ST Engineering, the defense, aerospace, and engineering giant, is conducting a “rigorous review” of its security posture after a US subsidiary was hit by a ransomware attack last week.
+In a statement published on Friday (June 5), Ed Onwe, vice president and general manager of VT San Antonio Aerospace, said they had “discovered that a sophisticated group of cyber criminals, known as the Maze group, [had] gained unauthorized access to our network and deployed a ransomware attack.”
+Texas-based VT San Antonio Aerospace repairs, maintains, and overhauls aircraft for commercial airlines and cargo operators.
+The fact that Maze listed two ‘lock dates’ on its website – in March and June – indicates “that there were two separate encryption events”, Brett Callow, threat analyst at anti-malware software vendor Emsisoft, told The Daily Swig.
+A screenshot of a memo published by cybersecurity firm Cyble “strongly suggests that Maze had access to the company’s network in the days or weeks after” the first incident in March, he added.
+“This is why we recommend that companies rebuild their networks post-incident rather than simply decrypting their data: doing so ensures any backdoors are closed and cannot be used in a second attack.”
+Cyble published screenshots on Friday showing evidence that Maze had published “the company’s cyber insurance documents, various contract calculations worksheets, NASA give review rules, and much more”.
+Announcing the cyber-attack, Onwe said: “Our ongoing investigation indicates that the threat has been contained and we believe it to be isolated to a limited number of ST Engineering’s U.S. commercial operations. Currently, our business continues to be operational.”
+In a further statement issued yesterday (June 7), ST Engineering said: “ST Engineering’s IT network in Singapore and its other businesses” had not been compromised during the attack.
+After discovering the unauthorized access, ST Engineering disconnected systems from the network, notified law enforcement, and launched an investigation.
+The tech firm is now “conducting a rigorous review of the incident and its systems”, including deployment of “advanced tools to remediate the intrusion and to restore the affected systems”.
+ST Engineering is also taking steps to further strengthen its overall cybersecurity architecture, while the US subsidiary has begun notifying potentially affected customers.
+ST Engineering operates in 20 countries and 40 cities across Asia, Europe, the US, and the Middle East.
+The Maze group, which first emerged in May 2019, was among the first ransomware groups to threaten to dump victims’ stolen data into the public domain and onto cybercrime markets, rather than simply destroying the data.
+Maze ransomware has been deployed via fake websites loaded with exploit kits, spam emails, and Remote Desktop Protocol attacks, which have soared during the Covid-19 lockdown.
+In response to queries from The Daily Swig, a spokesperson for ST Engineering said the investigation was ongoing and declined to give further details. 
+This article was updated on June 8 with the addition of a previous statement from VT San Antonio Aerospace and comments from Brett Callow of Emsisoft.
+RELATED Tycoon ransomware poses new threat to education, IT organizations
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

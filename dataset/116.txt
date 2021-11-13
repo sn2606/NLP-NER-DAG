@@ -1,0 +1,34 @@
+Remote learning giant suffers PR setback after Facebook investment and surging popularity during lockdown
+
+UPDATED A data breach at Unacademy, India’s largest online education platform, has exposed the personal details of around 11 million users, the company has admitted.
+This is around half the figure reported by security researchers who alerted the edtech company about the leak, since the platform only has around 11 million registered user accounts, Unacademy said in a statement.
+In a blog post published on Tuesday (May 5), Cyble said it had acquired a database containing nearly 22 million Unacademy user accounts that was up for sale on the dark web for $2,000.
+The leaked data included user IDs, names and usernames, encrypted passwords, email addresses, dates joined, and times of last login.
+Cyble said the data breach “apparently took place” in January 2020.
+The “perpetrator alleged that they have access to their entire database,” added the cybersecurity intelligence firm. “However, they decided to only leak [users’ accounts] at this point in time, further leaks are expected in the near future.”
+But in a statement obtained by The Daily Swig yesterday (May 7), Hemesh Singh, Unacademy’s co-founder and CTO, assured learners that “no sensitive information such as financial data, location or passwords has been breached.”
+However, Cyble has today (May 8) tweeted that “the hacker has just released more [Unacademy] data for sale in the darkweb”. A spokesperson for the company told The Daily Swig that “this confirms our initial comment that the hackers have access to more data than Unacademy claimed.”
+In its blog post, it said it had so far been “unable to confirm who else might have access to this data.”
+Cyble has advised Unacademy users to change their Unacademy passwords and similar passwords used on other accounts, implement multi-factor authentication where possible, and avoid using corporate email addresses on third-party services where possible.
+They also urged affected users to monitor their financial accounts for anomalous transactions as well as Cyble’s blog and darkweb data breach monitoring platform for further updates.
+Unacademy’s Singh said: “Data security and privacy protection of our users is of utmost importance to us and we are doing everything possible, to ensure no personal information is compromised.
+“We follow stringent encryption methods using the PBKDF2 algorithm with a SHA-256 hash, making it highly implausible for anyone to decrypt passwords. We also follow an OTP based login system that provides an additional layer of security to our users.
+Singh added: “We are doing a complete background check and will be addressing any potential security loophole to further bolster our efforts of ensuring a far more robust security mechanism. We are in communication with our users to keep them updated on the progress.”
+Unacademy says 300,000 students have together attended 2,400 online lessons over a six-month period.
+Founded in Bangalore in 2015 the edtech giant enjoyed an 82% surge in use during the nationwide lockdown in April, and recently received investment from Facebook as part of an $400 million funding round.
+This article was updated on May 8 with comments from Cyble.
+YOU MIGHT ALSO LIKE Secure communication: Indian government seeks home-grown Zoom alternative
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

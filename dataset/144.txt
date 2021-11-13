@@ -1,0 +1,34 @@
+More than 8,000 devices are vulnerable to ‘trivial’ exploit code that ‘fits in a tweet’
+
+A critical remote code execution (RCE) flaw in F5’s BIG-IP networking devices is being exploited in the wild, just days after the vulnerability was publicly disclosed by security researchers.
+Sysadmins’ had their weekends interrupted after a proof-of-concept exploit and reports of active exploitation of the vulnerability – whose disclosure The Daily Swig reported on Thursday – surfaced online on Saturday (July 4).
+In a Twitter thread, Rich Warren, principal security consultant at NCC Group, revealed that the cybersecurity organization’s BIG-IP honeypots had been hit by exploits emanating from Italy.
+Warren followed up this morning with reports of “an uptick in RCE attempts” using a public Metasploit module that was published on Sunday, with a “large wave of attacks” apparently being directed from China.
+NCC Group researchers have outlined their findings in a blog post.
+Eric Vanderburg, vice president of cybersecurity at TCDI, tweeted that the proof-of-concept code “is so trivial, it fits in a tweet”.
+A penetration tester today tweeted a screenshot of a Shodan search revealing that 8,400 vulnerable BIG-IP management interfaces were still exposed to the internet.
+More than 3,300 of these installations are located in the US, where many offices remain closed today for a federal holiday following Independence Day celebrations.
+Attackers who exploit the RCE flaw can “completely compromise the system, and pursue further targets, such as the internal network”, Mikhail Klyuchnikov, the security researcher at Positive Technologies who discovered the vulnerability, said in a post published Thursday (July 2).
+On Sunday (July 5), a Jordan-based researcher outlined some of the files attackers could extract using the exploit code.
+RECOMMENDED Shodan founder John Matherly on IoT security and dual-purpose hacking tools
+F5 patched the critical RCE vulnerability, along with an authenticated cross-site scripting (XSS) bug, in its BIG-IP application delivery controller (ADC) after being notified of the issues on April 1.
+ADCs optimize the performance of web applications using techniques such as load balancing, caching, compression, and offloading SSL processing.
+Organizations are advised to urgently update their systems if they are running BIG-IP versions 11.6.x, 12.1.x, 13.1.x, 14.1.x, 15.0.x, or 15.1.x.
+An F5 security advisory for the RCE flaw, and a separate advisory for the XSS vulnerability, provide further details around updates and mitigations.
+IoT search engine Shodan said yesterday that potentially affected organizations could configure Shodan Monitor to receive alerts if any of their assets are vulnerable.
+F5 says its application security services are used by 48 of the Fortune 50 companies, with customers including Alibaba, Turkish Airlines, and University of Queensland.
+RELATED Salt framework security flaws used to attack multiple targets
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

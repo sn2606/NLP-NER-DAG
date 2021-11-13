@@ -1,0 +1,31 @@
+Cyber-attack ‘limited to internal systems’
+
+D-Box said it is recovering from a ransomware attack that partially paralyzed many of its IT systems earlier this month.
+In a statement issued on Wednesday (July 29), the Canadian immersive entertainment technology provider said it was “gradually resuming its activities following a ransomware cyber-attack” first publicly disclosed on July 14.
+“All major IT systems have been restored and the restoration work should be finalized in the next few weeks,” D-Box said.
+“Production was never completely interrupted, and recovery of its various internal IT systems has begun.”
+The company said it had worked with incident response experts to determine that the impact of the cyber-attack was “limited to internal systems, and that its services to studios and theatre operators were not affected”.
+Catch up on the latest ransomware news and analysis
+The attack has prompted D-Box to delay the planned announcement of its latest quarterly financial results by up to a month past an August 14 deadline.
+The firm, which makes haptic seating for home cinemas and commercial theatres, was able to say that its revenue for the quarter ending June 30, 2021 was $3.1 million, up 40% from the same quarter last year.
+Sebastien Mailhot, president and chief executive of D-Box, said that the company “believes that the financial impact of this cyber-attack on the results should be negligible”.
+The strain of ransomware, much less how it infected D-Box’s systems, remains unclear.
+RELATED Kaseya denies ransomware payment as it hails ‘100% effective’ decryption tool
+The Daily Swig has contacted the vendor on that point, as well as to ask whether or not it had to resort to paying criminals in order to restore its systems. We’ll update this story as and when more information comes to hand.
+In its statement, D-Box said it didn’t anticipate any need to issue patches or service updates to partners because of the cyber-assault, which on this evidence is not being treated as a software supply chain attack.
+D-Box is, however, offering its employees identity theft prevention services at no cost for 12 months, as a precaution.
+YOU MAY ALSO LIKE DDoS attacks recede as cryptocurrency price drops
+
+
+John Leyden
+
+
+
+@jleyden 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

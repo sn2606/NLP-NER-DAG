@@ -1,0 +1,32 @@
+Cyber-attack forces GGPoker website offline
+
+A popular Asian poker site suffered a DDoS attack on the opening day of the World Series of Poker tournament this week, the company has confirmed.
+Yesterday (July 20), a distributed denial-of-service (DDoS) attack forced systems offline, disrupting WSOP Online Bracelet Series games.
+GGPoker, which mainly serves the Asian market but has customers across Europe and America, claims that it migrated servers to a new cloud data center on July 16 to improve performance and account for increased load during the tournament.
+However, it claims, “the tech team made a mistake of not shielding this server with our DDoS protection service after the migration”.
+A subsequent DDoS attack forced systems offline for around two hours.
+GGPoker posted on its Twitter account yesterday: “We apologize for everything that has happened today. A critical bug has been found, and we need to postpone WSOP Event #32 and #33 to next week.”
+It added: “The bug was caused by an overwhelming number of players joining The Opener and other side events.
+“The tournament servers were unable to resume due to high loads. We will increase more capacity (we just doubled it) to make sure future events run smoothly.”
+After apparently fixing the connectivity issues, GGPoker said it experienced a DDoS attack starting at around 01:12 UTC on July 20.
+GGPoker published an incident report on July 20
+In its analysis of the incident GGPoker said it has taken steps to protect against future incidents, including adding the configuration server to its CloudFlare DDoS protection and adding a “second layer of DDoS protection”.
+It details how a temporary fix was added during server downtime, and states that the company will issue more stable fixes before July 24.
+The post reads: “At the worst case, even if these incidents were to happen again, we will add code to manually re-start the tournaments affected by July 24.”
+GGPoker has offered compensation to players who were cut off from the tournament in the form of in-play credits, though this has done little to appease everyone.
+Some players claim that the outage caused them to lose money after others “stole their blinds” while they were unable to access the site.
+READ MORE Security firms track ‘dramatic rise’ in DDoS attacks
+
+
+Jessica Haworth
+
+
+
+@JesscaHaworth 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

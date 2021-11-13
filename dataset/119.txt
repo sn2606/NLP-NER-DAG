@@ -1,0 +1,37 @@
+Verizon and NTT reports put breaches and cyber-attacks under the microscope
+
+Attacks against web applications have increased in prevalence to become the single biggest cause of data breaches, according to findings from two separate reports out today (May 19).
+The Verizon 2020 Data Breach Investigation Report (DBIR) reports that 43% of breaches could be traced back to attacks against web applications – more than double the results from last year.
+The vast majority (86%) of data breaches were motivated by the prospect of illicit financial gain, up significantly from 71 % in 2019.
+Two-thirds (67%) of breaches were caused by credential theft, human error, or social engineering attacks.
+More than a quarter 27% of malware incidents covered by the study were attributed to ransomware.
+Verizon’s influential DBIR report is based on the analysis of 32,002 security incidents and 3,950 confirmed breaches from 81 contributors from 81 countries worldwide.
+Attack data from NTT’s 2020 Global Threat Intelligence Report (GTIR) similarly shows that more than half (55%) of all attacks in 2019 were a combination of web application and application-specific attacks, up from 32% the year before.
+Matt Gyde, CEO of NTT’s security division, told The Daily Swig: “A majority of businesses today use applications as their front door. This is where both client and financial information is held or can be accessed.
+“And with some not practicing basic security hygiene, such as running the latest version of frequently used applications, patching and updating systems, and encrypting data at rest or in transit, threat actors are focusing on these vulnerabilities,” he added.
+Attacks on content management systems including WordPress, Joomla, Drupal, and NoneCMS accounted for about 20% of all cyber-attacks.
+Additionally, more than 28% of attacks targeted technology platforms that support websites, such as ColdFusion and Apache Struts.
+RELATED Vulnerabilities in web and app frameworks fall, but weaponization rate jumps – study
+Long patched vulnerabilities remain an active target, according to NTT.
+Attackers regularly took advantage of vulnerabilities that are several years old, but have not been patched by organizations, such as HeartBleed, which helped make OpenSSL the second most targeted software with 19% of attacks globally.
+A total of 258 new vulnerabilities were identified in Apache frameworks and software over the past two years, making Apache the third most targeted platform in 2019, accounting for over 15% of all attacks observed.
+The technology and government sectors surpassed the financial sector to become the most targeted sectors for the first time, according to NTT’s report.
+The technology sector experienced a 70% increase in overall attack volume. More than half of attacks aimed at this sector were application-specific (31%) or DDoS (25%) attacks
+Attacks on government organizations – driven largely by geo-political activity – nearly doubled.
+More generally, application-specific (33%), web application (22%), reconnaissance (14%), DoS/DDoS (14%), and network manipulation (5%) attacks collectively accounted for the majority of attacks.
+NTT’s latest annual Global Threat Intelligence Report is based on an analysis of log, event, attack, incident, and vulnerability data from clients recorded between October 1, 2018, to September 31, 2019.
+YOU MIGHT ALSO LIKE Security software discovery tops latest Mitre ATT&CK threat list
+
+
+John Leyden
+
+
+
+@jleyden 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

@@ -1,0 +1,47 @@
+A new deep learning detection model can spot cyber-attacks with improved speed and accuracy
+
+A group of researchers from the US, China, and Saudi Arabia, have demonstrated how artificial intelligence (AI) algorithms can help detect distributed denial-of-Service (DDoS) attacks where other methods fail.
+With the number of internet-connected devices growing at an exponential rate and attackers becoming more sophisticated in their methods, finding and filtering out harmful DDoS traffic against web servers is becoming a mounting challenge.
+Their method, presented in a paper published on the open science platform Europe PMC, uses deep learning to determine whether network traffic coming from a source is normal or part of a malicious DDoS attack.
+EXPLAINER What is DDoS? A complete guide
+The researchers’ findings show that when dealing with large-scale data, deep learning-based detection methods improve speed and accuracy while reducing false alarm rates.
+The work focuses on software-defined networks (SDN), a networking paradigm that has gained popularity in recent years.
+SDN provides flexible virtualization capabilities that fulfill the growing demands of cloud computing, mobile networks, and internet of things (IoT).
+However, SDN and OpenFlow, the protocol often used to enable communications between SDN controllers and network devices such as switches and routers, are vulnerable to DDoS attacks, as many researchers have found.
+The classical way to detect DDoS is to compare incoming network traffic against a predefined set of rules that can separate normal from attack traffic.
+But setting rules for DDoS detection is very difficult due to the diversity of DDoS attack schemes and the difficulty of defining thresholds between normal and malicious traffic.
+“In practice, there is no clear distinction between normal traffic and attack traffic,” the authors of the paper note, adding that it would practically be impossible for humans to analyze the huge volume of data running through networks to find the correct rules.
+Setting foolproof rules for DDoS detection has been proven to be extremely difficult
+Instead of manually perusing data, the authors propose to analyze it with deep neural networks (DNNs).
+DNNs, which roughly imitate the workings of their biological counterparts, ingest large amounts of data and find relevant patterns, which they transform into complex mathematical representations.
+They can then use this model to classify new incoming data or predict the next piece of information in a sequence.
+In the case of DDoS, the researchers treat it as a classification problem. The goal of the algorithm is to determine, on a scale of 0 to 1, how likely incoming traffic from a node in the network is malicious, or, as the researchers put it, “judging whether the characteristic data of the OpenFlow flow table is normal or not”.
+By analyzing reams of data, a well-trained deep learning model will be able to glean intricate characteristics of safe and malicious traffic that would have otherwise gone undetected to a human analyst.
+RECOMMENDED Q1 DDoS surge driven by attacks on government and coronavirus information sites
+The neural network was trained on a large dataset comprised of both normal and malicious table entries, and then tested against five different types of DDoS attacks, including various traffic flooding attacks and slow-connection HTTP attacks, where attackers try to bog down a server by sending it very lengthy requests.
+As is true for most deep learning uses, developing a reliable DDoS detection model depends largely on gathering enough quality training data.
+As the authors note:
+In the case of a small data scale, the relevance ratio of the DL model in the face of flooding attacks has a slight advantage [in comparison to traditional detection methods], but it has not shown its detection advantage in other aspects. The detection performance is not outstanding.
+But as the system was scaled to larger datasets, the researchers found that the deep learning model eventually became more accurate and made fewer errors than other established DDoS detection tools, including those based on other machine learning algorithms, including support vector machines (SVM) and decision trees.
+
+Deep learning systems are very good at handling classification and prediction tasks, as long as they’re dealing with data that is statistically similar to their training examples.
+But as soon as they meet novel situations that vary from what they’ve previously seen, they behave in unexpected ways.
+“Although some achievements have been obtained in this research, there are still some shortcomings,” the authors of the paper note. “The DL model of this research also needs a certain degree of human adjustment, and it cannot be completely intelligent.”
+The paper has not been peer-reviewed, and the authors have not released the code and data for examination by industry experts, so it’s hard to independently verify the accuracy of their model.
+But using machine learning algorithms to address the growing threat of DDoS attacks has become a growing area of interest, and several projects have already shown promising results.
+Other efforts in the field range from simple machine learning models that detect compromised IoT devices in networks to SVM models that analyze OpenFlow tables for malicious behavior.
+READ MORE Dutch police shut down 15 DDoS-for-hire platforms
+
+
+Ben Dickson
+
+
+
+@bendee983 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

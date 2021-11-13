@@ -1,0 +1,10 @@
+Sean Lyngaas
+A 38-year-old Ohio man has pleaded guilty to his role in a cryptocurrency laundering service that moved some $300 million on behalf of dark web marketplaces and other clients, the Justice Department said Wednesday.
+Larry Dean Harmon admitted to running Helix, a popular service for concealing the source of bitcoin transactions, from 2014 to 2017. Helix allegedly worked with AlphaBay, a notorious $1 billion marketplace for hacking tools and drugs that security researchers recently warned could be coming back online.
+Harmon faces up to 20 years in prison and a $500,000 fine, according to the Justice Department.
+A lawyer for Harmon could not be reached for comment.
+As part of his plea deal, Harmon agreed to forfeit more than $200 million in bitcoin. After a multi-year investigation of Helix, U.S. law enforcement arrested Harmon in his hometown of Akron in February, 2020. The U.S. Treasury’s Financial Crimes Enforcement Network has also levied $60 million in civil penalties against Harmon for allegedly violating the Bank Secrecy Act, which requires money service businesses to take anti-laundering measures.
+As law enforcement agencies get better at tracing cryptocurrency, such laundering services have grown in importance. Police have responded by cracking down on illicit enterprises like Helix.
+In April, U.S. federal agents arrested the alleged operator of another laundering service, Bitcoin Fog, which reportedly washed digital money for AlphaBay and SilkRoad, another big name in the dark-web business before it was shut down.
+The cases highlight how U.S. law enforcement agents surreptitiously monitor dark web forums and the laundering services that cater to them. In both cases, an undercover FBI or IRS agent solicited services from Helix and Bitcoin Fog in an effort to track the operations.
+The impetus for tracking and seizing cryptocurrency assets of accused cybercriminals has only increased since the May ransomware attack on major fuel provider Colonial Pipeline. The Justice Department recovered $2.3 million of the $4.4 million worth of cryptocurrency that Colonial Pipeline paid a criminal enterprise known as DarkSide.

@@ -1,0 +1,40 @@
+Ransomware is a crime that is predominantly financially motivated, yet the effects of attacks are far broader and more profound than just the financial impact. Pervasive attacks against healthcare, local government, schools and other forms of critical infrastructure are threatening our quality and safety of life every day.
+
+These disruptive attacks tear at the very fabric of our society, while also causing economic and reputational harm. Further, ransom payments are fuelling the activities of organized crime groups that are often engaged in heinous crimes such as human trafficking and child exploitation.
+
+Not only do successful attackers stand to make a huge payday in the order of hundreds of thousands or even millions for a single attack, they also face very little risk or friction in perpetrating these crimes. The existence of ‘safe-haven nations’, which either can’t or won’t prosecute cybercriminals means attackers rarely face legal consequences.
+
+The rise of ransomware-as-a-service has provided new cybercriminals with an opportunity to enter the ransomware market and make a quick, easy, and relatively risk-free profit — without needing the skills to develop their own malware. They can simply lease variants of ransomware in the same way that many organisations lease SaaS products.
+
+Without significant intervention, we can expect to see attacks grow in number, frequency, variety, and sophistication over the coming years. Ransomware attacks are already becoming more severe with the trends of double and triple extortion, so when organisations are not only locked out of their systems, their data is also stolen and payments demanded by cybercriminals to prevent the leaking of this data.
+
+So, what action should be taken?
+
+It’s not as simple as banning ransom payments
+In an ideal world, ransom payments would be banned and with no pay-out, attackers would lose interest and find other pursuits. No one would be saddled with the moral conundrum of choosing between keeping their business running or funding organised crime.
+
+Unfortunately, we don’t live in an ideal world. In the real world, the very likely result of prohibiting payments would be a nasty game of ‘chicken’, whereby criminals would focus all their attention on organisations that would feel the worst effects from downtime — for instance hospitals, schools, water-treatment plants and energy providers. Criminals know that the potentially catastrophic consequences of downtime in these sectors would ensure they get paid.
+
+Governments should consider creating funds to support essential service providers so they don’t have to pay, yet even this does not completely solve the problem as recovery takes a great deal of time, during which essential services will continue to be disrupted. Small-to-medium businesses will also be heavily impacted. A small business can end up folding from an unresolved ransomware attack. This being the case, business owners would potentially make illegal payments to say their company, putting themselves further under control of their attacker. There is no easy solution to this problem. It’s going to take time, education and sustained investment. In the meantime, we can look at alternative measures that make it harder for ransomware attackers to realise their profit, for example ensuring that existing financial regulations are being applied to cryptocurrency exchanges, crypto kiosks, and over-the-counter (OTC) trading “desks”.
+
+Governments can also require disclosure of ransom payments, which will help increase the understanding of the scope and scale of the problem, as well as assisting law enforcement in tracking criminal groups and their payments. In some cases, such as with Colonial Pipeline, law enforcement may even be able to recapture the payment, but this would likely be the exception rather than the norm.
+
+Governments can also mandate that more effort be made to look for alternatives prior to payment. For example, the No More Ransom Project, backed by Europol, the Dutch Government, and numerous private sector organisations, provides a large amount of ransomware decryptors for free. This has already helped to resolve approximately four million ransomware attacks, saving organisations more than $630million (£456million) in the US alone, yet it’s still relatively unknown and few organisations know to check it for decryptors before paying a ransom.
+
+The need for a coordinated, comprehensive, public-private response
+No single entity can put an end to the chaos caused by ransomware; it’s going to require a coordinated public-private response.
+
+First, business leaders must stop thinking of ransomware as a computer issue; it’s a whole-of-business event that needs to be thought of in business resilience terms, in the same way organisations have had to plan around the pandemic during the past 18 months. Many leaders think there is no reason their business would be targeted, but all too often, these attacks are completely opportunistic and untargeted.
+
+All it takes to become a victim is for an attacker to be able to access your technical systems, which is often fairly trivial since phishing continues to be very successful as an attack vector, and organisations often have unchecked external exposures that also provide opportunities for attackers. To avoid becoming victims of attacks, organisations of all sizes must implement cyber hygiene practices and educate employees to help protect themselves.
+
+While an organisation’s capacity to implement effective mitigations may vary, there are some basics that should be prioritised. For example, keeping systems up to date with patches and managing who has access to systems. A two-step verification system for access is a good way of reducing the likelihood of the wrong person accessing systems and information. These measures take time and investment, and that can be a struggle for organisations, but it’s worth taking them a step at a time and focusing on each one in turn until they are complete.
+
+Regular backups will also improve an organisation’s chances of recovery, while patching vulnerable systems will reduce the opportunities for attackers to gain a foothold — and DNS filtering will reduce the malicious traffic coming into your organisation.
+
+There are things that governments should do too. We need to see them prioritise ransomware and recognise it as a national security threat. We need a collaborative whole-of-government approach that tackles the threat on multiple fronts. We also need to see governments work together to tackle the safe haven nations and encourage their governments to take stronger action to crack down on cybercriminals operating in their domain.
+
+Governments also need to help organisations take action to protect themselves and respond to attacks. This means ensuring the threat is understood and taken seriously and organisations know what they should be doing. In some sectors, governments may want to go further by incentivising, funding, or mandating adoption of key cyber hygiene practices.
+
+Waking up to the societal threat
+Unfortunately, ransomware isn’t going anywhere any time soon. But recent events like the attack on Ireland’s Health Service Executive (HSE), which runs the country’s healthcare, or the US Colonial Pipeline, which carries 45% of the East Coast’s supply of diesel, petrol and jet fuel, have helped highlight that ransomware attacks are not just niche computer crimes. And they are not just a significant threat to business continuity either — they are a threat to society as a whole

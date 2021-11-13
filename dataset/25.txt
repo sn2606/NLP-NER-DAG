@@ -1,0 +1,17 @@
+Ransomware is malware designed to lock computers by encrypting data
+The US government has announced a reward of up to $10 million (roughly Rs. 74.6 crores) for information that results in the arrest of people behind ransomware attacks on critical American infrastructure. The reward will be given under the State Department's Rewards for Justice (RFJ) programme. However, it is for the first time that a federal US agency has added cryptocurrency as a payout option. The department also said that the programme has set up a Dark Web (Tor-based) channel for reporting tips to protect the safety and security of potential sources.
+The move has come at a time when the US is facing increasing ransomware attacks. In May, a hacker group crippled the country's biggest gasoline pipeline between Houston and New Jersey. The FBI blamed DarkSide, which some claim may be based in Russia or Eastern Europe, for the attack.
+The State Department said that the reward is for information on cyber criminals “acting at the direction or under the control of a foreign government” to intentionally cause damage to a protected computer. “Protected computers include not only US government and financial institution computer systems, but also those used in or affecting interstate or foreign commerce or communication,” it added in a statement.
+The department added that the programme is also working with inter-agency partners to enable the “possible relocation of and payment of rewards to sources. Reward payments may include payments in cryptocurrency.”
+The detailed information about the reward offer can be accessed here.
+Ransomware is malware designed to lock computers by encrypting data. The people behind these attacks demand payment to let institutions of individuals regain access to their computers. The ransom demand may vary depending on the size of the system being held hostage and the group behind the attack, cyber experts say. However, hackers have made millions in recent years attacking manufacturers, hospitals, schools and even local schools.
+The RFJ programme is being run through the Diplomatic Security Service.
+In recent months, US President Joe Biden has raised ransomware attacks forcefully with Russian President Vladimir Putin, and the White House has stepped up efforts to curb the malicious activity.
+For the latest tech news and reviews, follow Gadgets 360 on Twitter, Facebook, and Google News. For the latest videos on gadgets and tech, subscribe to our YouTube channel.
+Advertisement
+06:09 
+05:26 
+04:03 
+09:19 
+09:31 
+Advertisement

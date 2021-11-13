@@ -1,0 +1,24 @@
+We use some essential cookies to make this website work.
+We’d like to set additional cookies to understand how you use GOV.UK, remember your settings and improve government services.
+We also use cookies set by other sites to help us deliver content from their services.
+You can change your cookie settings at any time.
+The defence sector is full of legacy systems vulnerable to cyber attack. Do you have the technology to reduce defence exposure to cyber effects?
+The defence sector is diverse and continually growing, with a large integrated network of legacy  cyber technologies. This presents a substantial and diverse surface area for cyber enabled attack to disrupt military operations.
+Being able to accelerate next generation hardware and software technologies to phase out the cyber vulnerabilities within current computer networks is vital in order to reduce defence exposure to cyber attack.
+So, the Defence and Security Accelerator (DASA) is pleased to launch a new Innovation Focus Area (IFA) called Reducing the Cyber Attack Surface, which aims to develop technologies that reduce the opportunity for cyber attacks on Ministry of Defence (MOD) systems and platforms.
+This IFA is being run on behalf of Defence Science and Technology laboratory (DSTL) and Defence Science and Technology (DST) and seeks proposals that enable greater confidence and a level of assurance in military systems against cyber-enabled attack.
+DASA expects to fund proposals within Technical Readiness Level 4 – 7 (TRLs) up to £300K for a 9 month contract. Proposed technologies should demonstrate by providing a roadmap describing how they would achieve a technical demonstrator by end of Financial Year 2023 if further funding was made available.
+Cycle 1 of the Reducing the Cyber Attack Surface IFA is open now, and it will close on 20 October 2021 at midday BST. Cycle 2 will run from 20 October 2021 to 05 January 2022.
+The MOD is interested in identifying and accelerating next generation hardware and software technologies to reduce the vulnerabilities within current and future computer networks and systems, focusing particularly on operational technologies.
+DASA is seeking proposals that are applicable across a whole “class” of attack.
+We are not seeking solutions that:
+The closing date for proposals of this IFA is 20 October 2021 at midday BST. A second cycle will run from 20 October 2021 to 05 January 2022. Click here for the full scope in the competition document and submit a proposal.
+You might also be interested in another cyber security IFA we are running called Autonomous Cyber Defence for Military Systems. This IFA seeks proposals that will develop autonomous cyber defence agents to protect military networks and systems.
+Don’t include personal or financial information like your National Insurance number or credit card details.
+To help us improve GOV.UK, we’d like to know more about your visit today. We’ll send you a link to a feedback form. It will take only 2 minutes to fill in. Don’t worry we won’t send you spam or share your email address with anyone.
+
+
+                    Open Government Licence
+                  
+
+All content is available under the Open Government Licence v3.0, except where otherwise stated

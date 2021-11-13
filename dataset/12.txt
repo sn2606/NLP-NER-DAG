@@ -1,0 +1,33 @@
+Apps – many still available on third-party stores – ‘collect money for services that don’t exist’
+
+Security researchers have found more than 170 fraudulent Android apps purporting to offer cloud crypto-mining services that have collectively swindled victims out of $350,000.
+The app developers have duped more than 93,000 users into paying around $300,000 in app purchases, and another $50,000 for fake upgrades and subscriptions, according to a blog post published by Lookout Threat Lab.
+Researchers found 25 of the fake cryptocurrency mining apps on Google Play, from where Google has now removed them – but dozens more are still circulating on third-party app stores.
+Cryptocurrency mining harnesses computers’ processing power in order to verify cryptocurrency transactions by solving complex mathematical problems.
+The lure for unsuspecting victims in this case was the false promise of renting cloud computing power via the apps and taking a small cut of each transaction verified.
+The apps’ only malicious function is to “collect money for services that don’t exist”, said Ioannis Gasparis, security intelligence engineer at Lookout Threat Lab.
+“Their entire raison d’être is to steal money from users through legitimate payment processes, but never deliver the promised service,” he added.
+Catch up on the latest cryptocurrency security news
+When users log into the apps they are presented with a fictitious, slowly incrementing coin balance, which in some cases increments “only while the app is running in the foreground and is often reset to zero when the mobile device is rebooted or the app restarted”, said Gasparis.
+Also displayed on the dashboard is a hash mining rate that is typically very low in order to lure the user into buying upgrades that promise faster mining rates, daily rewards, and incentives for referring friends.
+Users pay between $12.99 and $259.99 for this ‘virtual hardware’ via Google Play’s in-app billing system or by transferring cryptocurrency to the developers’ wallet.
+Some apps – dubbed ‘CloudScam’ apps by the researchers – meet withdrawal attempts with an ‘insufficient balance’ error message, while ‘BitScam’ apps bar users from withdrawing coins until they reach a minimum balance.
+Withdrawal attempts beyond a minimum threshold trigger a message that falsely signals a pending withdrawal and a resetting of the coin balance to zero.
+Cryptocurrency is likely to remain a popular bait for cyber-scammers, even despite the recent Bitcoin crash and Chinese crackdown on crypto-mining having dampened hitherto rampant enthusiasm for crypto assets.
+Gasparis offered advice on performing due diligence before downloading apps offering cryptocurrency-related services.
+“Take your time, and if a deal is too good to be true, it probably isn’t real,” he said.
+YOU MIGHT ALSO LIKE Yearn Finance launches bug bounty program with payouts potentially reaching $200k
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

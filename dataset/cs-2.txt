@@ -1,0 +1,30 @@
+The fake 1Password installer is used to launch Cobalt Strike allowing attackers to collect information about multiple systems in the network.
+
+We have covered various examples of malware in the recent past. One such happens to be Trickbot which surfaced in 2016 and has evolved over the years from being just a banking trojan to a ransomware botnet adding different capabilities over time.
+
+In the latest, it has been discovered that Trickbot deploys a mechanism to install a fake “1Password password manager” which in reality is designed to infect the victim’s computer and collect data.
+
+How it does so is initially through a password-protected archive file with a Microsoft Word or Excel file containing macros, which if enabled, results in the targeted device being compromised.
+
+Furthermore, the fake 1Password installer with the file name “Setup1.exe” is deployed which is used to launch Cobalt Strike helping the attackers collect information about multiple systems in the network. 
+
+New Trickbot attacks installs fake 1Password manager to extract data
+Legitimate 1Password installer (right) – Fake 1Password installer (left) – Image credit: The DFIR Report
+
+According to the researchers at The DFIR Report who were the first ones to discover the attack,
+
+The Trickbot payload injected itself into the system process wermgr.exe — the Windows process responsible for error reporting. The threat actor then utilized built-in Windows utilities such as net.exe, ipconfig.exe, and nltest.exe for performing internal reconnaissance.  
+
+Within two minutes of the discovery activity, WDigest authentication was enabled (disabled by default in Windows 10) in the registry on the infected host. This enforces credential information to be saved in clear text in memory.
+
+
+Shortly after applying this registry modification, the LSASS process was dumped to disk using the Sysinternals tool ProcDump. Having obtained sensitive credentials, WMIC was used to deploy a fake password manager application across multiple systems in the network, the researchers wrote in a blog post.
+
+The fake installer itself is also responsible for further dropping a file that helps run Cobalt Strike (CS) shellcode and therefore receives CS beacons. As the tool enables remote access to the victim systems, this is used to run PowerShell commands to collect information about the victim computers such as their “anti-virus state”.
+
+New Trickbot attacks installs fake 1Password manager to extract data
+Trickbot’s execution (Image credit: The DFIR Report)
+
+However, as pointed out by the researchers, the data collected was not exfiltrated and so it remains unclear what the motives of the group exactly were. In the future, we will continue updating you on this if any more developments are observed.
+
+Currently, cybersecurity researchers should read up the technicalities to ensure their client systems are secure against these techniques as the group may re-launch an attack again on other systems.

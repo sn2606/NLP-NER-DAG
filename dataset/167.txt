@@ -1,0 +1,435 @@
+
+
+Cybersecurity
+volume 4, Article number: 6 (2021)
+            Cite this article
+
+908 Accesses
+1 Citations
+Metrics details
+Cyber-physical systems (CPSs) in critical infrastructure face serious threats of attack, motivating research into a wide variety of defence mechanisms such as those that monitor for violations of invariants, i.e. logical properties over sensor and actuator states that should always be true. Many approaches for identifying invariants attempt to do so automatically, typically using data logs, but these can miss valid system properties if relevant behaviours are not well-represented in the data. Furthermore, as the CPS is already built, resolving any design flaws or weak points identified through this process is costly. In this paper, we propose a systematic method for deriving invariants from an analysis of a CPS design, based on principles of the axiomatic design methodology from design science. Our method iteratively decomposes a high-level CPS design to identify sets of dependent design parameters (i.e. sensors and actuators), allowing for invariants and invariant checkers to be derived in parallel to the implementation of the system. We apply our method to the designs of two CPS testbeds, SWaT and WADI, deriving a suite of invariant checkers that are able to detect a variety of single- and multi-stage attacks without any false positives. Finally, we reflect on the strengths and weaknesses of our approach, how it can be complemented by other defence mechanisms, and how it could help engineers to identify and resolve weak points in a design before the controllers of a CPS are implemented.
+Cyber-physical systems (CPSs), in which software components and physical processes are tightly integrated, are prevalent in the automation of critical infrastructure, e.g. as the industrial control systems of power grids and water purification plants. The potential impact of compromising such systems has made them prime targets for attackers (Hassanzadeh et al. 2020; Leyden 2016). In 2015, for example, the US Department of Homeland Security reported 25 cybersecurity incidents in the water sector and 46 in energy. Internationally, there have been several well-publicised attacks in these sectors too (N. Al-Mhiqani et al. 2018). This situation has motivated the development of multiple different countermeasures for attack detection and prevention, including techniques based on anomaly detection (Cheng et al. 2017; Goh et al. 2017; Harada et al. 2017; Inoue et al. 2017; Pasqualetti et al. 2011; Aggarwal et al. 2018; Aoudi et al. 2018; He et al. 2019; Kravchik and Shabtai 2018; Lin et al. 2018; Narayanan and Bobba 2018; Schneider and Böttinger 2018; Carrasco and Wu 2019; Kim et al. 2019; Adepu et al. 2020; Das et al. 2020; Giraldo et al. 2020; Schmidt et al. 2020), fingerprinting (Ahmed et al. 2018; Ahmed et al. 2018; Formby et al. 2016; Gu et al. 2018; Kneib and Huth 2018; Yang et al. 2020), and fuzzing (Chen et al. 2019; Chen et al. 2020; Wijaya et al. 2020).
+Another popular approach is to monitor invariants of a CPS (Adepu and Mathur 2016a; Adepu and Mathur 2016b; Giraldo et al. 2018), i.e. properties that always hold under normal operating conditions, and the violation of which might suggest the presence of an attacker in the system. Invariants are typically relations over the sensor readings and actuator states of a system, a simple example being that “if the tank level is above x, then pump p should be ON”. Given the complexity of CPSs in general, several approaches (e.g. (Chen et al. 2016; Chen et al. 2018; Feng et al. 2019)) aim to automatically derive such invariants from sources of data, for instance, the time series of sensor readings and actuator states logged by a supervisory control and data acquisition system (SCADA). There is a risk, however, that viable system behaviours are missed if they are not represented in that data (e.g. rarely occurring), and addressing any design flaws identified is costly as the CPS is already built. Invariants can be derived manually by system engineers (Cárdenas et al. 2011; Adepu and Mathur 2016a; Adepu and Mathur 2016b; Adepu and Mathur 2021; Choi et al. 2018), but if done so in an ad hoc manner, may also lead to properties being missed.
+In this paper, we propose a novel and systematic method for deriving invariants and invariant checkers from a design-level analysis of a CPS. In doing so, we aim to: (1) find invariants implicit in the design but poorly represented in datasets; (2) ensure that invariants can be contextualised by the specific design iterations and requirements they were derived from; and (3) further integrate security concerns at the design stage, potentially allowing weak points to be identified and fixed before a CPS is built. Our method, inspired by the principles of axiomatic design (Suh 2001)—a design science methodology for systems—iteratively decomposes a CPS design to sets of dependent components that can be transformed into invariants. We implement invariant checkers using decision tree learning, and use them to monitor CPSs for anomalies, i.e. violations of the invariant properties.
+To evaluate the viability of our proposals, we apply our method to the designs of two real-world CPS testbeds. First, Secure Water Treatment (SWaT) (Secure Water Treatment (SWaT) 2020; Mathur and Tippenhauer 2016), a scaled-down version of a modern water purification plant. SWaT is a complex multi-stage CPS involving physical and chemical processes such as ultrafiltration, de-chlorination, and reverse osmosis. Second, Water Distribution (WADI) (Ahmed et al. 2017), a scaled-down version of a water distribution network typical of a city, designed to account for varying patterns of peak and off-peak water demand. Starting from high-level functional requirements, we applied axiomatic design principles to decompose the systems’ designs and identify dependencies between their design parameters (i.e. sensors and actuators). Using domain expertise and process graphs, we transformed these into a suite of invariant checkers that were able to detect 13 different single- and multi-stage attacks on the real systems, all without false positives.
+Our paper is organised as follows. In our Background section, we present an overview of the SWaT and WADI testbeds, as well as a general attack classification that will be used in the evaluation of our method. In Our Approach, we present the three main steps of our design-level analysis, and show how axiomatic design principles can be used to identify sets of dependent components that can be transformed into invariants. In our Evaluation and discussion section, we assess the effectiveness of decision tree learning for constructing our invariant checkers, their ability to correctly label real SWaT and WADI inputs as normal or anomalous, and then reflect on the strengths and weaknesses of our approach. Finally, we compare our approach against some Related work before drawing some Conclusions and speculating on some future work.
+This is a revised and extended version of our position paper, Towards Systematically Deriving Defence Mechanisms from Functional Requirements of Cyber-Physical Systems (Yoong et al. 2020), adding the following new content: (1) an expanded description of the approach, adding details of the training sets used, an algorithm, and additional examples of invariants; (2) the addition of WADI as a second case study; (3) an evaluation of our invariant checkers against 13 different single- and multi-stage attacks; (4) new Discussion and Related work sections offering some critical reflections and comparisons; and (5) significant improvements to all parts of the text, including additional depth, examples, and figures.
+This section presents an overview of the two CPS testbeds used to evaluate our proposed approach. First, we present SWaT, a water purification plant that forms our principal case study, followed by our second testbed, the WADI water distribution system. Finally, we clarify what is meant by a CPS attack in the context of such systems.
+The Secure Water Treatment (SWaT) testbed (Secure Water Treatment (SWaT) 2020; Mathur and Tippenhauer 2016) is a scaled-down version of a modern water purification plant, intended for supporting research into cyber-security solutions for critical infrastructure. SWaT is able to produce up to five gallons of safe drinking water per minute across six distinct co-operating stages (Fig. 1) involving chemical processes like ultrafiltration, de-chlorination, and reverse osmosis. Each stage is controlled by an Allen-Bradley ControlLogix Programmable Logic Controller (PLC), which communicates with sensors and actuators through a field-bus network, and with each other through a 24-port Ethernet switch. A SCADA workstation connects a human-machine interface to all of the PLCs, facilitating monitoring and control of the plant by human operators. The physical state of SWaT, as observed by the sensors, is recorded by a historian server at pre-specified intervals. A SWaT dataset is available, consisting of all the data recorded by this server over a period of several days, including a few during which the testbed was subjected to attacks (iTrust Labs: Datasets 2020; Goh et al. 2016).
+
+Overview of the six stages of SWaT. Thick red arrows indicate the flow of water; dotted and dashed rectangles respectively indicate sensors and actuators; thick black rectangles indicate tanks and sub-systems; and blue rectangles indicate the stages
+An overview of the six sub-processes of SWaT is given in Fig. 1. A number of the testbed’s 68 sensors and actuators are depicted, with sensors including Flow Indicator Transmitters (FITs), Analyzer Indicator Transmitters (AITs), and Level Indicator Transmitters (LITs). Actuators include Motorised Valves (MVs) for controlling the inflow of water into tanks and Pumps (Ps) for pumping it out. Note that each stage is controlled by a dedicated PLC (not shown in the figure).
+Stage One. This is the first stage of SWaT, consisting of a raw water tank (T-101), connected to a motorised valve (MV-101) that controls the inflow of raw water. An electromagnetic flow transmitter (FIT-101) reads the flow rate of this water, and sends it to the PLC. Pump P-101 transfers water from T-101 into the chemical dosing process of stage two. The operation of P-101 is interlocked to the level indicator transmitter (LIT-301) in tank T-301 of stage three.
+Stage Two. Chemical dosing is applied in this stage. The chemical properties of the incoming raw water are measured using analyser indicator transmitters AIT-201, AIT-202, and AIT-203. This information is used by the PLC to control pumps P-201, P-202, and P-203, adjusting the dosing and thus the water’s chemical properties before it enters stage three.
+Stage Three. Ultrafiltration (UF) is performed in this stage. Raw water, after being dosed with chemicals in stage two, is fed into a UF unit. The operation of P-301 is interlocked with the level indicator transmitter LIT-401 for the reverse osmosis (RO) feed water tank (T-401) in stage four. Thus, P-301 is stopped when the water level in T-401 is high, but when the water level reaches the low marker, P-301 is turned on, and MV-302 is opened. Flow meter FIT-301 measures the incoming flow rate to the UF unit. The differential pressure indicator transmitter (DPIT) continuously monitors the difference in inlet pressure and outlet pressure. If the UF membranes are clogged, the DPIT triggers an alarm, and a backwash sequence begins in stage six. AIT-301, AIT-302, and AIT-303 measure and transmit (to the PLC) various chemical parameters of the water entering the UF feed water tank T-301.
+Stage Four. De-chlorination is performed in this stage: any free chlorine in the water coming out of the UF unit is removed using a combination of an ultraviolet de-chlorinator and sodium bisulphate. P-401 is started when T-401 reaches the high marker, moving water through the de-chlorinator unit. The hardness analyser (AIT-401) monitors and reports the level of hardness to avoid scaling within the RO system.
+Stage Five. Reverse osmosis (RO) is applied in stage five. The RO system is designed to provide bulk reduction of inorganic impurities. The RO permeate stream is channelled to the RO permeate tank (T-601) when MV-501 is opened. Before reaching the tank, the conductivity analyser (AIT-504) measures water conductivity, and if above the threshold, water is diverted to a reject tank T-602 by opening valve MV-503. The rejected water is used to clean the UF membranes in the backwash process. RO permeate pump P-601 recycles water from T-601 back to T-101.
+Stage Six. Finally, stage six consists of a backwash process. UF membranes need cleaning to remove solid particles. This cleaning is achieved through the backwash process, which is programmed to start every 30 min. It is also started when the pressure drop across the membrane goes above a pre-set threshold. The rejected RO water from tank T-602 is moved through the UF unit by starting pump P-602.
+The Water Distribution (WADI) testbed (Ahmed et al. 2017) is a scaled-down version of a typical water distribution network, designed to account for varying patterns of water demands (e.g. peak vs off-peak), and support research into ways of mitigating attacks that might otherwise cut off the water supplies of real consumers. WADI consists of three distinct stages, each controlled by a National Instruments PLC. The first stage consists of two 2500 litre water tanks which receive treated water from an external source. In the second stage, this water is fed through to two elevated reservoirs, which are configured to supply six consumer tanks based on a pre-set pattern of demand. Finally, in the third stage, unused water is fed into a return water tank, which can then be pumped back to the first stage to be re-used.
+Figure 2 provides an overview of the WADI’s three stages, as well as the main sensors and actuators involved. While the electronics involved are all based on different hardware from that of SWaT, we use a similar naming convention: LT for Level Transmitters, AIT for Analyser Indication Transmitters, FIT for Flow Indication Transmitters, PIT for Pressure Indication Transmitters, LS for Level Switches, P for Pumps, MV for Motorised Valves, MCV for Modulating Control Valves, and SV for Solenoid Valves. Each component is named according to its stage, type, and index: stage- type- index. For example, component 2-MV-001 is a motorised valve in stage two.
+
+Overview of the three stages of WADI. Solid arrows indicate the flow of water and the sequence of processes; component names are of the form stage- type- index, e.g. 1-LT-001 is a Level Indication Transmitter in stage one
+To evaluate the defence mechanisms developed in this work, we must first clarify exactly what we mean by a CPS attack. We define an attack as a tuple 〈T,C,O,D,L〉 of five components: T, a type; C, the subset of components being targeted (e.g. pump P-101); O, the objective; D, the description of the attacker’s steps (or actions); and L, the initial (or launch) state of the attack. In the context of SWaT and WADI, we consider four types of attacks: 
+
+Single attack, one stage (SAOS): one component is attacked, and the impact is observable within one stage only;
+Single attack, multiple stages (SAMS): one component is attacked, but the impact is observable within more than one stage;
+Multiple attacks, one stage (MAOS): multiple components are attacked, affecting one stage only;
+Multiple attacks, multiple stages (MAMS): multiple components are attacked, affecting multiple stages of the CPS.
+Thus, T∈{SAOS,SAMS,MAOS,MAMS}, and we aim to cover attacks of multiple different types to test the effectiveness of our defence mechanisms across a variety of scenarios. For simplicity, we will describe the steps of attackers (D) informally, but precisely, using natural language in our case studies.
+Our attack classification is similar to that of Adepu and Mathur (Adepu and Mathur 2016), in that we distinguish between single- and multi-point attacks. However, our model emphasises the results of the attacks (rather than just the steps themselves), classifying attacks according to whether they impact devices in one or multiple stages of the CPS. We shall use this classification for the attacks we consider in our Evaluation.
+The overarching goal of our work is to define a systematic design-level method for identifying—possibly before a system is built—dependencies between CPS components, helping designers to understand the potential impact of compromised components, and to identify weak points that should be redesigned or mitigated by other means (e.g. security policies, access rights, physical keys). In this paper, we focus on one particular application of this analysis: deriving invariants, i.e. mathematical relations over the dependent components. These can be included as part of the implemented CPS’s defence mechanisms, in the form of invariant checkers.
+Figure 3 summarises the steps of our approach. First, a design-level analysis based on axiomatic design principles is used to identify groups of dependent components in the CPS design. Second, invariants are derived for those groups of components, guided by domain knowledge and/or process graphs. Finally, we construct invariant checkers that can be used as defence mechanisms for an implementation of the CPS design. We expand upon these broad steps in the following three subsections, demonstrating them on SWaT, our principal case study, as well as WADI.
+
+High-level overview of our design-level analysis for obtaining invariant checkers
+Our analysis is based on the principles of axiomatic design, a systems design methodology developed by Nam Pyo Suh (Suh 2001), that uses matrix methods to systematically analyse the transformation of customer needs (e.g. “build a six-stage water treatment plant”) into functional requirements (e.g. “track water level of tanks”), design parameters (e.g. sensing mechanisms), and process variables (e.g. value ranges). The objective of the theory is to create a scientific base for the design process by building upon a suite of fundamental theories from logic and rationale thinking. Researchers have applied this theory in areas such as manufacturing (Matt 2012; Zhu et al. 2008) and software development (Kandjani et al. 2015; Mohsen and Cekecek 2000).
+In axiomatic design, functional requirements (FRs) express what we want to achieve, i.e. the specific behaviours we want from the design. Design parameters (DPs) are elements of the physical design that are chosen to realise the FRs. Finally, process variables (PVs) are elements of the process design controlling the DPs (e.g. continuous or discrete values that are characterising the process). Matrix methods are used by the designer to map FRs to DPs in the physical domain. For example, suppose that the top-level of a design involved two FRs and two DPs. These can then be related using the following matrix: 
+
+ The square matrix is a binary (or Boolean) matrix, indicating the coupling between FRs and DPs. After identifying the couplings at a high level (e.g. where one DP might represent all pumps), the designer would decompose the FRs and DPs further (e.g. with one DP representing exactly one of the pumps) until achieving a fine-grained set of dependencies in the design. The decomposed matrices can then be subjected to analyses to assess and mitigate the effects of coupling.
+In our work, rather than using axiomatic design to build a CPS from the ground up, we take the core principles of the approach and apply them to an existing CPS design in order to identify dependencies. We take DPs to be CPS components such as tank level sensors or motorised valves, each of which can function within specific values of PVs. Furthermore, we differ from conventional axiomatic design in the type of coupling: instead of considering physical coupling between FRs and DPs, we consider information state coupling when decomposing the matrix equations. This paves the way for a simple and high-level design analysis to uncover the relations that exist between DPs in normal CPS behaviour.
+Based on the requirements of SWaT, a top-level design decomposition is given in Table 1. By the axiomatic design principles, this first level should be a functionally uncoupled design guaranteeing that each DP satisfies exactly one FR. This is reflected by the matrix of Eq. (1), a diagonal matrix in which each FR is related only to its given DP from Table 1. 
+
+Next, the engineer analyses the DPs against the FRs and updates the corresponding Boolean value of the matrix if there is an information state coupling between them. Inserting this information state coupling into Eq. (1) results in Eq. (2), where ⊗ (or X on the diagonal) indicates some dependencies, and a zero (0) denotes the absence of them. Note that for simplicity, we assume these dependencies to be symmetric, e.g. if DP7 is (information state) coupled with FR2, then FR2 is coupled with DP7. 
+
+Equation (2) shows that FR7 (“direct flow of water”) is coupled with DP1–3, DP6, and DP7. This is justified by a number of different behaviours in the design. For example, if a tank level (DP2) is low and the corresponding pump (DP1) is on, then a motorised valve (DP7) is opened. Note however that Eq. (2) presents design information that is at a very high and broadly defined level. For instance, FR3—“track flow rate of water”—relates to multiple different locations and flow sensors (DP3) in SWaT. Another example is FR1—“feed water to water tanks/systems”—when in reality, there are multiple water pumps (DP1) in six different stages of SWaT. In order to derive meaningful invariants that relate concrete components of the CPS, our method requires that the top-level design of Eq. (2) is iteratively decomposed towards a point-to-point mapping between each FR and DP. For illustration purposes, such a mapping is shown in the third-level decomposition of Table 2.
+
+For simplicity of presentation, rather than use a full point-to-point mapping, we decompose the eight FRs of Eq. (2) into the 30 FRs of the second-level decomposition in Table 3. This is much more concrete than the top-level decomposition as it factors in particular sensors and actuators from different stages, but groups some of them together for convenience (e.g. P-101 and P-102 are the same DP, as the latter pump is simply a backup for the former).
+
+Next, the equation in Fig. 4 is constructed by mapping down the information-state coupling from Eq. (2) and adjusting according to the FRs of Table 3. At this second level, we use the notational format FR i.j and DP i.j with i denoting the number from the top-level design and j the number from the second-level.
+
+Equation characterising the second-level information-state couplings
+Finally, Table 4 presents the dependencies between DPs for each second-level FR of Table 3, using the information-state coupling as identified by the CPS designer in the equation of Fig. 4. These sets of dependencies identified in the design can then be used to construct invariants (see Step Two and Three).
+
+Similar to SWaT, our method requires a functionally uncoupled top-level decomposition in which each DP satisfies exactly one FR. Following the design of Palleti et al. (Palleti et al. 2018), we decompose WADI into eight FRs and DPs, which are presented together in Table 5. An analysis of the requirements enables the designer to derive the matrix below (Eq. 3), in a similar way to SWaT. 
+
+Further detailed, lower levels of decomposition follow the same procedure as in SWaT, and enable the designer to flesh out the relations across the different components of the system. For WADI, a second-level decomposition leads to 25 FRs and DPs.
+Having identified sets of dependent DPs, the second step of our approach is to identify the invariant relationships that exist between them, i.e. relational properties that always hold under normal operating conditions. For example, if two DPs have been identified as dependent, then we are seeking to identify the combinations of states they are permitted to be in, with any other combinations representing anomalous behaviour.
+Design engineers can derive invariants for these sets of DPs in a number of different ways. We propose a systematic approach supported by visual aids. In particular, we propose the construction of mathematical expressions over the DP states (e.g. “if DP1 is on and DP2 is low then the system is anomalous”). These expressions can be constructed directly (e.g. in a tabulated format) by the designer or engineer using domain expertise, or can be guided by visual aids such as process graphs. These are based on the directed acyclic graph (DAG) concept of graph theory (Bondy and Murty 2008) and can assist the designer/engineer to visually analyse the relationship between states of DPs (represented as nodes) and the conditions that cause them to change (represented as edges).
+To illustrate this step, consider, row FR7.1 of Table 4: here, DP7.1.1 expresses that motorised valve MV-101 has a dependency on LIT-101 (and vice versa). Using knowledge of the plant’s design, we then construct state expressions to characterise their invariant relationship, i.e. the combinations of states they will always be in during normal operation. These state expressions consist of combinations of DP states and the corresponding labels of anomalous or non-anomalous. In the case of LIT-101, we use the low/high thresholds to determine two discrete states of interest, then relate them against the possible discrete values of MV-101 (open or closed). These equations are given in Table 6 (Invariant #1), where MV-101 denotes that the valve is open, !MV-101 denotes that the valve is closed, LIT-101 denotes that the tank level is high, and !LIT-101 denotes that the tank is low. The table also contains labels reflecting the judgement of an engineer as to which of these four combinations reflect anomalous configurations. For example, if the valve is open and the tank level is high, this is anomalous as it could cause the tank to overflow.
+
+Figure 5 shows how the normal and anomalous cases of Invariant #1 would be depicted as process graphs. The arrows in parts (b) and (c) indicate changes of state, here triggered by LIT-101 reporting a reading below one of its low thresholds (Low or LowLow), or above one of its high thresholds (High or HighHigh). The idea is that the designer traverses through the different paths to explore the different behaviours, before mapping them down to equivalent state expressions.
+
+Process graphs for Invariant #1 a Subsystem in stage one of SWaT; b a process graph for normal cases; c a process graph for anomalous cases
+We exemplify the process of deriving invariants with two more examples. Consider DP3.5.1, in row FR3.5 of Table 4, which denotes a set of dependencies between flow sensor FIT-501, pump P-401, and pump P-402. We identify two states of interest for each component: water flowing (FIT-501 >0) versus no water flowing; and pump on (P-401) versus pump off (!P-401). Using knowledge of the design, we enumerate the mathematical state expressions in Table 7 (Invariant #2).
+
+Finally, consider the more complex case of DP7.1.2, in row FR7.1 of Table 4. The four devices are found across different stages of SWaT: the pumps P-101 and P-102 in stage one, the valve MV-201 in stage two, and the tank level sensor LIT-301 in stage three. The communication between these components is summarised in Fig. 6a. The sensor reading of LIT-301 (in tank T-301) is transmitted from PLC3 to PLC2. When the water level in the tank is low or very low, PLC2 sends a signal to close valve MV-201. Next, it transmits a signal to start pump P-101 or P-102 via PLC1. By doing so, water is pumped from stage one of SWaT through MV-201 in stage two through to tank T-301 in stage three. These are typical normal cases, i.e. without an attack. The process graph in Fig. 6b presents exactly three different paths to represent normal behaviour, whereas Fig. 6c depicts other, anomalous cases. For example, if the tank is falsely reported as being in a low state (e.g. by an attacker), MV-201 is anomalously opened, and P-101 or P-102 are switched on. The water starts flowing into the tank, but since its actual state is high, it may start to overflow and cause damage. The mathematical state expressions corresponding to these paths are summarised in Table 8 (Invariant #3).
+
+Process graphs for Invariant #3. a Subsystems involved across three stages of SWaT; b a process graph for normal cases; c a process graph for anomalous cases
+Note that for SWaT, we are able to assume that all DPs have one of two states, meaning that the total number of state expressions to analyse will be 2n, where n is the number of components involved. Though n is typically of a manageable magnitude for SWaT, for other systems, the number of equations may grow too large to manually complete. We address this in Step Three by allowing automated approaches (e.g. decision tree learning) to generalise from a strict subset of the state expressions that engineers have been able to identify.
+After decomposing the design of WADI using axiomatic design principles, we are able to identify the following sets of dependent components (depicted in Fig. 2). These sets of dependencies identified in the design include two limited to a single stage of WADI, and two involving multiple stages. 
+
+Motorised valves (1-MV-001, 1-MV-005) allowing treated water to flow into the stage one tank, and the level indicator transmitter (1-LT-001) in that tank;
+Motorised valve (2-MV-001) in an elevated reservoir of stage two, and the associated level indicator transmitter (2-LT-001);
+Pump 1-P-005 in stage one, and a motorised valve (2-MV-003) and level indicator transmitter (2-LT-002) in stage two;
+Pumps 1-P-005 and 1-P-006 in stage one, and a motorised valve (2-MV-003) and level indicator transmitter (2-LT-002) in stage two.
+With these sets of dependencies extracted, their invariant relationships can be derived by the designer/engineer in much the same way as SWaT.
+In this final step, we incorporate the identified invariants into the implemented CPS as invariant checkers, i.e. defence mechanisms that monitor for any violations of the properties. Intuitively, an invariant checker takes live sensor readings and actuator states from a CPS, maps them to the appropriate state expression of the invariant (discretising continuous values where necessary), then returns the corresponding label of anomalous or non-anomalous.
+Implementing invariant checkers can be done in at least two ways. First, if a complete set of state expressions is available, they can be programmed explicitly, e.g. as a control structure. Alternatively, an invariant checker can be constructed automatically using a supervised algorithm such as decision tree learning (Breiman et al. 1984). This latter approach has the advantage that the set of expressions need not be complete, as the learning algorithm will attempt to generalise from the samples presented.
+Consider the training set given in Table 9, which corresponds to the state expressions and labels of Invariant #3 (Table 8). The inputs are discretised representations of the sensor and actuator states, whereas the labels yk are discrete values between 1 and 5 of which 2 and 4 indicate anomaly cases (of course, one could simply use two labels—anomaly, normal—but this helps differentiate exactly which anomaly occurred). Note that the training set is incomplete in comparison to Table 8, but is still enough to learn an accurate classifier (i.e. invariant checker), as detailed in the next section. This allows for the possibility of a design engineer to focus on enumerating the most important cases, using decision trees to generalise the rest, followed by some validation (see Evaluation and discussion) to ensure that the resulting classifier is correct.
+
+Once the invariant checker is constructed or trained, Algorithm 1 summarises how it can be deployed as an anomaly detector—whether on simulators, datasets, or real systems and testbeds. In SWaT and WADI, the invariant checkers are implemented using values from the historian server. Intuitively, the states of the sensors/actuators relevant to a particular invariant are constantly read, discretised, then labelled (as anomalous or non-anomalous) by the invariant checker. As soon as an anomalous label is returned, an alarm is raised and the relevant values are sent to the plant operator. Note that the algorithm requires actuator states to be ‘stable’, i.e. not in the process of transitioning from one state to another (such as a closed valve moving into a fully open position). These transient states can be handled either by expanding the mathematical state expressions to cover them, or by using complementary defence mechanisms alongside our invariant checkers (see our Discussion section).
+The classifiers (i.e. invariant checkers) embody key characteristics of the design as identified by the engineer through a systematic method. We envisage that this has the potential to complement defence mechanisms based on data mining (e.g. (Pal et al. 2017; Chen et al. 2018; Umer et al. 2020)), where invariant relationships are based only on observable data after the system has been implemented, and which might not reflect all invariants implied by the design. Furthermore, as our invariants are constructed at the design stage, it may be possible to involve them in early simulations of the processes, and to iteratively modify the system design before it is implemented (Fig. 3) if any weak points or large sets of dependencies are identified.
+Having derived invariants and invariant checkers from the designs of SWaT and WADI, in this section, we evaluate how effective they are at detecting real attacks.
+We derived eight invariants and invariant checkers from the designs of SWaT and WADI by following the steps given in the previous section. These invariants relate groups of dependent level/flow/analytical sensors, pumps, and motorised valves from both single stages and multiple stages of their respective testbeds (Table 10). As described, we used process graphs and domain knowledge to determine state expressions for the invariants, i.e. combinations of discretised states and their corresponding labels. The full sets of expressions for Invariants #1–#3 are given in Tables 6, 7, and 8 (with the expressions for the others omitted for brevity).
+
+We experimentally assess the effectiveness of our design-derived invariant checkers on the SWaT and WADI testbeds. First, we run a pre-study to assess the suitability of decision trees for implementing invariant checkers from our (possibly partial) sets of mathematical state expressions. Second, we describe a study to validate that our invariant checkers properly classify normal system behaviour as non-anomalous (i.e. without raising false alarms). Finally, in our main study, we assess their effectiveness at detecting attacks, before discussing how designers might have mitigated them in the first place.
+As previously discussed, after identifying a group of related components and some mathematical state expressions, our approach uses decision tree learning to convert this information (e.g. Table 9) into a classifier that can be used as an invariant checker. To assess the suitability of decision trees for this purpose, we designed a simple pre-study to ascertain that the learnt classifiers correctly label states as anomalous or non-anomalous, using complete sets of state expressions as our oracles. Our decision trees were implemented in Python using scikit-learn (no maximum tree depth; minimum sample of two to split a node; minimum sample of one to be leaf).
+For each invariant, we generated 1000 copies of every possible combination of inputs (thus totalling 4000 tests for Invariant #1 and 16,000 for Invariant #3). First, we fed these to decision trees trained on the complete sets of state expressions for Invariants #1–#8 and found that the classifiers labelled them correctly 100% of the time. This is unsurprising, but an important sanity check before deploying our classifiers. Second, we fed the same inputs but to decision trees trained on partial sets of state expressions, in particular, the training set of Table 9 which covered all three non-anomalous cases but only 10 of the anomalous cases. Here too the classifiers labelled inputs correctly 100% of the time, suggesting that decision trees may be useful in cases where we want to generalise from partially completed analyses, e.g. if the number of dependent components is larger than 2–4. This should be investigated further, although for SWaT and WADI, is less important as the number of dependent components involved for each invariant typically remains in this range.
+In our pre-study, we validated our classifiers (i.e. invariant checkers) against inputs we labelled ourselves. In practice, we need confidence that our invariant checkers perform correctly for inputs from the real systems too: real normal behaviour should be classified as non-anomalous, whereas real behaviours under attack scenarios should be classified as anomalous.
+We designed a simple study to assess the first of these two requirements, i.e. to validate that our SWaT and WADI classifiers actually do characterise invariant properties of the testbeds. In other words, we want to validate that whenever the system is behaving normally, our invariant checkers label this behaviour as such and do not mislabel it as anomalous (detecting anomalies will be addressed in our third study).
+To assess this, we made use of the SWaT and WADI datasets (iTrust Labs: Datasets 2020; Goh et al. 2016), which respectively contain seven and 14 days of data from continuous normal operation of the testbeds, i.e. without interruption from any faults or attacks. In particular, the dataset contains the readings of all sensors and the states of all actuators as logged every one second during this period. For every log in this normal dataset, we mapped the (continuous) sensor values and actuator states to the (discretised) inputs of our invariant checkers, and noted whether the classification was anomalous or non-anomalous. We found that all of our invariant checkers correctly labelled all stable states extracted from the logs as non-anomalous, i.e. 100% of the time. In other words, no false positives were reported at any point while analysing these 21 days’ worth of logged data.
+While our second study suggests that our invariant checkers are unlikely to raise false alarms, we must also investigate their ability to detect true positives, i.e. actual attacks. In this third study, we launched several attacks on the SWaT testbed that targeted components covered by the invariants, and observed whether or not the checkers were able to successfully detect them based on values obtained from the testbeds’ historians. For WADI, we evaluated our invariant checkers against real data extracted from the system while it was under attack (iTrust Labs: Datasets 2020).
+Tables 11 and 12 list several different SWaT and WADI attack scenarios, targeting sensors and actuators covering all of the dependent components monitored by our invariant checkers. Furthermore, the attacks cover all four categories of attacks as introduced earlier. For each SWaT attack in turn, we used the SCADA controls to bring the given testbed into the stated launch state, before starting the attack as described, extracting the logs from the historian, and mapping the (continuous) sensor values and actuator states to the (discretised) inputs of our invariant checkers (for WADI, we used existing attack data (iTrust Labs: Datasets 2020)). We found that for every attack, at least one of the invariant checkers (i.e. the one covering the affected dependent components) was able to correctly detect the anomaly and raise an alarm for the plant engineer. However, it should be noted that the anomalies were only detected once actuator states had stabilised, e.g. a valve is either open or closed, but not in the process of changing from one state to the other. Nonetheless, in a water plant the processes typically evolve slowly (e.g. filling up a tank takes time), so despite the small delay, the alarm is still likely to be raised well before an unsafe state is reached.
+
+All of the attacks presented in Table 11 exploit the same dependencies between components that we identified in a design-level analysis to develop invariant checkers. By identifying dependencies in the design early, the designer can take steps either to minimise them (i.e. feedback to and adjust the design) or identify other means of attack mitigation.
+For example, consider Attack #1, visualised in Fig. 7. The dependency exploited is given in DP7.1.1, row FR7.1 of Table 4. SWaT’s defences could be strengthened against this attack by overriding attempts to manually turn on MV-101 if the water level reported by LIT-101 is above its high (H) or critically high (HH) thresholds. This would help to prevent the original attack, although would rely on the assumption that the value of LIT-101 is correct and can be trusted (additional invariant checkers concerning LIT-101 could help to mitigate this threat).
+
+Attack #1 on SWaT: single attack, one stage
+Consider Attacks #2 through to #5, as visualised in Fig. 8. The dependencies exploited are given in DP7.1.2, row FR7.1 of Table 4. Attacks #2 and #3 could be mitigated by overriding attempts to change the states of the pumps when the LIT is in its high (H) or critically high (HH) thresholds. A key lock could even be introduced to minimise the possibility of the manipulation being carried out by an insider. Attack #4 could be mitigated by similar measures for MV-201. Finally, Attack #5 could be mitigated by a monitor that checks for vast changes in continuous values, e.g. a sudden increase in a tank from level z at time t to level z+3 at time t+1.
+
+Attacks #2-#5 on SWaT: including SAOS, MAOS, and MAMS attacks
+Consider Attacks #6 and #7, as visualised in Fig. 9. The dependencies exploited are given in DP5.1.3, row FR5.1 of Table 4. Attack #6 could be mitigated by preventing P-203 from being switched off when the water pH is above eight, e.g. by requiring a password to digitally switch it off or requiring a key to physically turn it off. Attack #7 could be mitigated using similar solutions to those suggested for #5.
+
+Attacks #6 and #7 on SWaT: single attack, one stage
+For Attack #8 (Fig. 10), which exploits dependencies DP1.3.1 and DP1.3.2, row FR1.3 of Table 4, similar mitigations to those suggested for Attacks #2 and #3 could be used. For Attack #9 (Fig. 11), which exploits dependency DP3.5.1, row FR3.5 of Table 4, a similar solution to that of #5 can be again be used.
+
+Attack #8 on SWaT: single attack, one stage
+Attack #9 on SWaT: single attack, one stage
+Attack #10 on WADI: single attack, one stage
+Attacks #11-#13 on WADI: including SAOS and MAOS attacks
+This evaluation has shown that our design-level analysis for identifying sets of dependent components can also be used to derive invariants and invariant checkers. These invariant checkers are able to classify a range of real system inputs as anomalous or non-anomalous without any false positives. Our work has focused on the method of deriving invariants: axiomatic design principles provide systematic guidance for this purpose, without the need for any complex mathematical modelling (e.g. Petri-nets (Liu et al. 2017), Bayesian networks (Hadjsaid et al. 2009)) or even the implemented control logic itself. Ideally, the method would be applied earlier in the design process so that the system and its invariants can be derived together.
+Our work has focused on the problem of unearthing invariants, rather than deploying them. While our invariant checkers perform well on the inputs that they analyse, we have not addressed the problem—shared by all invariant-based defence mechanisms—of making sure that those inputs have not been spoofed by an attacker. For this, we recommend combining our invariants with secure deployment strategies as suggested in the literature, e.g. trusted embedded devices connected to PLCs (Alves and Felton 2004; Abera et al. 2016).
+Even if deployed securely, no invariant-based defence mechanism alone is enough to secure a CPS against the full range of attacker profiles. For example, invariant checkers would not be able to detect a stealthy attacker changing the reading of LIT-101 from 820mm to 830mm: no anomaly would be detected as LIT-101 remains in the same state of High. However, this kind of attack could be detected by the auto-regression technique (Yoong and Heng 2019), the state estimation method (Adepu and Mathur 2021), or by analysis of sensor and process noise (Ahmed et al. 2018). These various approaches (as well as invariant-based methods) have their own strengths and weaknesses, but are complementary and should be deployed together.
+While our case studies have shown viability of deriving dependent components and invariants from a design, they have also highlighted some limitations of the approach, including: (1) manual effort is required; (2) the process requires the designer to have some domain expertise; (3) as SWaT and WADI were already built, we had limited opportunity to investigate how invariants derived from our process could be used to improve the design; and (4) the invariant checkers only detect anomalies once component states have stabilised (e.g. a valve has finished the process of opening). Some of these limitations are inherent from the goals of the approach: we want to manually analyse the CPS design in part to ensure we uncover invariants missed by data-driven approaches (e.g. invariants involving components rarely used). However, we are keen to explore ways of mitigating this by automating the extraction of simpler invariants (e.g. from data or simulations), focusing the design-level analysis on others, and supporting the decomposition of matrices using tools.
+By applying our axiomatic design analysis to two CPS testbeds, we have increased our confidence in the generality of the method. However, while the testbeds involve different processes, stages, and components, they are both from the domain of water, so we plan to explore the applicability of our work to other types of CPSs as well (e.g. power). As our approach is applied at the design level, it can avoid the safety and resource problems faced by others that rely on guided data generation (e.g. (Chen et al. 2018)).
+In this section, we highlight and compare against some related work that addresses the main themes of this paper: defending CPSs and deriving CPS invariants.
+Several different, complementary approaches have emerged in recent years for detecting and preventing attacks on CPSs and critical infrastructure. These include techniques based on anomaly detection, in which the logs of the physical data are analysed to identify suspicious events and anomalous behaviours (Cheng et al. 2017; Harada et al. 2017; Inoue et al. 2017; Pasqualetti et al. 2011; Aggarwal et al. 2018; Aoudi et al. 2018; He et al. 2019; Kravchik and Shabtai 2018; Lin et al. 2018; Narayanan and Bobba 2018; Schneider and Böttinger 2018; Carrasco and Wu 2019; Kim et al. 2019; Adepu et al. 2020; Das et al. 2020; Giraldo et al. 2020; Schmidt et al. 2020); digital fingerprinting, in which sensors are checked for spoofing by monitoring time and frequency domain features from sensor and process noise (Ahmed et al. 2018; Ahmed et al. 2018; Formby et al. 2016; Gu et al. 2018; Kneib and Huth 2018; Ahmed et al. 2020; Yang et al. 2020); and attestation, in which unauthorised changes to control logic can be detected (Valente et al. 2014; Abera et al. 2016).
+Our work falls into another category of defence mechanisms: invariant-based defences (Cárdenas et al. 2011; Adepu and Mathur 2016a; Adepu and Mathur 2016b; Chen et al. 2016; Adepu and Mathur 2021; Chen et al. 2018; Choi et al. 2018; Giraldo et al. 2018; Umer et al. 2020), in which a plant is constantly monitored for violations of properties over the processes or control states (these violations possibly indicating an ongoing attack or fault). In particular, we focus on the problem of deriving invariants for these defence mechanisms to check. Invariants can be derived from the system’s design (e.g. documentation or ladder logic), from data sources (e.g. a historian server), or both (Umer et al. 2020). Our work follows the first approach, in that we start from functional requirements and systematically decompose them to invariants using axiomatic design theory; an approach that can (in principle) be performed before the plant has been implemented. This is in contrast to design-based approaches that start with the laws of physics, e.g. deriving invariant equations from the dynamics of water flow, then using state estimation methods to measure them (Adepu and Mathur 2016a; Adepu and Mathur 2016b).
+Data-driven approaches to invariant generation mitigate the manual effort and expertise required of design-based approaches. Feng et al. (2019), for example, use data mining and learning to extract invariants from logs while taking into account noise in sensor measurements; and Chen et al. (2018) learn invariants over sensor readings by seeding control software with faults and observing the outcomes. Nonetheless, data-driven approaches have shortcomings (Ahmed et al. 2020) that could be complemented by design-driven approaches such as ours. First, they succeed or fail based on the quality of data: unbalanced or incomplete data can lead to false positives and incomplete invariant sets. Second, black-box anomaly detectors may be susceptible to adversarial synthetic sensor manipulations (Erba and Tippenhauer 2020). Third, translating data-driven invariants from a testbed to a real plant is difficult due to the policies of typical civil infrastructure operators. While fairly representative, testbeds are not like-for-like, and solutions working perfectly on the former may need significant re-engineering to work on the latter (e.g. due to different design parameters). Some of the data-driven approaches also come with safety concerns (e.g. (Chen et al. 2018)) which would prevent them from being re-trained on a real plant.
+Once invariants are obtained (by our approach or others), they need to be deployed in the plant as invariant checkers. In our work, invariant checkers were deployed as decision tree classifiers that monitored live data from the historian server. However, it is also possible for our invariants to be deployed in a more distributed manner, with checkers placed in the PLCs, as described by Adepu and Mathur (2021). We could also deploy our checkers orthogonally to existing defence mechanisms, i.e. on an independent network that unobtrusively monitors data extracted from several sources, as proposed by Shrivastava et al. (2018). This would allow our approach to be deployed alongside complementary defence mechanisms that focus on attacks that invariant-based approaches may miss, e.g. the injection of false data (Beg et al. 2017).
+We proposed a novel and systematic method for deriving CPS invariant checkers through a design-level analysis based on axiomatic design principles. Our method iteratively analyses dependencies in the CPS design to construct mathematical state expressions (or process graphs) that represent invariant relations between sensor readings and actuator states. In contrast to mining-based approaches for identifying invariants, our method aims to: (1) find invariants that are implicit in the design but not well-represented in datasets; (2) ensure that invariants can be contextualised by tracing them back to specific design iterations and requirements; and (3) further integrate security concerns at the design stage, potentially allowing weak points to be identified before a CPS is built. This is achieved using a step-by-step approach from requirements through to the implementation of invariant checkers, in a process that does not require any complex mathematical modelling or dataset-based training.
+We evaluated our approach on two real-world CPS testbeds: SWaT, a water purification system, and WADI, a water distribution network for consumer supplies. Starting from high-level functional requirements, we applied axiomatic design principles to decompose the systems’ designs and identify dependencies between design parameters (i.e. sensors and actuators). Using domain expertise and process graphs, we derived mathematical state expressions for eight of these sets of dependencies, then generalised them into invariant checkers using decision tree learning. We found that these checkers were able to detect all 13 attacks we launched, covering both single and multi-stage attacks and often multiple components. Finally, we found that our invariant checkers operated without false positives, i.e. without incorrectly raising any alarms on normal operational data.
+In ongoing work, plan to compare the effectiveness of our invariants against those derived by other approaches (both automated and manual ones) in order to better quantify and understand the potential payoff of analysing the CPS design directly. We also plan to evaluate our approach on other case studies, for example, other industrial control systems (e.g. power grids), and potentially CPSs from other domains such as building management or healthcare. Finally, we are interested in exploring the role that simulation can play, especially for validating invariants at early stages of the design process, before the real system has been implemented. Simulation may play an important role in reducing the effort required by design-centric approaches: we could use a data-driven approach to derive a first set of invariants from logs (e.g. (Feng et al. 2019)), leaving design engineers to focus their axiomatic design analysis on unearthing any invariants that are implicit in the CPS design but not well-represented in the data.
+The datasets used in this research are available online (iTrust Labs: Datasets 2020).
+Abera, T, Asokan N, Davi L, Ekberg J, Nyman T, Paverd A, Sadeghi A, Tsudik G (2016) C-FLAT: control-flow attestation for embedded systems software In: Proc. ACM SIGSAC Conference on Computer and Communications Security (CCS 2016), 743–754.. ACM. https://doi.org/10.1145/2976749.2978358.
+Adepu, S, Brasser F, Garcia L, Rodler M, Davi L, Sadeghi A, Zonouz S (2020) Control behavior integrity for distributed cyber-physical systems In: Proc. ACM/IEEE International Conference on Cyber-Physical Systems (ICCPS 2020), 30–40.. IEEE, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Adepu, S, Mathur A (2016) Using process invariants to detect cyber attacks on a water treatment system In: Proc. International Conference on ICT Systems Security and Privacy Protection (SEC 2016), IFIP AICT, vol. 471, 91–104.. Springer, Cham.
+Chapter 
+    
+                    Google Scholar 
+                
+Adepu, S, Mathur A (2016) Distributed detection of single-stage multipoint cyber attacks in a water treatment plant In: Proc. ACM Asia Conference on Computer and Communications Security (AsiaCCS 2016), 449–460.. ACM, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Adepu, S, Mathur A (2021) Distributed attack detection in a water treatment plant: Method and case study. IEEE Trans Dependable Secure Comput 18(1):86–99.
+Article 
+    
+                    Google Scholar 
+                
+Adepu, S, Mathur A (2016) Generalized attacker and attack models for cyber physical systems In: Proc. IEEE Annual Computer Software and Applications Conference (COMPSAC 2016), 283–292.. IEEE Computer Society.
+Aggarwal, E, Karimibiuki M, Pattabiraman K, Ivanov A (2018) CORGIDS: A correlation-based generic intrusion detection system In: Proc. Workshop on Cyber-Physical Systems Security and PrivaCy (CPS-SPC 2018), 24–35.. ACM, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Ahmed, C, Ochoa M, Zhou J, Mathur A, Qadeer R, Murguia C, Ruths J (2018) NoisePrint: Attack detection using sensor and process noise fingerprint in cyber physical systems In: Proc. Asia Conference on Computer and Communications Security (AsiaCCS 2018), 483–497.. ACM, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Ahmed, C, Palleti V, Mathur A (2017) WADI: a water distribution testbed for research in the design of secure cyber physical systems In: Proc. International Workshop on Cyber-Physical Systems for Smart Water Networks (CySWATER@CPSWeek 2017), 25–28.. ACM, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Ahmed, C, R G, Mathur A (2020) Challenges in machine learning based approaches for real-time anomaly detection in industrial control systems In: Proc. ACM Workshop on Cyber-Physical System Security (CPSS 2020), 23–29.. ACM, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Ahmed, C, Zhou J, Mathur A (2018) Noise matters: Using sensor and process noise fingerprint to detect stealthy cyber attacks and authenticate sensors in CPS In: Proc. Annual Computer Security Applications Conference (ACSAC 2018), 566–581.. ACM, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Alves, T, Felton D (2004) TrustZone: Integrated hardware and software security. ARM white paper 3(4):18–24.
+
+                    Google Scholar 
+                
+Aoudi, W, Iturbe M, Almgren M (2018) Truth will out: Departure-based process-level detection of stealthy attacks on control systems In: Proc. ACM SIGSAC Conference on Computer and Communications Security (CCS 2018), 817–831.. ACM, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Beg, O, Johnson T, Davoudi A (2017) Detection of false-data injection attacks in cyber-physical DC microgrids. IEEE Trans Ind Inform 13(5):2693–2703.
+Article 
+    
+                    Google Scholar 
+                
+Bondy, J, Murty U (2008) Graph Theory. Springer.
+Breiman, L, Friedman J, Stone C, Olshen R (1984) Classification and Regression Trees. Wadsworth and Brooks.
+Cárdenas, A, Amin S, Lin Z, Huang Y, Huang C, Sastry S (2011) Attacks against process control systems: risk assessment, detection, and response In: Proc. ACM Asia Conference on Computer and Communications Security (AsiaCCS 2011), 355–366.. ACM, New York.
+
+                    Google Scholar 
+                
+Carrasco, M, Wu C (2019) An unsupervised framework for anomaly detection in a water treatment system In: Proc. IEEE International Conference On Machine Learning And Applications (ICMLA 2019), 1298–1305.. IEEE, New York.
+
+                    Google Scholar 
+                
+Cheng, L, Tian K, Yao D (2017) Orpheus: Enforcing cyber-physical execution semantics to defend against data-oriented attacks In: Proc. Annual Computer Security Applications Conference (ACSAC 2017), 315–326.. ACM, New York.
+
+                    Google Scholar 
+                
+Chen, Y, Poskitt C, Sun J, Adepu S, Zhang F (2019) Learning-guided network fuzzing for testing cyber-physical system defences In: Proc. IEEE/ACM International Conference on Automated Software Engineering (ASE 2019), 962–973.. IEEE Computer Society, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Chen, Y, Poskitt C, Sun J (2016) Towards learning and verifying invariants of cyber-physical systems by code mutation In: Proc. International Symposium on Formal Methods (FM 2016), LNCS, 155–163.. Springer, Cham.
+
+                    Google Scholar 
+                
+Chen, Y, Poskitt C, Sun J (2018) Learning from mutants: Using code mutation to learn and monitor invariants of a cyber-physical system In: Proc. IEEE Symposium on Security and Privacy (S&P 2018), 648–660.. IEEE Computer Society, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Chen, Y, Xuan B, Poskitt C, Sun J, Zhang F (2020) Active fuzzing for testing and securing cyber-physical systems In: Proc. ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2020).. ACM, New York.
+
+                    Google Scholar 
+                
+Choi, H, Lee W, Aafer Y, Fei F, Tu Z, Zhang X, Xu D, Xinyan X (2018) Detecting attacks against robotic vehicles: A control invariant approach In: Proc. ACM SIGSAC Conference on Computer and Communications Security (CCS 2018), 801–816.. ACM, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Das, T, Adepu S, Zhou J (2020) Anomaly detection in industrial control systems using logical analysis of data. Comput Secur 96:1–13.
+Article 
+    
+                    Google Scholar 
+                
+Erba, A, Tippenhauer N (2020) No need to know physics: Resilience of process-based model-free anomaly detection for industrial control systems. CoRR abs/2012.03586:1–18.
+
+                    Google Scholar 
+                
+Feng, C, Palleti V, Mathur A, Chana D (2019) A systematic framework to generate invariants for anomaly detection in industrial control systems In: Proc. Annual Network and Distributed System Security Symposium (NDSS 2019), 1–15.. The Internet Society, Reston.
+
+                    Google Scholar 
+                
+Formby, D, Srinivasan P, Leonard A, Rogers J, Beyah R (2016) Who’s in control of your control system? device fingerprinting for cyber-physical systems In: Proc. Annual Network and Distributed System Security Symposium (NDSS 2016), 1–15.. The Internet Society, Reston.
+
+                    Google Scholar 
+                
+Giraldo, J, Urbina D, Cardenas A, Valente J, Faisal M, Ruths J, Tippenhauer N, Sandberg H, Candell R (2018) A survey of physics-based attack detection in cyber-physical systems. ACM Comput Surv 51(4):76–17636.
+Article 
+    
+                    Google Scholar 
+                
+Giraldo, J, Urbina D, Tang C, Cárdenas A (2020) The more the merrier: adding hidden measurements to secure industrial control systems In: Proc. Annual Symposium on Hot Topics in the Science of Security (HotSoS 2020), 3–1310.. ACM. https://doi.org/10.1145/3384217.3385624.
+Goh, J, Adepu S, Junejo K, Mathur A (2016) A dataset to support research in the design of secure water treatment systems In: Proc. International Conference on Critical Information Infrastructures Security (CRITIS 2016), 88–99.. Springer.
+Goh, J, Adepu S, Tan M, Lee Z (2017) Anomaly detection in cyber physical systems using recurrent neural networks In: Proc. International Symposium on High Assurance Systems Engineering (HASE 2017), 140–145.. IEEE, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Gu, Q, Formby D, Ji S, Cam H, Beyah R (2018) Fingerprinting for cyber-physical system security: Device physics matters too. IEEE Secur Priv 16(5):49–59.
+Article 
+    
+                    Google Scholar 
+                
+Hadjsaid, N, Tranchita C, Rozel B, Viziteu M, Caire R (2009) Modeling cyber and physical interdependencies - application in ICT and power grids In: Proc. IEEE/PES Power Systems Conference and Exposition (PSCE 2009), 1–6.. IEEE, New York.
+
+                    Google Scholar 
+                
+Harada, Y, Yamagata Y, Mizuno O, Choi E (2017) Log-based anomaly detection of CPS using a statistical method In: Proc. International Workshop on Empirical Software Engineering in Practice (IWESEP 2017), 1–6.. IEEE, New York.
+
+                    Google Scholar 
+                
+Hassanzadeh, A, Rasekh A, Galelli S, Aghashahi M, Taormina R, Ostfeld A, Banks M (2020) A review of cybersecurity incidents in the water sector. J Environ Eng 146(5):03120003.
+Article 
+    
+                    Google Scholar 
+                
+He, Z, Raghavan A, Hu G, Chai S, Lee R (2019) Power-grid controller anomaly detection with enhanced temporal deep learning In: Proc. IEEE International Conference On Trust, Security And Privacy In Computing And Communications (TrustCom 2019), 160–167.. IEEE, New York.
+
+                    Google Scholar 
+                
+Inoue, J, Yamagata Y, Chen Y, Poskitt C, Sun J (2017) Anomaly detection for a water treatment system using unsupervised machine learning In: Proc. IEEE International Conference on Data Mining Workshops (ICDMW 2017): Data Mining for Cyberphysical and Industrial Systems (DMCIS 2017), 1058–1065.. IEEE, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+iTrust Labs: Datasets (2020). https://itrust.sutd.edu.sg/itrust-labs_datasets/. Accessed December 2020.
+Kandjani, H, Tavana M, Bernus P, Wen L, Mohtarami A (2015) Using extended axiomatic design theory to reduce complexities in global software development projects. Comput Ind 67:86–96.
+Article 
+    
+                    Google Scholar 
+                
+Kim, J, Yun J, Kim H (2019) Anomaly detection for industrial control systems using sequence-to-sequence neural networks In: Proc. International Workshop on the Security of Industrial Control Systems and Cyber-Physical Systems (CyberICPS 2019), LNCS, 3–18.. Springer.
+Kneib, M, Huth C (2018) Scission: Signal characteristic-based sender identification and intrusion detection in automotive networks In: Proc. ACM SIGSAC Conference on Computer and Communications Security (CCS 2018), 787–800.. ACM, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Kravchik, M, Shabtai A (2018) Detecting cyber attacks in industrial control systems using convolutional neural networks In: Proc. Workshop on Cyber-Physical Systems Security and PrivaCy (CPS-SPC 2018), 72–83.. ACM, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Leyden, J (2016) Water treatment plant hacked, chemical mix changed for tap supplies. The Register. Accessed December 2020.
+Lin, Q, Adepu S, Verwer S, Mathur A (2018) TABOR: A graphical model-based approach for anomaly detection in industrial control systems In: Proc. Asia Conference on Computer and Communications Security (AsiaCCS 2018), 525–536.. ACM, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Liu, X, Zhang J, Zhu P (2017) Modeling cyber-physical attacks based on probabilistic colored petri nets and mixed-strategy game theory. Int J Crit Infrastruct Prot 16:13–25.
+Article 
+    
+                    Google Scholar 
+                
+Mathur, A, Tippenhauer N (2016) SWaT: a water treatment testbed for research and training on ICS security In: Proc. International Workshop on Cyber-physical Systems for Smart Water Networks (CySWater@CPSWeek 2016), 31–36.. IEEE Computer Society, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Matt, D (2012) Application of axiomatic design principles to control complexity dynamics in a mixed-model assembly system: a case analysis. Int J Prod Res 50:1850–1861.
+Article 
+    
+                    Google Scholar 
+                
+Mohsen, H, Cekecek E (2000) Thoughts on the use of axiomatic designs within the product development process In: Proc. International Conference on Axiomatic Design (ICAD 2000), 188–195.. Institute for Axiomatic Design.
+Narayanan, V, Bobba R (2018) Learning based anomaly detection for industrial arm applications In: Proc. Workshop on Cyber-Physical Systems Security and PrivaCy (CPS-SPC 2018), 13–23.. ACM, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+N. Al-Mhiqani, M, Ahmad R, Mohamed W, Hassan A, Zainal Abidin Z, Ali N, Abdulkareem K (2018) Cyber-security incidents: A review cases in cyber-physical systems. Int J Adv Comput Sci Appl 9:499–508.
+
+                    Google Scholar 
+                
+Pal, K, Adepu S, Goh J (2017) Effectiveness of association rules mining for invariants generation in cyber-physical systems In: Proc. IEEE International Symposium on High Assurance Systems Engineering (HASE 2017), 124–127.. IEEE Computer Society, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Palleti, V, Joseph J, Silva A (2018) A contribution of axiomatic design principles to the analysis and impact of attacks on critical infrastructures. Int J Crit Infrastruct Prot 23:21–32.
+Article 
+    
+                    Google Scholar 
+                
+Pasqualetti, F, Dorfler F, Bullo F (2011) Cyber-physical attacks in power networks: Models, fundamental limitations and monitor design In: Proc. IEEE Conference on Decision and Control and European Control Conference (CDC-ECC 2011), 2195–2201.. IEEE, New York.
+Chapter 
+    
+                    Google Scholar 
+                
+Secure Water Treatment (SWaT) (2020). https://itrust.sutd.edu.sg/itrust-labs-home/itrust-labs_swat/. Accessed December 2020.
+Schmidt, T, Hauer F, Pretschner A (2020) Automated anomaly detection in CPS log files - A time series clustering approach In: Proc. International Conference on Computer Safety, Reliability, and Security (SAFECOMP 2020), LNCS, vol. 12234, 179–194.. Springer. https://doi.org/10.1007/978-3-030-54549-9_12.
+Schneider, P, Böttinger K (2018) High-performance unsupervised anomaly detection for cyber-physical system networks In: Proc. Workshop on Cyber-Physical Systems Security and PrivaCy (CPS-SPC 2018), 1–12.. ACM, New York.
+
+                    Google Scholar 
+                
+Shrivastava, S, Adepu S, Mathur A (2018) Design and assessment of an orthogonal defense mechanism for a water treatment facility. Robot Auton Syst 101:114–125.
+Article 
+    
+                    Google Scholar 
+                
+Suh, N (2001) Axiomatic Design: Advances and Applications. Oxford University Press.
+Umer, M, Mathur A, Junejo K, Adepu S (2020) Generating invariants using design and data-centric approaches for distributed attack detection. Int J Crit Infrastruct Prot 28:100341.
+Article 
+    
+                    Google Scholar 
+                
+Valente, J, Barreto C, Cárdenas A (2014) Cyber-physical systems attestation In: Proc. IEEE International Conference on Distributed Computing in Sensor Systems (DCOSS 2014), 354–357.. IEEE Computer Society. https://doi.org/10.1109/DCOSS.2014.61.
+Wijaya, H, Aniche M, Mathur A (2020) Domain-based fuzzing for supervised learning of anomaly detection in cyber-physical systems In: Proc. International Workshop on Engineering and Cybersecurity of Critical Systems (EnCyCriS 2020), 237–244.. ACM, New York.
+
+                    Google Scholar 
+                
+Yang, K, Li Q, Lin X, Chen X, Sun L (2020) iFinger: Intrusion detection in industrial control systems via register-based fingerprinting. IEEE J Sel Areas Commun 38(5):955–967.
+Article 
+    
+                    Google Scholar 
+                
+Yoong, C, Heng J (2019) Framework for continuous system security protection in SWaT In: Proc. International Symposium on Computer Science and Intelligent Control (ISCSIC 2019), 60–1606.. ACM, New York.
+
+                    Google Scholar 
+                
+Yoong, CH, Palleti VR, Silva A, Poskitt CM (2020) Towards systematically deriving defence mechanisms from functional requirements of Cyber-Physical Systems In: Proc. ACM Cyber-Physical System Security Workshop (CPSS 2020), 11–22.. ACM. https://doi.org/10.1145/3384941.3409589.
+Zhu, X, Hu S, Koren Y, Marin S (2008) Modeling of manufacturing complexity in mixed-model assembly lines. J Manuf Sci Eng 130:1–10.
+
+                    Google Scholar 
+                
+Download references
+We are grateful to the support of the iTrust technicians and NSoE office for helping to facilitate the experiments reported in this research.
+This research / project is supported by the National Research Foundation, Singapore, under its National Satellite of Excellence Programme “Design Science and Technology for Secure Critical Infrastructure” (Award Number: NSoE DeST-SCI2019-0004). Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not reflect the views of National Research Foundation, Singapore.
+Singapore University of Technology and Design, 8 Somapah Road, Singapore, 487372, Singapore
+Cheah Huei Yoong & Arlindo Silva
+Indian Institute of Petroleum and Energy, 2nd Floor, AU Engg College Main Block, Andhra University, Visakhapatnam, 530003, India
+Venkata Reddy Palleti
+Birla Institute of Technology and Science, Pilani, Hyderabad Campus Jawahar Nagar, Kapra Mandal Medchal District, Telangana, 500078, India
+Rajib Ranjan Maiti
+Singapore Management University, 80 Stamford Road, Singapore, 178902, Singapore
+Christopher M Poskitt
+You can also search for this author in
+                        PubMed Google Scholar
+You can also search for this author in
+                        PubMed Google Scholar
+You can also search for this author in
+                        PubMed Google Scholar
+You can also search for this author in
+                        PubMed Google Scholar
+You can also search for this author in
+                        PubMed Google Scholar
+CHY performed the axiomatic design analysis, implemented the experiments, and wrote the first draft of this paper. VRP, RRM, AS, and CMP all provided technical feedback throughout the project. Furthermore, AS had the initial idea, and CMP made substantial contributions to the text. All authors reviewed the final manuscript. All authors read and approved the final manuscript.
+Correspondence to
+                Cheah Huei Yoong.
+The authors declare that they have no competing interests.
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+Open Access  This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+Reprints and Permissions
+Yoong, C.H., Palleti, V.R., Maiti, R.R. et al. Deriving invariant checkers for critical infrastructure using axiomatic design principles.
+                    Cybersecur 4, 6 (2021). https://doi.org/10.1186/s42400-021-00069-7
+Download citation
+Received: 18 August 2020
+Accepted: 01 January 2021
+Published: 02 April 2021
+DOI: https://doi.org/10.1186/s42400-021-00069-7
+
+
+            By using this website, you agree to our
+            Terms and Conditions,
+            California Privacy Statement,
+            Privacy
+                statement and
+            Cookies policy.
+            
+                Manage cookies/Do not sell my data we use in the preference centre.
+            
+        
+ © 2021 BioMed Central Ltd unless otherwise stated. Part of
+            Springer Nature.
+        

@@ -1,0 +1,35 @@
+Exploit-ridden websites and phishing emails singled out as main conduits for increase in malware activity
+
+Coronavirus-themed campaigns have resulted in a surge in malware threats over recent months, according to a new report from security vendor Malwarebytes.
+Cybercriminals have preyed on the confusion, fear, and uncertainty surrounding the global coronavirus pandemic to give fresh impetus to often well-established malware strains.
+For example, the NetWiredRC backdoor, which was dormant for roughly five months in 2019, returned with a vengeance at the start of 2020, with recorded incidents trebling (up 200%) in the period between December and March.
+In addition, incidents of AveMaria, a dangerous remote access trojan that bundles password stealing capabilities, more than doubled over just a month with detections up 110% from February to March this year.
+DanaBot, an invasive trojan and information stealer that can swipe online banking account credentials, rose 160% over the same period.
+Malwarebytes’ latest quarterly Cybercrime Tactics and Techniques report (PDF), published on Monday, reports that exploit-ridden websites and phishing emails were the main conduit for the increase in malware activity.
+The study offers an overview of what Malwarebytes reports were “countless impersonating emails and snake-oil pitches hiding a variety of keyloggers, ransomware, and data stealers”.
+Some scam emails preyed on individuals’ desire to offer support during the pandemic.
+INSIGHT Cloud-based cyber-attacks flaring up during coronavirus pandemic
+Governments as well as low-level crooks are suspected of using coronavirus hooks to sling malware.
+For example, a Pakistani state-sponsored threat actor spreading a remote access trojan through a coronavirus-themed spear-phishing campaign.
+Malwarebytes further reports that a marked (26%) increase in credit card skimming activity in March shows that home shoppers are also being placed at higher risk of attack because of changes in the febrile threat environment.
+Adam Kujawa, director of Malwarebytes Labs, told The Daily Swig that the security firm had seen a “few different ways that Covid-19 has been used in these attacks, both against consumers and against business folks who may be working from home.”
+Kujawa views the use of older malware in the latest attacks as representative of a temporary switch in tactics.
+“When more people started [working from home] and the target shifted, instead of investing heavily in more effective and novel malware, they went and purchased crap malware that’s really only good for stealing passwords and spying on the user,” he said.
+“Eventually, we’ll all go back to the office and we’ll see them go back to the more effective tools we were watching at the beginning of the year. (Like Emotet, TrickBot, etc.)”
+The main findings of the report are covered in a blog post by Malwarebytes.
+The study follows reports by threat intel firms about the impact of the coronavirus pandemic on the darknet cybercrime ecosystem over recent weeks.
+RELATED Google partners with US victim support network to fight Covid-19 scams
+
+
+John Leyden
+
+
+
+@jleyden 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

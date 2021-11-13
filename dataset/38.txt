@@ -1,0 +1,30 @@
+ Jump to navigation
+Speak Now
+Like a real-life biological virus, Pakistan-originated malware that earlier targeted the power sector and government organizations in India and Afghanistan, has now mutated to adopt new cyber-attack capabilities.
+As the extremist Taliban threat against Afghanistan government grows, its institutions continue to face growing cyber-attacks originating from Pakistan. While Afghanistan remained the primary target of this campaign, the new research shared by Black Lotus Labs, the threat intelligence arm of US-based Telecommunications Company Lumen Technologies, suggests that India, Iran and Jordan were also targeted.
+Evidence shows the attackers used a forged United Nations Meeting platform to lure the government targets. Named after its previous known version, researchers are calling this new program “ReverseRat 2.0”.
+One of the capabilities that has caught experts' eyes is the ability of the improved Remote Access Trojan (RAT) to control the webcam of the compromised device.
+“Some of the more prominent modifications allowed for added functionality such as taking remote photos via webcams and retrieving files on USB devices inserted into the compromised machines,” said the Back Lotus Labs report.
+The experts have also uncovered an updated version of a component file that allows the malware to avoid detection by some of the popular antivirus solutions available in India. “We also uncovered an updated version of the preBotHta loader file, which included new evasion techniques to counter Kaspersky or Quick Heal antivirus (AV) products, if either were detected on the host machine,” it added. Researchers believe that the threat actor may have run tests with these antivirus solutions and realized that the antivirus identified and blocked certain aspects of their infection chain and that’s why, they added different logic paths to avoid antivirus detection and to ensure the ability to infect the targeted machines.
+A decoy communication mimicking The United Nations Office on Drugs and Crime (UNODC) in Vienna was sent to the victim by government officials.
+Researchers note that the virtual invitation link in the document was valid but the document itself “seemed fabricated” as the official journal of the UN did not mention any such event.
+The suspicious package titled “Agenda” was the likely career of the malware. Use of fabricated UN communication suggests that the campaign was targeted and specific in nature. While the earlier attacks used Allakore, an open-source RAT, a new agent called NightFury was used in the current attacks.
+“Metadata from the campaign indicates that it began on June 28, 2021. We observed network telemetry from at least one government entity in addition to other targeted organizations located in Afghanistan, and to a lesser extent, Jordan, India and Iran,” researchers added.
+The researchers took measures against the infrastructure used by the campaign actors across the Lumen global IP network and also notified the affected organizations. They have asked other organizations to alert in case a similar campaign is found in their environments.
+“Given the nature of the critical sectors the actor is targeting, Black Lotus Labs advises security practitioners to learn the actor’s current tactics, tools and procedures (TTPs) to better defend their organizations against potential attacks,” the cyber security researchers at Black Lotus Labs said.
+ALSO READ: Chinese hackers attempted 40,000 cyber attacks on Indian web, banking sector in 5 days
+ALSO READ: India a third-tier country in cyber warfare capabilities, report says US more powerful than China
+Click here for IndiaToday.in’s complete coverage of the coronavirus pandemic.
+ Tripura Police books Abhishek Banerjee, other top TMC leaders for 'obstructing police duty'
+ Users under 18 can now request Google to remove their images from Google Search 
+ Rafael Nadal out of Toronto Masters because of foot injury
+ Mumbai court rejects Raj Kundra's pre-arrest bail plea in Nov 2020 case
+ Kerala continues to be worst-affected as concerns grow over new mutating variant
+ Lok Sabha Speaker Om Birla expresses pain over ruckus in House during Monsoon Session
+ Sakshi Tanwar and Manoj Bajpayee open up about Dial 100
+ How Rihanna Became A Billionaire
+ Image of the day: Messi arrives in Paris, waves at PSG fans
+ NaMo app opens survey for voters on govt performance, PM Modi's popularity in poll-bound states
+ OBC Bill passed in Lok Sabha; Chaos in Parliament over farm laws; more
+ Karnataka minister KS Eshwarappa stands by ‘hit back with same stick’ remark
+Copyright © 2021 Living Media India Limited. For reprint rights: Syndications Today

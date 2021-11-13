@@ -1,0 +1,32 @@
+Anti-racist groups and government sites were peppered with malicious HTTP requests over the weekend
+
+Anti-racist campaign groups were deluged with cyber-attacks over the weekend as protests broke out across the US in response to the death of George Floyd, according to Cloudflare.
+The web security firm also observed a spike in attacks against the websites of police departments and other government agencies, as thousands took to the streets after a video emerged showing a police officer kneeling on the neck of Floyd, an unarmed African-American man, for a prolonged period leading up to his death.
+In a blog post published yesterday (June 2), Matthew Prince and John Graham-Cumming, Cloudflare CEO and CTO respectively, said the rising numbers were unsurprising since “real world protest and violence is usually accompanied by attacks on the internet”.
+The same appears to be true of pandemics, with the Covid-19 outbreak also paralleled by a surge in cyber-attacks.
+The number of malicious HTTP requests blocked by Cloudflare against advocacy groups in general soared by a massive 111,900% over the weekend compared to the corresponding period in April.
+The San Francisco-based firm classified HTTP requests as malicious if they were part of a distributed denial-of-service (DDoS) attack or intended to break into websites, apps, or APIs.
+Campaign groups subject “to almost no attacks at all in April” were suddenly inundated with malicious requests over the weekend, with one site hit by 20,000 requests per second at one point.
+“One particular attacker, likely using a hacked server in France, was especially persistent and kept up an attack continuously hitting an advocacy group continuously for over a day,” said Prince and Graham-Cumming.
+The pair said anti-racist groups operating under Cloudflare’s Project Galileo umbrella – which provides free security protection to organizations championing causes such as press freedom, women’s rights, and mental health – were subject to a particularly “dramatic increase in the number of cyber-attacks”.
+However, a simultaneous rise in attacks on government domains suggests pro- as well as anti-protest cyber-activists mobilized over the weekend – unless state-backed hacking groups seeking to sow division in an increasingly polarized society were playing a major role.
+Attacks on government websites, including those of police and fire departments, jumped by 80%, while assaults on military websites increased by 280%, according to Cloudflare’s numbers.
+Long-dormant hacktivist group Anonymous was linked to a suspected DDoS attack against the Minneapolis police department website over the weekend, as well as the defacement of a United Nations agency webpage, which became a George Floyd memorial.
+Cloudflare said it blocked around 135 billion malicious HTTP requests in total on Saturday and Sunday, compared to 116 billion during the corresponding weekend in April – a 17% increase.
+Prince and Graham-Cumming said the 670,000 malicious requests that Cloudflare blocked per second eclipsed the number of per-second Google search queries by a factor of 10.
+The Daily Swig has contacted Cloudflare for further comment.
+YOU MIGHT ALSO LIKE Cybercrime report: Malware slingers riding the crest of the coronavirus pandemic
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

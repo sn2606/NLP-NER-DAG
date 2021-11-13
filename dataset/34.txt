@@ -1,0 +1,31 @@
+Sum may be awarded in cryptocurrency to help protect whistleblowers’ anonymity
+
+US authorities are offering up to $10 million in cryptocurrency for information leading to the identification of state-sponsored cyber-attackers.
+Under the scheme, which takes place under the Department of State’s Rewards for Justice (RFJ) program, payouts will be awarded for the identity or location of anyone who, “while acting at the direction or under the control of a foreign government, participates in malicious cyber activities against US critical infrastructure in violation of the Computer Fraud and Abuse Act (CFAA)”.
+A press release states that violations include threats made during ransomware attacks, unauthorized access to a protected computer with intention to steal sensitive data, and intentionally causing damage without authorization to a protected computer.
+
+RELATED CFAA: What the ‘landmark’ Van Buren ruling means for security researchers
+The program has set up a reporting channel accessible on the dark web to help protect the safety and security of potential sources.
+“Reward payments may include payments in cryptocurrency,” said the Department of State.
+More information on how to access the Tor-based reporting channel can be found in the release.
+
+
+The offer of a reward comes as the US continues to experience cyber-attacks against critical infrastructure that have caused chaos across the nation.
+In May this year, a ransomware attack on gas supplier Colonial Pipeline cut off services to multiple states on the east coast.
+Attackers leveraging DarkSide malware demanded $4.3 million in bitcoin – a sum that was reportedly paid out by the company.
+Security professionals previously told The Daily Swig that in paying ransoms, organizations risk perpetuating a “feedback loop of malicious activity” that “allows the groups to achieve a greater level of sophistication during their next attacks, whether that be via training, new tooling, purchasing credentials, or recruitment”.
+YOU MAY ALSO LIKE Analysis: Colonial Pipeline’s $5m ransomware payment risks perpetuating cybercrime ‘feedback loop’
+
+
+Jessica Haworth
+
+
+
+@JesscaHaworth 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

@@ -1,0 +1,22 @@
+Nearly 30 top US prosecutors had their office's email accounts hacked during a major breach last year, the Justice Department says.
+The attack on users of the software SolarWinds - which the US has blamed on Russia - was the worst-ever cyber-espionage attack on the US government.
+The department says 27 US attorneys had at least one office computer hacked.
+That has raised fears the hackers may have accessed sensitive information, including the names of informants.
+"It's potentially very serious," Gil Soffer, a former federal prosecutor, told the BBC.
+He said prosecutors' emails contain "very sensitive, very confidential and often very secret information".
+If the hackers got hold of secret informants' identities, they could use the information to "blow their cover," he added.
+The hack, which gave cyber-criminals potential access to 18,000 government and private computer networks, was made public last December.
+Those hit by the breach include 80% of Microsoft email accounts used by employees at the four New York's attorney offices - which handle some of the most prominent prosecutions in the country.
+"There are very sensitive investigations going on within those offices," former federal prosecutor Renato Mariotti said.
+They include many high-profile financial investigations, which means any leaked information could be used for blackmail or extortion, he said.
+The department says hackers compromised the accounts as early as May 2020 - some seven months before the SolarWinds hack was made public.
+The department said all victims had been notified and it is working to mitigate "operational, security and privacy risks" caused by the hack. 
+It did not reveal what kind of information had been taken.
+In April, US President Joe Biden's administration announced sanctions against Russia in response to the SolarWinds breach and other cyber attacks. 
+Russia has denied any wrongdoing.
+But Mr Mariotti warned that if a foreign government got hold of sensitive legal files, it could try to use them to shape public debate or influence elections.
+"There are all sorts of reasons why a foreign government might want to have that kind of information," he said.
+SolarWinds: Why the Sunburst hack matters
+Russia hacking claims pose challenge for Biden
+China accused of cyber-attack on Microsoft
+Taliban 'carrying out door-to-door manhunt'

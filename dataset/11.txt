@@ -1,0 +1,30 @@
+The gang behind a "colossal" ransomware attack has demanded $70m (£50.5m) paid in Bitcoin in return for a "universal decryptor" that it says will unlock the files of all victims.
+The REvil group claims its malware, which initially targeted US IT firm Kaseya, has hit one million "systems".
+This number has not been verified and the exact total of victims is unknown.
+However, it does include 500 Swedish Coop supermarkets and 11 schools in New Zealand.
+Two Dutch IT firms have also been hit, according to local media reports.
+On Friday, cyber-security firm Huntress Labs estimated about 200 firms had been affected.
+The "supply chain" attack initially targeted Kaseya, before spreading through corporate networks that use its software.
+Kaseya said that fewer than 40 of its own customers had been affected.
+But because Kaseya provides software to managed service providers, firms which themselves provide outsourced IT services to other companies, the number of victims may be much greater. 
+And the number of individual computer systems within those victim organisations could be greater still.
+Kaseya chief executive Fred Voccola told the Associated Press that the number of victims would probably be in the low thousands, made up of small organisations such as dental practices and libraries.
+For hundreds, perhaps thousands, of IT teams around the world this ransomware attack is a horrendous headache that is still growing.
+But the way the cyber-security world has pulled together to reduce the impact of the attack has been incredible. 
+Cyber-defenders, both private and public sector, have been issuing alerts while experts work out how best to untangle the web of victims.
+There could have been far more victims if it wasn't for a busy and stressful weekend of work.
+However, we now know that the secret digital doorway in the Kaseya system that let in the REvil hackers was known about before the attack.
+Researchers from the Dutch Institute for Vulnerability Disclosure found the problem and were helping Kaseya plug the hole long before the hackers found it.
+It was a case of the good hackers racing to stop the bad hackers from getting in and, as Victor Gevers from the institute puts it: "Unfortunately, we were beaten by REvil in the final sprint."
+This case shows how skilled, persistent and determined these criminals are, and that in spite of all the efforts of the cyber-security world, we are losing the race against ransomware.  
+"The scale and sophistication of this global crime is rare, if not unprecedented," Prof Ciaran Martin, founder of the National Cyber Security Centre, told Radio 4's Today programme.
+Most of REvil's members are believed to be based in Russia or countries that were formerly part of the Soviet Union.
+Prof Martin criticised Russia for providing a safe environment for ransomware hackers, but said that the West was making it too easy for these gangs to be paid and "unsurprisingly they are coming back for more".
+Experts have expressed surprise at the group's demand that the ransom should be paid in Bitcoin, as opposed to harder-to-trace cryptocurrencies such as Monero.
+On Twitter, Prof Martin called REvil's decision to demand payment in Bitcoin, "weird".
+Yes. Weird. Original demands to individual orgs in monero; over-arching demand for masterkey is in Bitcoin
+Earlier this month the US Justice Department announced it had traced and seized millions of dollars worth of bitcoin paid to the DarkSide ransomware group, responsible for shutting down the Colonial Oil Pipeline.
+"Following the money remains one of the most basic, yet powerful tools we have", said Deputy Attorney General Lisa O. Monaco.
+Tom Robinson, founder and chief scientist of the firm Elliptic, which analyses bitcoin payments, told the BBC it had observed REvil continuing to negotiate with individual customers for smaller ransoms of about $200,000, despite the $70m request to unlock everything. 
+He said REvil preferred to use Monero, but it would be difficult to purchase $70m of the currency for practical and regulatory reasons.
+

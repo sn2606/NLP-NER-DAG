@@ -1,0 +1,59 @@
+By Bernd Debusmann JrBusiness reporter
+A cyber-crime group known as REvil took meticulous care when picking the timing for its most recent attack - US Independence Day, 4 July.  
+They knew many IT specialists and cyber-security experts would be on leave, enjoying a long weekend off work.
+Before long, more than 1,000 companies in the US, and at least 17 other countries, were under attack from hackers. 
+Many firms were forced into a costly downtime period as a result.
+Among those targeted during the incident was a well-known software provider, Kaseya. 
+REvil used Kaseya as a conduit to spread its ransomware - a malware that can scramble and steal an organisation's computer data - through other corporate and cloud-based networks that use the software. 
+REvil took credit for the incident and claimed to have encrypted more than one million systems. 
+The group then demanded a ransom of $70m (£50.5m) in Bitcoin for the release of a universal decryption tool that would allow those affected to recover their crucial files.
+Hacking experts warn that such attacks are likely to become more frequent, and suggest businesses cannot afford to underestimate the hidden impact the pandemic has had on their vulnerability. 
+A recent survey from the UK and US-based security firm, Tessian, found that 56% of senior IT technicians believe their employees have picked up bad cyber-security habits while working from home. Worryingly, the survey found that many employees agreed with that assessment. 
+Nearly two in five (39%) admitted that their cyber-security practices at home were less thorough than those practised in the office, with half admitting that this is a result of feeling less scrutinised by their IT departments now, than prior to Covid. 
+"One of the main mistakes we've seen is moving company data to personal e-mail accounts," says Henry Trevelyan-Thomas, Tessian's vice-president of Customer Success.
+"When you do that, it's likely you don't have any sort of two-factor authentication. This then makes it easier for attackers to exploit that data. If data is leaked, attackers compromise it and it can end up in the wrong hands."
+Experts also warn of a significant growth in the number of coronavirus-themed phishing emails targeting employees, being reported by several companies around the world.
+During the height of the pandemic in 2020, network security firm Barracuda Networks said it had seen a 667% increase in malicious phishing emails.  Google also reported, at the time, that it was blocking over 100 million phishing emails daily. 
+"Social engineering and phishing work best when there's a climate of uncertainty," Casey Ellis, founder of security platform, BugCrowd, tells the BBC. "As an attacker in that scenario, I've got a base of fear to work off of."
+Mr Ellis says for example, one method hackers may use in a post-pandemic world could be an email that lures victims in with the promise of appointments for those who are currently unvaccinated against the virus.
+"You've got an entire population wanting the pandemic to end. They're more likely to click on that," he says. "I think that companies should proactively consider that it's a really good time to invest in training to work through these kinds of scenarios."
+The consequences of such phishing attacks can often be dire. While global multinationals may be able to recover from substantial losses, cyber-attacks can be catastrophic for both small businesses and individuals.
+In November 2020, a Sydney-based hedge fund collapsed after a senior executive clicked on a fraudulent Zoom invitation. The company - Levitas Capital - reportedly lost $8.7m to the cyber-attack and was forced to close.
+"The hackers were able to access their systems, sending out multiple fraudulent invoices, and the damage was so great that their largest client pulled out of a planned multi-million-dollar investment," says Tony Pepper, the co-founder of security firm Egress. "With enough pressure, businesses will fold."
+Now, with many employers demanding workers return to the office at least part-time, experts say there are several steps companies should take to ensure that proper security procedures are put in place to keep both themselves and their employees safe. 
+New Tech Economy is a series exploring how technological innovation is set to shape the new emerging economic landscape.
+Mary Guzman, the founder of Crown Jewel Insurance, is urging firms to carefully screen personal devices that have been used for work on a remote-basis during the pandemic. 
+"Before anyone is allowed to use them, or connect to any corporate network, appropriate analysis, and protective measures should be taken to ensure malware is not present," she tells the BBC. "Until that can safely take place, perhaps personal devices should not be allowed back in the office."
+Mrs. Guzman says that employers now have two options to consider; they can re-train their employees so they know how to navigate cyber security in a post-pandemic world, or prepare themselves to "face the ramifications are for failing to do so."
+Meanwhile, Tessian's Henry Trevelyn-Thomas says that the most important thing is that companies urgently take steps to address threats if they haven't already. He believes the current heightened risk of cyber-attacks is likely to become the new normal.
+"This isn't a short-term phenomenon. It's a long-term issue... this is the new world that we live in."
+Voice cloning of growing interest to actors and cybercriminals
+Who are the alleged victims of Pegasus spyware?
+Taliban 'carrying out door-to-door manhunt'
+The militants are searching for those who worked with Nato forces, a UN document warns.
+'Everything I ever thought I would have is gone'
+Taliban 'tortured and massacred' Afghan men
+'Everything I ever thought I would have is gone'
+'I transformed my disability into a super-ability' Video'I transformed my disability into a super-ability'
+The treacherous road to Kabul's airport
+What's behind the rising gun violence in the US? VideoWhat's behind the rising gun violence in the US?
+OnlyFans: How it handles illegal sex videos
+Weekly quiz: Ice-cream vans and rude place names
+Aaliyah: 'Her influence is absolutely everywhere'
+How virtual reality helps to recruit and train staff
+BBC Future: Which hand gestures will disappear?
+Lyrics quiz
+Have you been getting these songs wrong?
+Feeling hot
+What happens to your body in extreme heat?
+Taliban 'tortured and massacred' Afghan men1
+Taliban 'carrying out door-to-door manhunt'2
+Afghan footballer falls to death from US plane3
+OnlyFans: How it handles illegal sex videos4
+BHP sacked 48 over sexual misconduct at mines5
+Sydney extends lockdown and imposes curfew6
+Afghanistan: Danger lies on Kabul road to freedom7
+Kill Bill actor Sonny Chiba dies of Covid at 828
+OnlyFans to ban sexually explicit content9
+China formally passes three-child policy10
+© 2021 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking.

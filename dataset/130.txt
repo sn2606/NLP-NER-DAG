@@ -1,0 +1,39 @@
+Cybercriminals shift focus in an attempt to capitalize on home-working trend
+
+UPDATED A huge increase in cyber-attacks targeting cloud services has accompanied the move by many organizations to get staff to working from home in response to the Covid-19 pandemic.
+A new study from McAfee reports that external attacks on cloud accounts grew sevenfold (up 630%) between January and April.
+Most of these external attacks targeted collaboration services like Microsoft 365, and were large-scale attempts to access cloud accounts with stolen credentials.
+The security firm further reports that “anomalous login attempts” tripled in the first three months of 2020.
+Nigel Hawthorn, a data privacy expert for cloud security at McAfee, told The Daily Swig: "As well as credential stuffing and password reuse, we’ve seen malware emails that claim to be new versions of cloud applications or links to online meetings attempting to steal credentials, as well as links that look like common cloud-based apps (with the traditional slight misspelling) aiming to download malware or that request credentials."
+"We’ve seen that the cloud traffic from unmanaged devices has doubled, so attackers are aiming to compromise a new or unmanaged device and then get to the corporate cloud service from there,” he added.
+Insider threats remained the same, indicating that working from home has not negatively influenced employee loyalty.
+Access to the cloud by unmanaged, personal devices doubled in the January to April period, adding another layer of risk for security professionals working to keep their off-site data secure.
+Overall, enterprise use of cloud services increased by 50%, bolstered by increased adoption by industries such as manufacturing and financial services that typically rely on legacy on-premises applications, networking, and security more than others.
+Video conferencing has become the killer app for working from home. Cisco WebEx, Zoom, Microsoft Teams, and Slack saw an increase of up to 600% in usage, led by the education sector and its adoption of distance learning practices.
+
+INSIGHT Cloud security: Attacking Azure AD to expose sensitive accounts and assets
+Hawthorn commented: “The move to widespread remote working has required many industries to adopt new cloud services in order to maintain staff communication and collaboration during such a challenging time.
+“However, it is important to recognise the increased threat from cybercriminals who see opportunity in cloud services that are not managed securely.”
+The same infrastructure typically used for botnet attacks has been turned to attack enterprises via their cloud services, according to McAfee.
+With cloud-native threats increasing in step with cloud adoption, all industries need to evaluate their security posture to protect against account takeover and data exfiltration, the security vendor advised.
+The company’s findings are based on data from more than 30 million McAfee MVISION Cloud users worldwide between January and April.
+The full report, entitled Cloud Adoption & Risk Report – Work-from-Home Edition (registration required), offers guidance and advice on rolling out security policies to the cloud.
+
+This story has been updated to add comment from McAfee's Nigel Hawthorn
+
+
+RECOMMENDED Dark web vendors feel the pinch as coronavirus lockdown restrictions impact underground operations
+
+
+John Leyden
+
+
+
+@jleyden 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

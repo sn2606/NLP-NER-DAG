@@ -1,0 +1,10 @@
+On May 29, 2020, Amtrak revealed in a security advisory that a security incident affected the personal information, usernames, and passwords of its users. However, no credit card information, financial details, or Social Security numbers were compromised.
+It was determined that an unauthorized third-party gained access to the Amtrak Guest Rewards accounts on April 16, 2020. Amtrak hired cybersecurity experts to investigate the incident, reset users’ passwords, and implemented additional security measures to prevent incidents in the future. The affected customers and federal law enforcement were notified. Amtrak is also offering complimentary one-year identity protection services to all impacted customers.
+Arm yourself against cybersecurity disasters like this by investing in an all-encompassing tool that will protect your network from brute-force attacks, ransomware threats, and denial-of-service (DoS) attacks. Download ManageEngine Log360, a comprehensive solution to help you combat both internal and external security attacks.
+Log360, our comprehensive SIEM solution, can help your organization by:
+Download a free trial of Log360 to see the tool in action for yourself.
+Share:
+Subscribe to our digest to get your weekly dose of cyber security updates straight to your inbox.
+By clicking 'I’m interested', you agree to processing of personal data according to the Privacy Policy
+© 2019 Zoho Corporation Pvt. Ltd. All rights reserved.
+You will receive weekly cybersecurity news soon!

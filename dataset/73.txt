@@ -1,0 +1,27 @@
+Five-year anniversary for crime-busting website
+
+No More Ransom has celebrated its fifth anniversary of helping victims to recover from ransomware attacks.
+The decryptors available in the No More Ransom repository have helped more than 600,000 people to recover their files without having to pay malware-peddling criminals.
+The portal – available in 37 languages – offers 121 free tools capable of decrypting 151 ransomware families.
+The No More Ransom initiative was created by the National High Tech Crime Unit of the Dutch National Police, Europol’s European Cybercrime Centre, Kaspersky, and McAfee. Five years on, the project has brought together 170 partners from the public and private sectors internationally.
+Members of the initiative publish decryption tools on the website. These tools, which typically exploit weaknesses in malware encryption routines, help victims of specific ransomware families get their data back without paying.
+Backers of the scheme estimate it has deprived criminals of €900 million (US$1.06 billion).
+The No More Ransom project has helped more than 600,000 people get their data back
+The No More Ransom website has recently been revamped to mark the project’s fifth birthday.
+Alongside decryption tools, the self-described new home of the ‘Crypto Sheriff’ also offers advice on how to prevent a ransomware infection and instructions on how to report a cybercrime in a particular country.
+Elsewhere, the US recently established StopRansomware – a similar initiative backed by the US Cybersecurity and Infrastructure Security Agency.
+YOU MAY ALSO LIKE Multiple encryption flaws uncovered in Telegram messaging protocol
+
+
+John Leyden
+
+
+
+@jleyden 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

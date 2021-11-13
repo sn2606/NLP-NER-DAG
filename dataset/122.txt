@@ -1,0 +1,33 @@
+Have I Been Pwned? founder Troy Hunt solves three-month mystery
+
+Covve, the popular address book app, has been identified as the source of a data breach that exposed the details of nearly 23 million individuals.
+Troy Hunt, founder of Have I Been Pwned?, tweeted on Saturday (May 16) that the app had been pinpointed as the source of a publicly accessible database that he had been investigating since February.
+Hunt duly updated his blog post outlining the mystery of the 90 GB “treasure trove”, published the previous day, to confirm that “community sleuthing” had identified Covve as the data source.
+He added that he had already been in touch with the Cyprus-based company about the breach.
+The compromised data, which was “left exposed on a major cloud provider via a publicly accessible Elasticsearch instance”, included names and job titles, email addresses, phone numbers, and physical addresses, Hunt’s post suggests.
+In a security alert issued on Saturday, Covve confirmed that a third party had “gained unauthorized access to one of our legacy, decommissioned systems”.
+The company added: “It appears at this stage that contact data such as name and contact details was accessed, that the data cannot be associated with specific users and no user passwords were compromised.”
+Covve said it first learned of the breach on May 15 and “immediately launched an investigation”.
+The statement continued: “We have taken all necessary measures to ensure that the security incident has been isolated and have confirmed that the system in question does not pose any further risk as it had already been decommissioned.
+“We contacted and are in talks with the regulator, we have informed our users and will continue to post updates [on the security alert].”
+In his blog post, Hunt said he was first alerted to the database in February by security software vendor Dehashed.
+The ‘db8151dd’ breach – which he named after a global unique identifier that recurred frequently in the database – involved “mostly scrapable data from public sources”.
+Indeed, Have I Been Pwned?, a search engine that links email addresses to specific data breaches, tweeted that it had previously logged 65% of the 22.8 million email addresses involved from previous breaches.
+However, Hunt accurately speculated that “it feels like a CRM [customer relationship management system]”, noting that his own “record was immediately next to someone else I've interacted with in the past as though the data source understood the association.”
+The Covve app, which has been downloaded nearly 5,500 times in the past 30 days, according to Crunchbase, includes a personal CRM.
+The Daily Swig has contacted Covve and Troy Hunt for further comment and will update the story if we hear back.
+READ MORE US healthcare admin firm MNS admits data breach
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

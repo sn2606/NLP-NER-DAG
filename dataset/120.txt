@@ -1,0 +1,29 @@
+Dozens of employees’ email accounts were compromised, investigation reveals
+
+The email accounts of 47 workers at Service NSW, the government information office for the Australian state of New South Wales, have been compromised following a cyber-attack.
+The incident was discovered on April 22, and although it’s not known how much customer information was accessed, Service NSW says forensic specialists are investigating.
+Although Service NSW offered little in the way of technical details, multiple Australian news outlets are reporting that the business email compromise (BEC) attack was the result of at least one employee falling victim to a phishing scam.
+Only customers served by one of the 47 team members are believed to have been affected, the agency said.
+Account data for the MyServiceNSW resident portal has not been compromised, says Service NSW, and there’s no risk to transactions carried out online or via mobile.
+“We are now working as quickly as possible to confirm the scope of this attack on the personal information of our customers,” said Service NSW CEO Damon Rees.
+“We are now confident the criminal access was limited to the content of those email accounts, which are related to transactions over the phone or over-the-counter at a Service NSW Centre.”
+Service NSW says it’s set up a dedicated team that will contact customers who have been affected, and is advising them to check for unauthorized transactions or changes to settings, and to reset all passwords and PINs.
+While Australia’s Privacy and Personal Information Protection Act does not require government agencies to report data breaches to the privacy commissioner or affected individuals, New South Wales has pledged to introduce the requirement.
+Service NSW says that relevant state and federal cybersecurity agencies have been briefed on the incident, along with the NSW Information and Privacy Commission.
+“This is a very complex issue and the analysis and investigation are both ongoing,” says Rees.
+The Daily Swig has approached the agency for additional comment.
+YOU MIGHT ALSO LIKE Data breach at Indian learning platform Unacademy exposes millions of user accounts
+
+
+Emma Woollacott
+
+
+
+@EmmaWoollacott 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

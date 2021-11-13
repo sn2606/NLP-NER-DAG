@@ -1,0 +1,207 @@
+
+
+Cybersecurity
+volume 4, Article number: 11 (2021)
+            Cite this article
+
+1092 Accesses
+Metrics details
+Robust encryption techniques require heavy computational capability and consume large amount of memory which are unaffordable for resource constrained IoT devices and Cyber-Physical Systems with an inclusion of general-purpose data manipulation tasks. Many encryption techniques have been introduced to address the inability of such devices, lacking in robust security provision at low cost. This article presents an encryption technique, implemented on a resource constrained IoT device (AVR ATmega2560) through utilizing fast execution and less memory consumption properties of curve25519 in a novel and efficient lightweight hash function. The hash function utilizes GMP library for multi-precision arithmetic calculations and pre-calculated curve points to devise a good cipher block using ECDH based key exchange protocols and large random prime number generator function.
+Useful tiny autonomous IoT machines that work endlessly, are used in our daily lives such as smart refrigerator, smart air-condition, smart TV, smart health devices and smart parking. Number of such devices are estimated to reach 50 Billion by 2025 (Song et al. 2017). Most devices share sensitive information over the internet with each other via pre-programmed tasks and make critical and nearly accurate decisions when required. These devices are usually cheap, tiny and retain little computational and memory capabilities, known as IoT devices, machine type communication (MTC) devices and cyber physical systems (CPS).
+The data shared among such devices can be extremely sensitive, both for user and operational purposes. Since the devices do not possess security of their own, it is provided either externally or physically by embedded applications (which is not feasible for all devices) within the entire network as the purpose of such devices is to work remotely and autonomously with constrained resources (Rajesh et al. 2019). However, due to low computation and memory capabilities, standard security protocols (as of internet) cannot be applied (Song et al. 2017). Consequently, the devices are only equipped with software-based security in a network for secure operational communication applications. The data shared between the devices must be integrated in its original form without mutation and must also maintain secrecy of the device that sends data. Whereas a network can contain numerous connected devices and every data block that is transmitted from a device, must ensure integrity of data. It is achieved by applying end-to-end encryption.
+We propose curve25519 based end-to-end encryption with a novel lightweight hash function. The proposed elliptic curve cryptography (ECC) based end-to-end encryption method enables computational and memory exhaustive IoT devices to communicate securely with efficient memory consumption and affordable computation because of curve25519 that possess strong security (Bernstein 2006) and occupies comparatively smaller key sizes in memory. While most ECC based encryption techniques utilize RSA, AES and Elgamal (Banerjee and Patil 2018) type hash functions to encrypt data based on a private keys and consequently resulting in exhaustive computational power, our proposed method introduces a pre-calculated curve points strategy that proves to be more efficient in computational performance and memory consumption. Moreover, it retains strong 192-bit security with 128-bit encrypted keys. The proposed method is tested on an AVR ATMega2560 microcontroller with ECDH based 128-bit secret keys. Furthermore, the use of GMP library improved scaler multiplication performance and large prime number generation costs. The proposed technique is applicable on all AVR machines with minimum 32Kbytes of flash memory.
+Elliptic curve over a finite field F is a one-way function and its’ inverse is incomputable (Moosavi et al. 2018a). An elliptic curve over a field is denoted by Fg(a, b) where g is a prime number where g > 3. g represents x, y set of coordinate points such that g = (x, y) where (x, y∈ Fg(a, b)) that satisfies the equation y2 = x3 + ax + b (mod p) where 0 <  = x <  = p . Size of p in a curve, governs the essence of n-bit security. The performance efficiency of ECC relies on computing a fixed-point or scalar-point multiplication, given the product points x, y. Performance cost of scaler multiplication mainly depends on two curve operations i.e., PA (Point Addition) and PD (Point Doubling). PA refers to the addition of two similar curve points (x1, y1) and (x2, y2) on curve in a field f such that x1 = x2 and y1 = y2 . Whereas PD refers to a Double-&-Add algorithm, used for two different points on curve such that x1 ≠ x2 and y1 ≠ y2. The resulting curve point from PA and PD will be a random point on curve that cannot be calculated reversely. Additionally, PA and PD operations cost computational power if large prime numbers are used. Furthermore, ANSI X9.63 and IEEE P1363 provide the public key cryptography (PKC) standards for ECC based lightweight cryptography. These standards offer randomness and robustness per bit compared to the current PKC encryption schemes based on RSA, DES and Elgamal.
+Düll et al. (2015) initiated ECDH (Elliptic Curve Diffie-Hellman) key exchange protocol by applying a fixed basepoint and a variable curve point on AVR ATmega, MSP-430X and ARM Cortex-M0 microcontrollers using curve25519. The variance in bandwidth upgraded the robustness of curve including reduction in cost of clock cycles by 18%. Previous methods applied by Liu et al. (2014), Hutter and Schwabe (2013), Hinterwälder et al. (2014), De Clercq et al. (2014), Wenger et al. (2013), Gouvêa et al. (2012), Aranha et al. (2010) and Gura et al. (2004), utilized identical hardware configured IoT devices with different types of elliptic curves where each type resulted in different computational cost and memory consumption. However, the results indicated that these resource constrained computing capable IoT devices handled encryption computational tasks in reasonable time and inexpensive memory. Oualha and Nguyen (2016) applied pre-computation techniques using ECC by discarding scalar point multiplication tasks and resulted in consuming lesser energy. While the technique is computationally efficient but it demanded for large memory. Fujii and Aranha (2018) also instigated curve25519, targeted for ARM Cortex-M4 type microcontrollers that relied on a digital signature (ECqDSA). Moosavi et al. (2018b) worked on developing a refined IoT network structure to achieve optimal security in a three-layer architecture with ECC centered private key generation on random time points using ECG of a patient by calculating difference in two crusts with combination of Fibonacci linear feedback shift register. Numerous applications of ECC discussed in Liu and Ning (2008), used AVR ATmega and targeted low costs with high security. Whereas TinyECC library applied ECDSA, ECDH, and ECIES for 128, 160 and 192-bit security using SECG curves, respectively. Szczechowiak et al. (2008) applied another similar and smaller type of curve called Nano-ECC and used NIST K-163 curve. Though improving cost efficiency in terms of computation and memory, is still a challenging task as recent ECC applications on AVR ATmega machines applied comparatively unsafe curves. Another type of twisted Edwards curves presented in Chu et al. (2013), applied 80-bit and 96-bit security levels for performance enhanced implementation of ECC. De Santis and Sigl (2016) used implemented × 25519 curve on ARM Cortex-M4 device to improve key generation computation. Similarly, Fujii and Aranha (2018) aimed to minimize modular multiplication by 50% on ed25519 curve using ARM Cortex-M4 device. Moreover, a software implementation on Intel’s AVX2 Haswell processors which are equipped with vector instruction set architecture for prime number arithmetic in ECC operations (Faz-Hernández et al. 2019). They computed digital signatures algorithms with reduction of 19% and 29% for ed25519 and ed448 in comparing with execution time of × 25519 and × 448, respectively.
+In the context of Related work on ECC section, resource constrained IoT devices still lack in efficient encryption algorithm that can deliver robust security against powerful computational statistical attacks. We propose a novel approach in implementation of end-to-end encryption in this section. The section also describes related functional parts of our technique. An example illustrated in Fig. 1 elaborates proposed novel hash function and a pseudo code of encryption and decryption procedures is also presented in Algorithm 1&2, respectively.
+
+Hash function mutation of curve points (example)
+The proposed method implements curve25519 based encryption on an AVR ATMega2560 machine through a pre-calculated curve points strategy. The method is designed to accommodate 46 characters (a-z, 0–9 and special characters) to minimize memory usage. Each character (ci) is allocated a unique large random prime number (LRPN), considered as a generator number point (G) on curve. A generator number point (G) represents the number of times a curve performs PA and PD curve operations from a starting point 1G (i.e., 9x,6278y in our technique). Thus, each character has a particular generator number representing unique curve points. These curve points are then fed to a hash function that encrypts the characters. Moreover, every proceeding character will influence the next character’s curve points during encryption, explained briefly in Hash function of the proposed method section.
+32–64-bit large prime numbers and signed integers have limited compiler support in constrained IoT devices. To use minimum code size, we adopted GMP library that has embedded support libraries for arithmetic operations of 32–64 bits large-signed integers. GMP library is freeware and used for arbitrary multiple precision based arithmetic calculation on singed integers, floating points and rational numbers. It is equipped with fast and precision capable algorithms. Furthermore, it supports C and C++ platform with most inner loops coded in assembly language (depending on CPUs) to deliver speedy calculations.
+We used gmp-6.2.0 version that comes with a mini-gmp sub library. This sub library can be used for machines from AVR family to use minimum code size and functionality for all arithmetic operations related to elliptic curves.
+Adoption of a particular form of curve is very crucial in elliptic curve cryptography. The proposed technique targets a curve that should perform speedy calculations and consume the least possible memory in addition to robust encryption. In this regard, we chose curve25519 as it retains our targeted features during the curve operations. The curve25519 is a 255-bit based curve with preceding standard curves (NIST P-256 and NIST K233 of 128-bit) that offers up to 256-bit key security with fastest ECC curves. The curve was introduced by Bernstein (2006) and designed particularly for ECDH key agreement schemes. The research in Bernstein (2006), implemented the curve on a public domain software using Intel Pentium III, 4, M and AMD Athlon CPUs and concluded that the curve is fast, retains short secret and public keys, and is free of key validation. Another research in Bernstein and Lange (2014), represented a thorough security and performance analysis of several ECC based curves where the curve25519 is said to gain indistinguishable security and showed resilience against ladder attack, side channel attack, twist attack and exhibited completeness from random strings attacks. Thus, it is considered a safe curve as it repels all known curve attacks.
+The curve equation y2 = x3 + 486662x2 + x mod(p) is a Montgomery curve (Montgomery 1987) over Fg prime field where mod (p) is defined by 3 < p ≤ 2255 − 19, with a based-point of x = 9. The curve also uses compressed x-axis coordinate points to allow use of Montgomery ladder in utilizing X, Z coordinates. In our work, we used three (32,43 and 62-bit) p values and secret key sizes at 30,43 and 51-bit to limit cost affordability of computation and memory.
+Secret key (SK) plays vital role in the proposed hash function. SK is primarily adopted to further mutate curve points to improve encryption robustness. It is generated during runtime; hence size of the secret key must be considerably kept as a tradeoff between robustness and computational efficiency. We tested three SKs for every mod(p) as shown in Table 1. Additionally, SK can be generated by any of the following two means
+
+SK can be resultant key provided by ECDH based key exchange protocols.
+SK can be generated via large prime positive integer through random number generator function (RNGF) with seed value applied from a built-in timer function in AVR Atmega2560.
+SK in Table 1 is generated by ECDH based key exchange protocols, treated as a starting generator value (1G) with specific curve points. The SK generator’s execution cost is evaluated through curve operations (PA & PD) during scalar multiplication. It is an efficient way to calculate large curve points on a curve (i.e. If a bit is 1 then PA is applied, and PD is applied if the bit is 0). Similarly, the number of operations (i.e., PA and PD) depends on number of generator (G) bits.
+Table 1 shows several SKs, generated against three mod(p) values on runtime in constrained IoT device where scalar multiplication and computational costs are also mentioned. The execution time (ET) increases with larger mod(p) value due to increase in the curve operations. Note that PD has lesser arithmetic operations than PA. We calculated that PA takes 1.5-2x more execution time than PD.
+Reference table (RFTAB) contains the list of ASCII characters which will be used to encrypt message where each character contains a unique curve point. Unlike secret key (SK), the corresponding curve points in RFTAB are pre-calculated to limit runtime computation. The proposed method utilizes only 46 ASCII characters in RFTAB including a-z, 0–9 and 10 special characters. Other ASCII characters such as capital letters and special characters are excluded to reduce memory usage and simplify messages. Every character is assigned a large random prime integer which is considered as a generator curve point (G) (as shown in Table 2). These curve points are pre-calculated through scalar multiplication starting from a pre-set generator value (1G). The starting point (1G) can also be set as a network dependent generator number, a public key or specified through constant change on certain timestamps. Furthermore, the RFTAB is flexible enough to incorporate all ASCII and Unicode characters depending upon developers.
+
+Table 2 represents a unique generator number, pre-calculated through large random prime integer function for every ASCII character. Generator numbers are further applied on a curve to calculate its corresponding unique (x, y) curve points, generated from a starting curve point at 1G (9x, 6248y) with mod (p) = 1019532643. Note that the starting curve point (1G) and mod(p) are developer dependent values and must be kept secret. Moreover, change in single bit of starting curve point will result in totally different values in Table 2.
+Hash function includes a secret key (SK) described either from a random number function of hardware machine (discussed in Security analysis section) or from resultant key of ECDH key exchange protocols. We assume generating SK from random number generator. The random number generator function takes seed value provided by a timer. The timer starts when the hardware is powered on and the value is taken in microseconds. In the example, the random number function outputs 484,924,606,752,301 value which is considered as a SK generator value (G). Secret key generated at 484924606752301G contains curve points at SKx = 369,200,743 and SKy = 723,310,002. The hash function incorporates two more following variables.
+
+Consequently, Ω and Θ are said to be 354,109,259 and 1,025,334,229, respectively from Eqs. 1 & 2. Ω is added to x1 and y1 in the first-round while θ is subtracted from resulting values in the second-round. Similarly, we assume encrypting a message that contains five characters (abc58), with referenced curve points shown in Table 3. Figure 1 illustrates the further mutation of x and y coordinates into referenced curve points from Table 2. The purpose of this mutation is to increase permutation and range so that the real curve points are kept secret. The decryption process is similar and inverse of the encryption function as described in Algorithm.1 (encryption) and Algorithm.2 (decryption).
+
+This section represents analysis of results taken from implementation of the proposed technique on an IoT resource constrained device. The technique is evaluated in terms of avalanche effect and memory consumption with existing similar encryption techniques. Additionally, computational and memory costs are also presented in the preceding sections.
+This subsection describes the specifications of a resource constrained IoT device’s hardware in terms of processing power, availability of internal memory (RAM) and code size (ROM). The proposed method is implemented on an AVR ATmega2560 machine with the following specifications.
+
+CPU - AVR ATmega2560 with frequency (crystal oscillator) of 16 MHz
+256 KB of flash memory
+EEPROM of 4 KB
+SRAM of 4 KB
+20 mA average current ratings
+5 V of operating voltage
+The ATmega2560 machine is tested on three (32, 43 & 63-bit) mod(p) , containing 1,019,532,643, 5,171,003,929,967 and 4,434,155,615,661,930,479 values, respectively. Every p value is further tested against three (30, 43 and 51-bit) SKs with the respective curve points at (640280610x, 817170226y) – (5067356135643x, 223330964472y) and (2527499838244584x, 1675273799655845y), respectively. In total, nine message blocks (3 mod(p) values against 3 SKs) are encrypted, each containing all the ASCII characters shown in Table 2. Similarly, these encrypted message blocks are then decrypted. Computational cost, memory and energy consumptions are evaluated during the encryption and decryption processes, as mentioned in Table 4.
+
+Avalanche effect is known as the computational time taken during encryption and decryption of data block and change in bits before and after encryption. Since significant change in bit pattern does not apply on ECC as all the resulting curve points are not random values but rather the exact curve points. However, the change of bit difference before and after the encryption can be explained in the following example.
+If a single bit is changed in encrypted block by the adversary. The decryption process will apply SK ’ s round 1 & 2 as described in Algorithm 2. The final value will be formed into two different large random prime integers for x and y coordinates. We assume that the bit change resulted as exact points on curve. In this case, the resulted points for one character must be same as assigned in Table 2 (RFTAB). Similarly, the adversary will have to change bits for all characters in encrypted message block which is statistically extremely difficult and computationally exhaustive to predict. In addition, the hash function is designed in a way that change in one character will affect the entire preceding message block. Hence, the entire message will be decrypted as null characters if single bit change in the encrypted message is found wrong.
+Execution time (ET) costs during encryption and decryption of 46 characters in different mod(p) values and SK sizes, are shown in Table 4. It is observed that the execution time shows significant increase with the increase in SK size. However, there is slight difference in encryption time and energy usage between 32-bit and 62-bit mod(p) values with similar SK size.
+Resource constrained IoT devices possess very small internal memory. Encryption techniques must address efficiency in terms of memory cost in these devices. Efficient memory usage is one of the main features of the proposed method. Furthermore, the technique enabled such devices with 192-bit security in consuming comparatively smaller internal memory. According to Table 4, 17% of the dynamic memory is occupied (1420 bytes out of 8192 bytes) for 128-bit SK and ≈ 192-bit security, leaving rest of the memory for other general-purpose usage. It is also observed that memory consumption mainly depends on the size of SK. Similarly, program memory (coded in C) occupied 7% (20,044 bytes out of 253,952 bytes) of total available memory. Hence, the method can be stored and implemented in small computing capable IoT devices that contain minimum 64Kbytes of internal memory.
+Figure 2 illustrates nine tests of computational and memory performance in encryption and decryption of 46 ASCII characters. Encryption process appears to consume most of the CPU power while the decryption process utilizes almost uniform CPU power. Furthermore, 51-bit SK costs nearly similar computation time in all three mod(p) values which confirms that the considerate size of SK plays important role for computational efficiency in the proposed technique. Hence, the size of SK can be considered a tradeoff between retaining good security and computational affordability in resource constrained IoT devices, in the proposed method.
+
+Computation and memory performance of the proposed technique
+This section describes security robustness of the proposed technique. Elliptic curve-based encryption security mainly depends on the keys and the hash function that encrypts data block founded on the devised keys. Hence, these keys must exhibit extreme sensitivity and randomness in devising good ciphers.
+Key sensitivity means if a single bit change occurs in a key, then the whole encrypted block should also change. In our technique, the change will lead to a non-curve point and the overall output will also change during round operations. Furthermore, scope of curve points in curve25529 are mainly limited to positive integers with maximum value of p = 2255 − 19. However, our technique expands the scope of values to both positive and negative integers. This scope expansion improves permutation range from +2255 − 19 to − 2255 + 19 which vastly improve immunity against several statistical attacks. Additionally, the method is primarily dependent on manipulation and generation of secret key (SK) devised from ECDH key exchange protocols or a large prime random number generator function whose seed value changes every 4 microseconds (limited to AVR ATmega family). Thus, one microsecond change in seed value will lead to different curve points during key predicting statistical attacks. Additionally, ECC curve points are statistically proven to be non-reversible. It is extremely difficult and huge computation costly to accurately calculate or predict previous curve points (Moosavi et al. 2018a). Curve25519 is faster and can withstand timing, side channel, twists on curve, ladder and statistical attacks (Dong et al. 2018). However, SK size used in our proposed method achieved only 192-bit security which is kept limited because of the affordability in resource constrained autonomous IoT devices (Table 5).
+
+An efficient encryption method should ensure high level of uniformity, recurrence, and independence to exhibit strong immunity against statistical attacks. In Uniformity, encrypted key must be correlated in size, bit-pattern and exhibit existence probability near \( \frac{1}{n} \) (Noura et al. 2018). To assess uniformity of encrypted data, it is justified visually through the PDF (Probability Density Function) graph. Figure 3 plots PDF graph where horizontal-axis shows original message in ASCII and vertical-axis shows PDF value against every encrypted ASCII. 1, 2 and 3 corresponds to 43, 30 and 51-bit SKs, respectively. Similarly, 43, 62 and 32 corresponds to the respective size (in bits) of mod(p) values. In case of uniformity, Its observable in PDF plot that every encrypted character exhibit existence probability close to \( \frac{1}{n} \).
+
+Probability density function plot
+Recurrence refers to a well scattered data in PDF plot and strict correlation between curve points for robust encrypted blocks. It can be seen in Fig. 3 that the PDF values are well scattered and the average PDF value is also close to \( \frac{1}{n} \) . Furthermore, Table 6 shows strict cross correlation between the curve points in all three mod (p) values. The values for 43-bit SK are strictly correlated while showing non uniform strict cross correlation for 30 and 51-bit SKs. This non uniformity in cross correlation indicates randomness between the curve points. Moreover, Avg.PDF of all tested variations is near \( \frac{1}{n} \) which proves that the keys used in our technique are robust and has high level of randomness. The strict cross-correlation and well scattered PDF values increase the level of permutation due to long random signed integer values which are devised through mutation in the hash function, as shown in Fig. 1.
+
+This section deals with performance analysis of the proposed technique with similar ECC based techniques. The analysis is presented in terms of curve operations and CPU execution time cost in constructing 128-bit encrypted keys.
+Robust elliptic curve key generation determines the efficiency of performance due to its heavy computation. Curve operations are executed on large random prime numbers with maximum size of 255-bits. These operations consist of fixed-point multiplication, scaler multiplication, point addition, point doubling, multiplicative inverse and verification. Point addition and point doubling are the main computational exhaustive curve operations and other operations are subparts of these operations. Additionally, Table 6 shows cost comparisons of our technique with similar techniques where all mentioned techniques used comparatively more computational power capable CPUs. Research carried out by Faz-Hernández et al. (2019) and Chou (2015) used advanced curve operations in relatively more powerful CPUs with advance instruction set architectures which cannot be afforded by 8-bit CPUs. That is why our work’s CPU expense is slightly higher than Faz-Hernández et al. (2019) and Chou (2015). Moreover, Fig. 4 illustrates the comparison shown in Table 6 where it is observable that our proposed technique utilizes efficient curve operations in creating 128-bit encrypted keys.
+
+Curve25519 based curve operation cost comparison of 128-bit encrypted key generation with similar existing techniques
+This section is based on cost analysis of the proposed technique in terms of execution time (clock cycles) during encryption of 128-bit keys. Table 7 summarizes comparative cost analysis of encryption performance of existing techniques where the techniques utilized similar curve types (Montgomery) and hardware (AVR family) to generate encrypted keys over 160-bit field. The techniques adopted different libraries and features to improve encrypted keys’ security and performance. Liu et al. (2016) used optimal prime field (OPF) library to optimize scaler multiplication process and compared with former implementation on Gallant-Lambert-Vanstone technique on twisted Edward curves. Hutter and Schwabe (2013) applied networking and cryptography library (NaCl) and used Salsa20 encryption method. The method utilized significant clock cycles, whereas use of memory was efficient. Düll et al. (2015) coded in assembly language to reduce CPU cycles by factor of 1.6x comparing to Hutter and Schwabe (2013) in several microcontrollers including AVR ATmega2560 and ATmega128. Inter-pulse interval (IPI) and ECG based key generation methods were developed by Altop et al. (2015) and Zhang et al. (2011) through mixing IPI random intervals with other features such as physiological parameter generation (PPG), blood pressure and biometric binary sequences (BSS). The keys were generated over finalizing 16 sequential samples of IPI. Furthermore, Moosavi et al. (2017) generated 128-bit encrypted key for body area network (BAN) through similar IPI and ECG based features. IPI feature of ECG executed 188 ms for one sample. In total 16 consecutive cycles of IPIs and Fibonacci linear feedback shift register (LFSR) based pseudo random number samples were collected to generate a single key. We utilized GMP library and introduced a novel hash function that achieved better performance in encrypting 128-bit keys with 96-to-192-bit security provisions. Moreover, Fig. 5 illustrates comparison of execution time cost in microseconds. It can be concluded that our work generated 128-bit encrypted keys with affordable internal memory consumption and enabled 8-bit CPUs in achieving elliptic curve based robust end-to-end encryption.
+
+128-bit encrypted key generation performance comparison
+There have been several in-depth studies and implementations on elliptic curve cryptographies as the functionality and applications of autonomous resource constrained devices grew. Table 8 provides the summery of similar implementations of elliptic curve cryptography in IoT devices, achievable milestones and weaknesses. Apart from AVR family, ARM machines are comparatively more expensive and cannot be categorized as resource constrained IoT devices for stream/block ciphers because these machines possess 32-bit computation power and high memory capacity. As a result, with faster CPUs, advanced encryption algorithms (that require more memory and clock cycles) can easily be applied.
+
+The novelty in our work is the utilization of GMP library for related arithmetic calculations in retaining almost similar security levels and robust encrypted blocks with 8-bit CPU that consumed only 1-2Kbytes of RAM. The GMP library enabled our work for faster execution of the curve operations in generating 128-bit keys and large random prime integers. Furthermore, techniques mentioned in Table 8 applied different ciphering methods such as RSA, AES and PRNG. Whereas our novel hash function performed faster executions during encryption due to pre-calculation strategy and provided affordable 192-bit security.
+The proposed method is mainly designed to provide robust ECC based 96-to-192-bit affordable security to resource constrained MTC, CPS and IoT devices. The curve25519 is applied to provide faster execution for generating secret keys with support from GMP library. Furthermore, hash function consumed affordable computational and memory consumption in providing good encryption. Additionally, the proposed method proves to retain good security level (described in Security analysis section) with efficient consumption of internal memory. Moreover, generating keys at very large prime integers, cost computation that might not be affordable as these CPUs are cheap and possess less computation capabilities. It can be elaborated from Table 6 that curve25519 used in our method has generated robust secret keys (as summarized in Table 8) with statistically proven good cipher blocks and costing less computation (as shown in Table 7). The proposed technique can be applied on all AVR ATmega 8-bit machines with capability of 32-64Kbytes internal memory. However, the method is dependent on GMP (GNU Multiple Precision) arithmetic library in handling large prime random integers during scaler multiplication. Devices that lack support from GMP library will have to use alternative libraries that can differ in performance.
+Altop DK, et al (2015) Towards using physiological signals as cryptographic keys in body area networks. 2015 9th International Conference on Pervasive Computing Technologies for Healthcare (PervasiveHealth), IEEE
+Aranha DF, Dahab R, López J, Oliveira LB (2010) Efficient implementation of elliptic curve cryptography in wireless sensors. Adv Math Commun 4(2):169–187
+MathSciNet 
+    Article 
+    
+                    Google Scholar 
+                
+Banerjee S, Patil A (2018) ECC Based Encryption Algorithm for Lightweight Cryptography. International Conference on Intelligent Systems Design and Applications, Springer
+Bernstein DJ (2006) Curve25519: new Diffie-Hellman speed records. International Workshop on Public Key Cryptography, Springer
+Bernstein, DJ, Lange, T: SafeCurves: choosing safe curves for elliptic-curve cryptography. 2014. https://safecurves.cr.yp.to. Accessed 1 Dec 2014.
+
+                    Google Scholar 
+                
+Chou T (2015) Sandy2x: new Curve25519 speed records. International Conference on Selected Areas in Cryptography, Springer
+Chu D, et al (2013) Twisted Edwards-form elliptic curve cryptography for 8-bit AVR-based sensor nodes. Proceedings of the first ACM workshop on Asia public-key cryptography, ACM
+De Clercq R, et al (2014) Ultra low-power implementation of ECC on the ARM Cortex-M0+. 2014 51st ACM/EDAC/IEEE Design Automation Conference (DAC), IEEE
+De Santis F, Sigl G (2016) Towards side-channel protected X25519 on ARM Cortex-M4 processors. In: Proceedings of Software performance enhancement for encryption and decryption, and benchmarking, Utrecht, The Netherlands, pp 19–21
+
+                    Google Scholar 
+                
+Devi GU, Balan EV, Priyan M, Gokulnath C (2015) Mutual authentication scheme for IoT application. Indian J Sci Technol 8(26):15
+
+                    Google Scholar 
+                
+Dong J, et al (2018) Towards High-performance X25519/448 Key Agreement in General Purpose GPUs. 2018 IEEE Conference on Communications and Network Security (CNS), IEEE
+Düll M, Haase B, Hinterwälder G, Hutter M, Paar C, Sánchez AH, Schwabe P (2015) High-speed Curve25519 on 8-bit, 16-bit, and 32-bit microcontrollers. Des Codes Crypt 77(2–3):493–514
+MathSciNet 
+    Article 
+    
+                    Google Scholar 
+                
+Faz-Hernández A, López J, Dahab R (2019) High-performance implementation of elliptic curve cryptography using vector instructions. ACM Trans Math Softw 45(3):1–35
+MathSciNet 
+    Article 
+    
+                    Google Scholar 
+                
+Fujii H, Aranha DF (2018) Efficient Curve25519 implementation for ARM microcontrollers. Anais Estendidos do XVIII Simpósio Brasileiro em Segurança da Informação e de Sistemas Computacionais, SBC
+Gouvêa CP, Oliveira LB, López J (2012) Efficient software implementation of public-key cryptography on sensor networks using the MSP430X microcontroller. J Cryptogr Eng 2(1):19–29
+Article 
+    
+                    Google Scholar 
+                
+Gura N, et al (2004) Comparing elliptic curve cryptography and RSA on 8-bit CPUs. International workshop on cryptographic hardware and embedded systems, Springer
+Hinterwälder G, Moradi A, Hutter M, Schwabe P, Paar C (2014) Full-size high-security ECC implementation on MSP430 microcontrollers. In: International conference on cryptology and information security in Latin America. Springer, pp 31–47
+Hutter M, Schwabe P (2013) NaCl on 8-bit AVR microcontrollers. International Conference on Cryptology in Africa, Springer
+Liu A, Ning P (2008) TinyECC: A configurable library for elliptic curve cryptography in wireless sensor networks. Proceedings of the 7th international conference on Information processing in sensor networks, IEEE Computer Society
+Liu Z, Seo H, Großschädl J, Kim H (2015) Efficient implementation of NIST-compliant elliptic curve cryptography for 8-bit AVR-based sensor nodes. IEEE Trans Inf Forensics Secur 11(7):1385–1397
+Article 
+    
+                    Google Scholar 
+                
+Liu Z, Weng J, Hu Z, Seo H (2016) Efficient elliptic curve cryptography for embedded devices. ACM Trans Embed Comput Syst 16(2):1–18
+
+                    Google Scholar 
+                
+Liu Z, et al (2014) MoTE-ECC: Energy-scalable elliptic curve cryptography for wireless sensor networks. International Conference on Applied Cryptography and Network Security, Springer
+Montgomery PL (1987) Speeding the pollard and elliptic curve methods of factorization. Math Comput 48(177):243–264
+MathSciNet 
+    Article 
+    
+                    Google Scholar 
+                
+Moosavi SR, Nigussie E, Levorato M, Virtanen S, Isoaho J (2018a) Low-latency approach for secure ECG feature based cryptographic key generation. IEEE Access 6:428–442
+Article 
+    
+                    Google Scholar 
+                
+Moosavi SR, Nigussie E, Levorato M, Virtanen S, Isoaho J (2018b) Performance analysis of end-to-end security schemes in healthcare IoT. Procedia Comput Sci 130(C):432–439
+Article 
+    
+                    Google Scholar 
+                
+Moosavi SR, Nigussie E, Virtanen S, Isoaho J (2017) Cryptographic key generation using ECG signal. In: 2017 14th IEEE annual consumer communications & networking conference (CCNC). IEEE, pp 1024–1031
+Noura H, et al (2018) Efficient and secure physical encryption scheme for Low-Power wireless M2M devices. 2018 14th International Wireless Communications & Mobile Computing Conference (IWCMC), IEEE
+Oliveira T, et al (2017) How to (pre-) compute a ladder. International Conference on Selected Areas in Cryptography, Springer
+Oualha N, Nguyen KT (2016) Lightweight attribute-based encryption for the internet of things. 2016 25th International Conference on Computer Communication and Networks (ICCCN), IEEE
+Rajesh S, Paul V, Menon VG, Khosravi MR (2019) A secure and efficient lightweight symmetric encryption scheme for transfer of text files between embedded IoT devices. Symmetry 11(2):293
+Article 
+    
+                    Google Scholar 
+                
+Song T, Li R, Mei B, Yu J, Xing X, Cheng X (2017) A privacy preserving communication protocol for IoT applications in smart homes. IEEE Internet Things J 4(6):1844–1852
+Article 
+    
+                    Google Scholar 
+                
+Szczechowiak P, et al (2008) NanoECC: Testing the limits of elliptic curve cryptography in sensor networks. European conference on Wireless Sensor Networks, Springer
+Wenger E, et al (2013) 8/16/32 shades of elliptic curve cryptography on embedded processors. International Conference on Cryptology in India, Springer
+Zhang G-H, Poon CC, Zhang Y-T (2011) Analysis of using interpulse intervals to generate 128-bit biometric random binary sequences for securing wireless body sensor networks. IEEE Trans Inf Technol Biomed 16(1):176–182
+Article 
+    
+                    Google Scholar 
+                
+Download references
+We acknowledge that the work is not funded by any funding.
+School of Computing, Faculty of Engineering, Universiti Teknologi Malaysia, 81310, Johor Bahru, Johor, Malaysia
+Shafi Ullah & Raja Zahilah
+You can also search for this author in
+                        PubMed Google Scholar
+You can also search for this author in
+                        PubMed Google Scholar
+Shafi Ullah: Concept and Design of Work, Experiments. Dr. Raja Zahilah: Data analysis and interpretation. The author(s) read and approved the final manuscript.
+Correspondence to
+                Shafi Ullah.
+The authors concur that there are no competing interests related to this research artical.
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+
+
+
+Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+Reprints and Permissions
+Ullah, S., Zahilah, R. Curve25519 based lightweight end-to-end encryption in resource constrained autonomous 8-bit IoT devices.
+                    Cybersecur 4, 11 (2021). https://doi.org/10.1186/s42400-021-00078-6
+Download citation
+Received: 19 November 2020
+Accepted: 07 February 2021
+Published: 02 March 2021
+DOI: https://doi.org/10.1186/s42400-021-00078-6
+
+
+            By using this website, you agree to our
+            Terms and Conditions,
+            California Privacy Statement,
+            Privacy
+                statement and
+            Cookies policy.
+            
+                Manage cookies/Do not sell my data we use in the preference centre.
+            
+        
+ © 2021 BioMed Central Ltd unless otherwise stated. Part of
+            Springer Nature.
+        

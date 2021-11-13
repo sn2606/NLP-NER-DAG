@@ -1,0 +1,37 @@
+The top state-run refinery and its closest rival were both assaulted during the same week
+
+Taiwan’s two largest oil refineries have each been targeted by cyber-attackers, with disruption trickling down the supply chain to impact customers at gas stations.
+On Tuesday, Taiwan News reported that the state-owned petroleum, gasoline, and natural gas company CPC Corporation and its rival, Formosa Petrochemical Corporation (FPCC), have both been subject to cyber-attacks in the past two days.
+CPC was struck first, while FPCC experienced its own attack a day after.
+The CPC attack, on May 4, prompted the closure of IT and computer systems and prevented gas stations in the country from accessing the digital platforms used to manage revenue records.
+Customers were also unable to use VIP payment cards or electronic payment apps at gas stations, although credit cards and cash were still accepted.
+CPC executives said the disruption was caused by ransomware.
+A CPC gas station in Kaohsiung, Taiwan
+Local media publications report that FPCC staff were on “high alert” due to CPC’s security incident, and on May 5, they noticed “irregularities” on the firm’s corporate network of their own.
+IT systems were immediately closed in every division to investigate the issue. A “virus” was discovered and dealt with quickly, although it is not known if ransomware was also to blame.
+Read more of the latest cyber-attack news
+Unlike CPC, FPCC did not experience any widespread disruption. Both companies are now operating as normal.
+In a statement (translated), CPC said – somewhat defiantly – that customers should not be concerned about the potential compromise of their credit cards as “all gas stations in Taiwan have passed [an] international financial certification”.
+However, the state utility did say that the incident will act as a “reference” for future security improvements.
+“[The company] will also strengthen security protection, introduce a more rigorous security detection system, and protect the rights of consumers,” CPC added.
+The attacks on CPC, FPCC, and also Powertech Technology – a Taiwanese circuit packaging and testing company that reported a ransomware outbreak on Monday – each occurred in quick succession, a factor that could indicate a connection between each attack.
+However, the identity of the threat actors is unknown.
+“Coincidence in cybersecurity often means commonality in either attackers or attack mythologies,” Tim Mackey, principal security strategist at the Synopsys CyRC commented.
+“Investigators will want to identify any similarities in the attack or the malware.”
+Mackey added: “Once the likely attack vector is known, then it would be beneficial for leaders to detail how the attack was perpetrated such that all business leaders can investigate whether their defences are sufficient to protect against similar attacks.”
+The Daily Swig has reached out to CPC and FPCC and will update when we hear back.
+READ MORE Salt framework security flaws used to attack multiple targets
+
+
+Charlie Osborne
+
+
+
+@SecurityCharlie 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

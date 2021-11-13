@@ -1,0 +1,444 @@
+
+
+Cybersecurity
+volume 3, Article number: 22 (2020)
+            Cite this article
+
+907 Accesses
+Metrics details
+The functional encryption scheme designed using the lattice can realize fine-grained encryption and it can resist quantum attacks. Unfortunately, the sizes of the keys and ciphertexts in cryptographic applications based on learning with errors are large, which makes the algorithm inefficient. Therefore, we construct a functional encryption for inner product predicates scheme by improving the learning with errors scheme of Agrawal et al. [Asiacrypt 2011], and its security relies on the difficulty assumption of ring learning with errors. Our construction can reduce the sizes of the keys and ciphertexts compared with the learning with errors scheme.
+Traditional public key encryption is “all or nothing” in accessing data, that is, a user can decrypt successfully or know nothing about the plaintexts. While the presentation of functional encryption (FE) (Boneh et al. 2011; O’Neill 2010) breaks through the restriction which is limited to only one user and has a single decryption result, and it can realize fine-grained encryption. As an extension of the traditional public key, the FE is the advanced cryptographic paradigm.
+Two typical examples of FE are attribute-based encryption (ABE) (Goyal et al. 2006; Wang et al. 2019; Yun et al. 2018; Zhang and Wu 2017; Zhang et al. 2019) and predicate encryption (PE) (Attrapadung and Imai 2009; Agrawal et al. 2016; Boneh and Waters 2006; Blundo et al. 2010; Katz et al. 2008). In the (key-policy) ABE system, the secret key s is related to a predicate g and each ciphertext is related to an attribute I. A user who holds the secret key s is able to decrypt successfully if and only if g(I)=1. So does for the PE system. However, there is an obvious difference between these two encryption systems. Namely, the attribute related with each ciphertext is revealed in the ABE system, while the attribute is hidden in the PE system.
+ABE is an application of fuzzy identity-based encryption (Sahai and Waters 2005). In the ABE system (Agrawal et al. 2012; Ducas et al. 2014; Libert and Ţiţiu 2019; Yun et al. 2018; Zhang and Wu 2017; Zhang et al. 2019), data is encrypted on the basis of individual identity associated with a series of attributes. Hence, ABE is applicable in cloud storage to provide authorized data privacy. However, there are some issues to solve before applying ABE in practice. For example, when user’s attributes are altered, it is required for ABE supporting attribute revocation to change user’s access privilege timely and effectively. And in 2018, Liu et al. proposed a practical ABE scheme which can solve the aforementioned issue (Liu et al. 2018). ABE also has many other practical applications, such as network privacy (Baden et al. 2009), health record access-control (Camenisch et al. 2012), verifiable computation (Parno et al. 2011), forward-secure messaging (Green and Miers 2015) and so on.
+In the PE system, the computation of inner product over \(\mathbb {Z}_{N}\) about predicate was proposed by Katz et al. (2008) where N is a composite number. They also provide a construction about inner product predicate, called inner product encryption (IPE). Due to flexibleness and usefulness of IPE, a number of researchers have proposed schemes about IPE (Agrawal et al. 2011; Abdalla et al. 2020; Abdalla et al. 2015; Chen et al. 2018; Okamoto and Takashima 2015; Kurosawa and Phong 2017; Li et al. 2018; Tseng et al. 2020; Wang et al. 2019; Xagawa 2013).
+For example, Chen et al. proposed two IPE schemes achieving both adaptive security and full attribute-hiding in the prime-order bilinear group (Chen et al. 2018). In 2018, Kwangsu et al. first proposed a two-input IPE scheme in composite-order bilinear groups (LEE 2018). And in 2019, Tomida et al. first constructed a multi-user and multi-challenge IPE scheme, which is constructible on a pairing-free group and secure under the matrix decisional Diffie-Hellman (MDDH) assumption (Tomida 2020). While in a pairing-based IPE system, the algorithm tends to be inefficient over computation since a lot of pairings (linear to vector lengths) are used during decryption. Therefore, in 2019, an IPE scheme proposed by Wei et al. with adaptive security based on the dual system encryption method requires only six bilinear pairs to decrypt (Wei and Gao 2019). In 2020, an IPE scheme proposed by Tseng et al. needs only one pairing computation to decrypt, which is the most efficient one in terms of the private key length and the number of pairings computation for decryption (Tseng et al. 2020).
+As is known to all, compared with the conventional cryptography (designed based on certain hard problems), the lattice-based cryptography resists against the quantum attacks. What’s more, a great number of lattice-based cryptographic schemes are based directly on two average-case problems, that is the small integer solution (SIS) problem and LWE problem. These two problems have been confirmed to support worst-case hardness guarantees in security.
+In 2011, Agrawal et al. proposed the first lattice-based IPE scheme (Agrawal et al. 2011). To optimize the sizes of the public parameters and the ciphertexts, Xagawa et al. proposed an improved lattice-based IPE scheme (Xagawa 2013), Li et al. proposed an IPE scheme reducing the size by a factor of logκ compared with the work of reference (Xagawa 2013), where κ is a security parameter (Li et al. 2018), and Wang et al. proposed the first compact IPE scheme from learning with errors (LWE) in 2018 (Wang et al. 2018). Those schemes are constructed on the basis of the first lattice-based IPE scheme (Agrawal et al. 2011). In addition, Abdalla et al. constructed a multi-input FE scheme combining the access control functionality of ABE with the possibility of performing linear operations on the encrypted data and built identity-based functional encryption for inner products from lattices (Abdalla et al. 2020).
+However, nearly all of IPE schemes based upon these two problems will suffer from either large key size or small message space. Although some researchers may improve the sizes of keys and ciphertexts of IPE schemes based on LWE problem to certain extent, they are still too large to be practical.
+To acquire more efficiency in computation and confidence in security, we will provide a construction by adapting the scheme based on LWE (Agrawal et al. 2011) to ring-LWE (R-LWE). The R-LWE is an algebraic variant of LWE. In most practical applications, the n samples from the LWE distribution can be replaced by a sample from the R-LWE distribution, which will reduce the size of the public key by a factor of n. As is mentioned above, our construction is of theoretical value and practical significance.
+Our approach. We construct a functional encryption scheme for inner product predicates based on the R-LWE problem building on the ideas and techniques of the scheme in the reference (Agrawal et al. 2011). In our construction, we generate the secret key associated with the predicate g using of ring-SIS (R-SIS) and the ciphertext c associated with the attribute I using of R-LWE. The user then can decrypt successfully using the secret key when g(I)=1.
+It is necessary to simulate an experiment during the process of security proof, which allows the simulator to answer secret key queries whenever g(I)=0. Similarly, just as the thought of proof in the reference (Agrawal et al. 2011), we make use of m+1R-LWE instances to generate a ciphertext that either decrypts correctly or decrypts to a random element in the message space \(\mathcal {M}\) in this simulation. Therefore, we only need to use a weaker security model (“weak attribute hiding”) in the security proof.
+Our contribution. In this paper, we present an IPE scheme that is secure under the R-LWE hardness assumption. The scheme is at its core based on the LWE scheme of (Agrawal et al. 2011). Our scheme satisfies the slightly weaker notion considered by Okamoto and Takashima (2009) and Lewko et al. (2010).
+Outline. The rest of the paper is organized as follows. In “Predicate encryption”, we review some theoretical knowledge about predicate encryption. In “Preliminaries”, we set some notations and provide some preliminaries about lattice theory and much more. In “A functional encryption scheme for inner product predicates”, we describe concretely an IPE scheme and prove the correctness and security of the scheme. In “Conclusion” sections, we present some concluding remarks.
+Let κ be the security parameter for the rest of this paper and let n=n(κ) be a power of two. We first recall the following definition of predicate encryption proposed by Katz et al. (2008), which is based on the definition of searchable encryption proposed by Boneh and Waters (2006).
+((Katz et al. 2008), Definition 2.1). A (key-policy) predicate encryption scheme for the class of predicates \(\mathcal {G}\) over the set of attributes Σ consists of four probabilistic polynomial-time (PPT) algorithms Setup, KeyGen, Enc, Dec such that:
+
+Setup: takes as input a security parameter κ and outputs a set of public parameters PP and a master secret key MK.
+KeyGen: takes as input the master secret key MK and a (description of a) predicate \(g\in \mathcal {G}\). It outputs a key skg.
+Enc: takes as input the public parameters PP, an attribute I∈Σ, and a message m in some associated message space \(\mathcal {M}\). It returns a ciphertext C.
+Dec: takes as input a secret key skg and a ciphertext C. It outputs either a message m or the distinguished symbol ⊥.
+For correctness, we require that for all κ,(PP, MK) are generated by Setup(1κ), for all \(g\in \mathcal {G}\), any key skg is generated by KeyGen(sk,g) and for all I∈Σ, any ciphertext C is generated by Enc(PP,I,m):
+
+If g(I)=1, then Dec(skg,C)=m.
+If g(I)=0, then Dec(skg,C)=⊥ with all but negligible probability.
+In this paper, the correctness proof satisfies a different correctness condition which is just as the correctness idea of the LWE scheme (Agrawal et al. 2011): when C←Enc(PP,I,m) with probability 1, then m←Dec(skg,C) if g(I)=1, however, if g(I)=0 then Dec(skg,C) is computationally indistinguishable from a uniformly random element in the message space \(\mathcal {M}\).
+Next, we introduce several notations of security about the PE scheme. The basic concept of security is called payload hiding. It will guarantee that the ciphertext about the attribute I can hide all information associated with the message, unless one holds a secret key giving the explicit capability to decrypt. Namely, the adversary \(\mathcal {A}\) holding the keys \(sk_{g_{1}},\cdots,sk_{g_{l}}\) cannot get any information about the message encrypted by any attribute I when satisfying g1(I)=⋯=gl(I)=0. A stronger notation of security is called attribute hiding. It requires that the ciphertext can hide all information associated with attribute I except the part which is leaked explicitly by one who holds the key. Namely, \(\mathcal {A}\) who possesses the keys only can obtain the values of g1(I),⋯,gl(I). The last is an intermediate notion, weak attribute hiding, in which attribute hiding is guaranteed to hold only if \(\mathcal {A}\) holds the keys that cannot recover the message. And our scheme satisfies the weak attribute hiding.
+((Katz et al. 2008), Definition 2.1). A predicate encryption scheme with respect to \(\mathcal {G}\) and Σ is attribute hiding if for any PPT adversaries \(\mathcal {A}\), the advantage of \(\mathcal {A}\) in the following experiment is negligible in the security parameter κ:
+
+\(\mathcal {A}\left (1^{\kappa }\right)\) outputs I0,I1∈Σ.
+Setup(1κ) is run to generate PP and MK, and the adversary is given PP.
+\(\mathcal {A}\) may adaptively request keys for any predicates \(g_{1},\cdots,g_{l}\in \mathcal {G}\) subject to the restriction that gi(I0)=gi(I1) for all i. In response, \(\mathcal {A}\) is given the corresponding keys \(sk_{g_{i}}\leftarrow \text {KeyGen}\left (\text {MK},g_{i}\right)\).
+\(\mathcal {A}\) outputs two equal-length messages m0 and m1. If there is an i for which gi(I0)=gi(I1)=1, then it is required that m0=m1. A random bit b is chosen, and \(\mathcal {A}\) is given the ciphertext C←Enc(PP,Ib,mb).
+\(\mathcal {A}\) may continue to request keys for additional predicates, subject to the same restrictions as before.
+\(\mathcal {A}\) outputs a bit b′, and succeeds if b′=b. The advantage of \(\mathcal {A}\) is the absolute value of the difference between its success probability and 1/2.
+By the above definition, we observe that there exists two relations among the three notations of security. One is that any scheme which is weak attribute hiding is payload hiding, the other is that any scheme which is attribute hiding is weak attribute hiding.
+If no special note, we use lowercase letters (e.g. a) to express polynomials, bold lowercase letters (e.g. a) to express vectors, bold capital letters (e.g. A) to express matrices, the arrows \(\left (\text {e.g.}\ \vec {v}\right)\) to represent predicates or attributes. If A is an m×n matrix and A′ is an m′×n matrix, then [A∥A′] represents an (m+m′)×n matrix formed by concatenating A and A′. If a is a length m vector and a′ is a length m′ vector, then we denote [a|a′] as a length (m+m′) vector which is concatenated by a and a′. Suppose to denote S as a basis of lattice Λ, then \(\tilde {\mathbf {S}}\) denotes the Gram-Schmidt orthogonalization of S.
+For \(n=n(\kappa)\in \mathbb {Z}^{+}\), we let \(R_{q}=\mathbb {Z}_{q}[x]/{f(x)}\) be the integer polynomial ring modulo both f(x) and q, where q is a prime and \(f\in \mathbb {Z}[x]\) is a monic degree n polynomial. In particular, considering the security of our construction, we fix f(x)=xn+1 in the rest of paper. For a∈Rq, we denote ∥a∥ as the Euclidean norm of a vector a=a0+a1x+⋯+an−1xn−1 for \(a_{i}\in \mathbb {Z}_{q}\). We define \(rot_{f}(a)\in R_{q}^{n\times n}\) as the matrix whose i-th row is given by the coefficients of the polynomial xi−1a mod f(x), for any 1≤i≤n. Note that for a,b∈Rq,a·b=(1,x,⋯,xn−1)·rotf(a)T·(b0,b1,⋯,bn−1)T=(a0,a1,⋯,an−1)·rotf(b)·(1,x,⋯,xn−1)T. The specific form of rotf is given below:
+
+Let A=rotf(a), then the set \(\Lambda ^{\perp }(\mathbf {A})=\left \{\mathbf {b}\in \mathbb {Z}^{n}|\mathbf {b}\cdot \mathbf {A}=0\mod q\right \}\) is an n-dimensional lattice. We extend that notation to the vector \(\boldsymbol {a}\in R_{q}^{m}\) by applying rotf component-wise. Namely, for a=(a1,a2,⋯,am),rotf(a)=[rotf(a1)∥rotf(a2)∥⋯∥rotf(am)].
+We define the norm of a matrix R∈{−1,1}m×m to be sup{∥Rx∥:∥x∥=1}. Then we recall the following result.
+((Agrawal et al. 2011), Lemma A.1). Let R be an m×m matrix chosen at random from {−1,1}m×m. Then \({Pr}\left \{\|{\mathbf {R}}\|>12\sqrt {2m}\right \}< e^{-2m}\).
+Now we remind some definitions and properties of lattice that we need to use in our system.
+The m-dimension lattice Λ is generated by the set \(\left \{\sum \limits _{i=1}^{n} x_{i}\boldsymbol {b}_{i}\left |\right.{x}_{i}\in \mathbb {Z}\right \}\) for n linearly independent vectors \(\boldsymbol {b}_{1},\cdots,\boldsymbol {b}_{n}\in \mathbb {R}^{m}\). That is to say, the lattice Λ is a full-rank discrete additive subgroup of \(\mathbb {R}^{m}\). For \(\boldsymbol {a}\in R_{q}^{m}, u\in R_{q}\), we define the ring setting as follows:
+
+Next, we introduce the R-SIS (Lyubashevsky and Micciancio 2006; Peikert and Rosen 2006) and R-LWE (Lyubashevsky et al. 2010; Stehlé et al. 2009) as the ring-based variant of SIS and LWE respectively. They have been proven to be at least as hard as the shortest independent vectors problem (SIVP) and the decision version of the shortest vector problem (GapSVP). And there exists a reduction from the search version of R-LWE to the average-case decision R-LWE. If the probability that for all the polynomial-time adversaries \(\mathcal {A}\) who solve the decision R-LWE is negligibly away from \(\frac {1}{2}\), then we call that the decision R-LWE problem is infeasible.
+(Lyubashevsky and Micciancio 2006; Peikert and Rosen 2006, R-SISq,m,β) Given \(\boldsymbol {a}=\left (a_{1},\cdots,a_{m}\right)\in R_{q}^{m}\) a vector of m uniformly random polynomials, find a non-zero vector of small polynomial \(\mathbf {e}=\left (e_{1},\cdots,e_{m}\right)\in R_{q}^{m}\) such that \(\boldsymbol {a}\boldsymbol {e}^{T}=\sum \limits _{i=1}^{m}a_{i}e_{i}=0\bmod q\), and 0≤∥e∥≤β.
+(Lyubashevsky et al. 2010; Stehlé et al. 2009, R-LWE Distribution) For s∈Rq (the “secret”) and an error distribution χ over Rq, a sample from the R-LWE distribution As,χ over \(R_{q}^{m}\times R_{q}^{m}\) is generated by choosing \(\boldsymbol {a}\leftarrow R_{q}^{m}\) uniformly at random, choosing η←χm, and outputting (a,s·a+η).
+(Lyubashevsky et al. 2010; Stehlé et al. 2009, R-LWE Search). For s∈Rq and an error distribution χ over Rq. The search of version of the R-LWE is defined as follows: given access to arbitrarily many independent samples from As,χ for some arbitrary s∈Rq and η∈χm, find s.
+Gaussian distribution. We denote ρσ(a) as the standard n-dimensional Gaussian distribution with center 0 and the variance σ>0, that is ρσ(a)= exp(−π∥a∥2/σ2). For any \(\sigma \in \mathbb {R}^{+}\) and a lattice Λ as the subset of \(\mathbb {Z}^{n}\), we define the lattice Gaussian distribution as \(D_{\Lambda,\sigma }(a)=\frac {\rho _{\sigma }(a)}{\rho _{\sigma }(\Lambda)}\) where \(\rho _{\sigma }(\Lambda)=\sum \limits _{a'\in \Lambda }\rho _{\sigma }\left (a'\right)\). What’s more, we denote the error distribution Ψ as the discrete Gaussian distribution \(D_{\mathbb {Z}^{n},\sigma }\) for some σ>0. A sample from Ψ is a polynomial in Rq. We will use the following property referring to the Gaussian distribution in our construction.
+((Micciancio and Regev 2004), Theorem 4.4) Let \(n\in \mathbb {N}\). For any real number \(\sigma =\omega \left (\sqrt {\log n}\right)\), we have \(\text {Pr}_{\boldsymbol {a}\leftarrow D_{\mathbb {Z}^{n},\sigma }}\left [\|\boldsymbol {a}\|>\sigma \sqrt {n}\right ]\leq 2^{-n+1}\).
+Now we introduce the following properties about sample algorithms. The TrapGen algorithm (Lai et al. 2015) is to generate the trapdoor for the R-LWE scheme. The algorithm SampleLeft (Agrawal et al. 2010; Cash et al. 2010) is used in our system, while the algorithm SampleRight (Agrawal et al. 2010) is used in the simulation during the proof of security.
+We first recall the definition of the trapdoor in the ring setting.
+((Lai et al. 2015), Definition 2) Let \(\boldsymbol {a}\in R_{q}^{m},\boldsymbol {g}\in R_{q}^{k}\). A g-trapdoor for a is a collection of linearly independent vectors of ring elements \({\mathbf {T}}_{\boldsymbol {a}}\in R_{q}^{(m-k)\times k}\) such that \(\boldsymbol {a}\left [\begin {array}{cc} {\mathbf {T}}_{\boldsymbol {a}}\\ {\mathbf {I}}_{k}\end {array}\right ]=h\boldsymbol {g}\) for some non-zero ring element h∈Rq. h is referred as the tag or label of the trapdoor. The quality of the trapdoor is measured by its largest singular value s1(Ta), which is computed as the largest singular value of the matrix obtained by interpreting Ta as a matrix in \(\mathbb {Z}_{q}^{(m-k)n\times kn}\).
+((Lai et al. 2015)) Let q,m,n,k be positive integers with q≥2 and m>k. There exists a PPT algorithm TrapGen outputs a pair \(\left (\boldsymbol {a}\in R_{q}^{m},{\mathbf {T}}_{\boldsymbol {a}}\in R_{q}^{(m-k)\times k}\right)\) such that a is statistically indistinguishable with the uniform distribution in \(R_{q}^{m}\) and the quality of the trapdoor Ta is measured by its largest singular value s1(Ta).
+By applying the definition and properties of rotf to interpret a polynomial vector into a type of integer matrix, there are two efficient trapdoor delegation algorithms given as follows referring to the literature (Agrawal et al. 2010).
+((Agrawal et al. 2010), Theorem 3) Let q>2,m>2 logq and \(\sigma >\|\tilde {{\mathbf {T}}}_{\boldsymbol {a}}\|\omega \left (\sqrt {\log (2nm)}\right)\), then the algorithm SampleLeft(a,b,Ta,u,σ) outputs a vector \(\boldsymbol {e}\in R_{q}^{2m}\) distributed statistically close to \(D_{\Lambda _{q}^{u}\left (\boldsymbol {a}'\right),\sigma }\) where a′=[a|b].
+((Agrawal et al. 2010), Theorem 4) Let q>2,m>1 and \(\sigma >\|\tilde {{\mathbf {T}}}_{\boldsymbol {b}}\|\cdot \sqrt {nm}\cdot \omega (\log nm)\), then the algorithm SampleRight(a,b,R,Tb,u,σ) outputs a vector \(\boldsymbol {e}\in R_{q}^{2m}\) distributed statistically close to \(D_{\Lambda _{q}^{u}\left (\boldsymbol {a}'\right),\sigma }\) where a′=[a|aR+b].
+For a hash function h, define δh(x,y)=1 if h(x)=h(y) and δh(x,y)=0 otherwise for x,y∈X,x≠y. That is, δh(x,y)=1 if and only if the hashed values of x and y collide. For a finite set \(\mathcal {H}\) of hash functions, define \(\delta _{\mathcal {H}}(x,y)=\sum \limits _{h\in \mathcal {H}}\delta _{h}(x,y)\). Hence, \(\delta _{\mathcal {H}}(x,y)\) counts the number of hash functions in \(\mathcal {H}\) under which x and y collide.
+((Roşca et al. 2017)) A (finite) family \(\mathcal {H}\) of hash functions h:X→Y is universal if \(\text {Pr}_{h\leftarrow U(\mathcal {H})}\left [\delta _{h}(x,y)=1\right ]=1/{|Y|}\), for all x,y∈X,x≠y.
+We will use the following variant of the leftover hash lemma which is necessary when presenting our construction.
+((Roşca et al. 2017), Lemma 2.1) Let X,Y,Z denote finite sets and let \(\mathcal {H}\) be a universal family of hash functions h:X→Y. Let f:X→Z be arbitrary. Then for any random variable T taking values in X, we have: \(\varDelta ((h,h(T),f(T)),(h,U(Y),f(T)))\leq \frac {1}{2}\sqrt {\gamma (T)\cdot |Y|\cdot |Z|}\), where γ(T)= maxT′∈XPr[T=T′].
+Let q be a prime. For R∈{−1,1}m×m and a∈Rq, define \(\Phi _{\boldsymbol {a}}:\{-1,1\}^{m\times m}\rightarrow R_{q}^{m}\) by the rule: Φa(R)=aR. Then {Φa} is universal.
+We set a=(a1,⋯,am) and R=(rij) where ai∈Rq and rij∈{−1,1} for i,j∈{1,⋯m}. Then
+
+ Obviously, we need to prove \(\text {Pr}\left \{\left (\sum \limits _{i=1}^{m}a_{i}r_{i1},\cdots, \sum \limits _{i=1}^{m}a_{i}r_{im}\right)=\left (y_{1},\cdots,y_{m}\right)\right \}=\frac {1}{q^{nm}}\) for all \((y_{1},\cdots,y_{m})\in R_{q}^{m}\). Without loss of generality, we assume that \(\sum \limits _{i=1}^{m}a_{i}r_{i1}\neq 0\). Then by linearity, it suffices to prove that for all \(y_{1}\in R_{q}, \text {Pr}\left \{\sum \limits _{i=1}^{m}a_{i}r_{i1}=y_{1}\right \}=\frac {1}{q^{n}}\).
+We write ai as ai0+ai1x+⋯+ai,n−1xn−1 and y1 as y10+y11x+⋯+y1,n−1xn−1 for \(a_{ij},y_{1j}\in \mathbb {Z}_{q}\). Then we calculate the following formula,
+
+Since \(y_{1j}\in \mathbb {Z}_{q}\), it follows that \(\text {Pr}\left \{\sum \limits _{i=1}^{m}r_{i1}a_{ij}=y_{1j}\right \}=\frac {1}{q}\), which is equivalent to \(\text {Pr}\left \{\sum \limits _{i=1}^{m}a_{i}r_{i1}=y_{1}\right \}=\frac {1}{q^{n}}\). Hence the hash function family is universal. □
+In this section, we first describe a new predicate encryption scheme and prove its correctness and security. We define our construction consisting of four PPT algorithms: setup, key generation, encryption and decryption algorithms. In this scheme, each secret key is associated with a predicate vector \(\vec {v}\in \mathbb {Z}_{q}^{l}\) (for some fixed l≥2) and each ciphertext is associated with an attribute vector \(\vec {w}\in \mathbb {Z}_{q}^{l}\). The decryption algorithm involves a condition that will decrypt successfully if and only if \(\left \langle \vec {v},\vec {w}\right \rangle =0\pmod q\). Therefore, we define the predicate associated with the secret key as \(g_{\vec {v}}(\vec {w})=1\) when satisfying \(\left \langle \vec {v},\vec {w}\right \rangle =0\pmod q\), and \(g_{\vec {v}}\left (\vec {w}\right)=0\) otherwise.
+Let \(\kappa \in \mathbb {Z}^{+}\) and l be the length of predicate and attribute vectors. Let m=m(κ,l),q=q(κ,l) and t=⌊logq⌋ be positive integers. Let α and σ be positive real Gaussian parameters. Let the error distribution χ=⌊Dαq⌉ denote the discrete Gaussian distribution where each coefficient is sampled from Dαq and then rounded to nearest integer. The plaintext space is {0,1}n, while the ciphertext space is \(R_{q}^{m}\times \left \{R_{q}^{m}\right \}^{l(t+1)}\times R_{q}\).
+FE.Setup (1κ,1l): Input a security parameter \(\kappa \in \mathbb {Z}^{+}\) and a parameter l, do the following:
+
+Using the algorithm TrapGen to obtain a vector \(\boldsymbol {a}\in R_{q}^{m}\) together with the trapdoor Ta.
+Choose l·(1+t) uniformly random vectors \(\boldsymbol {a}_{i,\gamma }\in R_{q}^{m}\) for i=1,⋯,l and γ=0,⋯,t.
+Select a uniformly random polynomial u∈Rq.
+Output the public parameters PP =(a,{ai,γ}i∈{1,⋯,l},(a,{ai,γ}i∈{1,⋯,l},γ∈{0,⋯,t},u) and MK= Ta.
+FE.KeyGen(PP, MK, \(\vec {v}\)): Input the public parameters PP, the master secret key MK and a predicate vector \(\vec {v}\in \mathbb {Z}_{q}^{l}\), do:
+
+For i=1,⋯,l, let \(\hat {v}_{i}\) be the integer in [0,q−1], which equals to vi mod q. Let the binary decomposition of \(\hat {v}_{i}\) as \(\hat {v}_{i}=\sum \limits _{\gamma =0}^{t}v_{i,\gamma }\cdot 2^{\gamma }\), where vi,γ are in {0,1}.
+Define the vectors \(\boldsymbol {a}_{\vec {v}}':=\sum \limits _{i=1}^{l}\sum \limits _{\gamma =0}^{t}v_{i,\gamma }\boldsymbol {a}_{i,\gamma }\) and \(\boldsymbol {a}_{\vec {v}}:=\left [\boldsymbol {a}|\boldsymbol {a}_{\vec {v}}'\right ]\).
+Using the master secret key MK= Ta to compute e←SampleLeft\(\left (\boldsymbol {a},\boldsymbol {a}_{\vec {v}}',\mathbf {T}_{\boldsymbol {a}},u,\sigma \right)\). Then e is a vector in \(R_{q}^{2m}\) satisfying \(\boldsymbol {a}_{\vec {v}}\boldsymbol {e}^{T}=u\).
+Output the secret key \(sk_{\vec {v}}=\boldsymbol {e}\).
+FE.Enc(PP, \(\vec {w}, \boldsymbol {m}\)): Input the public parameters PP, an attribute vector \(\vec {w}\in \mathbb {Z}_{q}^{l}\) and a message m, do:
+
+Choose a uniformly random vector \(\boldsymbol {b}\in R_{q}^{m}\).
+Choose a uniformly polynomial s∈Rq.
+Select a noise vector η from χm and a noise term η from χ.
+Compute c0=s·a+2η.
+For i=1,⋯,l and γ=0,⋯,t, do the following:
+
+Pick a random matrix Ri,γ∈{−1,1}m×m.
+Calculate ci,γ←s·(ai,γ+2γwib)+2η·Ri,γ.
+Compute c′=us+m+2η.
+Output the ciphertext CT= (c0,{ci,γ}i∈{1,⋯,l},γ∈{0,⋯,t},c′).
+FE.Dec(PP, CT, \(sk_{\vec {v}}\)): Input the public parameters PP, a secret key \(sk_{\vec {v}}\) and a ciphertext CT, do:
+
+Compute \(\boldsymbol {c}_{\vec {v}}=\sum \limits _{i=1}^{l}\sum \limits _{\gamma =0}^{t}v_{i,\gamma }\boldsymbol {c}_{i,\gamma }\).
+Let \(\boldsymbol {c}=\left [\boldsymbol {c}_{0}|\boldsymbol {c}_{\vec {v}}\right ]\).
+Output m′←(c′−e·cT mod f mod q) mod 2.
+Next, we need to show that our construction is correct for certain parameter choices and secure under R-LWE hardness assumption. The specific proof is as follows.
+Let the parameters q and α satisfy q>16(n+λnm) and \(\alpha <8\left (\sqrt {n}+\lambda \sqrt {nm}\right)^{-1}\) where \(\lambda =\left (1+12\sqrt {2m}l(t+1)\right)\sigma \sqrt {nm}\). When the FE.KeyGen algorithm returns the secret key, FE.Enc encrypts with probability 1 for all the plaintext m. If \(\left \langle \vec {v},\vec {w}\right \rangle =0\), then we have FE.Dec=m with overwhelming probability.
+According to the decryption algorithm, we have,
+
+the last equation holds because of \(\left \langle \vec {v},\vec {w}\right \rangle =0\).
+By the above formula, we obtain,
+
+According to Lemma 3, we can get \(\boldsymbol {a}_{\vec {v}}\boldsymbol {e}^{T}=u\) and \(\boldsymbol {e}\cdot \boldsymbol {c}^{T}=us+2\boldsymbol {e}\cdot \left [\boldsymbol {\eta }\left |\right.\sum \limits _{i=1}^{l}\sum \limits _{\gamma =0}^{t}v_{i,\gamma }\boldsymbol {\eta }\cdot \mathbf {R}_{i,\gamma }\right ]^{T}\).
+Finally, according to the third step of the decryption algorithm, we compute m′ as
+
+If \(\left \|\boldsymbol {m}+2\left (\eta -\boldsymbol {e}\left [\boldsymbol {\eta }\left |\right.\sum \limits _{i=1}^{l}\sum \limits _{\gamma =0}^{t}v_{i,\gamma }\boldsymbol {\eta }\mathbf {R}_{i,\gamma }\right ]^{T}\right)\right \|< q/2\), centered reduction modulo q of c′−e·cT given us \(\boldsymbol {m}+2\left (\eta -\boldsymbol {e}\left [\boldsymbol {\eta }\left |\right.\sum \limits _{i=1}^{l}\sum \limits _{\gamma =0}^{t}v_{i,\gamma }\boldsymbol {\eta }\mathbf {R}_{i,\gamma }\right ]^{T}\right)\) (over the integers). Hence, in order to obtain m=m′, it suffices to certify \(\left \|\boldsymbol {m}+2\left (\eta -\boldsymbol {e}\left [\boldsymbol {\eta }\left |\right.\sum \limits _{i=1}^{l}\sum \limits _{\gamma =0}^{t}v_{i,\gamma }\boldsymbol {\eta }\cdot \mathbf {R}_{i,\gamma }\right ]^{T}\right)\right \|< q/2\).
+We set \(\boldsymbol {e}\in R_{q}^{2m}\) as [e1|e2] for \(\boldsymbol {e}_{i}\in R_{q}^{m}\). Then Eq. (2) can be rewritten as
+
+For η∈χ and η∈χm, we have \(\|\eta \|<\alpha q\sqrt {n}+n\) and \(\|\boldsymbol {\eta }\|<\alpha q\sqrt {nm}+nm\) with overwhelming probability because of the Gaussian tail bound. According to Lemma 1 and the triangle inequality, \(\left \|\left (\boldsymbol {e}_{1}+\boldsymbol {e}_{2}\cdot \sum \limits _{i=1}^{l}\sum \limits _{\gamma =0}^{t}v_{i,\gamma }\mathbf {R}_{i,\gamma }^{T}\right)\cdot 2\boldsymbol {\eta }^{T} \right \|\) is not exceeding \(2\lambda \left (\alpha q\sqrt {nm}\,+\,nm\right)\)where \(\lambda =\left (1\,+\,12\sqrt {2m}l(t+1)\right)\sigma \sqrt {nm}\). Thus we have \(\left \|\boldsymbol {m}+2\eta -\left [\left (\boldsymbol {e}_{1}+\boldsymbol {e}_{2}\cdot \sum \limits _{i=1}^{l} \sum \limits _{\gamma =0}^{t}v_{i,\gamma }\mathbf {R}_{i,\gamma }^{T}\right) {{\left \|\boldsymbol {m}+2\eta -\left [\left (\boldsymbol {e}_{1}+\boldsymbol {e}_{2}\cdot \sum \limits _{i=1}^{l} \sum \limits _{\gamma =0}^{t}v_{i,\gamma }\mathbf {R}_{i,\gamma }^{T}\right) \right.\right.}} \cdot 2\boldsymbol {\eta }^{T}\right ] \right \| < \sqrt {n}+2\left (\alpha q\sqrt {n}+n\right)+2\lambda \left (\alpha q\sqrt {nm}+nm\right)< q/2\)with overwhelming probability when α and q satisfy the condition in the lemma.
+If \(\left \langle \vec {v},\vec {w}\right \rangle \neq 0, \sum \limits _{i=1}^{l}\sum \limits _{\gamma =0}^{t}2^{\gamma } v_{i,\gamma }w_{i}s\cdot \mathbf {b}\) in the formula (1) is unequal to 0. Since s∈Rq and \(\mathbf {b}\in R_{q}^{m}\) are randomly chosen in the formula (1), the decryption algorithm cannot decrypt the message correctly. □
+To demonstrate the security, we introduce several security games to prove that the security of the scheme can be reduced to the hardness of R-LWE problem.
+Suppose that m≥3n logq. Then the above predicate encryption scheme is weakly attribute hiding under the R-LWE hardness assumption.
+Before introducing these security games, we define a simulation construction as following: alternative setup, key generation, and encryption algorithms.
+Sim.Setup\(\left (1^{\kappa },1^{l},\vec {w}^{*}\right)\): Input a security parameter κ, a parameter l and an attribute vector \(\vec {w}^{*}\in \mathbb {Z}_{q}^{l}\), do the following:
+
+Select a uniformly random vector \(\boldsymbol {a}\in R_{q}^{m}\) and polynomial u∈Rq.
+Using the algorithm TrapGen to obtain a vector \(\boldsymbol {b}^{*}\in R_{q}^{m}\) with a trapdoor \(\mathbf {T}_{\boldsymbol {b}^{*}}\).
+For i=1,⋯,l and γ=0,⋯,t, choose random matrices \(\mathbf {R}_{i,\gamma }^{*}\in \{-1,1\}^{m\times m}\) and set \(\boldsymbol {a}_{i,\gamma }\leftarrow \boldsymbol {a}\mathbf {R}_{i,\gamma }^{*}-2^{\gamma } w_{i}^{*}\boldsymbol {b}^{*}\).
+Output the public parameters and the master secret key
+PP =(a,{ai,γ}i∈{1,⋯,l},γ∈{0,⋯,t},u), MK\(=\left (\vec {w}^{*},\left \{\mathbf {R}_{i,\gamma }^{*}\right \}{{\left \{\mathbf {R}_{i,\gamma }^{*}\right \}}}_{i\in \{1,\cdots,l\},\gamma \in \{0,\cdots,t\}},\boldsymbol {b}^{*},\mathbf {T}_{\boldsymbol {b}^{*}}\right)\).
+Sim.KeyGen(PP, MK, \(\vec {v}\)): Input the public parameters PP, master secret key MK and a vector \(\vec {v}\in \mathbb {Z}_{q}^{l}\), do:
+
+If \(\left \langle \vec {v},\vec {w}\right \rangle =0\), output ⊥.
+For i=1,⋯,l, let \(\hat {v}_{i}\) be the integer in [0,q−1] equals to vi mod q. Write the binary decomposition of \(\hat {v}_{i}\) as \(\hat {v}_{i}=\sum \limits _{\gamma =0}^{t}v_{i,\gamma }\cdot 2^{\gamma }\), where vi,γ are in {0,1}.
+Define the vectors \(\boldsymbol {a}_{\vec {v}}':=\sum \limits _{i=1}^{l}\sum \limits _{\gamma =0}^{t}v_{i,\gamma }\boldsymbol {a}_{i,\gamma }\) and \(\boldsymbol {a}_{\vec {v}}:=\left [\boldsymbol {a}|\boldsymbol {a}_{\vec {v}}'\right ]\). Then it follows that
+
+Generate e←SampleRight\(\left (\boldsymbol {a},-\left \langle \vec {v},\vec {w}^{*}\right \rangle \boldsymbol {b}^{*},\sum \limits _{i=1}^{l}\sum \limits _{\gamma =0}^{t}v_{i,\gamma }\mathbf {R}_{i,\gamma }^{*},\mathbf {T}_{\boldsymbol {b}^{*}},u,\sigma \right)\).
+Output the secret key \(sk_{\vec {v}}=\boldsymbol {e}\).
+Sim.Enc(PP, \(\vec {w}, \boldsymbol {m}\), MK): The algorithm is the same as the FE.Enc algorithm, except:
+
+In Step 1, the random vector b∗∈MK is used to replace the vector b.
+In Step 5(a), the random matrices \(\mathbf {R}^{*}_{i,\gamma }\in \text {MK}\) are used to replace the matrices Ri,γ for i=1,⋯,l and γ=0,⋯,t.
+In order to prove Theorem 2, we consider a security game against the adversary \(\mathcal {A}\) that plays the weak attribute hiding game as follows. The challenger \(\mathcal {C}\) samples a bit b←{0,1} at the beginning of the game. \(\mathcal {A}\) outputs two attribute vectors \(\vec {w}_{b}\) for b∈{0,1}. \(\mathcal {C}\) then runs the FE.Setup and FE.KeyGen algorithms to answer \(\mathcal {A}\)’s queries, and it also generates the ciphertext using the \(\mathbf {FE.Enc}\left (\vec {w}_{b},\boldsymbol {m}_{b}\right)\) and sends it to \(\mathcal {A}\). Finally \(\mathcal {A}\) returns a bit b′. Our construction is secure if there is no probability polynomial time adversary \(\mathcal {A}\) to output b′=b with more probability that is non-negligibly away from \(\frac {1}{2}\).
+Next, we define a series of games which are statistically or computationally indistinguishable with the above security game against \(\mathcal {A}\). What’s more, according to the simulation scheme, \(\mathcal {A}\) can only request keys when the predicate vector \(\vec {v}\) satisfies \(\left \langle \vec {v},\vec {w}_{b}\right \rangle \neq 0\) for b∈{0,1}. 
+Game 1: The challenger \(\mathcal {C}\) runs the FE.Setup and FE.KeyGen to answer the adversary \(\mathcal {A}\)’s key queries. Then \(\mathcal {C}\) computes the challenge ciphertext from \(\mathbf {FE.Enc}\left (\vec {w}_{0},\boldsymbol {m}_{0}\right)\) and sends it to \(\mathcal {A}\).
+Game 2: The challenger \(\mathcal {C}\) runs the \(\mathbf {Sim.Setup}\left (\vec {w}^{*}=\vec {w}_{0}\right)\) and Sim.KeyGen to answer \(\mathcal {A}\)’s key queries. Then \(\mathcal {C}\) computes the challenge ciphertext from \(\mathbf {Sim.Enc}\left (\vec {w}_{0},\boldsymbol {m}_{0}\right)\) and sends it to \(\mathcal {A}\).
+Game 3: The challenger \(\mathcal {C}\) runs the \(\mathbf {Sim.Setup}\left (\vec {w}^{*}=\vec {w}_{0}\right)\) and Sim.KeyGen to answer \(\mathcal {A}\)’s key queries. Then \(\mathcal {C}\) chooses uniformly the challenge ciphertext from the ciphertext space and sends it to \(\mathcal {A}\).
+Game 4: The challenger \(\mathcal {C}\) runs the \(\mathbf {Sim.Setup}\left (\vec {w}^{*}=\vec {w}_{1}\right)\) and Sim.KeyGen to answer \(\mathcal {A}\)’s key queries. Then \(\mathcal {C}\) chooses uniformly the challenge ciphertext from the ciphertext space and sends it to \(\mathcal {A}\).
+Game 5: The challenger \(\mathcal {C}\) runs the \(\mathbf {Sim.Setup}\left (\vec {w}^{*}=\vec {w}_{1}\right)\) and Sim.KeyGen to answer \(\mathcal {A}\)’s key queries. Then \(\mathcal {C}\) computes the challenge ciphertext from \(\mathbf {Sim.Enc}\left (\vec {w}_{1},\boldsymbol {m}_{1}\right)\) and sends it to \(\mathcal {A}\).
+Game 6: The challenger \(\mathcal {C}\) runs the FE.Setup and FE.KeyGen to answer \(\mathcal {A}\)’s key queries. Then \(\mathcal {C}\) computes the challenge ciphertext from \(\mathbf {FE.Enc}\left (\vec {w}_{1},\boldsymbol {m}_{1}\right)\) and sends it to \(\mathcal {A}\).
+Assume that m≥3n logq, then it follows that,
+At the view of the adversary \(\mathcal {A}\), the Game 1 is statistically indistinguishable with the Game 2.
+At the view of the adversary \(\mathcal {A}\), the Game 5 is statistically indistinguishable with the Game 6.
+We prove (a) only because we can prove (b) with the same way.
+Firstly, we demonstrate the public parameters and the ciphertext output by the FE.Setup and vFE.Enc algorithms are statistically indistinguishable from those output by the Sim.Setup and Sim.Enc algorithms. That is, for every i=1,⋯,l and γ=0,⋯,t, we need to argue the distributions of the set Ei,γ in Game 1 and Game 2 are statistically indistinguishable, where Ei,γ as the set (a,{ai,γ,ci,γ}).
+In Game 1, the vector a is selected from the TrapGen. Then for all but a 2−Ω(κ) fraction of all a follow from uniformly distribution over \(R_{q}^{m}\). While in Game 2, the vector a is sampled uniformly from \(R_{q}^{m}\). Therefore, the distributions of a are statistically indistinguishable in both games.
+Next, we discuss the joint distributions {ai,γ,ci,γ} in the both games. In Game 1, the vector ai,γ is sampled uniformly from the \(R_{q}^{m}\) and ci,γ is equal to \(s\cdot \left (\boldsymbol {a}_{i,\gamma }+2^{\gamma }w_{i}^{*}\boldsymbol {b}^{*}\right)+2\boldsymbol {\eta }\cdot \mathbf {R}_{i,\gamma }^{*}\), where \(\mathbf {R}_{i,\gamma }^{*}\) is random independently in {−1,1}m×m for every i=1,⋯l,γ=0,⋯,t and b∗ is uniformly selected from \(R_{q}^{m}\). In Game 2, ai,γ is calculated as \(\boldsymbol {a}\mathbf {R}_{i,\gamma }^{*}-2^{\gamma }w_{i}^{*}\boldsymbol {b}^{*}\), where \(\mathbf {R}_{i,\gamma }^{*}\) is random independently in {−1,1}m×m for every i=1,⋯l,γ=0,⋯,t, and b∗ generated by TrapGen is statistically close to uniformly random in \(R_{q}^{m}, \boldsymbol {c}_{i,\gamma }\) is equal to \(s\cdot \left (\boldsymbol {a}\mathbf {R}_{i,\gamma }^{*}-2^{\gamma }w_{i}^{*}\boldsymbol {b}^{*}+2^{\gamma }w_{i}^{*}\boldsymbol {b}^{*}\right)+2\boldsymbol {\eta }\cdot \mathbf {R}_{i,\gamma }^{*}\) where \(\boldsymbol {a}\mathbf {R}_{i,\gamma }^{*}-2^{\gamma }w_{i}^{*}\boldsymbol {b}^{*}\) is equal to the public parameter ai,γ.
+Furthermore, according to Lemma 6, the function \(\Phi _{\boldsymbol {a}}\left (\mathbf {R}_{i,\gamma }^{*}\right)=\boldsymbol {a}\mathbf {R}_{i,\gamma }^{*}\) is universal. Then it follows from that the statistical distance of the following two distributions is at most \(\frac {1}{2} \left (\frac {1}{2^{m^{2}}}\cdot q^{2nm}\right)^{\frac {1}{2}}\leq \frac {1}{2}q^{-\frac {1}{2}nm}\) by Lemma 5, namely, \(\left (\boldsymbol {a},\boldsymbol {a}\mathbf {R}_{i,\gamma }^{*},2\boldsymbol {\eta }\cdot {\mathbf {R}_{i,\gamma }^{*}}\right)\approx _{s}\left (\boldsymbol {a},\boldsymbol {a}_{i,\gamma },2\boldsymbol {\eta }\cdot {\mathbf {R}_{i,\gamma }^{*}}\right)\). Then for every fixed vector b∗ and \(\vec {w}^{*}\), it follows that \(\left (\boldsymbol {a},\boldsymbol {a}\mathbf {R}_{i,\gamma }^{*}-2^{\gamma }w_{i}^{*}\boldsymbol {b}^{*},2\boldsymbol {\eta }\cdot {\mathbf {R}_{i,\gamma }^{*}}\right)\approx _{s}\left (\boldsymbol {a},\boldsymbol {a}_{i,\gamma },2\boldsymbol {\eta }\cdot {\mathbf {R}_{i,\gamma }^{*}}\right)\).
+Since the matrix \(\mathbf {R}_{i,\gamma }^{*}\) is chosen independently for every i,γ, the joint distributions of these quantities for all i,γ are also statistically close:
+
+Next, we need to add two quantities which are statistically indistinguishable to the both sides of the formula (3). Then we can get the following by the conclusion that applying any function to two statistically indistinguishable ensembles produces statistically indistinguishable ensembles, that is, for every i and γ:
+
+By the above formula, the right side of the formula is the public parameters and the challenge ciphertext in Game 1, while the left side of the formula is the public parameters and the challenge ciphertext in Game 2. Hence, the public parameters and the challenge ciphertexts are statistically indistinguishable at the both games.
+To complete the proof, we show that the secret keys output by Sim.KeyGen are statistically indistinguishable from those output by FE.KeyGen when given the public parameters and the challenge ciphertexts. In the two games, the secret key e follows from Gaussian distribution for Gaussian parameter σ, so the distributions of them are statistically indistinguishable when σ is sufficiently large. □
+If the decision R-LWE problem is infeasible, then it follows that:
+At the view of the adversary \(\mathcal {A}\), the Game 2 is computationally indistinguishable with the Game 3.
+At the view of the adversary \(\mathcal {A}\), the Game 4 is computationally indistinguishable with the Game 5.
+It suffices to prove (a). Given m+1R-LWE instances (aj,yj) for j=0,⋯,mred, in which we define either yj=s·aj+2ηj for s is sampled uniformly from Rq and ηj is sampled from the discrete Gaussian χ, or yj∈Rq is uniformly random. We denote c0=(y1,⋯,ym).
+We consider a variant experiment, in which the challenger \(\mathcal {C}\) runs the \(\mathbf {Sim.Setup}\left (\vec {w}^{*}=\vec {w}_{0}\right)\) and let a=(a1,⋯,am),u=a0. Then \(\mathcal {C}\) answers the queries of \(\mathcal {A}\) using the Sim.KeyGen algorithm. Finally, for i=1,⋯,l and \(\gamma =0,\cdots,t, \mathcal {C}\) computes \(c'=y_{0}+\boldsymbol {m}, \boldsymbol {c}_{i,\gamma }=\boldsymbol {c}_{0}{\mathbf {R}_{i,\gamma }^{*}}\) where \(\mathbf {R}_{i,\gamma }^{*}\in \) MK and sends (c0,{ci,γ},c′) to \(\mathcal {A}\).
+In Game 2, we observe that for i=1,⋯,l and γ=0,⋯,t, the challenge ciphertext ci,γ using the Sim.Enc as follows,
+\(\boldsymbol {c}_{i,\gamma }=s\cdot \left (\boldsymbol {a}\mathbf {R}_{i,\gamma }^{*}-2^{\gamma }w_{i}^{*}\boldsymbol {b}^{*}+2^{\gamma }w_{i}^{*}\boldsymbol {b}^{*}\right)+2\boldsymbol {\eta }\cdot {\mathbf {R}_{i,\gamma }^{*}}=\left (s\cdot \boldsymbol {a}+2\boldsymbol {\eta }\right){\mathbf {R}_{i,\gamma }^{*}}\).
+When yj=s·aj+2ηj, then \(\boldsymbol {c}_{i,\gamma }=\boldsymbol {c}_{0}{\mathbf {R}_{i,\gamma }^{*}}\) in the variant experiment is identical to corresponding ciphertext in Game 2.
+On the other hand, when yj is uniformly random in Rq, then the simulated ciphertext is \(\left (\boldsymbol {c}_{0},\left \{\boldsymbol {c}_{0}{\mathbf {R}_{i,\gamma }^{*}}\right \},c'\right)\) for i=1,⋯,l and γ=0,⋯,t. By the Lemma 6, we know that the function \(\Phi _{\boldsymbol {c}_{0}}=\mathbf {c}_{0}{\mathbf {R}_{i,\gamma }^{*}}\) is universal. Hence, by the variant of the leftover hash lemma (see Lemma 5), the statistical distance between the distribution of \(\left (\boldsymbol {c}_{0},\left \{\mathbf {c}_{0}{\mathbf {R}_{i,\gamma }^{*}}\right \},c'\right)\) with the uniform distribution is bounded from \(\frac {1}{2}q^{-\frac {1}{2}nm}\). While in the Game 3, the challenge ciphertext is selected uniformly from the ciphertext space. Therefore, the ciphertexts in the variant experiment and the Game 3 are statistically indistinguishable.
+So we draw the conclusion that the statistical distance in the both games is negligible close under the hardness of R-LWE problem. □
+The Game 3 and the Game 4 are statistically indistinguishable at the view of the adversary \(\mathcal {A}\).
+The only difference between the Game 3 and the Game 4 is the vector \(\vec {w}^{*}\) which is used to calculate the public parameter \(\boldsymbol {a}_{i,\gamma }=\boldsymbol {a}\mathbf {R}_{i,\gamma }^{*}-2^{\gamma }w_{i}^{*}\boldsymbol {b}^{*}\), where a and \(\mathbf {R}_{i,\gamma }^{*}\) are independent uniformly random samples. The function \(\Phi _{\boldsymbol {a}}:\mathbf {R}_{i,\gamma }^{*}\rightarrow \boldsymbol {a}\mathbf {R}_{i,\gamma }^{*}\) is universal according to Lemma 6. For every i∈{1,⋯,l} and \(\gamma \in \{0,\cdots,t\}, \left (\boldsymbol {a},\boldsymbol {a}\mathbf {R}_{i,\gamma }^{*}\right)\) is statistically indistinguishable from (a,U) where U is uniformly random. For the value \(C=2^{\gamma }w_{i}^{*}\boldsymbol {b}^{*}\) associated with the fixed b∗ and \(w_{i}^{*}\), the distribution of U−C is also uniformly random.
+Therefore, we conclude that for all i=1,⋯,l and γ=0,⋯,t, the distributions of ai,γ in the both games are statistically indistinguishable. □
+Proof of Theorem 2. Based on the Lemmas 8, 9 and 10, the Game 1 and Game 6 are statistically indistinguishable under the R-LWE hardness assumption. It indicates that there is no efficient adversary \(\mathcal {A}\) that can win the security experiment.
+We have constructed a new functional encryption scheme for inner product predicates from R-LWE problem. In our construction, firstly, we use setup algorithm to generate the public parameters and the master secret key. Secondly, we compute the secret key associated with the predicate vector \(\vec {v}\) based on R-SIS problem using key generation algorithm. Thirdly, we calculate the ciphertext associated with the attribute vector \(\vec {w}\) based on R-LWE problem using encryption algorithm. Finally, the user then can decrypt successfully using the secret key when \(\left \langle \vec {v},\vec {w}\right \rangle =0\).
+What’s more, the n samples from the LWE distribution can be replaced by a sample from the R-LWE distribution, which will reduce the size of the public key by a factor of n. Hence, our scheme is more efficiency in computation than the scheme of the reference (Agrawal et al. 2011).
+Some questions still remain. For example, one direction is to improve the security of our construction for researchers. Firstly, our scheme is secure under the R-LWE hardness assumption. While Rosca et al. proposed Middle-Product LWE (MP-LWE) problem as a variant of the LWE problem and proved a reduction from polynomial LWE to MP-LWE (Roşca et al. 2017). Hence, it is a open question to construct functional encryption schemes based on MP-LWE hardness assumption. Secondly, our scheme is weakly attribute hiding in security model. Therefore, we can try to construct a functional encryption scheme that is fully attribute hiding.
+All data generated or analysed during this study are included in this published article.
+Abdalla, M, Bourse F, De Caro A, Pointcheval D (2015) Simple functional encryption schemes for inner products. In: Katz J (ed)Public-Key Cryptography – PKC 2015, 733–751.. Springer, Berlin, Heidelberg.
+Chapter 
+    
+                    Google Scholar 
+                
+Abdalla, M, Catalano D, Gay R, Ursu B (2020) Inner-product functional encryption with fine-grained access control. IACR Cryptol ePrint Arch 2020:577.
+
+                    Google Scholar 
+                
+Agrawal, S, Boneh D, Boyen X (2010) Efficient lattice (h)ibe in the standard model. In: Gilbert H (ed)Advances in Cryptology – EUROCRYPT 2010, 553–572.. Springer, Berlin, Heidelberg.
+MATH 
+    Chapter 
+    
+                    Google Scholar 
+                
+Agrawal, S, Boyen X, Vaikuntanathan V, Voulgaris P, Wee H (2012) Functional encryption for threshold functions (or fuzzy ibe) from lattices. In: Fischlin M, Buchmann J, Manulis M (eds)Public-Key Cryptography-PKC 2015, 280–297.. Springer, Berlin, Heidelberg.
+
+                    Google Scholar 
+                
+Agrawal, S, Freeman DM, Vaikuntanathan V (2011) Functional encryption for inner product predicates from learning with errors. In: Lee DH Wang X (eds)Advances in Cryptology – ASIACRYPT 2011, 21–40.. Springer, Berlin, Heidelberg.
+Chapter 
+    
+                    Google Scholar 
+                
+Agrawal, S, Libert B, Stehlé D (2016) Fully secure functional encryption for inner products, from standard assumptions. In: Robshaw M Katz J (eds), 333–362.. Springer, Berlin, Heidelberg.
+Attrapadung, N, Imai H (2009) Conjunctive broadcast and attribute-based encryption. In: Shacham H Waters B (eds)Pairing-Based Cryptography – Pairing 2009, 248–265.. Springer, Berlin, Heidelberg.
+MATH 
+    Chapter 
+    
+                    Google Scholar 
+                
+Baden, R, Bender A, Spring N, Bhattacharjee B, Starin D (2009) Persona: An online social network with user-defined privacy. ACM SIGCOMM Conf Appl Technol Architectures Protocol Comput Commun 39:135–146.
+Article 
+    
+                    Google Scholar 
+                
+Blundo, C, Iovino V, Persiano G (2010) Predicate encryption with partial public keys. Cryptol Netw Secur 2010:476.
+MATH 
+    
+                    Google Scholar 
+                
+Boneh, D, Sahai A, Waters B (2011) Functional encryption: Definitions and challenges. In: Ishai Y (ed)Theory of Cryptography, 253–273.. Springer, Berlin, Heidelberg.
+Chapter 
+    
+                    Google Scholar 
+                
+Boneh, D, Waters B (2006) Conjunctive, subset, and range queries on encrypted data. IACR Cryptol ePrint Arch 2006:287.
+MATH 
+    
+                    Google Scholar 
+                
+Camenisch, J, Dubovitskaya M, Enderlein RR, Neven G (2012) Oblivious transfer with hidden access control from attribute-based encryption. In: Visconti I De Prisco R (eds)Security and Cryptography for Networks, 559–579.. Springer, Berlin, Heidelberg.
+Chapter 
+    
+                    Google Scholar 
+                
+Cash, D, Hofheinz D, Kiltz E, Peikert C (2010) Bonsai trees, or how to delegate a lattice basis. In: Gilbert H (ed)Advances in Cryptology – EUROCRYPT 2010, 523–552.. Springer, Berlin, Heidelberg.
+Chapter 
+    
+                    Google Scholar 
+                
+Chen, J, Gong J, Wee H (2018) Improved inner-product encryption with adaptive security and full attribute-hiding. In: Peyrin T Galbraith S (eds)Advances in Cryptology – ASIACRYPT 2018, 673–702.. Springer, Cham.
+Chapter 
+    
+                    Google Scholar 
+                
+Ducas, L, Lyubashevsky V, Prest T (2014) Efficient identity-based encryption over ntru lattices. In: Sarkar P Iwata T (eds)Advances in Cryptology – ASIACRYPT 2014, 22–41.. Springer, Berlin, Heidelberg.
+Chapter 
+    
+                    Google Scholar 
+                
+Goyal, V, Pandey O, Sahai A, Waters B (2006) Attribute-based encryption for fine-grained access control of encrypted data. ACM Conf Comput Commun Secur 89-98:89–98.
+
+                    Google Scholar 
+                
+Green, MD, Miers I (2015) Forward secure asynchronous messaging from puncturable encryption. IEEE Comput Soc 2015:305–320.
+
+                    Google Scholar 
+                
+Katz, J, Sahai A, Waters B (2008) Predicate encryption supporting disjunctions, polynomial equations, and inner products. In: Smart N (ed)Advances in Cryptology – EUROCRYPT 2008, 146–162.. Springer, Berlin, Heidelberg.
+Chapter 
+    
+                    Google Scholar 
+                
+Kurosawa, K, Phong L (2017) Anonymous and leakage resilient ibe and ipe. Des Codes Crypt 85:273–98.
+MathSciNet 
+    MATH 
+    Article 
+    
+                    Google Scholar 
+                
+Lai, RWF, Cheung HKF, Chow SSM (2015) Trapdoors for ideal lattices with applications. In: Lin D, Yung M, Zhou J (eds)Information Security and Cryptology, 239–256.. Springer, Cham.
+Chapter 
+    
+                    Google Scholar 
+                
+LEE, K (2018) Two-input functional encryption for inner products from bilinear maps. IEICE Trans Fundam Electron Commun Comput Sci E101.A:915–928.
+Article 
+    
+                    Google Scholar 
+                
+Lewko, A, Okamoto T, Sahai A, Takashima K, Waters B (2010) Fully secure functional encryption: Attribute-based encryption and (hierarchical) inner product encryption. In: Gilbert H (ed)Advances in Cryptology – EUROCRYPT 2010, 62–91.. Springer, Berlin, Heidelberg.
+Chapter 
+    
+                    Google Scholar 
+                
+Li, J, Zhang D, Lu X, Wang K (2018) Compact (targeted homomorphic) inner product encryption from lwe. In: Qing S, Mitchell C, Chen L, Liu D (eds)Information and Communications Security, 132–140.. Springer, Cham.
+Chapter 
+    
+                    Google Scholar 
+                
+Libert, B, Ţiţiu R (2019) Multi-client functional encryption for linear functions in the standard model from LWE. In: Steven DG Shiho M (eds)Advances in Cryptology-ASIACRYPT 2019-25th International Conference on the Theory and Application of Cryptology and Information Security, Kobe, Japan, December 8-12, 2019, Proceedings, Part III, 520–551.. Springer.
+Liu, Z, Jiang Z, Wang X, Yiu S (2018) Practical attribute-based encryption: Outsourcing decryption, attribute revocation and policy updating. J Netw Comput Appl 108:112–123.
+Article 
+    
+                    Google Scholar 
+                
+Lyubashevsky, V, Micciancio D (2006) Generalized compact knapsacks are collision resistant. In: Bugliesi M, Preneel B, Sassone V, Wegener I (eds)Automata, Languages and Programming, 144–155.. Springer, Berlin, Heidelberg.
+Chapter 
+    
+                    Google Scholar 
+                
+Lyubashevsky, V, Peikert C, Regev O (2010) On ideal lattices and learning with errors over rings. In: Gilbert H (ed)Advances in Cryptology – EUROCRYPT 2010, 1–23.. Springer, Berlin, Heidelberg.
+
+                    Google Scholar 
+                
+Micciancio, D, Regev O (2004) Worst-case to average-case reductions based on gaussian measures In: Proceedings - Annual IEEE Symposium on Foundations of Computer Science, FOCS, 372–381.. IEEE, Rome. Proceedings - 45th Annual IEEE Symposium on Foundations of Computer Science, FOCS 2004 ; Conference date: 17-10-2004 Through 19-10-2004.
+Chapter 
+    
+                    Google Scholar 
+                
+Okamoto, T, Takashima K (2009) Hierarchical predicate encryption for inner-products. In: Matsui M (ed)Advances in Cryptology – ASIACRYPT 2009, 214–231.. Springer, Berlin, Heidelberg.
+Chapter 
+    
+                    Google Scholar 
+                
+Okamoto, T, Takashima K (2015) Achieving short ciphertexts or short secret-keys for adaptively secure general inner-product encryption. Des Codes Cryptogr 77:725–771.
+MathSciNet 
+    MATH 
+    Article 
+    
+                    Google Scholar 
+                
+O’Neill, A (2010) Definitional issues in functional encryption. IACR Cryptol ePrint Arch 2010:556.
+
+                    Google Scholar 
+                
+Parno, B, Raykova M, Vaikuntanathan V (2011) How to delegate and verify in public: Verifiable computation from attribute-based encryption. IACR Cryptol ePrint Arch 2011:597.
+MATH 
+    
+                    Google Scholar 
+                
+Peikert, C, Rosen A (2006) Efficient collision-resistant hashing from worst-case assumptions on cyclic lattices. In: Halevi S Rabin T (eds)Theory of Cryptography, 145–166.. Springer, Berlin, Heidelberg.
+Chapter 
+    
+                    Google Scholar 
+                
+Roşca, M, Sakzad A, Stehlé D, Steinfeld R (2017) Middle-product learning with errors. In: Katz J Shacham H (eds)Advances in Cryptology – CRYPTO 2017, 283–297.. Springer, Cham.
+Chapter 
+    
+                    Google Scholar 
+                
+Sahai, A, Waters B (2005) Fuzzy identity-based encryption. In: Cramer R (ed)Advances in Cryptology – EUROCRYPT 2005, 457–473.. Springer, Berlin, Heidelberg.
+Chapter 
+    
+                    Google Scholar 
+                
+Stehlé, D, Steinfeld R, Tanaka K, Xagawa K (2009) Efficient public key encryption based on ideal lattices. In: Matsui M (ed)Advances in Cryptology – ASIACRYPT 2009, 617–635.. Springer, Berlin, Heidelberg.
+Chapter 
+    
+                    Google Scholar 
+                
+Tomida, J (2020) Tightly secure inner product functional encryption: Multi-input and function-hiding constructions. Theor Comput Sci 833:56–86.
+MathSciNet 
+    MATH 
+    Article 
+    
+                    Google Scholar 
+                
+Tseng, Y, Liu Z, Tso R (2020) Practical predicate encryption for inner product. IACR Cryptol ePrint Arch 2020:270.
+
+                    Google Scholar 
+                
+Wang, Z, Fan X, Liu F-H (2019) Fe for inner products and its application to decentralized abe. In: Lin D Sako K (eds)Public-Key Cryptography – PKC 2019, 97–127.. Springer, Cham.
+Chapter 
+    
+                    Google Scholar 
+                
+Wang, Z, Fan X, Wang M (2018) Compact inner product encryption from lwe. In: Qing S, Mitchell C, Chen L, Liu D (eds)Information and Communications Security, 141–153.. Springer, Cham.
+Chapter 
+    
+                    Google Scholar 
+                
+Wei, D, Gao H (2019) An inner product encryption scheme based on dual systems. Wuhan Univ J Nat Sci 24:125–133.
+MATH 
+    Article 
+    
+                    Google Scholar 
+                
+Xagawa, K (2013) Improved (hierarchical) inner-product encryption from lattices. In: Kurosawa K Hanaoka G (eds)Public-Key Cryptography – PKC 2013, 235–252.. Springer, Berlin, Heidelberg.
+Chapter 
+    
+                    Google Scholar 
+                
+Yun, K, Wang X, Xue R (2018) Identity-based functional encryption for quadratic functions from lattices. In: Naccache D, Xu S, Qing S, Samarati P, Blanc G, Lu R, Zhang Z, Meddahi A (eds)Information and Communications Security, 409–425.. Springer, Cham.
+Chapter 
+    
+                    Google Scholar 
+                
+Zhang, D, Li J, Li B, Lu X, Xue H, Jia D, Liu Y (2019) Deterministic identity-based encryption from lattice-based programmable hash functions with high min-entropy. Secur Commun Netw 2019:1–12.
+
+                    Google Scholar 
+                
+Zhang, L, Wu Q (2017) Adaptively secure hierarchical identity-based encryption over lattice. In: Yan Z, Molva R, Mazurczyk W, Kantola R (eds)Network and System Security, 46–58.. Springer, Cham.
+Chapter 
+    
+                    Google Scholar 
+                
+Download references
+Not applicable.
+project is supported by the National Natural Science Foundation of China (11701089, 61822202, 61872089) and Science and Technology Program of Fujian Province, China (2019J01428).
+Shisen Fang and Shaojun Yang contributed equally to this work.
+The Fujian Provincial Key Laboratory of Network Security and Cryptology, College of Mathematics and Informatics, Fujian Normal University, Fuzhou, 350108, PR, China
+Shisen Fang, Shaojun Yang & Yuexin Zhang
+You can also search for this author in
+                        PubMed Google Scholar
+You can also search for this author in
+                        PubMed Google Scholar
+You can also search for this author in
+                        PubMed Google Scholar
+This work is the original idea of Yang. All reporting including validating for correctness and security were performed by Fang. Correctness and security of the scheme were modified by Yang. Language modification of the article was completed by Zhang. All author(s) read and approved the final manuscript.
+Correspondence to
+                Shisen Fang.
+The authors declare that they have no competing interests.
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+Open Access  This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+Reprints and Permissions
+Fang, S., Yang, S. & Zhang, Y. Inner product encryption from ring learning with errors.
+                    Cybersecur 3, 22 (2020). https://doi.org/10.1186/s42400-020-00062-6
+Download citation
+Received: 10 August 2020
+Accepted: 29 September 2020
+Published: 10 November 2020
+DOI: https://doi.org/10.1186/s42400-020-00062-6
+
+
+            By using this website, you agree to our
+            Terms and Conditions,
+            California Privacy Statement,
+            Privacy
+                statement and
+            Cookies policy.
+            
+                Manage cookies/Do not sell my data we use in the preference centre.
+            
+        
+ © 2021 BioMed Central Ltd unless otherwise stated. Part of
+            Springer Nature.
+        

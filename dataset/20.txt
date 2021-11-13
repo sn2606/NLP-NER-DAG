@@ -1,0 +1,15 @@
+Intelligent CISO
+Covering Security Across Borders
+Security company Verkada is reported to have been the victim of a hack of up to 150,000 security cameras.
+The attack targeted a Jenkins server used by its support team to perform bulk maintenance operations on customer cameras, such as adjusting camera image settings upon customer request. The attackers gained access to this server on March 7, 2021 and maintained access until March 9, 2021.
+In gaining access to the server, the attackers obtained credentials that allowed them to bypass the authorization system, including two-factor authentication.
+A statement from Verkada confirmed that attackers had obtained the following:
+Max Heinemeyer, Director of Threat Hunting at Darktrace, said: “This attack serves as yet another reminder that complex digital supply chains are a hacker’s paradise.“
+Candid Wüest, VP Cyber Security Research at Acronis said: “(Verada) must secure the configuration, restrict access where it must be restricted, remove default accounts and use strong passwords. They also have to update systems frequently, monitor access logs and separate devices from the rest of the network whenever possible.”
+Intelligent CISO is a technology intelligence platform aimed at the enterprise sector looking for updates and research driven data about cybersecurity. As part of Lynchpin Media, this digital medium gives unparalleled advice to the global community.
+UK Head Office         
+63/66 Hatton Garden 
+London, EC1N 8LE
+Phone: +44 (0) 20 3026 6825
+Browse our latest issue
+View Magazine Archive

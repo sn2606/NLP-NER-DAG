@@ -1,0 +1,41 @@
+Artificial Intelligence (AI) continues to evolve and has made huge progress over the last decade. AI shapes our daily lives. Deep learning is a subset of techniques in AI that extract patterns from data using neural networks. Deep learning has been applied to image segmentation, protein structure, machine translation, speech recognition and robotics. It has outperformed human champions in the game of Go. In recent years, deep learning has been applied to malware analysis. Different types of deep learning algorithms, such as convolutional neural networks (CNN), recurrent neural networks and Feed-Forward networks, have been applied to a variety of use cases in malware analysis using bytes sequence, gray-scale image, structural entropy, API call sequence, HTTP traffic and network behavior.  
+
+Most traditional machine learning malware classification and detection approaches rely on handcrafted features. These features are selected based on experts with domain knowledge. Feature engineering can be a very time-consuming process, and handcrafted features may not generalize well to novel malware. In this blog, we briefly describe how we apply CNN on raw bytes for malware detection and classification in real-world data. 
+
+CNN on Raw Bytes 
+Figure 1: CNNs on raw bytes for malware detection and classification
+
+The motivation for applying deep learning is to identify new patterns in raw bytes. The novelty of this work is threefold. First, there is no domain-specific feature extraction and pre-processing. Second, it is an end-to-end deep learning approach. It can also perform end-to-end classification. And it can be a feature extractor for feature augmentation. Third, the explainable AI (XAI) provides insights on the CNN decisions and help human identify interesting patterns across malware families. As shown in Figure 1, the input is only raw bytes and labels. CNN performs representation learning to automatically learn features and classify malware.  
+
+2. Experimental Results 
+For the purposes of our experiments with malware detection, we first gathered 833,000 distinct binary samples (Dirty and Clean) across multiple families, compilers and varying “first-seen” time periods. There were large groups of samples from common families although they did utilize varying packers, obfuscators. Sanity checks were performed to discard samples that were corrupt, too large or too small, based on our experiment. From samples that met our sanity check criteria, we extracted raw bytes from these samples and utilized them for conducting multiple experiments. The data was randomly divided into a training and a test set with an 80% / 20% split. We utilized this data set to run the three experiments.  
+
+In our first experiment, raw bytes from the 833,000 samples were fed to the CNN and the performance accuracy in terms of area under receiver operating curve (ROC) was 0.9953.  
+
+One observation with the initial run was that, after raw byte extraction from the 833,000 unique samples, we did find duplicate raw byte entries. This was primarily due to malware families that utilized hash-busting as an approach to polymorphism. Therefore, in our second experiment, we deduplicated the extracted raw byte entries. This reduced the raw byte input vector count to 262,000 samples. The test area under ROC was 0.9920. 
+
+In our third experiment, we attempted multi-family malware classification. We took a subset of 130,000 samples from the original set and labeled 11 categories – the 0th were bucketed as Clean, 1-9 of which were malware families, and the 10th were bucketed as Others. Again, these 11 buckets contain samples with varying packers and compilers. We performed another 80 / 20% random split for the training set and test set. For this experiment, we achieved a test accuracy of 0.9700. The training and test time on one GPU was 26 minutes.  
+
+3. Visual Explanation 
+Figure 2: visual explanation using T-SNE and PCA before and after the CNN training
+Figure 2: A visual explanation using T-SNE and PCA before and after the CNN training
+To understand the CNN training process, we performed a visual analysis for the CNN training. Figure 2 shows the t-Distributed Stochastic Neighbor Embedding (t-SNE) and Principal Component Analysis (PCA) for before and after CNN training. We can see that after training, CNN is able to extract useful representations to capture characteristics of different types of malware as shown in different clusters. There was a good separation for most categories, lending us to believe that the algorithm was useful as a multi-class classifier. 
+
+We then performed XAI to understand CNN’s decisions. Figure 3 shows XAI heatmaps for one sample of Fareit and one sample of Emotet. The brighter the color is the more important the bytes contributing to the gradient activation in neural networks. Thus, those bytes are important to CNN’s decisions. We were interested in understanding the bytes that weighed in heavily on the decision-making and reviewed some samples manually. 
+
+Figure 4: Human analysis on CNN’s predictions
+Figure 4: Human analysis on CNN’s predictions
+To verify if the CNN can learn new patterns, we fed a few never before seen samples to the CNN, and requested a human expert to verify the CNN’s decision on some random samples. The human analysis verified that the CNN was able to correctly identify many malware families. In some cases, it identified samples accurately before the top 15 AV vendors based on our internal tests. Figure 4 shows a subset of samples that belong to the Nabucur family that were correctly categorized by the CNN despite having no vendor detection at that point in time. It’s also interesting to note that our results showed that the CNN was able to currently categorize malware samples across families utilizing common packers into an accurate family bucket. 
+
+Figure 5
+We ran domain analysis on the same sample complier VB files. As shown in Figure 5, CNN was able to identify two samples of a threat family before other vendors. CNN agreed with MSMP/other vendors on two samples. In this experiment, the CNN incorrectly identified one sample as Clean.  
+
+Figure 6: Human analysis on an XAI heatmap. Above is the resulting disassembly of part of the decryption tea algorithm from the Hiew tool.
+Figure 6: Human analysis on an XAI heatmap. Above is the resulting disassembly of part of the decryption tea algorithm from the Hiew tool.
+Above is XAI heatmap for one sample.
+Above is XAI heatmap for one sample.
+We asked a human expert to inspect an XAI heatmap and verify if those bytes in bright color are associated with the malware family classification. Figure 6 shows one sample which belongs to the Sodinokibi family. The bytes identified by the XAI (c3 8b 4d 08 03 d1 66 c1) are interesting because the byte sequence belongs to part of the Tea decryption algorithm. This indicates these bytes are associated with the malware classification, which confirms the CNN can learn and help identify useful patterns which humans or other automation may have overlooked. Although these experiments were rudimentary, they were indicative of the effectiveness of the CNN in identifying unknown patterns of interest.  
+
+In summary, the experimental results and visual explanations demonstrate that CNN can automatically learn PE raw byte representations. CNN raw byte model can perform end-to-end malware classification. CNN can be a feature extractor for feature augmentation. The CNN raw byte model has the potential to identify threat families before other vendors and identify novel threats. These initial results indicate that CNN’s can be a very useful tool to assist automation and human researcher in analysis and classification. Although we still need to conduct a broader range of experiments, it is encouraging to know that our findings can already be applied for early threat triage, identification, and categorization which can be very useful for threat prioritization.  
+
+We believe that McAfee’s ongoing AI research, such as deep learning-based approaches, leads the security industry to tackle the evolving threat landscape, and we look forward to continuing to share our findings in this space with the security community

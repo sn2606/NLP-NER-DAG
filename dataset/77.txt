@@ -1,0 +1,34 @@
+The Health Service Executive is working to restore servers and devices
+
+Ireland’s national health service said patients requiring non-urgent care should expect “significant delays” after a ransomware attack shut down systems across the country.
+The country’s Health Service Executive (HSE), which oversees healthcare in the Republic of Ireland, released a statement last night (May 17) following the incident, which knocked systems offline. Disruption to its services is expected to continue into the week.
+The HSE is currently working to restore its IT systems and said it was working with authorities and cybersecurity experts.
+The agency said: “There are serious concerns about the implications for patient care arising from the very limited access to diagnostics, lab services, and historical patient records.”
+It added: “Our priority is keeping our patients safe and maintaining essential care and support services.”
+Clean-up operation
+The HSE said it is “clear” that some data has been encrypted, and has also stated it would not pay the ransom demand.
+Offering an update on the situation, the healthcare agency said approximately 2,000 IT patient facing systems are currently being put through a “rigorous process of assessment and recovery”.
+An additional 80,000 HSE-managed devices will also be assessed, while progress is already underway to clean up servers and restore internet access.
+The HSE said: “This is in line with the pace we had anticipated, and is a stepped, methodical process, to mitigate the risk of re-infection.
+“We are also looking at interim solutions to get some servers back online in a proven safe way.”
+Victim of crime
+Brian Honan, CEO of BH Consulting and head of Ireland’s Computer Security Incident Response Team (IRISS-CERT) told The Daily Swig: “We have to remember the HSE are the victims of a crime and should be viewed that way.
+“The people responsible for the crime are the criminals behind this attack and that is where our focus should be.
+“Later, when all systems are restored then a review can be held to determine if things could have been done more effectively.”
+Honan added that ransomware is rife in Ireland, which is “no different than many other countries with ransomware attacks being quite common”.
+He added: “We have assisted several companies recover from such attacks. Ransomware and Invoice Redirection Fraud are currently the two major threats facing Irish organizations.”
+YOU MAY ALSO LIKE AXA ransomware attack comes just days after insurer pulled coverage for cyber-attack class in France
+
+
+Jessica Haworth
+
+
+
+@JesscaHaworth 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

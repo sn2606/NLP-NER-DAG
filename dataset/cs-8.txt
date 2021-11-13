@@ -1,0 +1,29 @@
+The existence of a secret SAS mobile hacker squad, named MAB5 and under the control of the Computer Network Operations (CNO) Exploitation, was revealed by a job ad published by the UK’s Ministry of Defence on an external website, reported Alan Turnbull of Secret Bases.
+
+The UK Ministry of Defence is looking for an extraordinary talented electronics engineer to hire for its secretive unit is located in Hereford.
+
+The MoD is offering a salary of £33k to “work alongside some of the best scientists and engineers within defence and will be tasked with delivering prototype solutions directly to the soldiers and officers of a unique and specialized military unit.”
+The experts will be likely involved in the special projects for the design of custom electronics used for CNO.
+
+The job ad refers to the MAB5 as “a small military unit that specialises in the provision of novel and ground-breaking science and technology prototypes for operational requirements.”
+
+“MAB5 was described in gushing terms and with incredible detail, even naming the military leader – a Lieutenant Colonel (Lt Col) in the Royal Corps of Signals, who was awarded the MBE in the Queen’s Birthday Honours List 2013 when he was a Major. His email address and phone number were also listed in the advert.” reported secret Bases.
+
+“Whilst the phone number is for the SAS Barracks at Stirling Lines, Credenhill in Hereford, the job advert states the vacancy is based at “Hereford, HR2 0JA” which is the post code for PATA.”
+
+According to El Reg, MAB5 expects the lucky applicant to:
+
+“be a consultant (to the user who has the operational problem)”
+“an inventor (if no quick ‘off the shelf’ solution exists)”
+“a designer (bringing components and system together and fully integrating them physically as well as within simulation software)”
+“a production engineer (physically connecting components with hands on foundations skills such as soldering, crimping etc)”
+“a fabricator (using CAD software tools to deliver Additive manufactured parts to house electrical solutions in)”
+“a testing engineer (understanding the capability of the solutions and testing them to their limits)”
+“a report writer (so your tests can be peer reviewed and followed by other engineers for further production or repair and analysis)”
+“an analyst (if there is no immediate solution to a problem, you will find one or suggest alternatives)”
+Secret Bases website provides other details about the mysterious unit which is commanded by a Royal Signals lieutenant colonel.
+
+“The job blurb goes on to announce, “MAB 5 is a small military unit that specialises in the provision of novel and ground-breaking science and technology prototypes for operational requirements. As a military unit it is irregular and unrecognisable. Most of the workforce consist of civil servants who are Defence’s most talented scientists and engineers. The CNO Exploit engineer works within a small highly specialised team of talented engineers specialising in communications, electronics, networks and systems.” states Secret Bases.
+
+“The job vacancy described a “Skilled Electronics Engineer required for CNO Exploit solutions in support of a specialist military user organisation”. GCHQ is named as a key partner. It is possible that MAB5 is linked to the ultra secretive Special Reconnaisance Regiment (SRR). The successful candidate was required to obtain the highest level Developed Vetting (DV) security clearance.”
+The original was removed since it was published.

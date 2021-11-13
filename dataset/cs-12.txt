@@ -1,0 +1,86 @@
+The Department of Environmental Protection has warned municipalities and water-sector professionals to be on alert after two recent ransomware intrusions, believed to be the first on wastewater systems in Maine.
+
+The attacks occurred in the Aroostook County town of Limestone and the town of Mount Desert on Mount Desert Island, said Judy Bruenjes, a wastewater technical assistance engineer for the DEP.
+
+
+“They were both fairly minor, there was no threat to the public, there was no violation, no excursion, no health and safety threat. It wasn’t like the Colonial pipeline, but it was a concern for us that these small facilities were being targeted,” Bruenjes said.
+
+In May, hackers forced the shutdown of the Colonial, one of the nation’s largest oil pipelines.
+
+Jim Leighton, superintendent for the Limestone Water and Sewer Department, said the attack occurred over the July 4 weekend on a computer, running Windows 7, that was due for an upgrade. No taxpayer or ratepayer information was compromised, said Leighton.
+
+“We said enough of that, it’s not worth paying a ransom for,” he continued. “We had to update it anyway.”
+
+Ed Montague, superintendent for Mount Desert Wastewater, said in an email: “The office computers were down for approximately three working days… Our treatment plants were not affected as they are manually controlled with no automated inputs.” No ransom was paid and no personal information was compromised, said Montague, and town and IT professionals were notified.
+
+State officials warn that the attacks should be taken seriously. Cybersecurity experts say hackers are targeting smaller organizations, often with important infrastructure roles, and scaling their ransom demands accordingly.
+
+
+“Cyberattacks on wastewater infrastructure can cause significant harm,” warned Brian Kavanah, director of the DEP’s Bureau of Water Quality, in a July 8 memo.
+
+He said attacks can do serious damage by overriding alarms, disabling pumps and equipment, interrupting treatment, or exposing personal and financial information.
+
+Pace of attacks increasing ‘dramatically’
+Attacks in Maine have increased dramatically in all sectors in the past year, said Scott Fossett, president of A Partner in Technology, a Gardiner-based company.
+
+“The pace is picking up, definitely, over the last nine to 12 months,” Fossett said. “I have been in this industry over 20 years, and it was few and far between that this was happening to Maine businesses. Now we’re seeing it could be any business sector in Maine.”
+
+Hackers also are targeting smaller and smaller organizations, said Derek Hussey, API’s chief technology officer.
+
+“Two years ago we saw very little in Maine. But now, especially in the past nine months, we’re seeing a lot more. They’re targeting organizations that are only 10 people or less and adjusting that ransom accordingly.”
+
+News that companies are paying ransoms encourages hackers to keep trying. “They’re making money at this,” Fossett said.
+
+In 2018, the average ransomware payment nationwide was roughly $7,000, according to the security firm Coveware. In the second quarter of 2021, that figure had jumped to around $137,000. Although attacks such a recent one in Florida on a water system, in which the level of lye in the water was briefly adjusted, get a lot of attention, that’s not what most hackers are seeking.
+
+“Their end goal is to earn money,” Hussey said. “They seem very good at being able to determine what size the business is and appropriately adjusting that number in their ransomware letter.”
+
+In Maine, he’s seen hackers ask for as little as $1,200. “They’re going to look at a very small ransom, in hopes that the business can afford it, in hopes that they’re going to pay it.”
+
+Having backups may protect against data loss but doesn’t necessarily protect against ransom payments because hackers may threaten to publicly release data if a company or municipality doesn’t pay.
+
+Fossett declined to disclose what percentage of the company’s clients have paid a ransom to recover data or unlock systems. “As professionals in this business, we never want to see a client pay ransom. That’s our goal.”
+
+Even when ransom isn’t paid, companies and municipalities often pay in staff time spent recovering or reconstructing records. York Animal Hospital was forced to spend hours manually re-entering inventory data after refusing to pay an $80,000 ransom that wiped out four years of patient records.
+
+Scale of problem unclear
+Under federal law, there is no requirement that individual companies or municipalities disclose when they have been breached, which makes it difficult to understand the scale of the problem.
+
+Daisy Mueller, critical infrastructure protection officer for the Maine Emergency Management Agency, said in an email that the agency doesn’t solicit or require municipalities to report, instead advocating for information to be sent to local law enforcement.
+
+“That said, due to the Agency’s partnerships with a variety of critical infrastructure entities, we do on occasion receive reports of cyber-attack. These vary month-to-month, ranging from zero reports to four reports on average,” wrote Mueller.
+
+MEMA’s role is more of preparation, centered on planning, training and exercise, Mueller said. But, she added, “consistent information sharing is key given the constantly changing cyber threat landscape.”
+
+While municipalities are encouraged to report, they aren’t required to, which can make it difficult for federal agencies to investigate, Mueller said.
+
+“Without prompt reporting, investigative opportunities are lost,” said Richard Downing, a deputy assistant attorney general at the U.S. Justice Department, during a Senate Judiciary Committee hearing last month. “Our ability to assist other victims facing the same attacks is degraded, and the government and Congress does not have a full picture of the threat facing American companies. Congress should enact legislation to require victims to report.”
+
+Such legislation is making its way through Congress. The Cyber Incident Notification Act of 2021, introduced in late July by Sens. Susan Collins (R-Maine), Mark Warner (D-Virginia) and Marco Rubio (R-Florida), would require federal government agencies, federal contractors, and critical infrastructure operators to notify the Department of Homeland Security’s Cybersecurity and Infrastructure Security Agency within 24 hours of their discovery. The bill would grant limited immunity to companies that come forward.
+
+Outdated software exposes municipalities
+While ransoms are costly and make news, some towns can struggle to find the time and money for software upgrades and training.
+
+“They may not have the most up-to-date software. They’re vulnerable,” Bruenjes said. “We’re concerned about smaller systems.”
+
+Most hacking attacks come through email, Hussey said. “It can come from the web, but the web browser security is pretty decent right out of the box,” he added. “Email is definitely where we’re seeing that come in.”
+
+Any system that has not been properly patched or updated could be vulnerable, Hussey said. In the case of the most recent attack, “One of them was a desktop computer that was hooked up with the network and one of them was the main computer with Windows 7 that was aligned with the SCADA [supervisory control and data acquisition] system,” Bruenjes said. Leighton said it would cost roughly $10,000 to upgrade the system.
+
+“Training is something lacking in various areas,” Hussey said. “I think that’s a challenge for them in terms of not only budgeting, but simply finding the time for that to happen inside of municipalities.”
+
+There is no specific cybersecurity training requirement in order for someone to obtain a wastewater operators license, said Bruenjes, although the DEP and others offer ongoing training. A variety of federal and state organizations offer assistance to communities, and some funding for equipment and technology upgrades is available via the Clean Water State Revolving Fund.
+
+Nick Rico, wastewater superintendent for the Wells Sanitary District, who takes “a belt and suspenders and a second belt” approach, with several backups and a non cloud-based SCADA system, said he works with a consultant and instructs his crews not to check email on the SCADA computers.
+
+“My crew knows not to use the internet on our SCADA computers except maybe to check the weather,” Rico said.
+
+“I like to use the analogy of an onion,” Fossett said. “An onion has layers… Because municipalities, and particularly wastewater and infrastructure companies, are a big target right now, their onion has to be a bigger onion than frankly a small nonprofit.”
+
+If hackers were to get into the system at a wastewater treatment plant, the worst outcome — a complete shutdown, and overflow into homes and the environment — is “very unlikely,” Rico said.
+
+“If the ransomware attacked our SCADA computers, those just wouldn’t communicate,” Rico said. The controls in the system that set treatment levels “will still go merrily along at whatever set points it most recently received.”
+
+If ransomware were to attack that separate control system as well, then “I think everything would shut down,” Rico said.
+
+“You think it’s always somewhere else,” Bruenjes said. “Then it happened here.”

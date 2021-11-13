@@ -1,0 +1,25 @@
+
+The increase in ransomware attacks is closely connected to the advent of cryptocurrency, FireEye CEO Kevin Mandia told CNBC on Monday.  
+"There's a direct correlation," the cybersecurity firm executive said on "Closing Bell." "When you look at the rise of ransomware, it absolutely aligns with the rise of anonymous digital currencies."
+"It's no question it's an enabler that you can break in anonymously and be paid anonymously, and now you can commit crime from 10,000 miles away in a safe harbor," Mandia added.
+Mandia said that while awareness of cybersecurity issues is at an all-time high, following a series of headline-grabbing incidents including the Colonial Pipeline hack, challenges remain in preventing every single attack.
+"We're better protected today than ever before. But what we're seeing is, we're just playing goalie. There's an unlimited amount of opportunities to hack us, and no risks or repercussions to those doing the intrusions," Mandia said. "So over time, you're going to see successful intrusions. You know, we can't play successful defense every day."
+Outlawing ransomware payments by itself is not an adequate solution, Mandia said, while alluding to the incident involving Colonial Pipeline last month. The company paid a $5 million ransom after its IT network was hacked, although U.S. law enforcement was able to recover a chunk of the bitcoin used in that payment.
+Government has a crucial role, too, Mandia said.
+Beware of Robinhood's reliance on joke crypto dogecoin, Wolfe Research says
+Bill Miller places a big software bet, while the bitcoin bull also adds Coinbase stake
+Major analysts are talking about Coinbase’s second-quarter earnings. Here’s what they said
+"We have to consider all the tools of diplomacy to back the desired outcome we want, which is quite frankly to make sure that there's risks imposed to those who take advantage of cyberspace and the anonymity it offers," he said.
+Not everyone agrees with Mandia's view of a link between cyberattacks and cryptocurrency. Katie Haun, a partner at venture capital firm Andreessen Horowitz who invests in crypto start-ups, told CNBC last week she thinks it's a "myth that bitcoin is good for criminal activity."
+"The fact of the matter is, you see investigators and prosecutors solving cases where crypto was used as the technology of choice by criminals," said Haun, who is also a former federal prosecutor who has investigated cyber crimes that involved cryptocurrency.
+"Crypto is a step-level function improvement above the existing financial system in terms of traceability," said Haun, who now serves on the board of crypto exchange Coinbase. "People often say, 'How can that possibly be? Isn't crypto anonymous?' The fact is, when crypto is used for illicit activity it leaves ... digital bread crumbs, and I can tell you that, firsthand, I used blockchain technology to actually solve crimes."
+David Kennedy, a former NSA hacker turned founder and CEO of security firm TrustedSec, told CNBC earlier Monday he believes making it illegal for companies to pay ransomware payments in cryptocurrency would, over time, lead to a decline in such attacks.
+However, there would be a high cost in the immediate term, he contended, as companies that fall victim to security breaches struggle to return their systems to operation.
+"What would happen is you'd have an influx of ransomware groups trying to get as many attacks off" as possible before the payment ban went into effect, Kennedy said.
+"During that period of time, you'd see a heightened attack surface around a lot of companies being compromised and then you'd see a major dip off because they're essentially cutting off the currency of these organizations," he said.
+Got a confidential news tip? We want to hear from you.
+Sign up for free newsletters and get more CNBC delivered to your inbox
+Get this delivered to your inbox, and more info about our products and services. 
+© 2021 CNBC LLC. All Rights Reserved. A Division of NBCUniversal
+Data is a real-time snapshot *Data is delayed at least 15 minutes. Global Business and Financial News, Stock Quotes, and Market Data and Analysis.
+Data also provided by 

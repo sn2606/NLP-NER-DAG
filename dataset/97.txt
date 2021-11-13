@@ -1,0 +1,23 @@
+
+
+
+AiThority - Artificial Intelligence | News | Insights | AiThority
+
+
+AI in cybersecurity is a hot topic in the infosec world, as Machine Learning (ML) algorithms become increasingly complex. AI in cybersecurity is being applied to or considered for nearly every field application you can imagine. If a team of humans can do it, then AI can do it — although perhaps with a little human help. It’s a wonderful and exciting time for cybersecurity enthusiasts, and you can stay abreast of all the latest topics on a useful website such as AntivirusRankings.
+Intrusion signatures are a kind of digital footprint left by hackers when attempting to access internal systems. Security specialists compile large databases of digital footprints for future reference, to aid in detecting vulnerabilities, and specific patterns by attackers. With a large enough database of signatures and intrusion patterns, AI can be trained to recognize intrusions as they’re occurring.
+As an example, one of the most successful methods of attack is by getting into embedded systems — video cameras, printers, and other types of devices connected to the network. The hackers gain entry into these devices by using default login credentials (many companies do not bother to change the administrator password on ‘mundane’ devices). By breaching these devices, the hackers gain access to the rest of the network.
+AI cybersecurity is able to scan the entire network for such weaknesses, preventing many of the common kinds of attacks. However, AI is only a tool 3 it still requires human interference, not only to train AI, but step in if AI makes mistakes.
+Read More: The Significance of Data Cleansing in Big Data
+In cybersecurity solutions, AI is either already being applied to, or being heavily considered for, some of the following fields:
+ 
+			
+
+Those are just a few of the fields AI for cybersecurity has been applied. There are already a lot of research papers that show strong evidence in favor of AI’s efficacy regarding cybersecurity. In most research papers, the success rate varies between 85% to 99% in detecting cyber attacks. One AI-development company, DarkTrace, claims a 99% success rate, and already has thousands of global customers.
+Read More: Four Ways AI and Big Data Are Impacting Business… And Why They Could Be Doing More
+There is some concern that hackers will have their own AI cyber attacks. One of the first glimpses into what an AI-based cyber attack could look like came from DARPA’s Cyber Grand Challenge, which was an all-machine cyber hacking tournament. Several teams were able to display fully automated cyber attacks, such as generating exploits, patch generation, and launching attacks.
+Furthermore, hackers are able to fool learning-based systems. As an example, a team proved they were able to fool self-driving vehicles, by exploiting the vehicle’s road sign detection system. Utilizing things as simple as graffiti and art objects, they were able to force the vehicles to misclassify road signs. That is the basis of how hackers would be able to fool AI cybersecurity — by exploiting classification systems, which the AI is trained on.
+Finally, an additional concern is that skillful hackers would be able to prevent AI learning. Because AI learning is based on signature databases and intrusion patterns, yet skilled hackers tend to employ methods of scrubbing their tracks — such as by tunneling protocol, and altering log files. If a hacker is able to eliminate their presence from logs, then the security team has nothing with which to train the AI on to prevent a similar attack in the future.
+Developing systems that are resistant to log tampering is the task that blockchain technology is working on, AI can only make it more powerful in time. But the basic bricks are based on blockchain. As a decentralized, cryptographically-sealed system log, hackers would not be able to use traditional methods of scrubbing their presence from log files.
+
+

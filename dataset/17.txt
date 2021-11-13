@@ -1,0 +1,21 @@
+Hackers have stolen some $600m (£433m) in what appears to be one the largest cryptocurrency heists ever. 
+Blockchain site Poly Network said hackers had exploited a vulnerability in its system and taken thousands of digital tokens such as Ether. 
+In a letter posted on Twitter, it urged the thieves to "establish communication and return the hacked assets". 
+Hours after the hack, the attacker started returning the funds - first in small amounts and then in millions.
+They started sending back small transfers totalling a few dollars to the online wallets controlled by Poly - but then began making much larger deposits, totalling hundreds of millions.
+In scale, the hack is on par with huge recent breaches at exchanges such as Coincheck and Mt Gox.
+In its letter Poly Network said: "The amount of money you have hacked is one of the biggest in defi [decentralised finance] history.
+"Law enforcement in any country will regard this as a major economic crime and you will be pursued. 
+"The money you stole are [sic] from tens of thousands of crypto community members, hence the people." 
+Poly Network said a preliminary investigation found a hacker exploited a "vulnerability between contract calls". 
+It urged various exchanges to block deposits of the coins, after millions of dollars in tokens were transferred to separate cryptocurrency wallets.
+About $267m of Ether currency has been taken, $252m of Binance coins and roughly $85 million in USDC tokens. 
+We are aware of the https://t.co/IgGJ0598Q0 exploit that occurred today. While no one controls BSC (or ETH), we are coordinating with all our security partners to proactively help. There are no guarantees. We will do as much as we can. Stay #SAFU. 🙏 https://t.co/TG0dKPapQT
+Changpeng Zhao, chief executive of Binance, said his firm was aware of the hack, but added there was only so much he could do. 
+He said the group was "co-ordinating with all our security partners to proactively help".
+"There are no guarantees," he added.
+Poly Network is a decentralised finance - or Defi - provider, which allows users to transfer tokens tied to one blockchain to a different network.
+Cryptocurrency systems such as Ether and Binance were developed independently, so have struggled to work in conjunction with each other. 
+Losses from fraud in the Defi sector hit an all-time high of $474m in the first seven months of the year, a report from research company CipherTrace said on Tuesday.
+But losses from crime in the overall cryptocurrency market dropped sharply to $681m, compared to $1.9bn for the whole of 2020 and $4.5bn in 2019.
+

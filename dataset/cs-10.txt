@@ -1,0 +1,41 @@
+FBR, Pakistan’s IRS, has acknowledged the data breach and called it out as cyber-terrorism on Pakistan’s independence day.
+
+The Federal Board of Revenue (FBR) of Pakistan (fbr.gov.pk) has suffered a large-scale cyber attack. This was revealed after a group of unknown hackers were found selling network access to the agency with more than 1500 computer systems on a Russian cybercrime forum.
+
+Just like The Internal Revenue Service (IRS) in the United States, the FBR is the top federal law enforcement agency of Pakistan that investigates tax crimes and money laundering, etc.
+
+Vulnerability in Microsoft Hyper-V software exploited
+According to sources close to the matter, Hackread.com was told that hackers managed to breach the Microsoft Hyper-V software and took down the official website of the agency along with all of its subdomains.
+
+Hackread.com can also confirm that hackers are currently selling the FBR’s network access for $26,000 (PKR 4,274,000, £19,000, €20,000). The group is also demanding $30,000 (PKR 4,000,000, £21,000, €25,000) else they will infect all the devices on the FBR’s server and transfer them to interested buyers.
+
+Network access to Pakistan's top fed agency FBR sold on Russian forum
+Post on the Russian forum (Image: Hackread.com)
+
+FBR acknowledges the data breach
+On the other hand, the FBR has acknowledged the data breach and described it as “a national crisis-like situation.”
+
+“The FBR has experienced a severe cyberattack on our data centers. All applications have been shut down and need support from all teams,” stated the internal warning issued by the agency.
+
+
+In a statement to local media, a senior FBR official said that “The data center’s virtual machines were attacked and the attackers managed to exploit the weakest link, which is the hyper-V software by Microsoft Inc.” 
+
+“Since the virtual environment has been damaged, we are trying to create a new virtual environment that may take up to two days,” said another official from the information technology department. “We are trying to restore the websites by tomorrow afternoon and the essential data center by tomorrow evening, as we do not want to cause more damage by shifting data in haste.”
+
+The official also called out the attack as “cyber-terrorism on our Independence Day (August 14th).”
+
+Nevertheless, currently, the identity or affiliation of the hacker group is unknown, however, FBR has contacted Microsoft to sort things out and analyze the damage sustained by the cyberattack.
+
+In an exclusive conversation with Hackread.com, one of Pakistan’s most prominent cybersecurity specialists Rafay Baloch expressed his concern over the issue.
+
+In the name of digitization and interoperability, Pakistan is undergoing a massive digital revolution, however, cybersecurity is being undermined in the process, Baloch said.
+
+“We are still in early phases of digitization and therefore it’s still not too late to start incorporating security into business processes.” “The fact that FBR’s services are still down revealed absence of Business continuity planning and effective disaster recovery plans,” Baloch pointed out.
+
+
+He further added that “ideally, such critical national services should have a fully functional operational mirrored site and we have to make our infrastructure resilient so that it should continue to function during adverse circumstances.”
+
+“Govt should immediately work on formulating National Cyber Emergency Response Team (CERT) to provide assistance to critical services to effectively respond to cyber-attacks and this has been made part of the latest National cybersecurity policy 2021, implementation is required on an immediate basis,” Baloch emphasized.
+
+No surprise there
+Although Pakistan has highly skilled Whitehat hackers and cybersecurity researchers, its cyberinfrastructure remains vulnerable to all sorts of cyberattacks. For instance, in 2019, the official passport application tracking website of Pakistan was compromised in a sophisticated water hole attack.

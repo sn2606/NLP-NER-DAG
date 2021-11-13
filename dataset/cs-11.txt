@@ -1,0 +1,39 @@
+Further, 88% of people say organizations and government entities must have better data security systems in place to protect them from the increase in third party remote attacks. Of particular note, 53% of respondents lack confidence in the strength of the U.S. government’s infrastructure to protect the American people from cyberattacks.
+
+Recent high-profile breaches, including SolarWinds, Colonial Pipeline, and JBS Foods, have exposed how vulnerable organizations are to cybercrime and in particular ransomware attacks. Of note with recent attacks is how data breaches can quickly affect aspects of everyday life, such as the ability to fill a car with gasoline or buy meat at the grocery store. To rebuild consumer trust, survey respondents say organizations must invest in advanced technology systems that help proactively reduce their risk of third party-perpetrated cyberattacks.
+
+“The surge in high-profile cyberattacks in recent months has shown how seemingly easy it is for bad actors — whether human or bots — to infiltrate an organization’s data security infrastructure, creating chaos for the company and potential harm for consumers,” said David Pignolet, CEO of SecZetta.
+
+“Many of these attacks originated through weaknesses in these organizations’ risk-based identity access and lifecycle strategies for non-employee populations.”
+
+Safeguarding an organization from cybercrime has become vastly more difficult given how digitized, and correspondingly interconnected, the world has become.
+
+According to recent data from the Ponemon Institute, 51% of breaches are caused by a third party,​​ and more than half of respondents admit their organizations are not evaluating the security and privacy practices of these third party non-employees before granting them access to sensitive and confidential information and systems.
+
+People believe reliance on third party workers increases the risk of cyberattacks
+83% of people cite increased reliance on third party workers as catalyst for surge in data breaches
+88% of respondents agree organizations must have a system in place to help mitigate the risk of third party related cyberattacks, with 54% strongly agreeing.
+Consumer trust varies depending on the industry
+Survey results show people believe some industries are better at mitigating cyberattacks than others, but none are doing particularly well. When asked how confident they are in the following industries’ infrastructure to protect against cyberattacks:
+
+Fifty-three percent of people lack confidence that the U.S. government has the best infrastructure in place to protect Americans from cyberattacks. Those in the Northeast are more likely to say they’re confident in the government’s ability to thwart cyberattacks than those in the South, Midwest or West.
+People are least confident in the oil, gas and utilities industries, with only 45% saying they feel confident. Men were slightly more likely to say they were confident than women (48% vs. 43%).
+Fifty-six percent of respondents express confidence that the healthcare and/or health insurance industries have the appropriate infrastructure in place to protect them from the impacts of cyberattacks.
+52% of people feel confident in consumer-facing industries (i.e., financial services, retail) with men being slightly more confident than women (55% vs. 48%).
+People lack confidence in organizations’ ability to prevent cyberattacks
+78% of people believe it’s easy for cybercriminals to breach an organization.
+Seventy-three percent of people believe most organizations today lack good controls over who has access to their computer systems and/or data. Of this group, those 55 years and older were more likely to agree with this statement.
+54% of people express concern they and/or a family member will be directly impacted by a cyberattack on an organization with which they do business. Of this group, those 30 years and older are more likely to be concerned, while men are slightly more concerned than women (57% vs. 51%).
+Personal financial loss is of deepest concern to people
+When asked which areas of their personal lives they feel are most vulnerable to a cyberattack, 42% of respondents cited the potential for personal financial impact from a cyberattack on an organization with which they have a relationship. Of this group, those aged 30 and older are more concerned about experiencing financial loss, presumably due to having more assets to lose.
+24% are most concerned about the impact from disruptions to utilities and other critical industries.
+Fourteen percent are worried about disruptions to the U.S. food supply.
+“The results of the survey clearly demonstrate heightened awareness of cybercrime across the general public who identify increased reliance on third party workers as a leading cause of the surge in data breaches,” said Pignolet.
+
+“Given that many enterprise organizations provide access to significantly more third party workers, including their supply chains, than full-time employees, it’s imperative they adopt comprehensive third party identity risk management solutions to not just protect themselves and their assets, but safeguard customers from financial loss, the exposure of personally identifiable information, and the downstream effects of disruption to our country’s infrastructure. This includes the food supply chain, utilities, and even our national security.”
+
+Too many organizations lack automated and effective methods to centrally track and manage their relationships with the burgeoning number of third parties with whom they do business. This, coupled with the lack of information organizations have about these third parties, makes them a cybercriminal’s best friend. The recent Presidential Executive Order (EO) mandates the federal government “improve its efforts to identify, deter, protect against, detect, and respond to these actions and actors.”
+
+For organizations looking to make changes to their third party identity risk security measures, there are steps they can implement today including: properly identifying who each third party is and the sensitive data to which they have access; conducting regular user audits to ensure third parties have access based on the least amount of privilege necessary to do their jobs; extending zero trust programs to third party non-employees; and conducting continuous risk ratings of the individuals working within a third party vendor or partner, not just the organization as a whole.
+
+As cyberattacks on organizations and government entities continue to grow in size and impact, so too will people’ concerns about the impact these breaches can have on their daily lives. It’s time organizations and the government take action before they’re affected by the hard and soft costs of reputational damage.

@@ -1,0 +1,29 @@
+Life Healthcare is investigating extent to which patients’ data has been compromised
+
+Life Healthcare, a South African healthcare provider, is investigating a cyber-attack that targeted some of the group’s IT systems.
+In a security alert issued today (June 9), the company, which operates dozens of healthcare facilities across South Africa and Botswana, said it had become the victim of a “targeted criminal attack”.
+While the advisory offers little in the way of technical details, Life Healthcare said it immediately took systems offline as it sought to contain the incident.
+“The extent to which sensitive data has been compromised is yet to be ascertained, as we are still in the process of investigating,” the organization said.
+“External cybersecurity experts and forensic teams have been brought on board to advise and supplement our internal teams and capacity.”
+Life Healthcare oversees the operation of 49 hospitals and dozens of ancillary healthcare facilities across seven South African provinces and Botswana.
+According to the organization, patient care has not been impacted by the cyber-attack, although some hospitals and administrative offices have switched to manual backup systems.
+Pieter Van der Westhuizen, acting group CEO, decried the attack, which came as hospitals across the region continue to be stretched by the coronavirus pandemic.
+“First, and foremost, we wish to assure all the communities within which we operate, that this criminal attack on our systems will not affect the quality care and clinical excellence we aim to provide,” Van der Westhuizen said.
+“We are deeply disappointed and saddened that criminals would attack our facilities during such a time, when we are all working tirelessly and collectively to fight the Covid-19 pandemic.
+“However, we will not be distracted, and will continue to place our patients first. We regret that the disruption caused by this criminal act may cause our patients some frustration, in what is already a trying time.”
+Life Healthcare has alerted the relevant authorities and has also published a Q&A (PDF) for potentially impacted patients.
+READ MORE US healthcare admin firm admits data breach
+
+
+James Walker
+
+
+
+@jameswalk_er 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

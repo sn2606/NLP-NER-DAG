@@ -1,0 +1,60 @@
+
+IBM
+
+
+
+
+
+
+
+
+
+
+
+AI is changing the game for cybersecurity, analyzing massive quantities of risk data to speed response times and augment under-resourced security operations
+
+
+AI Guide for CISOs (801 KB)
+
+What benefits does artificial intelligence (AI) present for cybersecurity? AI’s capability to analyze massive quantities of data with lightning speed means security threats can be detected in real time, or even predicted based on risk modeling. As AI reaches new frontiers, there must be a framework for ensuring AI is accurate and ethical.
+Watch the video to see Sridhar Muppidi, CTO of IBM Security™, offer insights into the ways AI is becoming integral to cybersecurity.
+
+
+AI is trained by consuming billions of data artifacts from both structured and unstructured sources, such as blogs and news stories. Through machine learning and deep learning techniques, the AI improves its knowledge to “understand” cybersecurity threats and cyber risk.
+AI gathers insights and uses reasoning to identify the relationships between threats, such as malicious files, suspicious IP addresses or insiders. This analysis takes seconds or minutes, allowing security analysts to respond to threats up to 60 times faster.
+AI eliminates time-consuming research tasks and provides curated analysis of risks, reducing the amount of time security analysts take to make the critical decisions and launch an orchestrated response to remediate the threat.
+Read articles on how AI impacts the cybersecurity workforce, ethics and adversarial AI.
+ Explore the blog
+
+Cognitive security combines the strengths of artificial intelligence and human intelligence. Cognitive AI learns with each interaction to proactively detect and analyze threats, providing actionable insights to security analysts for making informed decisions — with speed and accuracy.
+Cognitive computing, an advanced type of artificial intelligence, leverages various forms of AI including machine-learning algorithms and deep-learning networks that get stronger and smarter over time. Watson for Cyber Security — cognitive AI from IBM — learns with each interaction to connect the dots between threats and provide actionable insights. The result: You can respond to threats with greater confidence and speed.
+Watch the video to see how IBM QRadar® Advisor with Watson helps you get a head start in assessing incidents to reduce your cyber risk.
+ IBM QRadar Advisor with Watson
+
+
+
+
+Leverage the power of cognitive AI to automatically investigate indicators of compromise and gain critical insights. QRadar consolidates log events and network flow data from thousands of devices, endpoints and applications, correlating them into single alerts — so you can accelerate incident analysis and remediation.
+ Learn more
+
+
+Orchestrate and automate hundreds of time-consuming, repetitive and complicated response actions that previously required human intervention. IBM Security SOAR is an open and agnostic solution that integrates with your security infrastructure and establishes a central hub for managing your response playbook with speed and agility.
+ Learn more
+
+
+Get cognitive insights, contextual analytics and benchmarking to make sense of security events — while protecting your endpoints, users, apps, docs and data from a single platform. Discover endpoint vulnerabilities and protect corporate data and uphold compliance with containment plus identity and patch management from the industry's first and only AI approach to UEM.
+ Learn more
+
+
+Wimbledon partnered with IBM Security to protect its digital presence from thousands of cyberattacks over the course of the iconic sporting event.
+ Read the case study
+
+With financial services as the most-targeted industry, Cargills Bank has taken a proactive approach to safeguarding customers’ data by deploying an AI security solution.
+ Read the case study
+
+Environmental firm RGS Nordic uses IBM MaaS360® with Watson to gain 100 percent visibility of hundreds of mobile devices on its work sites.
+ Read the case study
+
+Sogeti Luxembourg and IBM developed an alliance to provide companies with a security operations center (SOC) that could uncover advanced persistent threats 50 percent faster.
+
+

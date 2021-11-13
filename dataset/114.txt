@@ -1,0 +1,31 @@
+Ghost, LineageOS, and Digicert all peppered with exploits
+
+Attackers are actively abusing security flaws in the Salt configuration management framework to attack a variety of targets.
+Open source blogging platform Ghost, and tech firms LineageOS and Digicert have all fallen victim to attacks in short succession, just days after security researchers at F-Secure went public with a pair of critical vulnerabilities, as previously reported by The Daily Swig.
+In an incident report issued yesterday (May 4), Ghost said that attackers abused the vulnerabilities in a quickly detected and essentially unsuccessful attempt to mine cryptocurrency on its servers.
+In the case of LineageOS, the attackers exploited the flaw to gain access to its infrastructure. Subsequent checks by developers of the open source mobile operating system revealed that neither its source code, software builds, nor signing keys were affected by the failed attack.
+DigiCert, a cybersecurity firm, said the assault on its systems targeted its certificate transparency log, which it deactivated in response, with affecting systems running its core digital certificate systems.
+Salt is widely used by data centers and in cloud-based environments as a server configuration, monitoring, and update tool. The open source Salt project is popular in its own right at well as being at the center of vendor SaltStack’s product range.
+In a lengthy blog post published in reaction to the attacks, SaltStack reiterated the importance of applying the update it released last week.
+“The vulnerability is easily exploitable if a Salt Master is exposed to the open internet,” the vendor explained.
+“A scan by the security firm that identified the vulnerability found approximately 6,000 Salt Masters exposed to the Internet and vulnerable. These systems in particular, and all Salt environments must be hardened and updated immediately,” it added.
+Independent network security firms, such as Tenable, echoed this advice. In a blog post, Tenable notes that several proof-of-concept exploits of the Salt vulnerabilities had been posted on GitHub, which goes some way towards explaining the rash of attacks over recent days.
+Asked to comment on the rapid exploit of the vulnerability, Rody Quinlan, security response manager at Tenable, told The Daily Swig that this was due to a combination of tasty target and ease of exploitation.
+"The combination of a severe authentication bypass vulnerability paired with a directory traversal flaw provides an unauthenticated attacker the ability for complete control,” Quinlan explained. 
+“F-Secure Labs recognized the severity of these vulnerabilities and noted that they would expect a working proof-of-concept (PoC) within 24 hours of the release of their advisory, prompting them to withhold releasing their own.”
+“Data centers are the main deployment environment of the Salt framework, which has become an increasingly important infrastructure with the increase of remote working during the Covid-19 pandemic, making it a prime target," he added.
+RELATED Salt DevOps framework shaken by data center server security flaws
+
+
+John Leyden
+
+
+
+@jleyden 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

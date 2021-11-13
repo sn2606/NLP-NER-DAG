@@ -1,0 +1,306 @@
+
+
+Cybersecurity
+volume 4, Article number: 1 (2021)
+            Cite this article
+
+1274 Accesses
+Metrics details
+Energy forecasting using Renewable energy sources (RESs) is gradually gaining weight in the research field due to the benefits it presents to the modern-day environment. Not only does energy forecasting using renewable energy sources help mitigate the greenhouse effect, it also helps to conserve energy for future use. Over the years, several methods for energy forecasting have been proposed, all of which were more concerned with the accuracy of the prediction models with little or no considerations to the operating environment. This research, however, proposes the uses of Deep Neural Network (DNN) for energy forecasting on mobile devices at the edge of the network. This ensures low latency and communication overhead for all energy forecasting operations since they are carried out at the network periphery. Nevertheless, the cloud would be used as a support for the mobile devices by providing permanent storage for the locally generated data and a platform for offloading resource-intensive computations that exceed the capabilities of the local mobile devices as well as security for them. Electrical network topology was proposed which allows seamless incorporation of multiple RESs into the distributed renewable energy source (D-RES) network. Moreover, a novel grid control algorithm that uses the forecasting model to administer a well-coordinated and effective control for renewable energy sources (RESs) in the electrical network is designed. The electrical network was simulated with two RESs and a DNN model was used to create a forecasting model for the simulated network. The model was trained using a dataset from a solar power generation company in Belgium (elis) and was experimented with a different number of layers to determine the optimum architecture for performing the forecasting operations. The performance of each architecture was evaluated using the mean square error (MSE) and the r-square.
+Energy forecasting has come to be a common concern among researches due to the cumulative impact of renewable energy in the present-day power system. The most common RESs are wind, water, solar and bio-fuel or biomass. The customary utilization of these energy sources includes power generation, heating, and transport fuels. Renewable energy sources are of importance as a result of their capacity to sustain. This outcome is a substitute for the diminution of conventional energy sources for example coal, petrol, and nuclear energy (Badal et al. 2019). Energy from these sources is clean and has a much lower environmental impact when compared to traditional energy sources. As a result of the impact, it is vital for grid workers and stakeholders to ascertain how much power renewable energy sources will yield in the succeeding hours and days (Alanazi et al. 2017). A distributed micro-grid system is a less expensive option for the construction of large, central power plants and High-Voltage transmission lines. They afford consumers the potential for lower cost, higher service reliability, high power quality, increased energy efficiency, and energy independence. The use of renewable distributed energy such as wind, photovoltaic, geothermal, hydroelectric power can also provide a significant environmental benefit.
+This research, therefore, presents a method for short term energy forecasting in Distributed renewable energy source (D-RES) micro-grids using mobile devices at the network edge. This ensures effective and efficient management of the generated power from micro-grids. Also, these mobile devices have the required storage and network resources to avoid delay-sensitive tasks. Researches in (Marah et al. 2020) used mobile devices to formulate an IoT architecture that is capable of executing complex computational tasks at the network edge. Mobile devices, however, could be any electronic devices capable of running complicated programming constructs using the medium to low power computational resources. Examples of such devices include micro-controllers, smartphones, and desktop/laptop computers.
+Generally, energy forecasting for D-RES is done for the effective coordination of power from the grid to the consumers and also for scheduling the operation of the different types of Renewable Energy sources in the micro-grid (Liu et al. 2019a). This research, however, considers the use of energy forecasting for the latter. This is because RESs operate on different mechanisms and with proper coordination and management, they can be made to support each other thus providing a sustainable source of power for distribution to consumers. A well-defined Electrical topology is therefore proposed in this research that allows for the easy incorporation of RESs into a micro-grid in a distributed fashion. As opposed to the other approaches (Sharma 2018), this ensures the addition of any number of RES into the D-RES network which in turn eliminates the limit to the power that could be generated from the micro-grid.
+However, as stated in the above paragraph, the mobile devices provide control for the RESs in the D-RES network at the network edge. A wireless sensor network (WSN) is employed to gather data (generated electrical energy) from the D-RES network and passed to the local mobile device for administering the control by using pre-defined control algorithms. With this approach, the appropriate control operation would be administered without delay since operations are carried out at the network periphery. Moreover, external updates would be easily administered with little or no stress on the network bandwidth as the data from the sensors are analyzed locally on mobile devices. However, the cloud would be used as a support for the mobile devices by providing permanent storage for the locally generated data and a platform for offloading resource-intensive computations. Nevertheless, mobile devices are constrained by limited computational resources such as memory and processing power (Xu et al. 2019a, 2020). Therefore, the method for energy forecasting should be carefully selected to work with these constraints while still maintaining acceptable accuracy. This research, therefore, utilizes the method of Deep Neural Network (DNN) for creating lightweight machine learning models that can be easily deployed on the resource-constrained devices at the network periphery. DNNs are simply Artificial Neural Networks (ANNs) with a higher number of hidden layers in their architectures (Liu et al. 2019b). They are well known for their ability to capture complex relationships between features of very large non-linear datasets. This approach is used instead of the very old shallow learning method which has fewer hidden layers (Cartina et al. 1995) or the LSTM-based RNN methods which require a huge amount of memory-bandwidth during its operation (Bai et al. 2018).
+The dataset for forecasting energy in the micro-grid is historical data of its generated power. Other researchers (Bică et al. 2016; Wan et al. 2015) considers the use of meteorological data obtained from meteorology stations with special considerations to changes in atmospheric features such as humidity, temperature, light, etc. Even though results obtained with such a dataset are good, the data is not always available for use and as such cannot be relied on.
+This research would focus on creating the electrical network topology for incorporating the RESs into the micro-grid network with a clear description of the different components and sections. Furthermore, a dataset from a solar power generation company in Belgium would be used to create a DNN model that can be deployed on any mobile device at the network edge. However, the model would be tested with a test dataset to observe for overfitting. Evaluation matrices such as the mean square error (MSE) and the r-square would be used to evaluate the model. Also, the model would be tested with different topologies (number of hidden layers and activation functions) to determine the optimal architecture for the DNN in the D-RES.
+Increased demands on national electrical power systems and incidences of electricity shortages, power quality problems, rolling blackouts, and electricity price spikes have caused many utility customers to seek other sources of high-quality, reliable electricity. Distributed renewable energy, small-scale power generation sources situated close to where electricity is consumed (e.g., a household or business), offers an alternative or improvement to the traditional electric power grid. This research is therefore focused on energy forecasting for Distributed Renewable Energy (D-RES) micro-grids. However, this goal is accomplished in two phases; the first is the design of an electrical network topology that seamlessly supports the incorporation of multiple RESs with the same or different operation mechanism into the network. A similar approach was proposed in (Ronay et al. 2017) where an electrical micro-grid was developed with up to two RESs, one of which was used as a support to a so-called main RES. Nevertheless, the problem with such a system was with the limitation to the number of RESs that could be added to the micro-grid thus reducing the total energy generated by the microgrid itself. Moreover, the second phase of this research is concerned with the forecasting of the energy from the micro-grids which is used to administer a well-informed and coordinated control for the different RESs in the RESs electrical network. This is accomplished with the use of DNN for the prediction of short time series of the energy from the RES electrical network and a control algorithm that would use the prediction model to administer control to the RESs in the D-RES.
+In the last couple of years, different methods for predicting energy creation, delivery, and depletion had been used (Suganthi and Samuel 2012; Li 2018) The authors in (Liu et al. 2019b; Qi et al. 2019), made available a lot of review of smart forecasters in the area of energy predicting, comprising of four-categories of surface forecasters (Extreme learning machine, Support vector machine, Artificial Neural network, plus Fuzzy logic model) as well as four-kinds of deep learning-centered forecasters (autoencoder, controlled Boltzmann machine, convolutional neural network, in addition to a persistent neural network). Researches in (Hizam et al. 2014), executed a solar power modeling technique employing artificial neural networks (ANNs) which comprises dual neural network configurations. Moreover, one of the most popular methods for time series forecasting is the Long Short Term Memory (LSTM) based approach (Wang et al. 2018a; Zhuang and Zhou 2019). The authors in (Marino et al. 2016) executed an energy capacity predicting method by way of long short-term memory (LSTM). Furthermore, authors in (Zhu et al. 2019; Bouktif et al. 2018), used LSTM based model for electric load forecasting using feature selection and genetic algorithm. Results from such research show that the LSTM based approach for energy and/or load forecasting achieves very high accuracies as compared to the machine learning-based approaches. Nevertheless, memory bandwidth for LSTM networks is one of the highest. Running such networks on mobile devices at the edge of the network requires the highest amount of memory bandwidth, so high that it is usually impossible to fully utilize the hardware of such electronic devices. This limitation and more has raised serious concerns on the use of LSTM such that researchers are seeking alternative methods to sequence modeling and other related use cases that previously used LSTM (Bai et al. 2018).
+However, in this research, we consider the use of Deep Neural Networks (DNNs) for energy forecasting for the proposed D-RES micro-grid. DNN is a variation of ANN with deep architectures consisting of multiple hidden layers (Marino et al. 2016). These deep networks have gained much attention in the computer sciences, especially in the area of energy forecasting (Ronay et al. 2017), due to their ability to capture very complex relationships within features of very large datasets. Google Brain released TensorFlow (a free and open-source library for creating DNNs), version 1.0.0 in February 2017. They can run on multiple CPUs and GPUs such that even mobile devices can run these very complex neural network algorithms very efficiently even with their hardware limitations.
+Nevertheless, before the creation of the forecasting model, the nature and type of the dataset must be appropriately selected to achieve acceptable accuracies. Over the years, researchers in the field of RES energy forecasting have considered the use of meteorological datasets to train the forecasting models. This is because RESs (e.g. solar, wind, etc.) rely on different atmospheric parameters (light intensity, temperature, wind velocity, etc.) to operate (Wan et al. 2015; Başaran Filik et al. 2011). However, such data are not always available for use and sometimes are very expensive to obtain (Ronay et al. 2017). This is why the forecasting model in the proposed micro-grid (D-RES) would be trained using historical data of generated energy from the RES electrical network. Moreover, the dataset needs to go through a series of pre-processing before training as this would have a great impact on the performance of the forecasting model. The authors in (Saleh et al. 2016), executed a data mining-centered load predicting plan which separated data preparation procedures into two halves, i.e. data before processing, as well as a capacity approximation. The data before the processing stage executed outlier rejection to remove the corrupt data employing a distance-centered outlier rejection as well as feature assortment via genetic algorithm (Saleh et al. 2016; Qi et al. 2020a). These methods would also be used in this research to remove outliers from the dataset before training.
+The rest of the paper is structured as follows: Section 3 gives a brief description of artificial neural networks. Section 4 explains the design of the proposed distributed renewable energy source micro-grid. Section 5 explains experiments and performance evaluation with test results analysis and Section 6 concludes and suggests a future direction for this research.
+An Artificial neural network (ANN) emulates the human brain to study, decide as well as accomplish complex jobs (Anitescu et al. 2019). They are composed of a very large number of neurons which are highly interconnected processing elements that work together to solve specific problems. They are non-linear by default, with good features like fault-tolerance and the capability for self-learning, which makes them robust and appropriate for parallel handling.
+As stated in the above paragraph, ANN is composed of a large number of neurons that occur in either dense or shallow connected layers from the input towards the output. Deep Neural Network (DNN) which is a variation of ANN, has multiple layers of these connected neurons to improve the performance of the overall network. However, DNN is simply ANN with a larger number of hidden layers between the input and output neurons. Figure 1 below shows a Perceptron which is simply a single layer neural network.
+
+A single layer neural network perceptron
+From the above figure, the inputs are depicted by x1, x2, x3,…xm. Each of these inputs is multiplied by a connection weight before passing to an activation function that would estimate the output from the particular neuron. The weights are represented as ,wk1, wk2, …wkm. This operation is shown mathematically in the equation below,
+
+Applying the activation function gives,
+
+The activation function is a crucial component that determines the performance of the network as a whole. They are responsible for converting the input signal/s of the node/s in the ANN into the required output signal/s. For networks with multiple hidden layers (DNNs), the output computed from one layer is used as input to the next layer in the network. However, there are different types of activation functions, each of which performs better in specific use cases. Some of the commonly used activation functions include but are not limited to Rectified Linear Units (ReLu), Hyperbolic Tangent Function (tanh), and Sigmoid Activation Function. However, variable b is the bias value which allows the activation function to shift either up or down.
+The goal of this research is to create an efficient method for energy forecasting in a distributed renewable energy source (D-RES) micro-grid. Energy forecasting is essential for efficient scheduling of power distribution to the consumers as well as for controlling the RESs in the D-RES. However, this research is focused on using energy forecasting to ensure control over the RESs in the D-RES. In this section, therefore an electrical network topology would be devised for incorporating renewable energy sources into the proposed D-RES that would allow for the implementation of the control mechanism proposed in this study. The topology consists of two parts:
+
+Control center
+Distribution center.
+The control center is the main component in the D-RES. It aggregates the power generated in the distribution centers and appropriately distributes it to the consumers. In (Qi et al. 2019; Wang et al. 2018b) authors also implements the idea of a control center in their study. Like most control centers, it consists of smart meters that are capable of measuring the power produced by the distribution centers.
+The control center houses the mobile devices on which the control mechanism is implemented. The energy from the distribution center is measured using sensors in the form of smart meters and the data is stored on a server running either on the premise or the cloud (Qi et al. 2019). The forecasting model deployed on the mobile device is then used together with the control algorithm to administer control to the RES in the distribution center. Section 4.2 explains in detail how the control operation would be carried out.
+This part of the D-RES consists of the different renewable energy sources that would be incorporated into the system. The distribution center can hold any amount of renewable energy sources either of the same or of different types. However, the proposed scheme implemented at the control center would determine the method of operation of each of the RES in the system.
+The law of conservation of energy states that energy can neither be created nor can it be destroyed in any given system. It can only be changed from one form to the other. This rule applies also to RESs which generate electrical energy from natural sources like the sun, water, wind, etc. The Distribution center is, therefore divided into two main categories according to the natural source that powers them. These categories include:
+These are sources whose natural resources cannot be controlled. They generate a high amount of power when the related natural resource is adequately available. Solar Panels and Wind turbines are examples of RESs that falls into this category.
+These are RESs whose natural resources can be controlled. Moreover, to generate electrical energy, their natural resources would have to be stored to a certain level. They require high maintenance and most times generate low power as compared to the main sources. Hydro and battery cells are examples of RESs that fall into this category. However, RESs such as Geothermal and Biomass is not included in these categories because they are rarely used and are not environmentally friendly. The electrical network topology is displayed in Fig. 2 below.
+
+The Electrical Network Topology
+As mentioned in the section above, this scheme would be used to control the operation of the different RESs in the distribution center. It is however implemented in the control center. It is an intelligent system that uses sensors and actuators to implement control in the D-RES. This qualifies it to be an IoT system (Xu et al. 2018, 2019b, c, 2019; Qi et al. 2020b). However, to ensure security, low latency, and low data transmission cost, the analysis of the sensor data is carried out at the edge of the network using mobile computing devices. The sensors are used to collect data about the electrical power generated in the distribution center (Wang et al. 2018c, 2020; Qi et al. 2020c). This data is then analyzed to provide control to the entire D-RES To implement the scheme, the given RESs are separated into their respective categories taking into consideration the features mentioned in the topology described above (Fig. 2). The main sources would serve as the main energy generators in the D-RES while the storage sources would supplement them. However, to implement control in the system, a threshold is set in the control center which would be derived from the maximum power generated by the main sources. When the main sources are operating at maximum. (above-set threshold), some of the power generated would be used to store energy in the RESs at the storage category while the rest is sent to the control center for distribution to the consumers. However, if the main source is operating below the threshold, the RESs in the storage category would use the previously stored energy to generate electrical power. This is then combined with the low power from the main category and sent as output to the control center for distribution. The control center, in any case, would have enough power to distribute to the consumers. The total energy that goes to the control center is, therefore the power from the two categories in the distribution center at a particular point in time. This is shown mathematically using the equations below.
+
+where
+
+θtotal is the total power from the main category
+αtotal is the power from the main category
+∆t is the change in time
+However
+where
+Pmain is the power from each RES in the main category.
+Psub is the power from each RES in the storage category
+The number of RESs in each category range from 1 to n. That is \( {P}_{mai n}=\left({P}_{mai{n}_1}\dots {P}_{mai{n}_n}\right) \) and \( {P}_{su b}=\left({P}_{su{b}_1}\dots {P}_{su{b}_n}\right) \). The number of main power sources is directly proportional to the total energy from the D-RES.
+Nevertheless, the control described above is implemented by an IoT system that performs analysis at the network edge. Therefore, the smart meters at the control center measures the total energy from the distribution center and stores it on a control server that is running on the premise or the cloud. The control server in renewable energy source micro-grid is mostly implemented by the mobile computing devices in the Monitoring and Data Processing Unit (MDU).
+To ensure optimal control, the computing devices in the MDU would need to know when to replenish the storage sources and when to collect power from them. With this, the control center would always have enough energy to distribute to the consumers at any point in time as the power from the RESs in the distribution center is effectively coordinated. The most effective method to achieve this control is energy forecasting. To do this, a regression model is created using historical data collected by sensors (smart meters) at the control center to intelligently conduct energy forecasting in the D-RES. This model is then used with an algorithm to ensure the required control.
+The computers in the MDU uses an algorithm to control the system. The algorithm takes in three inputs; the maximum power of the entire D-RES (Pmax), the forecasted power for a particular time interval (Ppredicted), and the minimum power expected from the D-RES (Pthreshold). The maximum power is the total power form all the RESs in the main category. This is given by the sum of all the power generated by the individual RESs in that category as described in Eq. 3. The forecasted power is obtained from the trained regression model deployed on mobile computing devices in the MDU at the edge of the network. As mentioned earlier, the mobile devices would use this forecasted energy to make the decision to either store or withdraw power from the storage sources.
+The algorithm would start by using the regression model to predict the power for a particular time interval. This could be for a day, a week, or any time interval. It then proceeds to evaluate the difference between the generated power and the maximum power rating of the D-RES. This difference is then compared to the threshold value. The computers in the MDU would calculate the total energy to be outputted by the grid, based on whether the power difference exceeds the threshold or not. The algorithm is shown in Table 1 below.
+
+The forecasting is achieved by using DNN since it is not memory intensive and works well with non-linear data like those form electrical power systems. Unlike other methods that use metrological data to make the prediction, the DNN in this study would use historical data to create the forecasting model. This data is collected by the smart meters in the control center over a very long period. Nevertheless, the data consist of two parts; the time stamp and the total energy from the D-RES at that time. This is then served to the model which uses the time stamp as inputs and the generated energy as the label to train a regression model that can make forecasts for a set time interval. The resulting model is deployed on the computers in the MDU where it would be used with the proposed algorithm to administer control to the RESs in the distribution center.
+However, like any other machine learning problem, the performance of the model completely depends on the quantity and quality of the dataset used, the topology of the DNN defined by the analyst, and the pre-processing done on the dataset. The preceding section describes an experiment for a simulated D-RES Microgrid.
+In this section, an experiment for a simulated distributed renewable energy source micro-grid (D-RES) would be carried out using two RESs, one from each of the categories described in the Electrical Network Topology. These two sources include solar as the main source and a micro-hydro dam as the storage source supplementing the main source.
+The simulated D-RES is made up of a core power with a group of customers, consisting of housing and industry as well. The power line is linked to a substation, comprising of a high-low voltage transformer and electrical equipment, such as protection fuses and circuit breakers. The core apparatuses of the distributed generation are the grid linked solar photovoltaic (pv) (Liu et al. 2019b) and the micro-hydro turbine power system, related to the electric network, via a grid-tie power inverter.
+The goal is to use the proposed control scheme and topology to demonstrate the effectiveness of the D-RES. The ideal working circumstances are when the solar photovoltaic system is at full capacity, it transports energy as output to the grid. A part of this generated energy is used to store energy in the micro-dam in the form of hydrostatic potential. However, in the case where the energy for the main photovoltaic is less than minimum, the output from the grid would be the combined energy from both the photovoltaic and the micro-dam RESs. The prediction data is used for handling the solar photovoltaic and micro-hydro turbine system.
+The solar power created in this scenario is written as:
+
+where
+
+Imp is the current produced in maximum capacity;
+Vmp the voltage produced at a maximum power point;
+⅁inverter represents the effectiveness of the power inverter;
+The equation that involves the power produced by the micro-hydro turbine is written as:
+
+where
+
+⅁hydrotoal stands for the coefficient of the hydraulic effectiveness;
+p represents the flow speed;
+⅁G/M represents the electrical generator effectiveness;
+g represents gravitational speeding up;
+H represents the depth of the penstock
+The power that is formed from the activities of the photovoltaic system when transporting the required power to pump the water in the reservoir is written as;
+
+The microcontroller monitoring and control system collects the data from the current and voltage sensors and processes it into information (power, energy) for supplementary analysis and system control. From this data, the system operator can check for energy production and load profiles (Kalogirou 2014; Gligor 2012). The acquired information can be pulled out and used for the time series forecast in the dedicated software.
+As mentioned earlier, the regression models in this study would be trained with historical data, unlike other research that uses meteorological data from weather stations. This is because meteorological data is not easy to obtain and has a lot of quality issues. Historical data, on the other hand, is readily available since it is generated from the same power plant. Nevertheless, the dataset used is from elis (https://bit.ly/2PEIRNI), a solar power generation company in Belgium. The company logs the power generated every day in intervals of 15 min. It consists of the timestamps and the power generated from the solar plants at the respective intervals.
+To train the model, 29,173 readings were used which represents the power generated by the power plant from 01/01/2019 to 31/10/2019. However, to test the model, 2979 readings were used and it represents new data generated by the same plant during the month of October 2018. However, missing values for the generated pv energy in the dataset were replaced with their mean. Furthermore, to deal with outliers, the dataset was scaled and the z-score calculated for each of the generated pv energy values in the dataset. A set threshold was then used to identify outliers and they were also replaced with the mean of the pv energy data. This dataset is much detailed and satisfies the quantity and quality property of the dataset to be used for training the regression model in this study. Moreover, the figures below show the plot of the pv energy dataset over time. Figure 3 shows the hourly pv energy changes for the system. It is normally distributed starting with low values during the early hours, goes up during the day, and then goes down again as the day ends.
+
+Hourly pv energy changes
+This demonstrates the operation of the solar plant which produces high energy when the sun is out and low energy at sunset.
+However, Fig. 4 shows the time interval (15 min) that was used for collecting the data from the pv cells in the solar plants.
+
+Time interval of data collected
+The dataset described above was normalized using the min-max function before sending it to the model for training. The model is a feed-forward backpropagation model that takes in four (4) inputs and gives out one output. The inputs include the day, month, hour, and minutes which was derived from the timestamp of the dataset. The output is the solar energy generated by the pv cells at the respective time intervals.
+However, the model was experimented with several layers starting from one up to five. This is to show how the performance of the model was affected by the number of layers in the neural network. Nonetheless, for each architecture, the model was evaluated using the mean square error (mse) with a batch size of 60 and 300 epochs. Moreover, adam was the optimization algorithm selected for this experiment. Table 2 displayed below shows the mse and the r-square for each layer added to the model architecture (Fig. 5).
+
+A graph showing the mse and regression score for the different number of layers
+From the graph, the MSE is seen to reduce as the number of layers continues to increase. The actual values were multiplied by 100 to get it on the same scale as the r-square. The actual values are however shown in Table 2. The regression, however, remained constantly at 99% for the entire period indicating that the model would make a better forecast on a new unseen dataset for any number of layers used. However, the highest level of precision is obtained with five layers since it shows the lowest error. (i.e. mse = 0.007637)
+The final experiment was performed with five layers and the resulting model tested with the test dataset was mentioned in section 5. Table 3, shows the full topology of the model describing the number of neurons and parameters in each layer of the model.
+
+This model was trained with 1000 epochs and a batch size of 500. The MSE of the model was recorded at the end of each epoch and a resulting graph of these values was plotted as shown in Fig. 6. The MSE obtained was 0.009226. This shows that the model performed well even though it was trained with historical data.
+
+Model of the performance graph
+The dataset which are records of the power produced by the same plant for October 2018 was used to test the model that was trained as indicated above. It contains 2979 readings with the same 15 min’ interval. Figures 7 and 8 show the graph of the predicted values VS the original values for the per-minutes and daily changes of the generated power respectively.
+
+Forecast of solar power changes per-minute
+Forecast of daily solar power changes
+Notice that the model performs well for many of the data points with very small deviations from the true value. This can be seen in the daily prediction graph (Fig. 8).
+In this research, a distributed renewable source (D-RES) micro-grid was successfully created. Electrical network topology was designed which simplifies the incorporation of multiple RESs into the D-RES. The topology is made up of two categories; the control, and the distribution center. The distribution center consists of the main and storage category. The main category serves as the main source of power for the entire D-RES while the RESs in the storage category supplements the main RESs. Furthermore, a novel control algorithm was created that uses a regression model to implement control to the RESs in the distribution center. The algorithm along with the DNN model can be deployed on mobile devices in the MDU which is in the control center of the electrical network topology.
+Finally, two RESs from each category in the distribution center was used to test the proposed D-RES in this study. A regression model was trained using historical data instead of metrological data, to forecast the energy for the D-RES. The performance of this model was proven to depend on the quantity and quality of the data, as well as the number of layers in the DNN model.
+Data used for this research was acquired from a power generation company in Belgium elia (https://bit.ly/2PEIRNI).
+Alanazi M, Alanazi A, Khodaei A (2017) Long-term solar generation forecasting
+
+                    Google Scholar 
+                
+Anitescu C, Atroshchenko E, Alajlan N, Rabczuk T (2019) Artificial neural network methods for the solution of second order boundary value problems. Comput Mater Cont 59(1):345–359
+
+                    Google Scholar 
+                
+Badal FR, Das P, Sarker SK, Das SK (2019) A survey on control issues in renewable energy integration and microgrid. Prot Control Mod Power Syst 4(1):8
+Article 
+    
+                    Google Scholar 
+                
+Bai S, Kolter JZ, Koltun V (2018) An empirical evaluation of generic convolutional and recurrent networks for sequence modeling
+
+                    Google Scholar 
+                
+Başaran Filik Ü, Gerek O, Kurban M (2011) Hourly forecasting of long term electric energy demand using novel mathematical models and neural networks. Int J Innov Comput Appl 52:199–211. https://doi.org/10.1016/j.enconman.2010.06.059
+Bică D, Dulău M, Muji M, Dulău LI (2016) Photovoltaic power plant grid integration in the Romanian system – technical approaches
+Book 
+    
+                    Google Scholar 
+                
+Bouktif S, Fiaz A, Ouni A, Serhani MA (2018) Optimal deep learning LSTM model for electric load forecasting using feature selection and genetic algorithm: comparison with machine learning approaches †, p 14
+
+                    Google Scholar 
+                
+Cartina MGG, Bonciu C, Georgescu G (1995) Optimization algorithms for artificial neural networks training. In: Proceedings of the 5th Symposium on Automatic Control and Computer Science, SACCS’95, vol 1, pp 194–199
+
+                    Google Scholar 
+                
+Gligor A (2012) Emerging markets queries in finance and business SCADA based software for renewable energy management system. ScienceDirect 3(12):262–267
+Hizam H, Amran M, Radzi M, Kadir Z, Mirzaei M (2014) Modelling and prediction of photovoltaic power output using artificial neural networks
+
+                    Google Scholar 
+                
+Kalogirou SA (2014) Solar energy engineering processes and systems
+
+                    Google Scholar 
+                
+Li K (2018) Forecasting electricity consumption using an improved grey prediction model, pp 1–18
+
+                    Google Scholar 
+                
+Liu H, Chen C, Lv X, Wu X, Liu M (2019b) Deterministic wind energy forecasting: a review of intelligent predictors and auxiliary methods. Energy Convers Manag 195(May):328–345
+Article 
+    
+                    Google Scholar 
+                
+Liu Q, Kamoto KM, Liu X (2019a) Microgrids-as-a-service for rural electrification in sub-Saharan Africa
+
+                    Google Scholar 
+                
+Marah BD et al (2020) Smartphone architecture for edge-centric iot analytics. Sensors (Switzerland) 20(3):1–19
+MathSciNet 
+    Article 
+    
+                    Google Scholar 
+                
+Marino DL, Amarasinghe K, Manic M (2016) Building energy load forecasting using deep neural networks
+Book 
+    
+                    Google Scholar 
+                
+Qi L, He Q, Chen F, Zhang X, Dou W, Ni Q (2020c) Data-driven web APIs recommendation for building web applications. IEEE Trans Big Data:1–1
+Qi L, Wang X, Xu X, Dou W, Li S (2020b) Privacy-aware cross-platform service recommendation based on enhanced locality-sensitive hashing. IEEE Trans Netw Sci Eng:1–1
+Qi L, Zhang X, Li S, Wan S, Wen Y, Gong W (2020a) Spatial-temporal data-driven service recommendation with privacy-preservation. Inf Sci (Ny) 515:91–102
+Article 
+    
+                    Google Scholar 
+                
+Qi L et al (2019) Finding all you need: web APIs recommendation in web of things through keywords search. IEEE Trans Comput Soc Syst 6(5):1063–1072
+Article 
+    
+                    Google Scholar 
+                
+Ronay K, Bica D, Munteanu C (2017) Micro-grid development using artificial neural network for renewable energy forecast and system control. Procedia Eng 181:818–823
+Article 
+    
+                    Google Scholar 
+                
+Saleh AI, Rabie AH, Abo-Al-Ez KM (2016) A data mining based load forecasting strategy for smart electrical grids. Adv Eng Inform 30(3):422–448
+Article 
+    
+                    Google Scholar 
+                
+Sharma E (2018) Energy forecasting based on predictive data mining techniques in smart energy grids. Energy Inform 1(Suppl 1):44
+Article 
+    
+                    Google Scholar 
+                
+Suganthi L, Samuel AA (2012) Energy models for demand forecasting—a review. Renew Sust Energy Rev 16(2):1223–1240
+Article 
+    
+                    Google Scholar 
+                
+Wan C, Zhao J, Member S, Song Y (2015) Photovoltaic and solar power forecasting for smart grid energy management. CSEE J Power Energy Syst 1(4):38–46
+Article 
+    
+                    Google Scholar 
+                
+Wang B et al (2018a) Research on hybrid model of garlic short-term price forecasting based on big data. CMC Comput Mater Cont 57(2):283–296
+
+                    Google Scholar 
+                
+Wang T, Bhuiyan ZA, Wang G, Rahman A, Wu J, Cao J (2018b) Big data reduction for a smart city’s critical infrastructural health monitoring. IEEE Commun Mag 56(3):128–133
+Article 
+    
+                    Google Scholar 
+                
+Wang T, Zhou J, Huang M, Alam Z, Liu A (2018c) Fog-based storage technology to fight with cyber threat. Futur Gener Comput Syst 83:208–218
+Article 
+    
+                    Google Scholar 
+                
+Wang T et al (2020) Data collection from WSNs to the cloud based on mobile fog elements. Futur Gener Comput Syst 105:864–872
+Article 
+    
+                    Google Scholar 
+                
+Xu X, Fu S, Qi L, Zhang X, Liu Q (2018) An IoT-oriented data placement method with privacy preservation in cloud environment. J Netw Comput Appl 124(September):148–157
+Article 
+    
+                    Google Scholar 
+                
+Xu X, He C, Xu Z, Qi L (2019) Joint optimization of offloading utility and privacy for edge computing enabled IoT, pp 1–8
+Xu X, Liu Q, Luo Y, Peng K, Zhang X, Meng S (2019c) A computation offloading method over big data for IoT-enabled cloud-edge computing. Futur Gener Comput Syst 95:522–533
+Article 
+    
+                    Google Scholar 
+                
+Xu X, Liu X, Xu Z, Dai F, Zhang X (2019b) Trust-oriented IoT service placement for smart cities in edge computing. 4662(c):1–8
+Xu X, Liu X, Xu Z, Dai F, Zhang X, Qi L (2019a) Trust-oriented IoT service placement for smart cities in edge computing. Internet Things J IEEE 7(5):1–1
+Xu X, Zhang X, Gao H, Xue Y, Qi L, Dou W (2020) BeCome: Blockchain-enabled computation offloading for IoT in Mobile edge computing. IEEE Trans Ind Inform 16(6):4187–4195
+Article 
+    
+                    Google Scholar 
+                
+Zhu H, Meng F, Rho S, Li M, Wang J (2019) Long short term memory networks based anomaly detection for KPIs. Comput Mater Cont 61(2):829–847
+
+                    Google Scholar 
+                
+Zhuang X, Zhou S (2019) The prediction of self-healing capacity of bacteria-based concrete using machine learning approaches. Comput Mater Cont 59(1):57–77
+
+                    Google Scholar 
+                
+Download references
+Authors will like to express their sincere gratitude to the following institution for making this research possible National Natural Science Foundation of China, Spring Specialists, Major Program of the National Social Science Fund of China, High-Level Talent Cultivation Project of Jiangsu Province, Royal Society of Edinburgh, UK and China Natural Science Foundation Council under their Joint International Projects funding scheme and basic Research Programs (Natural Science Foundation) of Jiangsu Province.
+This work has received funding from the National Natural Science Foundation of China (No. 41911530242, 41975142), 5150 Spring Specialists (05492018012, 05762018039), Major Program of the National Social Science Fund of China (Grant No.17ZDA092), 333 High-Level Talent Cultivation Project of Jiangsu Province (BRA2018332), Royal Society of Edinburgh, UK and China Natural Science Foundation Council (RSE Reference: 62967_Liu_2018_2) under their Joint International Projects funding scheme and basic Research Programs (Natural Science Foundation) of Jiangsu Province (BK20191398).
+School of Computer and Software, Nanjing University of Information Science and Technology, Nanjing, 210044, Jiangsu Province, China
+Raphael Anaadumba, Bockarie Daniel Marah & Francis Mawuli Nakoty
+Jiangsu Collaborative Innovation Center of Atmospheric Environment and Equipment Technology (CICAEET), Nanjing University of Information Science & Technology, Nanjing, 210044, China
+Qi Liu
+Shandong Beiming Medical Technology Ltd, Jinan, 250000, China
+Qi Liu
+School of Computing, Edinburgh Napier University, 10 Colinton Road, Edinburgh, EH10 5DT, UK
+Xiaodong Liu & Yonghong Zhang
+You can also search for this author in
+                        PubMed Google Scholar
+You can also search for this author in
+                        PubMed Google Scholar
+You can also search for this author in
+                        PubMed Google Scholar
+You can also search for this author in
+                        PubMed Google Scholar
+You can also search for this author in
+                        PubMed Google Scholar
+You can also search for this author in
+                        PubMed Google Scholar
+Raphael Anaadumba; Conceptualization, Visualization, Writing original draft and writing original draft and editing. Qi Liu; Supervision, Methodology, Conceptualization. Bockarie Daniel Marah; Investigation. Francis Mawuli Nakoty; Software. Xiaodong Liu; Data curation. Yonghong Zhang; Formal analysis. The author(s) read and approved the final manuscript.
+Correspondence to
+                Raphael Anaadumba.
+The author declares that he has no competing interest.
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+Reprints and Permissions
+Anaadumba, R., Liu, Q., Marah, B.D. et al. A renewable energy forecasting and control approach to secured edge-level efficiency in a distributed micro-grid.
+                    Cybersecur 4, 1 (2021). https://doi.org/10.1186/s42400-020-00065-3
+Download citation
+Received: 31 July 2020
+Accepted: 04 November 2020
+Published: 06 January 2021
+DOI: https://doi.org/10.1186/s42400-020-00065-3
+
+
+            By using this website, you agree to our
+            Terms and Conditions,
+            California Privacy Statement,
+            Privacy
+                statement and
+            Cookies policy.
+            
+                Manage cookies/Do not sell my data we use in the preference centre.
+            
+        
+ © 2021 BioMed Central Ltd unless otherwise stated. Part of
+            Springer Nature.
+        

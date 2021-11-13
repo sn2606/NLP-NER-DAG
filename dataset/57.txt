@@ -1,0 +1,11 @@
+ McDonald’s has become the latest company to be hit by a data breach after unauthorized activity on its network exposed the personal data of some customers in South Korea and Taiwan.
+ McDonald’s Corp. said Friday that it quickly identified and contained the incident and that a thorough investigation was done.
+ “While we were able to close off access quickly after identification, our investigation has determined that a small number of files were accessed, some of which contained personal data,” the Chicago-based burger chain said.
+ McDonald’s said its investigation determined that only South Korea and Taiwan had customer personal data accessed, and that they would be taking steps to notify regulators and also the customers who may be affected. No customer payment information was exposed.
+ McDonald’s said it will look at the investigation’s findings, coupled with input from security resources, to identify ways to further enhance its existing security measures.
+ Businesses across various sectors are being targeted by cybercriminals, including some very high profile cases in recent weeks. On Wednesday, JBS, the world’s largest meat processing company, revealed that it had paid the equivalent of $11 million to hackers who broke into its computer system last month.
+ And Colonial Pipeline, which transports about half of the fuel consumed on the East Coast, last month paid a ransom of 75 bitcoin — then valued at roughly $4.4 million — in hopes of getting its system back online. On Monday the Justice Department announced that it had recovered most of the ransom payment.
+CONNECT
+TRIBUNE PUBLISHING
+COMPANY INFO
+ Copyright © 2021, Chicago Tribune 

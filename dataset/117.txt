@@ -1,0 +1,42 @@
+Remote network access technology thrown even further towards the frontline
+
+UPDATED Remote Desktop Protocol (RDP) cyber-attacks have increased in tandem with the shift to more people working from home in response to the Covid-19 pandemic, new research indicates.
+RDP is a Microsoft protocol networking technology that allows remote access to internal systems.
+RDP ports are often exposed to the internet – a factor that has made the technology the target of various forms of either malware attacks or attempts to break into internal networks.
+Compromised RDP credentials can either be abused directly by cybercriminals to launch ransomware attacks or sold on through underground markets.
+The issue – a problem for years – has been exacerbated with the rapid move to remote working that has accompanied coronavirus lockdown measures worldwide.
+“In order to maintain business continuity, it is very likely that many organizations brought systems online quickly with minimal security checks in place, giving attackers the opportunity to enter them with ease,” a blog post by McAfee’s Thomas Roccia notes.
+The number of RDP ports exposed to the internet has grown from roughly three million in January 2020 to more than four and a half million in March, McAfee found after running a number of searches on Shodan.
+The number of exposed RDP systems was much higher in China and the US than in other geographies around the world.
+Exposure to the internet alone does not open up systems for abuse, but many organizations have weak, easily guessable passwords on RDP nodes.
+Attackers exploit this by running brute-force attacks, the volume of which has skyrocketed over recent weeks.
+
+RECOMMENDED Coronavirus: How to work from home securely during a period of isolation
+McAfee found that the timing of increases in brute-force attacks in different countries correlated with the introduction of lockdowns.
+Security vendor Atlas VPN separately reports that RDP attacks rocketed by 330% in the US amid the Covid-19 pandemic. The figures are based on a monthly comparison between February-March and March-April.
+RDP attacks targeting workstations and servers in Spain and Italy shot up by 524% and 428%, respectively, over the same period, according to figures from Atlas VPN.
+“From the start of lockdowns on March 10, 2020, until April 15, 2020, hackers attacked the US, Spain, Italy, Germany, France, Russia, and China a total of over 148 million times combined,” according to Atlas VPN.
+The RDP protocol has suffered from various vulnerabilities over the last two years or so. The now-infamous ‘BlueKeep’ vulnerability – which posed a remote code execution risk – was considered to be so threatening that Microsoft even developed a software patch for obsolete systems, such as Windows XP.
+Organizations therefore need to apply patches, as well as introducing good password hygiene and network security measures in order to safeguard themselves from attack, as explained in McAfee’s blog post.
+Raj Samani, chief scientist and fellow at McAfee, told The Daily Swig that the rushed rollout of RDP to support remote workers has sometimes happened at the expense of security.
+"Whilst this increase in RDP is not specifically an issue, how they are secured is – sadly, the demand to get online quickly is often at the cost of security," Samani commented.
+"Open RDP is the equivalent of leaving your door wide open with a neon sign out the front welcoming all into the contents of your home. Via this open door into the network, attackers can move within the network to carry out their attack and are able to do anything they want.
+"For example, some of the major ransomware families use this as a key vector towards crippling businesses across the world. However, this threat is not only specific to RDP and is a challenge within the wider security landscape - many attacks can be simply mitigated by the implementation of cyber hygiene," he added.
+
+This story has been updated to add comment from Raj Samani.
+
+READ MORE Exclusive: Nintendo hacker sentencing postponed due to coronavirus-related court delays
+
+
+John Leyden
+
+
+
+@jleyden 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

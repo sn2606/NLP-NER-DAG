@@ -1,0 +1,622 @@
+Metrics details
+Artificial intelligence (AI) is one of the key technologies of the Fourth Industrial Revolution (or Industry 4.0), which can be used for the protection of Internet-connected systems from cyber threats, attacks, damage, or unauthorized access. To intelligently solve today’s various cybersecurity issues, popular AI techniques involving machine learning and deep learning methods, the concept of natural language processing, knowledge representation and reasoning, as well as the concept of knowledge or rule-based expert systems modeling can be used. Based on these AI methods, in this paper, we present a comprehensive view on “AI-driven Cybersecurity” that can play an important role for intelligent cybersecurity services and management. The security intelligence modeling based on such AI methods can make the cybersecurity computing process automated and intelligent than the conventional security systems. We also highlight several research directions within the scope of our study, which can help researchers do future research in the area. Overall, this paper’s ultimate objective is to serve as a reference point and guidelines for cybersecurity researchers as well as industry professionals in the area, especially from an intelligent computing or AI-based technical point of view.
+The modern world depends more on technology than ever before. A huge amount of data is generated and gathered with the large implementation of booming technologies such as the Internet of Things (IoT) [1] and cloud computing [2]. Although data can be used to better serve the corresponding business needs, cyber-attacks often pose major challenges. A cyber-attack is usually a malicious and concerted attempt by an individual or organization to breach another individual or organization’s information system. Malware attack, ransomware, denial of service (DoS), phishing or social engineering, SQL injection attack, Man-in-the-middle, Zero-day exploit, or insider threats are common nowadays in the area [3]. These types of security incidents or cybercrime can affect organizations and individuals, cause disruptions, as well as devastating financial losses. For instance, according to the IBM report, a data breach costs 8.19 million USD for the United States [4], and the estimated annual cost to the global economy from cybercrime is 400 billion USD [5]. Cybercrimes are growing at an exponential rate that brings an alarming message for the cybersecurity professionals and researchers [3]. Therefore, to effectively and intelligently protect an information system, particularly, Internet-connected systems from various cyber-threats, attacks, damage, or unauthorized access, is a key issue to be solved urgently, in which we are interested in this paper.
+In the real world, the overall national security of the business, government, organizations, and individual citizens of a country depends on the security management tools having the capability of detecting and preventing the security incidents in a timely and intelligent way. Intelligent cybersecurity services and management are, therefore, essential because immense amounts of data on computers and other devices are collected, processed, and stored by government, military, corporate, financial, medical organizations, and many others. Cybersecurity usually refers to a collection of technologies, procedures, and practices designed to protect networks, computers, programs, and data from attack, disruption, or unauthorized access. It is also known as “information technology security” or “electronic information security”. Several related terms with the concept of cybersecurity are briefly discussed and summarized in Sect. 2. According to today’s numerous needs, the conventional well-known security solutions such as antivirus, firewalls, user authentication, encryption, etc. may not be effective [6,7,8,9]. The key problem with these traditional systems is that they are normally operated by a few experienced security experts, where data processing is carried out in an ad-hoc manner and can, therefore, not run intelligently according to needs [10, 11]. On the other hand, Artificial intelligence (AI), which is known as the key technologies of the Fourth Industrial Revolution (Industry 4.0), can play an important role for intelligent cybersecurity services and management according to its computing power and capabilities. Thus, we focus on “AI-driven Cybersecurity” to make the cybersecurity computing process automated and intelligent than the conventional security systems in the area.
+Artificial intelligence (AI) is the branch of computer sciences that usually emphasizes the creation of intelligent machines, thinking and functioning like humans. To intelligently solve today’s various cybersecurity issues, e.g., intrusion detection and prevention system, popular AI techniques involving machine learning (ML) and deep learning (DL) methods, the concept of natural language processing (NLP), knowledge representation and reasoning (KRR), as well as the concept of knowledge or rule-based expert systems (ES) modeling can be used, which are briefly discussed in Sect. 3. For instance, these techniques can be applied for identifying malicious activities, fraud detection, predicting cyber-attacks, access control management, detecting cyber-anomalies or intrusions, etc. The aim of this paper is therefore to provide a reference guide for those processionals from academia and industry who want to work and research based on intelligent computing in the field of cybersecurity. Therefore, in the sense of cybersecurity, great emphasis is put on common AI-based methods and their applicability for solving today’s diverse security issues. Overall, this paper provides a detailed view of AI-driven cybersecurity in terms of principles and modeling for intelligent and automated cybersecurity services and management through intelligent decision making by taking into account the benefits of AI methods.
+The main contributions of this paper are, therefore, listed as follows:
+To provide a brief overview on the concept of AI-driven cybersecurity for intelligent cybersecurity services and management according to today’s needs. For this, we first briefly review the related methods and systems in the context of cybersecurity to motivate our study as well as to make a position for the term AI-driven cybersecurity.
+To present security intelligence modeling where various AI-based methods such as machine and deep learning, natural language processing, knowledge representation and reasoning, as well as the knowledge or rule-based expert systems modeling are taken into account according to our goal.
+Finally, we discuss and highlight several research directions within the scope of our study, which can help the cybersecurity researchers to do future research in the area.
+The rest of the paper is organized as follows. Section 2 provides a background and reviews the related work in this domain. In Sect. 3, we discuss how various AI techniques can be used for security intelligence modeling. In Sect. 4, we discover and summarize several research issues and potential future directions, and finally, Sect. 5 concludes this paper.
+In this section, we provide an overview of the relevant AI-driven cybersecurity technologies, including different types of cybersecurity incidents within the scope of our study.
+Confidentiality, integrity, and availability, also known as the CIA triad, is a model usually designed to guide information security policies within an organization. Thus, to understand the security policy, the CIA triad with the mentioned properties is important that are discussed as below.
+Confidentiality is a property of security policy that typically refers to protecting the information and systems from unauthorized parties. Confidentiality threat can typically target databases, application servers, and system administrators, and can be considered as “data theft”.
+Integrity is another property of security policy that typically refers to prevent any kind of destruction or modification of information by unauthorized parties. Integrity threat typically includes finance-related threat such as altering financial data, stealing money, reroute deposit, or hijacking, and to damage of the organization trustworthiness, and can be considered as “data alteration”.
+Availability is also considered as another property of security policy that typically refers to ensure the access of information systems or assets to an authorized party or entity in a reliable and timely manner. Availability threat typically includes denial of service, or physical destruction, and can be considered as “denial access of the data”.
+Overall, based on the CIA triad for the security policy discussed above, we can simply conclude that “Confidentiality” is limiting the data access, “Integrity” is ensuring the data is accurate, and “Availability” is making sure the accessibility of the data to the right entity.
+The worldwide popularity score of cyber security comparing with relevant terms in a range of 0 (min)–100 (max) over time where x-axis represents the timestamp information and y-axis represents the corresponding score
+Over the last half-century, our modern and digital society is highly integrated with information and communication technology (ICT). As the smart computing devices used in our daily life activities are mostly driven by global Internet connectivity, the associated risk of data breaches or cyber-attacks is increasing day by day. Thus, preventing and protecting the ICT systems from various kinds of advanced cyber-attacks or threats, is known as ICT security, becomes the major concern for our security professionals or policymakers in recent days [12]. ICT security refers to relevant incidents as well as measures, controls, and procedures applied by enterprises to ensure integrity, confidentiality, and availability of their data and systems. Cybersecurity is simply about securing things that are vulnerable through ICT. Although the term “Cybersecurity” is popular nowadays, several relevant terms such as “Information security”, “Data security”, “Network security”, “Internet/IoT security” often get interchangeable and may create confusion among the readers as well as the professionals in the area. In the following, we define these terms and highlight their world-wide popularity score as well.
+Data security is all about securing data, which could be specific to data, typically in storage. Thus, data security can be defined as the prevention of unauthorized access, use, disruption, modification, or destruction of data in storage.
+Information security is the prevention of unauthorized access, use, disruption, modification, or destruction of information. Information security, in a sense, can be considered as a specific discipline under the cybersecurity umbrella that is the broader practice of defending IT assets from attacks or threats.
+Network security is usually the practice of preventing and tracking unauthorized access, misuse, alteration, or denial of services available to a computer network. It thus can be considered as a subset of cybersecurity, which typically protects the data flowing over the network.
+Internet security is a specific aspect of broader concepts such as cybersecurity and computer security, focusing on the specific risks and vulnerabilities of internet access and use. IoT security is another relevant term, is typically concerned with protecting Internet-enabled devices, i.e., Internet of Things (IoT) devices, that connect on wireless networks [13].
+The above-mentioned security terms are related to “Cybersecurity”, which is the practice of defending computers, servers, mobile devices, electronic systems, networks, and data from malicious attacks, cyber-threats, damage, or unauthorized access. Among these terms, the worldwide popularity of “cybersecurity” is higher than others and increasing day-by-day, which is shown in Fig. 1. The popularity trend in Fig. 1 is shown based on the data collected from Google Trends over the last 5 years [14]. According to Fig. 1, the popularity indication values for cybersecurity was low in 2016 and is increasing day-by-day. Thus, in this paper, we focus on the popular term “cybersecurity”, which is the key to achieving the Fourth Industrial Revolution (Industry 4.0).
+Many researchers defined cybersecurity in various ways. For instance, the diverse activities or policies that are taken into account to protect the ICT systems from threats or attacks is known as cybersecurity [5]. Craigen et al. defined “cybersecurity as a set of tools, practices, and guidelines that can be used to protect computer networks, software programs, and data from attack, damage, or unauthorized access” [15]. According to Aftergood et al. [16], “cybersecurity is a set of technologies and processes designed to protect computers, networks, programs and data from attacks and unauthorized access, alteration, or destruction”. Overall, cybersecurity typically concerns with the understanding of diverse cyber threats or attacks and corresponding defense strategies to prevent them, and eventually protect the systems, which is associated with confidentiality, integrity, and availability [17,18,19]. Based on these definitions, we can conclude that cybersecurity is all about the security of anything in the cyber realm, such as network security, information security, application security, operational security, Internet of Things (IoT) security, cloud security, infrastructure security, and relevant others. While traditional cybersecurity systems consist mainly of network protection systems and computer security systems [20], we aim to provide a wide range of cybersecurity view to the readers as it is one of the major concerns in our digital life in various perspective, from commercial purpose to personalized mobile computing.
+A security incident is typically a malicious activity that threatens the security factors, i.e., confidentiality, integrity, and availability, defined earlier. Several types of cybersecurity incidents, i.e., cyber threats and attacks, may impact on an organization or an individual [21]. In general, a cyber-threat can be defined as a possible security violation that might exploit the vulnerability of a system or asset, while an attack is a deliberate unauthorized action on a system or asset. Cyber-attacks include threats like computer viruses, data breaches, denial of service (DoS) attacks, etc. In Table 1, we list the most common cyber-threats and attacks that are needed for consideration in today’s cyber world.
+Cybersecurity defense strategies are typically for the protection of the computer systems and networks from the damage of the associated hardware, software, or data, as well as the disruption of the services they provide. More granularly, they are responsible for preventing data breaches or security incidents that can be defined as any kind of malicious or unauthorized activity to protect the systems [44]. In the following, we give an overview of traditional security mechanisms.
+Access control [45] is a security mechanism that typically regulates the access or use of the resources, e.g., computer networks, system files, or data, in a computing environment. For example, based on the responsibilities of individual users, an attribute or role-based access control scheme may be used to limit network access, reducing the risk to the company or entity.
+Firewall [46] is a security framework for the network that tracks and regulates incoming and outgoing network traffic. Firewalls are defined as a network-based or host-based system that is based on a set of security rules to allow or block the traffic. It is also capable of filtering traffic from unsecured or suspicious sources to avoid attacks, such as malicious traffic.
+Anti-malware [47] also known as antivirus software, is a computer program that is typically used to prevent, detect, and remove computer viruses, or malware. Modern antivirus software can protect users from various malware attacks such as ransomware, backdoors, trojan horses, worms, spyware, etc.
+Sandbox [48] is a security mechanism used for mitigating the system failures or software vulnerabilities from spreading through separating the running programs. It is often used to execute untrusted programs or code, possibly from unverified suppliers, users, websites, or untrusted third parties.
+Security information and event management (SIEM) [49] is a combination of security information management (SIM) and security event management (SEM) that provides real-time analysis of device and network hardware security alerts.
+Cryptography [50] is a popular method used for protecting data or information that uses the secret keys, e.g., secret-key, public key, and hash function, to encrypt and decrypt data for communication.
+Although the traditional well-known security approaches have their own merits for different purposes, these might not be effective according to today’s diverse needs in the cyber industry, because of lacking intelligence and dynamism [6,7,8,9]. The intrusion detection system (IDS) becomes more popular that is typically defined as “a device or software application that monitors a computer network or systems for malicious activity or policy violations” [51]. IDS is typically capable to identify the diverse cyber threats and attacks, even the unknown zero-day attack, and able to respond in real-time based on the user’s requirements. IDS gathers data from different sources in a computer network or device for this purpose and identifies security policy breaches that can be used to detect internal and external attacks [52, 53]. IDS can be several types based on environment type and detection approaches. For instance, based on the scope from single computers to large networks, the most common types of IDS are:
+Host-based IDS (HIDS) runs on a host, analyze traffic, and detect malicious or suspicious activity. Thus, it can provide real-time visibility into what’s happening on the critical security systems, and which adds to the additional security [3].
+Network-based IDS (NIDS) On the other hand, NIDS analyzes and monitors network connections to detect malicious activity or policy violations on a network [3].
+Similarly, IDS can be several types depending on the detection method, where the most well-known versions are the signature-based IDS and anomaly-based IDS [44].
+Signature-based IDS (SIDS) It looks for unique patterns, such as network traffic byte sequences, or recognized malicious sequences that the malware uses as signatures. It is also considered as misuse or knowledge-based detection that performs well for the known attacks [54]. It can, however, face the greatest challenge in detecting unknown or new attacks.
+Anomaly-based IDS (AIDS) On the other hand, due to the rapid growth of malware in recent days, AIDS is mainly used to detect unknown attacks. To detect anomalies like the unknown or zero-day attacks, machine learning techniques can also be used to build the protection model [3, 55].
+Hybrid IDS The hybrid IDS is obtained by combining anomaly-based IDS with the misuse-based IDS discussed above and can be used to effectively detect the malicious activities in several cases [56, 57].
+Stateful Protocol Analysis (SPA) Besides, SPA is another type of method that identifies the deviations of protocol state. This approach is similar to the anomaly-based method, however, it uses predetermined universal profiles of benign protocol activity [54].
+Once the malicious activities have been detected, the intrusion prevention system (IPS) can be used to avoid and block them. This can be done in many ways, such as manual, sending notification, or automated operation [58]. Among these methods, an automated response system (ARS) may be more effective, because it does not involve a human interface between the detection and response systems.
+Research that relies on security information gathered from different sources is often problem specific, which varies from application-to-application. A number of studies have been performed on cybersecurity systems and facilities that take into account different sources of security data. For instance, NSL-KDD [59] that contains security data related to various types of cyber-attacks such as denial of service (DoS), remote-to-local (R2L), user-to-remote (U2R), and probing attack. Another popular dataset UNSW-NB15 [60] that consists of different types of attacks. Similarly, several other datasets exist in the domain of cybersecurity, for instance, DARPA [57, 61], CAIDA [62, 63], ISOT’10 [64, 65], ISCX’12 [66, 67], CTU-13 [68], CIC-IDS [69], CIC-DDoS2019 [70], MAWI [71], ADFA IDS [72], CERT [73, 74], EnronSpam [75], SpamAssassin [76], LingSpam [77], DGA [78,79,80,81], Malware Genome project [82], Virus Share [83], VirusTotal [84], Comodo [85], Contagio [86], DREBIN [87], Microsoft [88], Bot-IoT [89], etc. A summary of these cybersecurity datasets highlighting diverse attack types and machine learning-based usage in different cyber applications are provided in our earlier paper Sarker et al. [3]. Several works focused on deep learning have recently been studied in the field. For example, methods of detection of network attacks based on deep learning techniques are studied in [90]. The researchers of [91] review deep learning for the detection of cyber security intrusion. In [92], the authors review deep learning-based intrusion detection systems. The authors of [93] conducted a study of cybersecurity deep learning methods. In [13], a survey of computer and deep learning techniques for internet of things (IoT) security is studied. We summarize several data-driven tasks and machine-learning modeling used for various purposes in the cybersecurity domain in Table 2.
+While different types of cybersecurity data and techniques mentioned above are used for various purposes in the field of cybersecurity and systems, there is an interest in security intelligence modeling in a broad sense, according to today’s cyber industry needs. Therefore, in this paper, we intend to concentrate on a comprehensive view on “AI-driven cybersecurity” in terms of concepts and security modeling for intelligent cybersecurity services and management, where the most popular AI techniques such as machine and deep learning methods, the concept of natural language processing, knowledge representation and reasoning, as well as the concept of knowledge or rule-based expert systems modeling can be used. These AI methods based on security intelligence modeling can be used to solve various cybersecurity issues and tasks, such as automatic identification of malicious activities, phishing detection, to detect malware, prediction of cyber-attacks, fraud detection, access control management, detection of anomalies or intrusions, etc. Thus, the concept of AI-based security intelligence modeling can enable the cybersecurity computing process to be more actionable and intelligent compared to conventional systems.
+As discussed earlier, intelligent cybersecurity management is based on artificial intelligence, applies various AI methods that eventually seek for intelligent decision making in cyber applications or services. In our analysis, we have taken into account the most popular AI techniques that include ML and DL methods, the concept of NLP, KRR, as well as the concept of knowledge or rule-based expert systems (ES) modeling, according to today’s need in the cyber industry. These AI method-based security intelligence modeling potentially can be used to make intelligent decisions in cybersecurity tasks, which are discussed briefly in the following.
+Machine learning (ML) including neural network-based deep learning is an important part of AI that can be used to build effective security modeling utilizing the given historical cybersecurity data, summarized in Sect. 2. A security model for machine learning is typically a collection of target security-related data from different relevant sources, such as network behavior, database activity, application activity, or user activity, etc., and the algorithms chosen to operate on that data to deduce the performance [3]. In the following, we list several popular machine learning algorithms [137] that can be used for different purposes ranging from exploiting malware to risky behavior identification that might lead to a phishing attack or malicious code within the area of cybersecurity.
+An example of detecting cyber anomalies based on a decision tree-based machine learning model
+Supervised learning Supervised learning is performed when specific target attack-anomaly classes are defined to reach from a certain set of inputs, i.e., task-driven approach [138]. For instance, to classify internal data, spam and malicious activities, supervised technique can be used. Navies Bayes [139], Various types of decision trees, such as C4.5 [140], IntrudTree [117], or even BehavDT [141] for behavioral pattern analysis, etc., can generate policy rules as well, K-nearest neighbors [142], Support vector machines [143], Adaptive boosting [144], Logistic regression [145], Stochastic Gradient Descent [146], or ensemble methods such as XGBoost [147], Random Forest learning [148], etc. are the well-known classification techniques in the area. These techniques can be used for data-driven security modeling according to their learning capabilities from the security data, e.g., classifying and predicting malware attacks or cyber anomalies. For instance, a decision tree-based machine learning model, e.g., IntruDTree model [117], to detecting cyber anomalies, is shown in Fig. 2, which provides a significant accuracy 98% for unseen test cases.
+Unsupervised learning Security data are not labeled or categorized always in the real world scenario. Thus unsupervised learning, i.e., data-driven approach, can be used to find patterns, structures, or knowledge from unlabeled data [138]. The hidden patterns and structures of the datasets can be uncovered by clustering, a common form of unsupervised learning. Clustering techniques can group the security data by taking into account certain measures of similarity in the data. Several clustering algorithms, for example, partitioning methods such as K-means [149], K-medoids [150], CLARA [151], etc., density-based methods such as DBSCAN [152], distribution-based clustering such as Gaussian mixture models (GMMs) [147], hierarchical-based methods, agglomerative or divisive such as Single linkage [153], Complete linkage [154], BOTS [155], etc. can be used in such purposes. Moreover, incident response and risk management from recommendation methods is another area that typically comes from association learning techniques. Several methods such as AIS [156], Apriori [157], FP-Tree [158], RARM [159], Eclat [160], ABC-RuleMiner [161] can be used for building rule-based machine learning model, e.g., policy-rule generation.
+Security feature optimization Today’s cybersecurity datasets may contain security features with high dimensions [117]. Thus, to minimize the complexity of a security model, feature optimization is important. Therefore the task of feature selection or feature engineering such as considering a subset of security features according to their importance or significance in modeling, the extraction of features considering the key components, or generating new features could help simplify as well as optimize the resultant security model. Several methods such as variance threshold [147], Pearson’s correlation coefficient defined for two variables (X and Y) in Eq. 1 [146], analysis of variance (ANOVA) [147], chi-squared test considering \(O_i\) as observed value and \(E_i\) as expected value in Eq. 2 [147], recursive feature elimination (RFE) [147], principal component analysis (PCA) [162], or model-based selection [117, 147], etc. can be used to perform the tasks according to the characteristics or nature of the security data. For example, the authors take into account the ranking of security features in [117], according to their significance to create an efficient tree-based security model that achieves 98% with the simplified model for unseen test cases. 
+Deep learning and others Deep learning is typically considered as part of a broader family of machine learning approaches, originating from an artificial neural network (ANN). In Fig. 3, we show a structure of artificial neural network modeling considering input, hidden, and output layer, for detecting cyber anomalies or attacks. In the domain of cybersecurity, the deep learning methods can be used for various purposes such as detecting network intrusions, detecting and classifying malware traffic, backdoor attacks, etc. [24, 57, 91]. Multi-layer perceptron (MLP) [163], convolutional neural network (CNN) [164], recurrent neural network (RNN) and long–short-term memory (LSTM) are the popular approaches used in deep learning modeling [23, 124, 164]. In these deep-learning models, many hidden layers can be used to complete the overall computing process. The strongest aspect of deep learning techniques is effectively learning feature hierarchies based on the patterns in the data [92]. Several unsupervised techniques such as autoencoder (AE), deep belief network (DBN), restricted Boltzmann machines (RBMs), generative adversarial network (GAN) etc., can also be used in the domain of cybersecurity [90, 92]. Hybrid techniques can also be used for significant outcomes in several cases [92]. For instance, an intrusion detection model based on the LSTM architecture with RNN achieved an attack detection percentage of 98.8% [125]. A deep-learning model based on a stacked auto-encoder with a soft-max classifier for efficient network intrusion detection is proposed in [165], which achieves up to 99.99% accuracy for the KDD99 dataset, and 89.13% for the UNSW-NB15 dataset. Besides the semi-supervised learning combining the supervised and unsupervised techniques discussed above, and reinforcement learning techniques such as Monte Carlo learning, Q-learning, Deep Q Networks [3, 166] can be used in the area. A brief discussion of these various types of neural networks (ANN) and deep learning (DL) based security modeling are summarized in our earlier paper Sarker et al. [167].
+A structure of artificial neural network modeling for detecting cyber anomalies or attacks with multiple processing layers
+Thus, the machine and deep learning methods discussed above can play a vital role to understand and analyze the actual phenomena with cybersecurity data, depending on the nature or characteristics of the security features and the sufficient amount of data needed for learning. These techniques can extract insights or useful knowledge from the given security data and eventually build a data-driven security model. Such models can learn from the training data and behave accordingly for the unseen test cases. Overall, the resultant machine learning-based security models can make intelligent cybersecurity decisions through analyzing data from the huge amount of cyber events. Therefore, we can conclude that machine learning security models would be able to alter the future of cybersecurity applications and industry, because of their data learning capabilities, and could be a major part in the domain of AI-driven cybersecurity.
+Natural Language Processing (NLP) is considered as an important branch of AI that can make it possible for computers to understand human language, interpret it, and eventually determine which parts are important in an intelligent system [168]. NLP is increasingly used nowadays by cybercriminals and security defense tools in the understanding and processing of unstructured data generated. NLP’s ultimate aim is to extract knowledge from unstructured data or information, i.e., to interpret, decipher, comprehend, and make sense of human languages in a valuable way. In the following, we discuss several parts of NLP that can be used for intelligent cybersecurity modeling when unstructured security content is available.
+Lexical analysis It usually includes the arrangement of terms being described and analyzed. Lexical analysis separates the entire chunk of text according to the criteria into paragraphs, sentences, phrases, or tokens such as identifier, keyword, literal, etc. For example, the lexical analysis of domain names [169] will lead to the development of the NLP-based model to classify the malicious domains that may encompass the “malicious nature” of the domains used by cybercriminals.
+Syntactic analysis This is seen as one of the key tools used to complete the tasks of the NLP, which is used to determine how the natural language aligns with the grammatical rules. The most widely used techniques in NLP are: lemmatization, morphological segmentation, word segmentation, part-of-speech marking, parsing, sentence breaking, stemming, etc. A syntactic analysis, e.g., parsing [170], may contribute to developing an NLP-based model for cyberattack prediction, for example, to quickly extract useful data from large quantities of public text.
+Semantic analysis Another of the key methods used to complete NLP assignments is semantic analysis, which includes understanding the context and perception of words and how sentences are structured. For example, for phishing classification, latent semantic analysis can be used with keyword extraction [171]. The most widely used techniques in NLP are entity recognition (NER), word sense disambiguation, natural language generation, etc. For example, a NER-based automated system [172], can be used to diagnose cybersecurity situations in IoT networks.
+Several most frequently used algorithms such as Bag-of-Words (BoW), TF-IDF (term frequency-inverse document frequency), Tokenization and Stop Words Removal, Stemming, Lemmatization, Topic Modeling, etc. are used in the area of NLP [173]. Most of the NLP-based modeling relies on machine and deep learning techniques discussed above for building the resultant data-driven model that can be used for various purposes in the domain of cybersecurity. In the following, we give examples of NLP-based security modeling.
+Detecting malicious domain names to identify malicious domain names (e.g., clbwpvdyztoepfua.lu) from benign domains (e.g., cnn.com), the NLP methods can be used. It helps to build a technique for detecting such malicious domains in DNS traffic based on the patterns that are inherent in domain names using a domain dataset collected via a domain crawl.
+Vulnerability analysis to detect the weaknesses and vulnerabilities in the code, the NLP techniques can be used. For instance, n-grams and various smoothing algorithms [174] combined with machine learning can be used to build such a model based on the associated patterns for detecting vulnerabilities. One example could be the detection of zero-day vulnerabilities in the banking sector. The analysts usually study conversations on various platforms on the web and looking for the relevant information that is useful for the purposes.
+Phishing identification detection of a phishing attack is a challenging problem, because of considering this as semantics-based attacks. Phishing can be several categories, such as web page based, email content based, URL based, etc. A machine learning model with a set of features can be used to detect such phishing [175]. NLP techniques can be used to effectively extract the features from such content as well as to build the model.
+Malware family analysis to modeling behavioral reports into a series of words is necessary to effectively detect malware. For the formulation of behavioral reports [176], a bag-of-words (BoW) NLP model might be helpful. For the automated engineering of related security features and to construct the model, NLP with machine learning techniques can be used.
+Overall, to enhance the cybersecurity operations by automating threat intelligence extracted from the unstructured sources, an NLP-based methodology can be used. Thus, NLP with the machine learning techniques is considered as the driver for the automation of security activities according to its capabilities in security modeling depending on the target security application. Therefore, we can conclude that NLP-based security modeling could be another major part of the domain of AI-driven cybersecurity.
+Knowledge representation and reasoning is another field of AI that typically represents the real-world information so that an intelligent cybersecurity system can utilize that information to solve complex security problems like a human. In the real world, knowledge of cybersecurity is usually regarded as information about a specific security domain. It is the analysis of how an intelligent cybersecurity agent’s views, intentions, and decisions can be adequately articulated for automated reasoning, e.g., inference engines, classifiers, etc., to solve complex security problems. In this section, we first discuss and summarize the approaches of knowledge representation, and then we discuss a conceptual security model based on knowledge.
+Modeling the intelligent actions of a security agent is the key purpose of knowledge representation. In the field of cybersecurity, it enables a computer to benefit from that knowledge of security and function like a human being accordingly. Instead of considering the bottom-up learning, it takes into account a top-down approach to build the model to behave intelligently. As discussed in [168], descriptive knowledge, structural knowledge, procedural knowledge, meta knowledge, heuristic knowledge, etc. are the several types of knowledge that can be used in various application areas. In the following, we summarize several knowledge representation methods such as logical, semantic network, frame, and production rules [177], that can be used to build a knowledge-based conceptual model.
+Logical representation It represents with concrete rules without any ambiguity that typically deals with propositions. Thus, logic can be used to represent simple facts that are the general statements that may be either ‘True’ or ‘False’. Overall, logical representation means drawing a conclusion based on various conditions. Although logical representation enables us to do logical reasoning, the inference may not be so efficient due to the restrictions and challenges to work with.
+Semantic network representation We may represent our information in the form of graphical networks within semantic networks. This network is made up of objects and arcs representing nodes that define the relationship between those objects. Overall, they provide a structural representation of statements about a domain of interest. Although semantic networks are a natural representation of information, their intelligence in action depends on the system’s creator.
+Frame representation A frame, derived from semantic networks, is a structure-like record that consists of a set of attributes to represent an object in the world and its values. In the frame, knowledge about an object or event can be stored together in the knowledge base. Although frame representation is easy to understand and visualize, it cannot proceed with the inference mechanism smoothly.
+Production rules It typically consists of pairs of the condition, and corresponding action, which means, “If condition then action”. Thus, an agent first checks the condition and then the corresponding rule fires if the condition satisfies. The main advantage of such a rule-based system in cybersecurity is that the “condition” part can determine which rule is suitable to apply for a specific security problem. And the “action” part carries out the solutions associated with that problem. Thus, in a rule-based cybersecurity system, it allows us to remove, add or modify the rules according to the needs.
+Overall, we can say that the knowledge for building a knowledge-based conceptual model or system can be represented in multiple ways. However, the effectiveness of these methods in a security system may vary depending on the nature of the data and target application. In the following, we discuss how security ontologies, a formal way to define the semantics of knowledge and data, can be used to build a conceptual security model.
+Ontologies, through information representation techniques, are conceptual models of what exists in some domain, brought into machine-interpretable form. Top-level ontologies or upper ontologies, domain ontologies, and application ontologies are several types of ontologies used in the area [177]. In general, ontology is “an explicit specification of conceptualization and a formal way to define the semantics of knowledge and data” [178]. According to [178], formally, an ontology is represented as “\(\{O = C, R, I, H, A\}\), where \(\{C = C_1, C_2,...,C_n\}\) represents a set of concepts, and \(\{R = R_1, R_2,...,R_m\}\) represents a set of relations defined over the concepts. I represents a set of instances of concepts, and H represents a Directed Acyclic Graph (DAG) defined by the subsumption relation between concepts, and A represents a set of axioms bringing additional constraints on the ontology”. In an ontology-based information security, five concepts such as threat, vulnerability, attack, impact, and control, might be involved [179].
+A structure of conceptual modeling based on security ontologies in a cybersecurity system and the corresponding information flow from data source to application
+Concept:Threat represents various types of difficulties or dangers against a given set of security properties.
+Concept: Vulnerability mainly represents the weaknesses of a cybersecurity system.
+Concept:Attack represents various types of security incidents caused by cyber criminals.
+Concept:Impact represents the effects that a security incident can imply.
+Concept: Controls represents the relevant mechanisms that can be used to reduce or avoid the effects of a security incident or to protect a vulnerability.
+Based on these concepts and their relationships, a conceptual security model can be built to solve complex security problems. The rationale behind the conceptual security model can be structured as: a cyber-threat may produce an attack or security incident that exploits the vulnerabilities of the system, which may have an impact on that system. A control mechanism that can detect, prevent, or block the attack, is thus needed to protect the system and make it secured. In Fig. 4, we show a structure of conceptual modeling based on security ontologies in a cybersecurity system and the corresponding information flow from data source to application. According to Fig. 4, the automated security policies can also be generated from the relevant security ontologies that are used in the eventual security services or applications. Thus, it is capable of making intelligent decisions according to the concepts and their semantic relationships that exist in the ontologies. Based on different knowledge representation formalisms, various ontology languages can be used. In the area of semantic web, Web Ontology Language (OWL) [180] is mostly used to formalize and represent these concepts and their semantic relationships in a graphical representation to build an ontology-based security model. Overall, we can conclude that knowledge representation based conceptual security modeling could be another part in the domain of AI-driven cybersecurity according to its computing capabilities while making intelligent decisions.
+In artificial intelligence, an expert system is generally a computer system that emulates the decision-making capacity of a human expert. A cybersecurity expert system is an instance of a knowledge-based or rule-based system in which decisions can be made based on security guidelines. The system is typically split into two subsystems, such as the inference engine and the knowledge base represented as security rules, as shown in Fig. 5.
+A structure of a cybersecurity expert system modeling
+The foundation of this cybersecurity expert framework is the knowledge base shown in Fig. 5, as it consists of knowledge of the domain of the target cybersecurity application as well as operational knowledge of the rules of security decisions. The inference engine shown in Fig. 5, on the other hand, applies the rules to known facts from a security perspective to deduce new facts. The user interface shown in Fig. 5 recognizes the original security facts and invokes the inference engine to trigger the knowledge base decision rules.
+Usually, a rule consists of two parts: the antecedent (IF part), called the state or premise, and the inference or action called the consequent (THEN part). Thus, a rule’s basic syntax can be expressed as:
+IF \(<\mathrm{antecedent}>\) THEN \(<\mathrm{consequent}>\)
+For instance, “if the flag value is RSTR, then the outcome is anomaly” can be an example of the IF-THEN rule for detecting anomalies. Similarly, another rule with multiple security features could be “if flag value is SF, service is ftb, and duration \(<= 4\), then the outcome is anomaly”, generated from the tree shown in Fig. 2. In addition to human experts, several techniques can be used to generate rules that can be used to build the rule-based cybersecurity expert system.
+Classification learning rules In machine learning, the classification is one of the popular techniques that can be used in various application areas. Several popular classification techniques such as decision trees [140], IntrudTree [117], BehavDT [141], Ripple Down Rule learner (RIDOR) [181], Repeated Incremental Pruning to Produce Error Reduction (RIPPER) [182], etc. exist with the ability of rule generation.
+Association learning rules In general, association rules are created by searching for frequent IF-THEN pattern data on the basis of [161] support and confidence value. For generating rules using a given data set, common association rule learning techniques such as AIS [156], Apriori [157], FP-Tree [158], RARM [159], Eclat [160], ABC-RuleMiner [161], etc. can be used.
+Fuzzy logic-based rules Usually, fuzzy logic is an approach to computing focused on “degrees of truth” rather than the usual “true or false” (1 or 0) [183]. Thus, instead of Boolean logic, a fuzzy rule-based expert system uses fuzzy logic. In other words, using these rules, a fuzzy expert system is a set of membership functions and rules that can provide outputs.
+Conceptual semantic rule As discussed earlier, an ontology is “an explicit specification of conceptualization and a formal way to define the semantics of knowledge and data” [178]. For instance, security ontologies include the relationships between each entry within an ontology that can be used to generate such conceptual rules. As each security decision must consider the concrete company environment, particular domain ontology can help for building an effective semantic cybersecurity application.
+Thus, a rule-based cybersecurity expert system model may have the decision-making capacity of a security expert in an intelligent cybersecurity framework that is built to solve complex cybersecurity issues, as well as by information reasoning. A rule generation method discussed above can play a major role in generating the IF-THEN rules while developing the knowledge base module. The rules can then be modified and handled according to the requirements by domain experts with knowledge of business rules. Overall, we can conclude that cybersecurity expert systems modeling could be another important part in the domain of AI-driven cybersecurity according to its computing capabilities while making intelligent decisions.
+As we have discussed the role of Artificial Intelligence (AI) throughout the paper, which is known as the key technologies of the Fourth Industrial Revolution (Industry 4.0), can play a significant role for intelligent cybersecurity services and management. To intelligently solve today’s various cybersecurity issues, i.e., protecting of Internet-connected systems from cyber-threats, attacks, damage, or unauthorized access, popular AI methods such as machine and deep learning, natural language processing, knowledge representation and reasoning, as well as the concept of knowledge or rule-based expert systems modeling can be used, discussed briefly in Sect. 3. However, several research issues that are identified within the area of AI-driven cybersecurity, discussed briefly in the following.
+According to our study in this paper, cybersecurity source datasets are the primary component, especially to extract security insight or useful knowledge from security data using machine and deep learning technique, discussed briefly in Sect. 3. Thus, the primary and most fundamental challenge is to understand the real-world security issues and to explore the relevant cybersecurity data to extract insights or useful knowledge for future actions. For instance, public text data such as cyber-related webpage text is used to detect and track the potential cyber-attacks [170]. However, collecting the security data is not straight forward as the data sources could be multiple and dynamic. Thus, collecting various types of real-world data such as structured, semi-structured, unstructured, or meta-data [137] . relevant to a particular problem domain with legal access, which may vary from application to application, is challenging. Therefore, to understand the security problem, and to integrate and manage the collected data for effective data analysis could be one of the major challenges to work in the area of AI-driven cybersecurity.
+The next challenge could be an effective and intelligent solution to tackle the target security problems. Although several machine and deep learning techniques, such as clustering, rule-based approach, classification, neural network, etc. [3] are employed to solve several security problems, summarized in Table 2, these models can be improved with advanced analytics. For instance, observing attack patterns in time-series, behavioral analysis, data sparseness in security analysis, the impact of security features in modeling, simplifying and optimizing the security model, taking into account advanced feature engineering tasks, synchronizing temporal patterns in modeling while considering multiple data sources, etc. can be considered. Moreover, several important issues such as data aggregation, redundancy in rule generation, effectiveness of prediction algorithms, data inconsistency, recent pattern analysis for prediction [184,185,186], etc. might be an important issue for effective data-driven modeling. Thus, advanced analytics techniques, improved machine or deep learning techniques, new data-driven algorithms, or hybrid methods could give better results for modeling security intelligence, depending on the nature of the security problems, which could be a potential research direction in the area.
+Besides, to effectively extract the useful insights from the unstructured security data and to effectively build an intelligent security model could be another issue. For instance, a large amount of textual content is needed to analyze identifying malicious domains, security incident and event management, malware family analysis, domain classification, phishing, source code vulnerability analysis, spam emails, etc., that are discussed briefly in Sect. 3. Therefore effectively mining the relevant contents using natural language processing (NLP) techniques, or designing a new NLP-based model, could be another research direction in the area of AI-driven cybersecurity. An effective cybersecurity expert system modeling considering IF-THEN policy rules could be another potential research direction in the area. However, the development of large-scale rule-based systems in the area of cybersecurity may face numerous challenges. For instance, the reasoning process in the expert system can be very complex, difficult to manage [168]. Thus, a lightweight rule-based inference engine that allows to reason for intelligent cybersecurity services is important. Although several rule mining techniques are popular in the area, mentioned in Sect. 3, a concise set of security policy rules considering generalization, reliability, non-redundancy, exceptional discovery, etc., could make the expert security system more effective. Therefore, a deeper understanding and designing an effective rule-based system by taking into these properties could be another research issue in the area of AI-driven cybersecurity. Moreover, designing security ontologies according to today’s need, or knowledge representation model, and eventually to build an effective conceptual security modeling, could be another potential research scope in the area.
+Overall, the most important task for an intelligent cybersecurity system is to design and build an effective cybersecurity framework that supports the artificial intelligence techniques, discussed in Sect. 3. In such a framework, we need to take into account AI-based advanced analytics, so that the security framework is capable to resolve the associated issues intelligently. Therefore, to assess the feasibility and effectiveness of the related AI-based approaches, a well-designed cybersecurity framework and experimental evaluation are required, which is a very important direction and a major challenge as well. Overall, we can conclude that this paper has uncovered lots of research issues and potential future directions to resolve, discussed above, in the area of AI-driven cybersecurity.
+Motivated by the growing significance of cybersecurity and artificial intelligence, in this paper, we have studied AI-driven cybersecurity. Our goal was to provide a comprehensive overview of how artificial intelligence can play a significant role in intelligent decision making and to build smart and automated cybersecurity systems. For this, we have presented security intelligence modeling where various AI-based methods such as machine and deep learning, the concept of natural language processing, knowledge representation and reasoning, as well as the concept of knowledge or rule-based expert systems modeling are used to intelligently tackle the cybersecurity issues. Such AI-based modeling can be used in various problem domains ranging from malware analysis to risky behavior identification that might lead to a phishing attack or malicious code, which are discussed briefly throughout this paper.
+In the field of AI-driven cybersecurity, the concept of AI-based security intelligence modeling discussed in this paper can help the cybersecurity computing process to be more actionable and intelligent. Based on our study, we have also highlighted several research issues and potential directions that can help researchers do future research in the area. Overall, we believe this paper can be served as a reference point and guidelines for cybersecurity researchers as well as industry professionals in the area, especially from an intelligent computing or AI-based technical point of view.
+Li S, Da Li X, Zhao S. The internet of things: a survey. Inf Syst Front. 2015;17(2):243–59.
+Article 
+    
+                    Google Scholar 
+                
+Velte T, Velte A, Elsenpeter R. Cloud computing, a practical approach. New York: McGraw-Hill Inc; 2009.
+
+                    Google Scholar 
+                
+Sarker IH, Kayes ASM, Badsha S, Alqahtani H, Watters P, Ng A. Cybersecurity data science: an overview from machine learning perspective. J Big Data. 2020;7(1):1–29.
+
+                    Google Scholar 
+                
+Ibm security report. https://www.ibm.com/security/data-breach. Accessed 20 Oct 2019.
+Fischer EA. Cybersecurity issues and challenges: in brief. 2014.
+Anwar S, Mohamad Zain J, Zolkipli MF, Inayat Z, Khan S, Anthony B, Chang V. From intrusion detection to an intrusion response system: fundamentals, requirements, and future directions. Algorithms. 2017;39(2):10.
+MATH 
+    
+                    Google Scholar 
+                
+Mohammadi S, Mirvaziri H, Ghazizadeh-Ahsaee M, Karimipour H. Cyber intrusion detection by combined feature selection algorithm. J Inf Secur Appl. 2019;44:80–8.
+
+                    Google Scholar 
+                
+Tapiador JE, Orfila A, Ribagorda A, Ramos B. Key-recovery attacks on kids, a keyed anomaly detection system. IEEE Trans Dependable Secur Comput. 2013;12(3):312–25.
+
+                    Google Scholar 
+                
+Tavallaee M, Stakhanova N, Ghorbani AA. Toward credible evaluation of anomaly-based intrusion-detection methods. IEEE Trans Syst Man Cybern Part C (Appl Rev). 2010;40(5):516–24.
+
+                    Google Scholar 
+                
+Foroughi F, Luksch P. Data science methodology for cybersecurity projects. arXiv preprint arXiv:1803.04219. 2018.
+Saxe J, Sanders H. Malware data science: attack detection and attribution. 2018.
+Rainie L, Anderson J, Connolly J. Cyber attacks likely to increase. Digit Life. 2014;2025.
+Al-Garadi MA, Mohamed A, Al-Ali A, Du X, Ali I, Guizani M. A survey of machine and deep learning methods for internet of things (iot) security. IEEE Commun Surv Tutor. 2020;22:1646–85.
+
+                    Google Scholar 
+                
+Google trends. In https://trends.google.com/trends/. 2019.
+Craigen D, Diakun-Thibault N, Purse R. Defining cybersecurity. Technol Innov Manag Rev. 2014;4(10):13–21.
+
+                    Google Scholar 
+                
+Aftergood S. Cybersecurity: the cold war online. Nature. 2017;547(7661):30.
+
+                    Google Scholar 
+                
+National Research Council et al. Toward a safer and more secure cyberspace. 2007.
+Jang-Jaccard J, Nepal S. A survey of emerging threats in cybersecurity. J Comput Syst Sci. 2014;80(5):973–93.
+MathSciNet 
+    MATH 
+    
+                    Google Scholar 
+                
+Lahcen RAM, Caulkins B, Mohapatra R, Kumar M. Review and insight on the behavioral aspects of cybersecurity. Cybersecurity. 2020;3:1–18.
+
+                    Google Scholar 
+                
+Mukkamala S, Sung A, Abraham A. Cyber security challenges: designing efficient intrusion detection systems and antivirus tools. In: Vemuri VR editor. Enhancing Computer Security with Smart Technology (Auerbach, 2006). 2005. p. 125–163.
+Sun N, Zhang J, Rimba P, Gao S, Zhang LY, Xiang Y. Data-driven cybersecurity incident prediction: a survey. IEEE Commun Surv Tutor. 2018;21(2):1744–72.
+
+                    Google Scholar 
+                
+McIntosh T, Jang-Jaccard J, Watters P, Susnjak T. The inadequacy of entropy-based ransomware detection. In: International conference on neural information processing. Springer; 2019. p. 181–189.
+Dai J, Chen C, Li Y. A backdoor attack against lstm-based text classification systems. IEEE Access. 2019;7:138872–8.
+
+                    Google Scholar 
+                
+Wang B, Yao Y, Shan S, Li H, Viswanath B, Zheng H, Zhao BY. Neural cleanse: Identifying and mitigating backdoor attacks in neural networks. In: 2019 IEEE symposium on security and privacy (SP). IEEE; 2019. p. 707–723.
+Banerjee A, Rahman MS, Faloutsos M. Sut: quantifying and mitigating url typosquatting. Comput Netw. 2011;55(13):3001–14.
+
+                    Google Scholar 
+                
+Alsayed A, Bilgrami A. E-banking security: internet hacking, phishing attacks, analysis and prevention of fraudulent activities. Int J Emerg Technol Adv Act. 2017;7(1):109–15.
+
+                    Google Scholar 
+                
+Alazab M, Venkatraman S, Watters P, Alazab M, et al. Zero-day malware detection based on supervised learning algorithms of API call signatures. Proceedings of the 9th Australasian Data Mining Conference (AusDM), Ballarat, Australia. Australian Computer Society, CRPIT; 2010, vol 121.
+Bilge L, Dumitraş T. Before we knew it: an empirical study of zero-day attacks in the real world. In: Proceedings of the 2012 ACM conference on computer and communications security. ACM; 2012. p. 833–844.
+Moghimi A, Wichelmann J, Eisenbarth T, Sunar B. Memjam: a false dependency attack against constant-time crypto implementations. Int J Parallel Program. 2019;47(4):538–70.
+MATH 
+    
+                    Google Scholar 
+                
+Warkentin M, Willison R. Behavioral and policy issues in information systems security: the insider threat. Eur J Inf Syst. 2009;18(2):101–5.
+
+                    Google Scholar 
+                
+Ohm M, Sykosch A, Meier M. Towards detection of software supply chain attacks by forensic artifacts. In: Proceedings of the 15th international conference on availability, reliability and security. 2020. p. 1–6.
+Eggers S. A novel approach for analyzing the nuclear supply chain cyber-attack surface. Nucl Eng Technol. 2021;53(3):879–887
+
+                    Google Scholar 
+                
+Kügler D. “man in the middle” attacks on bluetooth. In: International conference on financial cryptography. Springer; 2003. p. 149–161.
+Shaw A. Data breach: from notification to prevention using pci dss. Colum JL Soc Probs. 2009;43:517.
+
+                    Google Scholar 
+                
+Data breach investigations report 2019. https://enterprise.verizon.com/resources/reports/dbir/. Accessed 20 Oct 2019.
+Hong S. Survey on analysis and countermeasure for hacking attacks to cryptocurrency exchange. J Korea Converg Soc. 2019;10(10):1–6.
+
+                    Google Scholar 
+                
+Boyd SW, Keromytis AD. Sqlrand: preventing sql injection attacks. In: International conference on applied cryptography and network security. Springer; 2004. p. 292–302.
+Tong F, Yan Z. A hybrid approach of mobile malware detection in android. J Parallel Distrib Comput. 2017;103:22–31.
+
+                    Google Scholar 
+                
+Shankar VG, Jangid M, Devi B, Kabra S. Mobile big data: malware and its analysis. In: Proceedings of first international conference on smart system, innovations and computing. Springer; 2018. p. 831–842.
+Davi L, Dmitrienko A, Sadeghi A-R, Winandy M. Privilege escalation attacks on android. In: International conference on information security. Springer; 2010. p. 346–360.
+Jovičić B, Simić D. Common web application attack types and security using asp .net. ComSIS. December. 2006.
+Virvilis N, Gritzalis D. The big four-what we did wrong in advanced persistent threat detection. In: 2013 international conference on availability, reliability and security. IEEE; 2013. p. 248–254.
+Sigler K. Crypto-jacking: how cyber-criminals are exploiting the crypto-currency boom. Comput Fraud Secur. 2018;2018(9):12–4.
+
+                    Google Scholar 
+                
+Khraisat A, Gondal I, Vamplew P, Kamruzzaman J. Survey of intrusion detection systems: techniques, datasets and challenges. Cybersecurity. 2019;2(1):20.
+
+                    Google Scholar 
+                
+Qi H, Di X, Li J. Formal definition and analysis of access control model based on role and attribute. J Inf Secur Appl. 2018;43:53–60.
+
+                    Google Scholar 
+                
+Yin J. Firewall policy management, May 10 2016. US Patent 9,338,134.
+Xue Y, Meng G, Liu Y, Tan TH, Chen H, Sun J, Zhang J. Auditing anti-malware tools by evolving android malware and dynamic loading technique. IEEE Trans Inf Forensics Secur. 2017;12(7):1529–44.
+
+                    Google Scholar 
+                
+Hunt T, Zhu Z, Yuanzhong X, Peter S, Witchel E. Ryoan: a distributed sandbox for untrusted computation on secret data. ACM Trans Comput Syst (TOCS). 2018;35(4):1–32.
+
+                    Google Scholar 
+                
+Irfan M, Abbas H, Sun Y, Sajid A, Pasha M. A framework for cloud forensics evidence collection and analysis using security information and event management. Secur Commun Netw. 2016;9(16):3790–807.
+
+                    Google Scholar 
+                
+Abood OG, Guirguis SK. A survey on cryptography algorithms. Int J Sci Res Publ. 2018;8(7):410–5.
+
+                    Google Scholar 
+                
+Johnson L. Computer incident response and forensics team management: conducting a successful incident response. 2013.
+Brahmi I, Brahmi H, Yahia SB. A multi-agents intrusion detection system using ontology and clustering techniques. In: IFIP international conference on computer science and its applications. Springer; 2015. p. 381–393.
+Qu X, Yang L, Guo K, Ma L, Sun M, Ke M, Li M. A survey on the development of self-organizing maps for unsupervised intrusion detection. Mob Netw Appl. 2019; 1–22.
+Liao H-J, Richard Lin C-H, Lin Y-C, Tung K-Y. Intrusion detection system: a comprehensive review. J Netw Comput Appl. 2013;36(1):16–24.
+
+                    Google Scholar 
+                
+Ammar A, Michael H, Jemal A, Moutaz A. Using feature selection for intrusion detection system. In: 2012 international symposium on communications and information technologies (ISCIT). IEEE; 2012. p. 296–301.
+Viegas E, Santin AO, Franca A, Jasinski R, Pedroni VA, Oliveira LS. Towards an energy-efficient anomaly-based intrusion detection engine for embedded systems. IEEE Trans Comput. 2016;66(1):163–77.
+MathSciNet 
+    MATH 
+    
+                    Google Scholar 
+                
+Xin Y, Kong L, Liu Z, Chen Y, Li Y, Zhu H, Gao M, Hou H, Wang C. Machine learning and deep learning methods for cybersecurity. IEEE Access. 2018;6:35365–81.
+
+                    Google Scholar 
+                
+Ragsdale DJ, Carver CA, Humphries JW, Pooch UW. Adaptation techniques for intrusion detection and intrusion response systems. In: Smc 2000 conference proceedings. 2000 IEEE international conference on systems, man and cybernetics.’cybernetics evolving to systems, humans, organizations, and their complex interactions’(cat. no. 0) vol. 4. IEEE; 2000. p. 2344–2349.
+Tavallaee M, Bagheri E, Lu W, Ghorbani AA. A detailed analysis of the kdd cup 99 data set. In: 2009 IEEE symposium on computational intelligence for security and defense applications. IEEE; 2009. p. 1–6.
+Moustafa N, Slay J. Unsw-nb15: a comprehensive data set for network intrusion detection systems (unsw-nb15 network data set). In: 2015 military communications and information systems conference (MilCIS). IEEE; 2015. p. 1–6.
+Lippmann RP, Fried DJ, Graf I, Haines JW, Kendall KR, McClung D, Weber D, Webster SE, Wyschogrod D, Cunningham RK, et al. Evaluating intrusion detection systems: the 1998 darpa off-line intrusion detection evaluation. In: Proceedings DARPA information survivability conference and exposition. DISCEX’00, vol 2. IEEE; 2000. p. 12–26.
+Caida ddos attack 2007 dataset. http://www.caida.org/data/ passive/ddos-20070804-dataset.xml/. Accessed 20 Oct (2019).
+Caida anonymized internet traces 2008 dataset. http://www.caida.org/data/passive/passive-2008-dataset.xml/. Accessed 20 Oct 2019.
+Isot botnet dataset. https://www.uvic.ca/engineering/ece/isot/ datasets/index.php/. Accessed 20 Oct 2019.
+The honeynet project. http://www.honeynet.org/chapters/france/. Accessed 20 Oct 2019.
+Canadian institute of cybersecurity, university of new brunswick, iscx dataset. http://www.unb.ca/cic/datasets/index.html/. Accessed 20 Oct 2019.
+Shiravi A, Shiravi H, Tavallaee M, Ghorbani AA. Toward developing a systematic approach to generate benchmark datasets for intrusion detection. Comput Secur. 2012;31(3):357–74.
+
+                    Google Scholar 
+                
+The ctu-13 dataset. https://stratosphereips.org/category/datasets-ctu13. Accessed 20 Oct 2019.
+Cse-cic-ids2018 [online]. https://www.unb.ca/cic/ datasets/ids-2018.html/. Accessed 20 Oct 2019.
+Cic-ddos2019 [online]. https://www.unb.ca/cic/datasets/ddos-2019.html/. Accessed 28 March 2020.
+Jing X, Yan Z, Jiang X, Pedrycz W. Network traffic fusion and analysis against ddos flooding attacks with a novel reversible sketch. Inf Fusion. 2019;51:100–13.
+
+                    Google Scholar 
+                
+Xie M, Hu J, Yu X, Chang E. Evaluating host-based anomaly detection systems: application of the frequency-based algorithms to adfa-ld. In: International conference on network and system security. Springer; 2015. p. 542–549.
+Lindauer B, Glasser J, Rosen M, Wallnau KC, L ExactData. Generating test data for insider threat detectors. JoWUA. 2014;5(2):80–94.
+
+                    Google Scholar 
+                
+Glasser J, Lindauer B. Bridging the gap: a pragmatic approach to generating insider threat data. In: 2013 IEEE security and privacy workshops. IEEE; 2013. p. 98–104.
+Enronspam. https://labs-repos.iit.demokritos.gr/skel/i-config/downloads/enron-spam/. Accessed 20 Oct 2019.
+Spamassassin. http://www.spamassassin.org/publiccorpus/. Accessed 20 Oct 2019.
+Lingspam. https://labs-repos.iit.demokritos.gr/skel/i-config/downloads/lingspampublic.tar.gz/. Accessed 20 Oct 2019.
+Alexa top sites. https://aws.amazon.com/alexa-top-sites/. Accessed 20 Oct 2019.
+Bambenek consulting–master feeds. http://osint.bambenekconsulting.com/feeds/. Accessed 20 Oct 2019.
+Dgarchive. https://dgarchive.caad.fkie.fraunhofer.de/site/. Accessed 20 Oct 2019.
+Zago M, Pérez MG, Pérez GM. Umudga: a dataset for profiling algorithmically generated domain names in botnet detection. Data in Brief. 2020. p. 105400.
+Zhou Y, Jiang X. Dissecting android malware: characterization and evolution. In: 2012 IEEE symposium on security and privacy. IEEE; 2012. p. 95–109.
+Virusshare. http://virusshare.com/. Accessed 20 Oct 2019.
+Virustotal. https://virustotal.com/. Accessed 20 Oct 2019.
+Comodo. https://www.comodo.com/home/internet-security/updates/vdp/database.php. Accessed 20 Oct 2019.
+Contagio. http://contagiodump.blogspot.com/. Accessed 20 Oct 2019.
+Kumar R, Xiaosong Z, Khan RU, Kumar J, Ahad I. Effective and explainable detection of android malware based on machine learning algorithms. In: Proceedings of the 2018 international conference on computing and artificial intelligence. ACM; 2018. p. 35–40.
+Microsoft malware classification (big 2015). arXiv:1802.10135. Accessed 20 Oct 2019.
+Koroniotis N, Moustafa N, Sitnikova E, Turnbull B. Towards the development of realistic botnet dataset in the internet of things for network forensic analytics: bot-iot dataset. Future Gener Comput Syst. 2019;100:779–96.
+
+                    Google Scholar 
+                
+Wu Y, Wei D, Feng J. Network attacks detection methods based on deep learning techniques: a survey. Secur Commun Netw. 2020;2020:17.
+
+                    Google Scholar 
+                
+Ferrag MA, Maglaras L, Moschoyiannis S, Janicke H. Deep learning for cyber security intrusion detection: approaches, datasets, and comparative study. J Inf Secur Appl. 2020;50:102419.
+
+                    Google Scholar 
+                
+Aleesa AM, Zaidan BB, Zaidan AA, Sahar NM. Review of intrusion detection systems based on deep learning techniques: coherent taxonomy, challenges, motivations, recommendations, substantial analysis and future directions. Neural Comput Appl. 2020;32(14):9827–58.
+
+                    Google Scholar 
+                
+Berman DS, Buczak AL, Chavis JS, Corbett CL. A survey of deep learning methods for cyber security. Information. 2019;10(4):122.
+
+                    Google Scholar 
+                
+Chandrasekhar AM, Raghuveer K. Confederation of fcm clustering, ann and svm techniques to implement hybrid nids using corrected kdd cup 99 dataset. In: 2014 international conference on communication and signal processing. IEEE; 2014. p. 672–676.
+Sharifi AM, Amirgholipour SK, Pourebrahimi A. Intrusion detection based on joint of k-means and knn. J Converg Inf Technol. 2015;10(5):42.
+
+                    Google Scholar 
+                
+Wei-Chao L, Shih-Wen K, Chih-Fong T. Cann: an intrusion detection system based on combining cluster centers and nearest neighbors. Knowl Based Syst. 2015;78:13–21.
+
+                    Google Scholar 
+                
+Tajbakhsh A, Rahmati M, Mirzaei A. Intrusion detection using fuzzy association rules. Appl Soft Comput. 2009;9(2):462–9.
+
+                    Google Scholar 
+                
+Mitchell R, Chen R. Behavior rule specification-based intrusion detection for safety critical medical cyber physical systems. IEEE Trans Dependable Secur Comput. 2014;12(1):16–30.
+
+                    Google Scholar 
+                
+Kotpalliwar MV, Wajgi R. Classification of attacks using support vector machine (svm) on kddcup’99 ids database. In: 2015 fifth international conference on communication systems and network technologies. IEEE; 2015. p. 987–990.
+Pervez MS, Farid DM. Feature selection and intrusion classification in nsl-kdd cup 99 dataset employing svms. In: The 8th international conference on software, knowledge, information management and applications (SKIMA 2014). IEEE; 2014. p. 1–6.
+Yan M, Liu Z. A new method of transductive svm-based network intrusion detection. In: International conference on computer and computing technologies in agriculture. Springer; 2010. p. 87–95.
+Li Y, Xia J, Zhang S, Yan J, Ai X, Dai K. An efficient intrusion detection system based on support vector machines and gradually feature removal method. Expert Syst Appl. 2012;39(1):424–30.
+
+                    Google Scholar 
+                
+Raman MRG, Somu N, Jagarapu S, Manghnani T, Selvam T, Krithivasan K, Sriram VSS. An efficient intrusion detection technique based on support vector machine and improved binary gravitational search algorithm. Artif Intell Rev. 2020;53:3255–3286.
+
+                    Google Scholar 
+                
+Kokila RT, Thamarai Selvi S, Govindarajan K. Ddos detection and analysis in sdn-based environment using support vector machine classifier. In: 2014 sixth international conference on advanced computing (ICoAC). IEEE; 2014. p. 205–210.
+Xie M, Hu J, Slay J. Evaluating host-based anomaly detection systems: application of the one-class svm algorithm to adfa-ld. In: 2014 11th international conference on fuzzy systems and knowledge discovery (FSKD). IEEE; 2014. p. 978–982.
+Saxena H, Richariya V. Intrusion detection in kdd99 dataset using svm-pso and feature reduction with information gain. Int J Comput Appl. 2014;98(6).25–29.
+
+                    Google Scholar 
+                
+Shapoorifard H, Shamsinejad P. Intrusion detection using a novel hybrid method incorporating an improved knn. Int J Comput Appl. 2017;173(1):5–9.
+
+                    Google Scholar 
+                
+Vishwakarma S, Sharma V, Tiwari A. An intrusion detection system using knn-aco algorithm. Int J Comput Appl. 2017;171(10):18–23.
+
+                    Google Scholar 
+                
+Meng W, Li W, Kwok L-F. Design of intelligent knn-based alarm filter using knowledge-based alert verification in intrusion detection. Secur Commun Netw. 2015;8(18):3883–95.
+
+                    Google Scholar 
+                
+Dada EG. A hybridized svm-knn-pdapso approach to intrusion detection system. In: Proceedings of Facility Seminar Ser. 2017. p. 14–21.
+Koc L, Mazzuchi TA, Sarkani S. A network intrusion detection system based on a hidden Naïve Bayes multiclass classifier. Expert Syst Appl. 2012;39(18):13492–500.
+
+                    Google Scholar 
+                
+Moon D, Im H, Kim I, Park JH. Dtb-ids: an intrusion detection system based on decision tree using behavior analysis for preventing apt attacks. J Supercomput. 2017;73(7):2881–95.
+
+                    Google Scholar 
+                
+Ingre B, Yadav A, Soni AK. Decision tree based intrusion detection system for nsl-kdd dataset. In: International conference on information and communication technology for intelligent systems. Springer; 2017. p. 207–218.
+Malik AJ, Khan FA. A hybrid technique using binary particle swarm optimization and decision tree pruning for network intrusion detection. Cluster Comput. 2018;21(1):667–80.
+
+                    Google Scholar 
+                
+Relan NG, Patil DR. Implementation of network intrusion detection system using variant of decision tree algorithm. In: 2015 international conference on nascent technologies in the engineering field (ICNTE). IEEE; 2015. p. 1–5.
+Rai K, Syamala Devi M, Guleria A. Decision tree based algorithm for intrusion detection. Int J Adv Netw Appl. 2016;7(4):2828.
+
+                    Google Scholar 
+                
+Sarker IH, Abushark YB, Alsolami F, Khan AI. Intrudtree: a machine learning based cyber security intrusion detection model. Symmetry. 2020;12(5):754.
+
+                    Google Scholar 
+                
+Puthran S, Shah K. Intrusion detection using improved decision tree algorithm with binary and quad split. In: International symposium on security in computing and communication. Springer; 2016. p. 427–438.
+Balogun AO, Jimoh RG. Anomaly intrusion detection using an hybrid of decision tree and k-nearest neighbor. In: A Multidisciplinary Journal Publication of the Faculty of Science, Adeleke University, Ede, Nigeria, 2015; vol 2.
+Jo S, Sung H, Ahn B. A comparative study on the performance of intrusion detection using decision tree and artificial neural network models. J Korea Soc Digit Ind Inf Manag. 2015;11(4):33–45.
+
+                    Google Scholar 
+                
+Zhang J, Zulkernine M, Haque A. Random-forests-based network intrusion detection systems. IEEE Trans Syst Man Cybern Part C (Appl Rev). 2008;38(5):649–59.
+
+                    Google Scholar 
+                
+Yuan Y, Kaklamanos G, Hogrefe D. A novel semi-supervised adaboost technique for network anomaly detection. In: Proceedings of the 19th ACM international conference on modeling, analysis and simulation of wireless and mobile systems. ACM; 2016. p. 111–114.
+Alrawashdeh K, Purdy C. Toward an online anomaly intrusion detection system based on deep learning. In: 2016 15th IEEE international conference on machine learning and applications (ICMLA). IEEE; 2016. p. 195–200.
+Yin C, Zhu Y, Fei J, He X. A deep learning approach for intrusion detection using recurrent neural networks. IEEE Access. 2017;5:21954–61.
+
+                    Google Scholar 
+                
+Kim J, Kim J, Thi Thu HL, Kim H. Long short term memory recurrent neural network classifier for intrusion detection. In: 2016 international conference on platform technology and service (PlatCon). IEEE; 2016. p. 1–5.
+Almiani M, AbuGhazleh A, Al-Rahayfeh A, Atiewi S, Razaque A. Deep recurrent neural network for iot intrusion detection system. Simul Model Pract Theory. 2019;101:102031.
+
+                    Google Scholar 
+                
+Kolosnjaji B, Zarras A, Webster G, Eckert C. Deep learning for classification of malware system call sequences. In: Australasian joint conference on artificial intelligence. Springer; 2016. p. 137–149.
+Wang W, Zhu M, Zeng X, Ye X, Sheng Y. Malware traffic classification using convolutional neural network for representation learning. In: 2017 international conference on information networking (ICOIN). IEEE; 2017. p. 712–717.
+Hansen JV, Lowry PB, Meservy RD, McDonald DM. Genetic programming for prevention of cyberterrorism through dynamic and evolving intrusion detection. Decis Support Syst. 2007;43(4):1362–74.
+
+                    Google Scholar 
+                
+Aslahi-Shahri BM, Rahmani R, Chizari M, Maralani A, Eslami M, Golkar MJ, Ebrahimi A. A hybrid method consisting of GA and SVM for intrusion detection system. Neural Comput Appl. 2016;27(6):1669–76.
+
+                    Google Scholar 
+                
+Azad C, Jha VK. Genetic algorithm to solve the problem of small disjunct in the decision tree based intrusion detection system. Int J Comput Netw Inf Secur (IJCNIS). 2015;7(8):56.
+
+                    Google Scholar 
+                
+Ariu D, Tronci R, Giacinto G. Hmmpayl: an intrusion detection system based on hidden Markov models. Comput Secur. 2011;30(4):221–41.
+
+                    Google Scholar 
+                
+Årnes A, Valeur F, Vigna G, Kemmerer RA. Using hidden markov models to evaluate the risks of intrusions. In: International workshop on recent advances in intrusion detection. Springer; 2006. p. 145–164.
+Alauthman M, Aslam N, Al-kasassbeh M, Khan S, Al-Qerem A, Choo K-KR. An efficient reinforcement learning-based botnet detection approach. J Netw Comput Appl. 2020;150:102479.
+
+                    Google Scholar 
+                
+Blanco R, Cilla JJ, Briongos S, Malagón P, Moya JM. Applying cost-sensitive classifiers with reinforcement learning to ids. In: International conference on intelligent data engineering and automated learning. Springer; 2018. p. 531–538.
+Lopez-Martin M, Carro B, Sanchez-Esguevillas A. Application of deep reinforcement learning to intrusion detection for supervised problems. Expert Syst Appl. 2020;141:112963.
+
+                    Google Scholar 
+                
+Sarker IH. Machine learning: Algorithms, real-world applications and research directions. Preprints. 2021; 2021030216:1–23.
+
+                    Google Scholar 
+                
+Sarker IH, Kayes ASM, Watters P. Effectiveness analysis of machine learning classification models for predicting personalized context-aware smartphone usage. J Big Data. 2019;6(1):1–28.
+
+                    Google Scholar 
+                
+John GH, Langley P. Estimating continuous distributions in Bayesian classifiers. In: Proceedings of the eleventh conference on uncertainty in artificial intelligence. Morgan Kaufmann Publishers Inc.; 1995. p. 338–345.
+Quinlan JR. C4.5: Programs for machine learning. Mach Learn. 2014.
+Sarker IH, Colman A, Han J, Khan AI, Abushark YB, Salah K. Behavdt: a behavioral decision tree learning to build user-centric context-aware predictive model. Mob Netw Appl. 2020;25:1151–1161.
+
+                    Google Scholar 
+                
+Aha DW, Kibler D, Albert MK. Instance-based learning algorithms. Mach Learn. 1991;6(1):37–66.
+
+                    Google Scholar 
+                
+Keerthi SS, Shevade SK, Bhattacharyya C, Krishna Murthy KR. Improvements to platt’s smo algorithm for svm classifier design. Neural Comput. 2001;13(3):637–49.
+MATH 
+    
+                    Google Scholar 
+                
+Freund Y, Schapire RE, et al. Experiments with a new boosting algorithm. In: Icml, vol. 96. Citeseer; 1996. p. 148–156.
+Le Cessie S, Van Houwelingen JC. Ridge estimators in logistic regression. J R Stat Soc Ser C (Appl Stat). 1992;41(1):191–201.
+MATH 
+    
+                    Google Scholar 
+                
+Han J, Pei J, Kamber M. Data mining: concepts and techniques. 2011.
+Pedregosa F, Varoquaux G, Gramfort A, Michel V, Thirion B, Grisel O, Blondel M, Prettenhofer P, Weiss R, Dubourg V, et al. Scikit-learn: machine learning in python. J Mach Learn Res. 2011;12:2825–30.
+MathSciNet 
+    MATH 
+    
+                    Google Scholar 
+                
+Breiman L. Random forests. Mach Learn. 2001;45(1):5–32.
+MATH 
+    
+                    Google Scholar 
+                
+MacQueen J. Some methods for classification and analysis of multivariate observations. In: Fifth Berkeley symposium on mathematical statistics and probability, vol. 1. 1967.
+Rokach L. A survey of clustering algorithms. In: Data mining and knowledge discovery handbook. Springer; 2010. p. 269–298.
+Kaufman L, Rousseeuw PJ. Finding groups in data: an introduction to cluster analysis, vol. 344. New York: Wiley; 2009.
+MATH 
+    
+                    Google Scholar 
+                
+Ester M, Kriegel H-P, Sander J, Xiaowei X, et al. A density-based algorithm for discovering clusters in large spatial databases with noise. Kdd. 1996;96:226–31.
+
+                    Google Scholar 
+                
+Sneath PHA. The application of computers to taxonomy. J Gen Microbiol. 1957;17(1):201–26.
+
+                    Google Scholar 
+                
+Sorensen T. Method of establishing groups of equal amplitude in plant sociology based on similarity of species. Biol Skr. 1948;5:1–34.
+
+                    Google Scholar 
+                
+Sarker IH, Colman A, Kabir MA, Han J. Individualized time-series segmentation for mining mobile phone user behavior. Comput J. 2018;61(3):349–68.
+
+                    Google Scholar 
+                
+Agrawal R, Imieliński T, Swami A. Mining association rules between sets of items in large databases. In: ACM SIGMOD Record, vol. 22. ACM; 1993. p. 207–216.
+Agrawal R, Srikant R, et al. Fast algorithms for mining association rules. In: Proceedings of 20th international conference very large data bases, VLDB, vol. 1215. 1994. p. 487–499.
+Han J, Pei J, Yin Y. Mining frequent patterns without candidate generation. In: ACM Sigmod Record, vol. 29. ACM; 2000. p. 1–12.
+Das A, Ng W-K, Woon Y-K. Rapid association rule mining. In: Proceedings of the tenth international conference on Information and knowledge management. ACM; 2001. p. 474–481.
+Zaki MJ. Scalable algorithms for association mining. IEEE Trans Knowl Data Eng. 2000;12(3):372–90.
+
+                    Google Scholar 
+                
+Sarker IH, Kayes ASM. Abc-ruleminer: user behavioral rule-based machine learning method for context-aware intelligent services. J Netw Comput Appl. 2020;168:102762.
+
+                    Google Scholar 
+                
+Sarker IH, Abushark YB, Khan AI. Contextpca: predicting context-aware smartphone apps usage based on machine learning techniques. Symmetry. 2020;12(4):499.
+
+                    Google Scholar 
+                
+Van Efferen L, Ali-Eldin AMT. A multi-layer perceptron approach for flow-based anomaly detection. In: 2017 international symposium on networks, computers and communications (ISNCC). IEEE; 2017. p. 1–6.
+Liu H, Lang B, Liu M, Yan H. Cnn and rnn based payload classification methods for attack detection. Knowl Based Syst. 2019;163:332–41.
+
+                    Google Scholar 
+                
+Khan FA, Gumaei A, Derhab A, Hussain A. A novel two-stage deep learning model for efficient network intrusion detection. IEEE Access. 2019;7:30373–85.
+
+                    Google Scholar 
+                
+Kaelbling LP, Littman ML, Moore AW. Reinforcement learning: a survey. J Artif Intell Res. 1996;4:237–85.
+
+                    Google Scholar 
+                
+Sarker IH. Deep cybersecurity: A comprehensive overview from neural network and deep learning perspective. Preprints. 2021; 2021020340:1–18.
+
+                    Google Scholar 
+                
+Sarker IH, Hoque MM, Uddin K et al. Mobile data science and intelligent apps: concepts, ai-based modeling and research directions. Mob Netw Appl. 2020;1–19.
+Kidmose E, Stevanovic M, Pedersen JM. Detection of malicious domains through lexical analysis. In: 2018 international conference on cyber security and protection of digital services (cyber security). IEEE; 2018. p. 1–5.
+Perera I, Hwang J, Bayas K, Dorr B, Wilks Y. Cyberattack prediction through public text analysis and mini-theories. In: 2018 IEEE international conference on big data (big data). IEEE; 2018. p. 3001–3010.
+L’Huillier G, Hevia A, Weber R, Rios S. Latent semantic analysis and keyword extraction for phishing classification. In: 2010 IEEE international conference on intelligence and security informatics. IEEE; 2010. p. 129–131.
+Georgescu T-M, Iancu B, Zurini M. Named-entity-recognition-based automated system for diagnosing cybersecurity situations in iot networks. Sensors. 2019;19(15):3380.
+
+                    Google Scholar 
+                
+Sun S, Luo C, Chen J. A review of natural language processing techniques for opinion mining systems. Inf Fusion. 2017;36:10–25.
+
+                    Google Scholar 
+                
+Mokhov SA, Paquet J, Debbabi M. The use of nlp techniques in static code analysis to detect weaknesses and vulnerabilities. In: Canadian conference on artificial intelligence. Springer; 2014. p. 326–332.
+Egozi G, Verma R. Phishing email detection using robust nlp techniques. In: 2018 IEEE international conference on data mining workshops (ICDMW). IEEE; 2018. p. 7–12.
+Karbab EB, Debbabi M. Maldy: portable, data-driven malware detection using natural language processing and machine learning techniques on behavioral analysis reports. Digit Investig. 2019;28:S77–87.
+
+                    Google Scholar 
+                
+Stephan G, Pascal H, Andreas A. Knowledge representation and ontologies. Semantic web services: concepts, technologies, and applications. 2007. p. 51–105.
+Maedche A, Staab S. Ontology learning for the semantic web. IEEE Intell Syst. 2001;16(2):72–9.
+
+                    Google Scholar 
+                
+Pereira T, Santos H. An ontology based approach to information security. In: Research conference on metadata and semantic research. Springer; 2009. p. 183–192.
+McGuinness DL, Van Harmelen F, et al. Owl web ontology language overview. W3C Recomm. 2004;10(10):2004.
+
+                    Google Scholar 
+                
+Witten IH, Frank E. Data mining: practical machine learning tools and techniques. Burlington: Morgan Kaufmann; 2005.
+MATH 
+    
+                    Google Scholar 
+                
+Witten IH, Frank E, Trigg LE, Hall MA, Holmes G, Cunningham SJ. Weka: practical machine learning tools and techniques with java implementations. 1999.
+Zadeh LA. Fuzzy logic—a personal perspective. Fuzzy Sets Syst. 2015;281:4–20.
+MathSciNet 
+    MATH 
+    
+                    Google Scholar 
+                
+Sarker IH. A machine learning based robust prediction model for real-life mobile phone data. Internet Things. 2019;5:180–93.
+
+                    Google Scholar 
+                
+Sarker IH. Context-aware rule learning from smartphone data: survey, challenges and future directions. J Big Data. 2019;6(1):95.
+
+                    Google Scholar 
+                
+Sarker IH, Colman A, Han J. Recencyminer: mining recency-based personalized behavior from contextual smartphone data. J Big Data. 2019;6(1):49.
+
+                    Google Scholar 
+                
+Download references
+Swinburne University of Technology, Melbourne, VIC, 3122, Australia
+Iqbal H. Sarker
+Department of Computer Science and Engineering, Chittagong University of Engineering & Technology, Chittagong, 4349, Bangladesh
+Iqbal H. Sarker
+Centre for Cyber Security and Games, Canberra Institute of Technology, Reid, ACT, 2601, Australia
+Md Hasan Furhad
+Victoria University, Footscray, VIC, 3011, Australia
+Raza Nowrozy
+You can also search for this author in
+                        PubMed Google Scholar
+You can also search for this author in
+                        PubMed Google Scholar
+You can also search for this author in
+                        PubMed Google Scholar
+The authors present a comprehensive view on “AI-driven Cybersecurity” that can play an important role for intelligent cybersecurity services and management [IHS—conceptualization, research design, and prepare the original manuscript]. All the authors read and approved the final manuscript.
+Correspondence to
+                Iqbal H. Sarker.
+The authors declare no conflict of interest.
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+This article is part of the topical collection “Cyber Security and Privacy in Communication Networks” guest edited by Rajiv Misra, R K Shyamsunder, Alexiei Dingli, Natalie Denk, Omer Rana, Alexander Pfeiffer, Ashok Patel and Nishtha Kesswani.
+Reprints and Permissions
+Sarker, I.H., Furhad, M.H. & Nowrozy, R. AI-Driven Cybersecurity: An Overview, Security Intelligence Modeling and Research Directions.
+                    SN COMPUT. SCI. 2, 173 (2021). https://doi.org/10.1007/s42979-021-00557-0
+Download citation
+Received: 22 November 2020
+Accepted: 02 March 2021
+Published: 26 March 2021
+DOI: https://doi.org/10.1007/s42979-021-00557-0
+Part of a collection:
+
+Over 10 million scientific documents at your fingertips
+
+Not logged in
+ - 111.223.26.28
+
+
+            Not affiliated
+        
+© 2021 Springer Nature Switzerland AG. Part of Springer Nature.

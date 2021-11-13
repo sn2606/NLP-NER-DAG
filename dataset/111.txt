@@ -1,0 +1,40 @@
+Have a heart, says High Representative
+
+The European Union (EU) has urged cybercriminals to halt all malicious activity exploiting the global Covid-19 pandemic.
+The EU’s High Representative, Josep Borrell, singled out attacks on “critical infrastructures that are essential to managing this crisis” as particularly egregious in a press release issued yesterday (April 30).
+He noted the proliferation of “malware distribution campaigns, scanning activities and distributed denial-of-service (DDoS) attacks” since the outbreak.
+“All perpetrators must immediately refrain from conducting such irresponsible and destabilising actions, which can put people’s lives at risk,” added Borrell.
+“We need the entire world to stand united in this global fight against the virus. It is a matter of humanity and universally shared values.”
+Should the call go unheeded, Borrell said EU member states stood ready to “prevent, discourage, deter and respond” to further cyber-attacks.
+The high-ranking official added that the EU and its member states would redouble collaborative efforts “at technical, operational, judicial and diplomatic levels, including with their international partners”.
+One prominent cybercrime expert was dubious about the prospect of cybercriminals granting the EU’s wish.
+“It’s worth a try, but the leaders in the EU must understand they are asking hundreds or thousands of people around the world to halt their work – their sole source of income – and without any financial aid or relief,” Charity Wright, cyber threat intelligence analyst at IntSights,  told The Daily Swig.
+“Cybercriminals are not eligible for unemployment insurance or relief if they quit their job. Some of them have employees and third parties to pay and most of them do not operate by a moral code. 
+“They are financially motivated and will not stop their businesses because the EU asks them to.”
+Over recent weeks, cybercriminals have exploited the coronavirus pandemic in myriad mendacious ways.
+Their exploits have included impersonating trusted sources of coronavirus advice, spreading malicious ads more widely than usual, and launching a DDoS attack on the US Health Department.
+RELATED Malicious advertising slingers up the ante during Covid-19 pandemic
+This onslaught of nefarious activity comes as senior cybersecurity professionals are being diverted from their usual duties to support their employer’s migration to a home-based workforce, according to one small study that was published this week.
+Even war-weary Syrians are being targeted with coronavirus lures, possibly by their own government, security researchers have speculated.
+Contrary to some expectations, the number of successful ransomware attacks actually fell sharply between February and March, when numerous countries began enforcing lockdowns and stay-at-home orders in the wake of the Covid-19 pandemic, according to Emsisoft’s latest ransomware report.
+However, far from being related to the recent healthcare ceasefire pledge issued by some ransomware groups – which the Maze outfit reneged on, in any case – Emsisoft attributed the fall to a reduced attack surface due to “the suspension of non-essential services”.
+A recent report by Chainalysis also found that ransomware payments had “decreased significantly” in early March.
+Emsisoft speculated that companies were simply too financially distressed to pay ransoms, something Maze acknowledged in saying “we are ready for compromise”.
+A trawl of cybercrime forums by Digital Shadows revealed how the unprecedented climate was causing unease among cybercrooks about the effectiveness of their existing business models during the crisis.
+However, the threat intel vendor also observed discussions about the opportunities created by the growth in online and cashless transactions, migration to home working, and the social engineering potential of lures offering face masks or miracle cures.
+The European Commission’s spokesperson for Foreign Affairs and Security Policy declined The Daily Swig’s request for further comment.
+RECOMMENDED Exclusive: Meet the cybersecurity volunteers helping to protect the healthcare industry during the coronavirus outbreak
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

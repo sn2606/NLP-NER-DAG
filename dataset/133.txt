@@ -1,0 +1,39 @@
+Stealthy malware strain uses uncommon file format to evade detection
+
+UPDATED A new Java-based ransomware strain dubbed ‘Tycoon’ is being deployed using an uncommon data format in an effort to evade security defenses.
+According to research published today (June 4) by BlackBerry Threat Intelligence, in partnership with KPMG’s UK Cyber Response team, Tycoon is a multi-platform ransomware targeting both Windows and Linux devices.
+The malware, first seen in the wild in December 2019, is deployed in the form of trojanized Java Runtime Environment (JRE) and leverages an obscure Java image in an attempt to “fly under the radar”.
+As outlined in the research, the threat actors behind Tycoon have been using targeted delivery mechanisms to infiltrate small to medium sized companies and institutions in education and software industries, where they would proceed to encrypt file servers before demanding a ransom.
+BlackBerry’s latest threat report uncovers how, during an investigation of an intrusion into an unnamed European educational institution, threat actors were able to bypass security and gain access to critical enterprise servers.
+This, the researchers say, paints a picture of how attackers are “shifting away from conventional tactics towards uncommon programming languages and data formats”.
+“The BlackBerry Research and Intelligence Team have observed approximately a dozen Tycoon related incidents in the past few months, although the true figure will certainly be much higher,” Claudiu Teodorescu, director of BlackBerry’s threat hunting and intelligence operations, told The Daily Swig.
+Discussing the technical idiosyncrasies of this new ransomware campaign, Teodorescu said: “The main thing that makes Tycoon stand out is that it was written in Java and deployed from an uncommon Java Image format (JIMAGE).
+“Java is seldom used to write endpoint malware because it requires the Java Runtime Environment to be able to run the code.
+He added: “Most of the known Java-based malware uses the Java Archive format (JAR), but we haven’t seen malware using JIMAGE format before.
+“The advantage of writing malware in Java is the portability between operating systems, while using uncommon file format helps the malware fly under the radar.”
+BlackBerry’s insight into Tycoon comes just a week after Microsoft issued a warning over another Java-based ransomware strain: PonyFinal.
+In a series of tweets from the tech giant’s security team on May 27, Microsoft said the PonyFinal threat actors have primarily targeted endpoints that already have JRE installed.
+However, according to Teodorescu there are some key differences between the two campaigns.
+“Tycoon comes bundled together with a custom JRE build, so it does not rely on a Java environment being installed on the victim’s machine,” he explained.
+“Unlike PonyFinal, the malicious module is compiled into a JIMAGE, which is significantly less common than JAR.”
+Although Tycoon has been active for at least six months, there have been a limited number of victims. This, says BlackBerry, suggests the malware may be highly targeted.
+“Malware writers are constantly seeking new ways of flying under the radar,” the report states.
+“They are slowly moving away from conventional obfuscation and shifting towards uncommon programming languages and obscure data formats.”
+Fortunately, victims of this ransomware now have the possibility of recovering their files at no cost, as Emsisoft has released a decryptor.
+It should be noted, however, that the tool only works for the earliest version of Tycoon ransomware that encrypts files with the .redrum extension, and not the more recent happyny3.1 variant.
+This article has been updated to include information relating to the Tycoon ransomware decryptor.
+READ MORE Cloudflare tracks massive spike in cyber-attacks as protests rage against George Floyd death
+
+
+James Walker
+
+
+
+@jameswalk_er 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.

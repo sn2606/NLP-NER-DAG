@@ -1,0 +1,73 @@
+‘We don’t have the luxury of starting over’, offensive security specialist warns in wide-ranging interview
+INTERVIEW Aaron Portnoy confesses to periodic bouts of imposter syndrome, despite having carved out a distinguished career in offensive security.
+Among other things, Portnoy – now principal scientist at attack surface management specialists Randori – has interned at one of the first traffickers of zero-days (iDefense), founded his own company (Exodus Intelligence), headed up the Zero-Day Initiative’s research team, and launched the very first Pwn2Own contest in 2007.
+Speaking to The Daily Swig, the security pro reflects on the dramatic changes he’s witnessed in the industry, and offers some prescriptions for keeping pace with increasingly sophisticated attackers.
+Please tell us about your current role…
+Aaron Portnoy: I enable our attack team to give customers a nation state-like experience – improving our product with new discovery and attack techniques, discovering and weaponizing zero-days…
+I also do presentations, blog posts, and technical analysis and try to put the attackers’ perspective on recent bugs and so forth.
+How and why did you get into hacking?
+AP: I first got into offensive security when I was about 14 or 15 years old. Your parents tell you not to talk to strangers on the internet – I wouldn’t be here if I hadn’t talked to professionals [online] who pointed me in the right direction.
+I started out with open source stuff like FreeBSD and some Unix flavors, then moved on to Linux. Once I realized I could look at all of the code, it evolved into a fascination with breaking through security boundaries.
+I started getting obsessed with offensive security and writing exploits, specifically reverse engineering. Then the industry kind of grew up around me and I got to pursue this professionally.
+RECOMMENDED Interview: Patchstack’s Oliver Sild on securing WordPress, one plugin vulnerability at a time
+I focused on reverse engineering and exploit discovery because it was, in my opinion, one of the more difficult things.
+I want to get into targets that no one else has – which was reflected in [why I launched the] Pwn2Own contest.
+What did Pwn2Own bring to the world of vulnerability discovery?
+AP: It was an awareness campaign at first: people outside our industry just weren’t aware of these capabilities.
+It had some key milestones throughout the first five years, moving from laptops and browsers to mobile phones, and then we did it in Tokyo as a Mobile Pwn2Own.
+The very first Pwn2Own, I was sitting there with a picnic table with a bunch of cash from the company to give away. We bought a laptop from BestBuy down the street – it was very unstructured.
+RELATED Pwn2Own 2021: Zero-click Zoom exploit among winners as payout record smashed
+When we first launched, you had individuals winning the contest. Now, we’re getting to a stage where you actually need teams to compete.
+Since I left [the Pwn2Own organizing team], it’s ballooned into a worldwide event with Teslas and all these different things. It’s more of a show these days, but probably still valuable.
+But I do think in the early days it was more innovative and pivotal in changing the perspective and general understanding of zero-days and vulnerabilities.
+Pwn2Own has become a hugely popular live hacking event
+What are the most innovative or interesting areas in vulnerability research right now?
+AP: Speculative execution vulnerabilities and anything that involves you not being able to trust your hardware the way you think you do are really interesting.
+The Internet of Things or embedded devices will have serious effects in the long term. Having your refrigerator network-connected is probably not the best idea.
+As an attacker, SCADA systems or industrial control systems are the most tempting targets when people running those systems have no way of looking at the system logs or logging in. With a root shell on there I could hide forever and they’ll never know I was there.
+How big a contribution do bug bounties make to infosec?
+AP: A lot of the bug bounty space seems to be web app-specific or specific to a given customer. If PayPal wants you to audit their website, it’s very specific to that vendor, and that irks me. That’s just glorified quality assurance.
+A bug bounty against a product with a large installed base would be way more valuable. But we’re in a gig economy. This is the trend in which labor is moving.
+I think [bug bounty] is a great opportunity for people in countries where it’s more difficult to get into the tech space. I’ve seen people outside of the US and Europe make a lot of money doing this and that's great.
+The only warning I would give [to vendors] is that it should be a piece of what you are doing, but it shouldn't be your entire defensive strategy.
+How confident are you that the government, businesses, and the infosec industry are getting any sort of handle on how to deal with supply chain attacks?
+AP: The analogy of ‘you’re only as strong as your weakest link’ comes to mind.
+The size of the dependency graph for a given piece of software is so massive that there’s no way to ever validate every single developer who has access to every project.
+You deal with that problem generically by basic blocking and tackling. You should design your network segmentation, have user-based access control, separate data from access to contain [risk], monitor for anomalies, separate controls…
+So, I don’t think there’s going to be any silver bullet for supply chain attacks.
+The recent breaches have occurred in software that is responsible for managing your network, but software by its very nature needs to have access to a wide range of things over a lot of security boundaries.
+I think there are analogies with ransomware. People want a silver bullet, but ransomware is really just the end of a long attack chain: they’ve compromised your external perimeter, gotten into your internals, pivoted, got credentials, then at the very end they monetize it with ransomware.
+The way to defend against that is stop them at the perimeter.
+Software supply chain attacks have become a hot topic in 2021
+Are security vulnerabilities destined to become even more prolific and damaging as the ecosystem becomes more sophisticated and the attack surface grows?
+AP: Every year I have a bit of an impostor syndrome, where I’m an old dinosaur looking for memory corruption bugs, and I stave that off by finding some really crucial, high-severity vulnerability.
+As the industry grows at an exponential rate, I don’t think we have matured as far as we should from a code production standpoint.
+Just look at the CVEs from the last decade – it’s just going up and up. There’s more and more code being put out there, more and more technical debt accruing.
+We don’t have the luxury of burning down the internet and starting over. I don’t see it getting any easier.
+Does this make the timing of vulnerability disclosures more difficult than ever?
+AP: At Randori we want to give our customers a nation-state experience with real zero-days so they can validate their controls. To do that, we need to withhold disclosure for a time, to give them that experience. Is this being actively exploited in the wild? Do we feel responsibility to disclose? There’s no easy answer.
+It’s a double-edged sword. You have to strike a balance between protecting users at large and making sure you’re not enabling attackers to run rampant with a given capability.
+Read more of the latest infosec interviews
+The theme tends to be that attackers move a lot quicker than defenders.
+There were like 18,000 vulnerabilities in 2020. How are they supposed to know which ones they need to prioritize and patch?
+President Biden has, on the face of it, been fairly proactive on the cybersecurity front – is he on the right track?
+AP: The administration is making good steps insofar as bringing it to light, starting initiatives, hiring a new CISA director, and getting a conversation started with various other nation states about what we’re going to do about this. I think more funding will be beneficial in the long run.
+We need to ensure that everyone is thinking about these things in the right way, and not sticking a random piece of hardware on their perimeter and trusting it to solve all their problems.
+No matter what fancy adjective you put in front of it, it’s really just another bit of attack surface.
+I do like that it’s being discussed more. It’s really kind of surreal to hear about our industry being opined on from the White House – that’s actually pretty crazy considering where we were 10 years ago.
+The US government, in particular, has quite a perspective on what’s happening on the internet and has a lot of information they don’t necessarily share as much as they should or could.
+YOU MIGHT ALSO LIKE Finders, cheaters: RCE bug in Moodle e-learning platform could be abused to steal data, manipulate results
+
+
+Adam Bannister
+
+
+
+@Ad_Nauseum74 
+
+Burp Suite
+Vulnerabilities
+Customers
+Company
+Insights
+© 2021 PortSwigger Ltd.
