@@ -1,0 +1,52 @@
+{
+  "lang":"en",
+  "name":"pipeline",
+  "version":"0.0.0",
+  "spacy_version":">=3.2.0,<3.3.0",
+  "description":"",
+  "author":"",
+  "email":"",
+  "url":"",
+  "license":"",
+  "spacy_git_version":"0fc3dee77",
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0,
+    "name":null,
+    "mode":"default"
+  },
+  "labels":{
+    "tok2vec":[
+
+    ],
+    "ner":[
+      "CYBER SECURITY TERMS"
+    ]
+  },
+  "pipeline":[
+    "tok2vec",
+    "ner"
+  ],
+  "components":[
+    "tok2vec",
+    "ner"
+  ],
+  "disabled":[
+
+  ],
+  "performance":{
+    "ents_f":0.8401826484,
+    "ents_p":0.8245838668,
+    "ents_r":0.8563829787,
+    "ents_per_type":{
+      "CYBER SECURITY TERMS":{
+        "p":0.8245838668,
+        "r":0.8563829787,
+        "f":0.8401826484
+      }
+    },
+    "tok2vec_loss":4.6927828611,
+    "ner_loss":35.291472557
+  }
+}
